@@ -41,6 +41,10 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
     content: "#";
 }
 
+.book-summary ul.summary li.active>a {
+    color: #26A69A;
+}
+
 .brand-container {
   padding: 5px 15px;
 }
