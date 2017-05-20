@@ -1,5 +1,5 @@
 {
-    "plugins": [ "theme-api", "jsfiddle", "custom-favicon", "anchorjs" ],
+    "plugins": [ "theme-api", "jsfiddle", "custom-favicon" ],
     "pluginsConfig": {
         "theme-api": {
             "languages": [
@@ -20,11 +20,6 @@
             "height": "500",
             "width": "500"
         },
-        "favicon": "assets/favicon.ico",
-        "anchorjs": {
-          "icon": "#",
-          "placement": "left",
-          "visible": "always"
-        }    
+        "favicon": "assets/favicon.ico",   
     }
 }
