@@ -19,17 +19,17 @@
         "favicon": "assets/favicon.ico"
     },
     "links": {
-        "home": null,
-        "about": null,
-        "issues": null,
-        "contribute": null,
+        "home": true,
+        "about": true,
+        "issues": true,
+        "contribute": true,
         "custom": {
             "Custom link name": "https://customlink.com"
         },
         "sharing": {
-            "google": null,
-            "facebook": null,
-            "twitter": null
+            "google": true,
+            "facebook": true,
+            "twitter": true
         }
     }
 }
