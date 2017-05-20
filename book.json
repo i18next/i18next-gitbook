@@ -22,10 +22,8 @@
         },
         "favicon": "assets/favicon.ico",
         "anchorjs": {
-          "icon": "#",
           "placement": "left",
-          "visible": "always",
-          "class": "custom-class another-one"
+          "visible": "always"
         }    
     }
 }
