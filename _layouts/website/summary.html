@@ -28,7 +28,9 @@
 {% endmacro %}
 
 <ul class="summary">
-    <img class="brand" src="images/logo_web.png" height="30" />
+    <div class="brand-container">
+    <img class="brand" src="images/logo_web.png" />
+    </div>
     {% set _divider = false %}
     {% if config.links.sidebar  %}
     {% for linkTitle, link in config.links.sidebar  %}
