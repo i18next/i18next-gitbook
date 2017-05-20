@@ -18,8 +18,7 @@
             "type": "script",
             "tabs": ["result","js"],
             "height": "500",
-            "width": "500",
-            "fontColor": "00FF00"
+            "width": "500"
         },
         "favicon": "assets/favicon.ico"
     }
