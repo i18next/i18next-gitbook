@@ -12,7 +12,7 @@ Learn it once - use it everywhere. The community made integrations for framework
 
 I18next reached not only the web, but also mobile and desktop development.
 
-## It's a complete solution
+## Complete solution
 
 Most frameworks leave it to you how the translation are loaded from the server. You are responsible to detect the right user language, to load the translations for that language and push those translations into the framework.
 
@@ -22,6 +22,8 @@ Not so with i18next. We provide you with plugins to:
 * load the translations
 * optionally cache the translations
 
+It even provides with [locize.com](http://locize.com) a own translation management tool - localization as a service offering.
+
 ## Flexibility
 
 i18next comes with strong defaults but it is open to adapt to your needs. Prefer moment.js over intl api for date formatting?
@@ -29,8 +31,4 @@ i18next comes with strong defaults but it is open to adapt to your needs. Prefer
 ## Ecosystem
 
 There are endless modules built around i18next to extract translations from your code, to bundle translations using webpack, to convert gettext, csv, resx to json format.
-
-
-
-
 
