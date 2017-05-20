@@ -2,7 +2,7 @@
 
 The short answer would be i18next is a internationalization **i18n-framework** written in javascript.
 
-But what makes i18next outstanding from other options out there?
+What makes i18next outstanding is it goes over providing only the i18n features \(plurals, context, interpolation, format\) expected but provides you with a complete solution to localize your product.
 
 ## It runs everywhere
 
