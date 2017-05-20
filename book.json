@@ -22,6 +22,7 @@
         },
         "favicon": "assets/favicon.ico",
         "anchorjs": {
+          "icon": "#",
           "placement": "left",
           "visible": "always"
         }    
