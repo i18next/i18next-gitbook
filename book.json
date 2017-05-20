@@ -1,6 +1,10 @@
 {
-    "plugins": [ "theme-api", "jsfiddle", "custom-favicon" ],
+    "plugins": [ "edit-link", "theme-api", "jsfiddle", "custom-favicon" ],
     "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/i18next/i18next-gitbook/edit/master/",
+            "label": "Edit This Page"
+        }
         "theme-api": {
             "languages": [
                 {
