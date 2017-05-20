@@ -24,7 +24,7 @@ i18next
 
 {% endmethod %}
 
-[source code](https://jsfiddle.net/jamuhl/2qc7oLf8/embed/js,html,result/></script>)
+[source code](https://jsfiddle.net/jamuhl/2qc7oLf8/></script>)
 
 
 
