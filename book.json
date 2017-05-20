@@ -5,7 +5,7 @@
             "languages": [
                 {
                     "lang": "js",
-                    "name": "JavaScript",
+                    "name": "js",
                     "default": true
                 }
             ]
