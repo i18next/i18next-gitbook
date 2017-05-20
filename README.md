@@ -28,6 +28,10 @@ It even provides with [locize.com](http://locize.com) a own translation manageme
 
 i18next comes with strong defaults but it is open to adapt to your needs. Prefer moment.js over intl api for date formatting?
 
+## Scalability
+
+The framework was built with scalability in mind. While for smaller projects having one file with all the translation might work with i18next you have the option to separate translations into multiple files and to load them on demand.
+
 ## Ecosystem
 
 There are endless modules built around i18next to extract translations from your code, to bundle translations using webpack, to convert gettext, csv, resx to json format.
