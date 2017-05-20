@@ -1,0 +1,3 @@
+h2 > a::before, h3 > a::before, h4 > a::before, h5 > a::before {
+    content: "#";
+}
