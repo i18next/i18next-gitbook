@@ -29,7 +29,7 @@ h2, h3, h4, h5 {
 }
 
 h2 > a:before, h3 > a:before, h4 > a:before, h5 > a:before {
-    color: #efefef
+    color: #efefef;
     position: absolute;
     left: -15px;
     content: "#";
