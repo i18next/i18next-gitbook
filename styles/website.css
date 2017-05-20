@@ -1,0 +1,42 @@
+h1, h2, h3, h4, h5, h6 {
+  color: #00695C;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #00796B;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  position: relative;
+  text-decoration: none;
+  color: #00695C
+}
+
+h1 a {
+  color: #00695C
+}
+
+h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #00796B
+}
+
+.markdown-section a, a, a:active, a:hover, a:focus, a:visited {
+  color: #26A69A;
+}
+
+h2, h3, h4, h5 {
+    position: relative;
+}
+
+h2 > a:before, h3 > a:before, h4 > a:before, h5 > a:before {
+    color: #efefef;
+    position: absolute;
+    left: -20px;
+    content: "#";
+}
+
+h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:before {
+    position: absolute;
+    left: -20px;
+    content: "#";
+}

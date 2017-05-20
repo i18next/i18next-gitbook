@@ -1,16 +1,16 @@
 {
-    "plugins": [ "theme-api", "jsfiddle", "custom-favicon" ],
+    "plugins": [ "edit-link", "theme-api", "jsfiddle", "custom-favicon" ],
     "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/i18next/i18next-gitbook/edit/master/",
+            "label": "Edit This Page"
+        },
         "theme-api": {
             "languages": [
                 {
                     "lang": "js",
-                    "name": "JavaScript",
+                    "name": "js",
                     "default": true
-                },
-                {
-                    "lang": "go",
-                    "name": "Go"
                 }
             ]
         },
@@ -18,9 +18,23 @@
             "type": "script",
             "tabs": ["result","js"],
             "height": "500",
-            "width": "500",
-            "fontColor": "00FF00"
+            "width": "500"
         },
         "favicon": "assets/favicon.ico"
+    },
+    "links": {
+        "home": true,
+        "about": true,
+        "issues": true,
+        "contribute": true,
+        "sidebar": {
+            "Custom link name": "https://customlink.com"
+        },
+        "sharing": {
+            "google": true,
+            "facebook": true,
+            "twitter": true,
+            "github": true
+        }
     }
 }
