@@ -8,7 +8,7 @@ There are a few options to load translations to your application instrumented by
 Each plugin comes with a set of on configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
 
 {% sample lang="js" %}
-Here is a sample using the i18next-xhr-backend to load resources from the server.
+Here is a sample using the [i18next-xhr-backend](https://github.com/i18next/i18next-xhr-backend) to load resources from the server.
 
 ```js
 import i18next from 'i18next';
