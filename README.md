@@ -6,7 +6,7 @@ What makes i18next outstanding is it goes over providing only the i18n features 
 
 ## It runs everywhere
 
-<img src="/images/frameworks.png" width="50%" />
+<img src="/assets/img/frameworks.png" width="50%" />
 
 Learn it once - use it everywhere. The community made integrations for frameworks like react.js, angualar.js, vue.js and many more. But this is not where it ends...you can use i18next on node.js, php, ios, android and other platforms.
 
