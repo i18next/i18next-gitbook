@@ -17,7 +17,7 @@ import Backend from 'i18next-xhr-backend';
 i18next
   .use(Backend)
   .init({
-    // for all options check the backend's repository readme file
+    // for all available options read the backend's repository readme file
     loadPath: '/locales/{{lng}}/{{ns}}.json',
   });
 ```
