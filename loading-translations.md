@@ -22,6 +22,8 @@ i18next
   });
 ```
 
+{% endmethod %}
+
 
 
 
