@@ -40,3 +40,7 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
     left: -20px;
     content: "#";
 }
+
+.brand-container {
+  text-align: center;
+}
