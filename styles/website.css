@@ -31,12 +31,12 @@ h2, h3, h4, h5 {
 h2 > a:before, h3 > a:before, h4 > a:before, h5 > a:before {
     color: #efefef;
     position: absolute;
-    left: -15px;
+    left: -20px;
     content: "#";
 }
 
 h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:before {
     position: absolute;
-    left: -15px;
+    left: -20px;
     content: "#";
 }
