@@ -42,5 +42,5 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
 }
 
 .brand-container {
-  text-align: center;
+  padding: 5px 15px;
 }
