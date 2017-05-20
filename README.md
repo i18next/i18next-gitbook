@@ -6,7 +6,7 @@ What makes i18next outstanding is it goes over providing only the i18n features 
 
 ## It runs everywhere
 
-<img src="/assets/frameworks.png" width="50%" />
+<img src="/images/frameworks.png" width="50%" />
 
 Learn it once - use it everywhere. The community made integrations for frameworks like react.js, angualar.js, vue.js and many more. But this is not where it ends...you can use i18next on node.js, php, ios, android and other platforms.
 
@@ -24,6 +24,8 @@ Not so with i18next. We provide you with plugins to:
 * extending by using post processing - eg. to enable sprintf support
 
 It even provides with [locize.com](http://locize.com) a own translation management tool - localization as a service offering.
+
+
 
 ## Flexibility
 
