@@ -23,7 +23,7 @@
         "about": true,
         "issues": true,
         "contribute": true,
-        "custom": {
+        "sidebar": {
             "Custom link name": "https://customlink.com"
         },
         "sharing": {
