@@ -20,7 +20,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #00796B
 }
 
-a, a:active, a:hover, a:focus, a:visited {
+.markdown-section a, a, a:active, a:hover, a:focus, a:visited {
   color: #26A69A;
 }
 
