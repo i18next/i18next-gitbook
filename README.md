@@ -25,7 +25,7 @@ Not so with i18next. We provide you with plugins to:
 
 It even provides with [locize.com](http://locize.com) a own translation management tool - localization as a service offering.
 
-
+<img src="/assets/img/locize_recap_big_low.gif" />
 
 ## Flexibility
 
