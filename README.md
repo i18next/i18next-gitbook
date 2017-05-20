@@ -21,6 +21,7 @@ Not so with i18next. We provide you with plugins to:
 * detect the user language
 * load the translations
 * optionally cache the translations
+* extending by using post processing - eg. to enable sprintf support
 
 It even provides with [locize.com](http://locize.com) a own translation management tool - localization as a service offering.
 
