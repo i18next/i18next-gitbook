@@ -1,5 +1,5 @@
 {
-    "plugins": [ "theme-api" ],
+    "plugins": [ "theme-api", "jsfiddle", "custom-favicon" ],
     "pluginsConfig": {
         "theme-api": {
             "languages": [
@@ -13,6 +13,14 @@
                     "name": "Go"
                 }
             ]
-        }
+        },
+        "jsfiddle":{
+            "type": "script",
+            "tabs": ["result","js"],
+            "height": "500",
+            "width": "500",
+            "fontColor": "00FF00"
+        },
+        "favicon": "assets/favicon.ico"
     }
 }
