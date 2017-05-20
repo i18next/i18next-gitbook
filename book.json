@@ -21,20 +21,5 @@
             "width": "500"
         },
         "favicon": "assets/favicon.ico"
-    },
-    "links": {
-        "home": true,
-        "about": true,
-        "issues": true,
-        "contribute": true,
-        "sidebar": {
-            "Custom link name": "https://customlink.com"
-        },
-        "sharing": {
-            "google": true,
-            "facebook": true,
-            "twitter": true,
-            "github": true
-        }
     }
 }
