@@ -17,5 +17,26 @@
             "width": "500"
         },
         "favicon": "assets/favicon.ico"
-    }
+    },
+        "links": {
+         // Link to home in the top-left corner
+         "home": null,
+ 
+         // Links in top of sidebar
+         "about": null,
+          "issues": null,
+          "contribute": null,
+  
+ 	// Custom links at top of sidebar
+ 	"custom": {
+ 	    "Custom link name": "https://customlink.com"
+ 	},	    	
+ 
+          // Sharing links
+          "sharing": {
+              "google": null,
+             "facebook": null,
+             "twitter": null
+         }
+     },
 }
