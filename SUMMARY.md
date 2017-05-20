@@ -6,4 +6,6 @@
 
 ## Methods
 
+* [Loading Translations](loading-translations.md)
 * [Defining Methods](methods.md)
+
