@@ -25,3 +25,11 @@ Using no module loader you can directly add the script loaded from one of the CD
 [unpkg min](https://unpkg.com/i18next/i18next.min.js)
 
 [cdnjs](https://cdnjs.com/libraries/i18next)
+
+## Most basic sample
+
+
+
+[source code](https://jsfiddle.net/jamuhl/wb1qvxu9/#tabs=js,result,html)
+
+As you might see this sample lacks 
