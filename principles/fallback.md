@@ -159,6 +159,10 @@ i18next.t('This will be shown if the current loaded translations to not have thi
 // -> "This will be shown if the current loaded translations to not have this."
 ```
 
+While this works and might reduce files to load it makes the management of translations a lot harder as you will need to update changes to fallback values in code and json files.
+
+Possible - but not recommended.
+
 ### calling with an array of keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
