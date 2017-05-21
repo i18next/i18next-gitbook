@@ -27,5 +27,6 @@
 
 ## Misc
 
+* [JSON Format](misc/json-format.md)
 * [Migration Guide](misc/migration-guide.md)
 
