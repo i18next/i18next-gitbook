@@ -4,6 +4,7 @@
 
 * [Introduction](README.md)
 * [Getting started](getting-started.md)
+* [Interpolation](interpolation.md)
 
 ## Principles
 
@@ -16,6 +17,6 @@
 
 ## Translation Function
 
-* [Interpolation](methods.md)
+* [Interpolation 2](methods.md)
 * [Plurals](plurals.md)
 
