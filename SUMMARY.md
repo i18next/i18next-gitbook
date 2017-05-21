@@ -9,6 +9,7 @@
 
 * [Namespaces](principles/namespaces.md)
 * [Fallback](principles/fallback.md)
+* [Plugins](principles/plugins.md)
 
 ## Methods
 
