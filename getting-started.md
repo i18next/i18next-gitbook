@@ -32,4 +32,7 @@ Using no module loader you can directly add the script loaded from one of the CD
 
 [source code](https://jsfiddle.net/jamuhl/wb1qvxu9/#tabs=js,result,html)
 
-As you might see this sample lacks 
+As you might see this basic sample does not yet display results in different languages...lets extend this:
+
+[source code](https://jsfiddle.net/jamuhl/wb1qvxu9/2/#tabs=result,js,html)
+
