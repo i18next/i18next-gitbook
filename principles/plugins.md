@@ -22,4 +22,4 @@ i18next
   .init(options);
 ```
 
-For usage details please read the documentation of the plugin (readme file in the repository or npm website)
+For usage details please read the documentation of the plugin (readme file in the repository or npm website).
