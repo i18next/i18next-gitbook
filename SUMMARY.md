@@ -11,7 +11,7 @@
 * [Fallback](principles/fallback.md)
 * [Plugins](principles/plugins.md)
 
-## Methods
+## How to
 
 * [Loading Translations](loading-translations.md)
 
