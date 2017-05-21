@@ -16,7 +16,8 @@ keys
 
 ```json
 {
-    "key": "The current date is {{date, MM/DD/YYYY}}"
+    "key": "The current date is {{date, MM/DD/YYYY}}",
+    "key2": "{{text, uppercase}} just uppercased"
 }
 ```
 
@@ -26,6 +27,7 @@ Init i18next with a format function:
 i18next.init({
     interpolation: {
         format: function(value, format, lng) {
+            if (format === 'uppercase') return value.toUpperCase();
             if(value instanceof Date) return moment(value).format(format);
             return value;
         }
@@ -37,79 +39,24 @@ i18next.init({
 sample
 
 ```js
-i18next.t('key', { what: 'i18next', how: 'great' });
-// -> "i18next is great"
+i18next.t('key', { date: new Date() });
+// -> "The current date is 07/13/2016"
+
+i18next.t('key2', { text: 'can you hear me' });
+// => "CAN YOU HEAR ME just uppercased"
 ```
 
-{% endmethod %}
-
-{% method %}
-## Working with data models
-
-You can pass entire data models in options.
-
-keys
-
-```json
-{
-    "key": "i am {{author.name}}"
-}
-```
-
-{% sample lang="js" %}
-sample
+Keep the language on moment in sync with i18next by listening to the change language event:
 
 ```js
-const author = { 
-    name: 'Jan',
-    github: 'jamuhl'
-};
-i18next.t('key', { author });
-// -> "i am Jan"
+i18next.on('languageChanged', function(lng) {
+  moment.locale(lng);
+});
 ```
 
 {% endmethod %}
 
 
-
-
-{% method %}
-## Unescape
-
-Per default the values get escaped to safe from possible xss attacks. You can toggle escaping off.
-
-keys
-
-```json
-{
-    "keyEscaped": "no danger {{myVar}}",
-    "keyUnescaped": "dangerous {{- myVar}}"
-}
-```
-
-{% sample lang="js" %}
-sample
-
-```js
-i18next.t('keyEscaped', { myVar: '<img />' });
-// -> "no danger &lt;img &#x2F;&gt;"
-
-i18next.t('keyUnescaped', { myVar: '<img />' });
-// -> "dangerous <img />"
-
-i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false } });
-// -> "no danger <img />" (obviously could be dangerous)
-
-```
-
-*Dangerzone:* Toggling escaping off you should escape any user input yourself!
-
-
-{% endmethod %}
-
-
-
-{% method %}
 ## Additional options
 
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
