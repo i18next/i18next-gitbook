@@ -16,9 +16,11 @@
 
 ## Translation Function
 
+* [Essentials](essentials.md)
 * [Interpolation](interpolation.md)
 * [Formatting](formatting.md)
 * [Plurals](plurals.md)
 * [Nesting](nesting.md)
 * [Context](context.md)
+* [Objects and Arrays](objects-and-arrays.md)
 
