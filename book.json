@@ -1,5 +1,5 @@
 {
-    "plugins": [ "edit-link", "theme-api", "jsfiddle", "custom-favicon" ],
+    "plugins": [ "edit-link", "theme-api", "jsfiddle", "custom-favicon", "simple-page-toc" ],
     "pluginsConfig": {
         "edit-link": {
             "base": "https://github.com/i18next/i18next-gitbook/edit/master/",
@@ -20,6 +20,10 @@
             "height": "500",
             "width": "500"
         },
-        "favicon": "assets/favicon.ico"
+        "favicon": "assets/favicon.ico",
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+       }
     }
 }
