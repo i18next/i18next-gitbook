@@ -18,4 +18,6 @@
 
 * [Interpolation](interpolation.md)
 * [Plurals](plurals.md)
+* [Nesting](nesting.md)
+* [Formatting](formatting.md)
 
