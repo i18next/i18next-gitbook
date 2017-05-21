@@ -25,3 +25,7 @@
 * [Context](context.md)
 * [Objects and Arrays](objects-and-arrays.md)
 
+## Misc
+
+* [Migration Guide](misc/migration-guide.md)
+
