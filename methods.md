@@ -35,6 +35,7 @@ i18next.t('keyEscaped', { myVar: '<img />' });
 i18next.t('keyUnescaped', { myVar: '<img />' });
 // -> "dangerous <img />"
 ```
+
 {% common %}
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
 
