@@ -1,21 +1,36 @@
 <!-- toc -->
-# Interpolation
+# Formatting
 
-Interpolation is one of the most used functionality used. It enables you to integrate dynamic values into your translations.
+You can define a function to handle formattings. Beside formatting numbers or dates you can use this to define custom formattings.
 
-Per default those interpolations get escaped to safe you from possible xss attacks.
+You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](http://numeraljs.com/) or the [intl api](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl).
+
+
 
 {% method %}
 ## Basic
 
-Interpolation is one of the most used functionality.
+As a sample using momentjs to format dates.
 
 keys
 
 ```json
 {
-    "key": "{{what}} is {{how}}"
+    "key": "The current date is {{date, MM/DD/YYYY}}"
 }
+```
+
+Init i18next with a format function:
+
+```js
+i18next.init({
+    interpolation: {
+        format: function(value, format, lng) {
+            if(value instanceof Date) return moment(value).format(format);
+            return value;
+        }
+    }
+});
 ```
 
 {% sample lang="js" %}
