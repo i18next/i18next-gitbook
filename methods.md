@@ -122,6 +122,6 @@ nestingPrefixEscaped     | undefined               | escaped prefix for nesting 
 nestingSuffixEscaped     | undefined               | escaped suffix for nesting (regexSafe)
 defaultVariables  | undefined           | default variables to use in interpolation replacements
 
-
+While there are a lot of options going with the defaults should get you covered.
 
 
