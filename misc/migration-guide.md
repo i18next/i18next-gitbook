@@ -1,4 +1,5 @@
-###[v7.x.x to v8.0.0](#v7-x-x--v8-0-0)
+<!-- toc -->
+### v7.x.x to v8.0.0
 
 The `nonExplicitWhitelist` flag was changed to be used in user detected language too, before it was restricted to defined fallback languages only.
 
@@ -12,7 +13,7 @@ i18next.init({
 // eg. `de-AT` will now pass the whitelist check
 ```
 
-###[v6.x.x to v7.0.0](#v6-x-x--v7-0-0)
+### v6.x.x to v7.0.0
 
 We used to resolve nb-NO, nn-NO to no as language part mainly because there was no way to proper define per local fallbacks. With v7.0.0 we removed that to enable default behaviour also for norwegian language. To get back the old behaviour you can define multiple fallbacks like:
 
@@ -30,21 +31,21 @@ Additional starting from 7.0.0 you could use named exports:
 import { init, t } from 'i18next';
 ```
 
-###[v5.x.x to v6.0.0](#v5-x-x--v6-0-0)
+### v5.x.x to v6.0.0
 
 Return namespace in cimode with appendNamespaceToCIMode option (default now will only return key without namespace - independent of call to t function) [#863](https://github.com/i18next/i18next/issues/863)
 
 This change might break your e2e tests if your depending on the cimode (the returned value can now be set to return always only key or ns+key)
 
 
-###[v4.x.x to v5.0.0](#v4-x-x--v5-0-0)
+### v4.x.x to v5.0.0
 
 Nested keys should not be escaped [#854](https://github.com/i18next/i18next/issues/854)
 
 i18next.cloneInstance() calls now init() (before it depended on having called that function with a callback) [#860](https://github.com/i18next/i18next/pull/860)
 
 
-### [v3.x.x to v4.0.0](#v3-x-x--v4-0-0)
+### v3.x.x to v4.0.0
 
 There is only a small change for webpack2 builds which now targets es build with import/export in place to enable treeshaking (module entrypoint in package.json).
 
@@ -52,7 +53,7 @@ Nothing breaking for non webpack2 users.
 
 
 
-###[v2.x.x to v3.0.0](#v2-x-x--v3-0-0)
+### v2.x.x to v3.0.0
 
 There is one breaking change regarding suffixing plurals in cases a language has multiple plural forms. Eg. arabic suffixes are now 0, 1, 2, 3, 4, 5 instead of 0, 1, 2, 3, 11, 100.
 
@@ -69,14 +70,14 @@ i18next.init({
 ```
 
 
-###[v1.11.x to v2.0.0](#v1-11-x--v2-0-0)
+### v1.11.x to v2.0.0
 
 While v2.0.0 is a full rewrite of the old codebase it should be possible to run in your app
 without completely rewrite your integration.
 
 
 
-###[Getting started](#v1-11-x--v2-0-0-gs)
+### Getting started
 
 The new version does not come with backend, cache and user language detection built in. i18next is more a core library that can be extended with modules on demand. This way it can be seamlessly used in browser, node.js or other javascript runtimes.
 
@@ -139,7 +140,7 @@ app.listen(3000);
 ```
 
 
-###[Running v2.0.0 with compatibility flags](#v1-11-x--v2-0-0-comp)
+### Running v2.0.0 with compatibility flags
 
 Version 2.0.0 has a compatibility layer built in which allows to run it like v1.11.x. Keep in mind this layer will be removed in future version.
 
@@ -159,7 +160,7 @@ compatibilityAPI  | Will convert init and t options and expose old API functions
 compatibilityJSON | Will allow to use JSON files in v1 format. Using old interpolation prefix, suffix and no need for singular suffix [0] for singular in languages with more then just 1 plural form.
 
 
-###[Not supported any longer in v2.0.0!!!](#v1-11-x--v2-0-0-depr)
+### Not supported any longer in v2.0.0
 
 - __support for older browsers__:
 
