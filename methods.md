@@ -61,7 +61,7 @@ i18next.t('key', { author });
 {% method %}
 ## Unescape
 
-Per default the values get escaped to safe from possible xss attacks. You can toggle escaping off. But you should escape any user input yourself in that case!
+Per default the values get escaped to safe from possible xss attacks. You can toggle escaping off.
 
 keys
 
@@ -86,6 +86,9 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escape: false } });
 // -> "no danger <img />" (obviously could be dangerous)
 
 ```
+
+*Dangerzone:* Toggling escaping off you should escape any user input yourself!
+
 
 {% endmethod %}
 
