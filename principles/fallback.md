@@ -5,7 +5,11 @@ Doing graceful fallbacks are a core principle of i18next. This enables you to di
 
 ## language fallback
 
-If you can not provide the preferred language for a user you can specify a fallback language.
+### locals resolving
+
+Per default locals containing region or script will take a translation from the pure language file if not found.
+
+Sample
 
 ```js
 
@@ -14,19 +18,42 @@ i18next.init({
     fallbackLng: 'en'
 });
 
-// fallback ordered
-i18next.init({
-    fallbackLng: ['fr', 'en']
-});
 
-// fallback depending on user language
+
+### fallback language
+
+If you can not provide the preferred language for a user you can specify a fallback language.
+
+en-GB.json
+
+```json
+{
+  "i18n": "Internationalisation"
+}
+```
+
+en.json
+
+```json
+{
+  "i18n": "Internationalization",
+  "i18n_short": "i18n"
+}
+```
+
+Sample
+
+```js
+
+// fallback to one language
 i18next.init({
-    fallbackLng: { 
-        'de-CH': ['fr', 'it'], 
-        'zh-HANT': ['zh-HANS', 'en'],
-        'es': ['fr'],
-        'default': ['en']
-    }
+    lng: 'en-GB'
+}, () => {
+  i18next.t('i18n'); // -> "Internationalisation"
+  i18next.t('i18n_short'); // -> "i18n" (from en.json)
+
+  // force loading en
+  i18next.t('i18n', { lng: 'en' ); // -> "Internationalization"
 });
 ```
 
