@@ -82,7 +82,7 @@ i18next.t('keyEscaped', { myVar: '<img />' });
 i18next.t('keyUnescaped', { myVar: '<img />' });
 // -> "dangerous <img />"
 
-i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escape: false } });
+i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false } });
 // -> "no danger <img />" (obviously could be dangerous)
 
 ```
