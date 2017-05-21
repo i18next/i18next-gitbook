@@ -142,7 +142,7 @@ app.listen(3000);
 ```
 
 
-## Running v2.0.0 with compatibility flags
+### Running v2.0.0 with compatibility flags
 
 Version 2.0.0 has a compatibility layer built in which allows to run it like v1.11.x. Keep in mind this layer will be removed in future version.
 
@@ -162,7 +162,7 @@ compatibilityAPI  | Will convert init and t options and expose old API functions
 compatibilityJSON | Will allow to use JSON files in v1 format. Using old interpolation prefix, suffix and no need for singular suffix [0] for singular in languages with more then just 1 plural form.
 
 
-## Not supported any longer in v2.0.0
+### Not supported any longer in v2.0.0
 
 - __support for older browsers__:
 
