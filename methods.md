@@ -1,10 +1,12 @@
 <!-- toc -->
-# Translation Function
+# Interpolation
 
-After initializing i18next the function you will use most is the `t` function.
+Interpolation is one of the most used functionality used. It enables you to integrate dynamic values into your translations.
+
+Per default those interpolations get escaped to safe you from possible xss attacks.
 
 {% method %}
-## Interpolation
+## Basic
 
 Interpolation is one of the most used functionality.
 
@@ -12,34 +14,94 @@ keys
 
 ```json
 {
-    "key": "{{what}} is {{how}}",
-    "keyDeep": "i am {{author.what}}",
+    "key": "{{what}} is {{how}}"
+}
+```
+
+{% sample lang="js" %}
+sample
+
+```js
+i18next.t('key', { what: 'i18next', how: 'great' });
+// -> "i18next is great"
+```
+
+{% endmethod %}
+
+{% method %}
+## Working with data models
+
+You can pass entire data models in options.
+
+keys
+
+```json
+{
+    "key": "i am {{author.name}}"
+}
+```
+
+{% sample lang="js" %}
+sample
+
+```js
+const author = { 
+    name: 'Jan',
+    github: 'jamuhl'
+};
+i18next.t('key', { author });
+// -> "i am Jan"
+```
+
+{% endmethod %}
+
+
+
+
+{% method %}
+## Unescape
+
+Per default the values get escaped to safe from possible xss attacks. You can toggle escaping off. But you should escape any user input yourself in that case!
+
+keys
+
+```json
+{
     "keyEscaped": "no danger {{myVar}}",
     "keyUnescaped": "dangerous {{- myVar}}"
 }
 ```
 
 {% sample lang="js" %}
-Calling t function with options
+sample
 
 ```js
-i18next.t('key', { what: 'i18next', how: 'great' });
-// -> "i18next is great"
-
-i18next.t('keyDeep', { author: { what: 'happy' } });
-// -> "i am happy"
-
-// ESCAPE / UNESCAPE
 i18next.t('keyEscaped', { myVar: '<img />' });
 // -> "no danger &lt;img &#x2F;&gt;"
+
 i18next.t('keyUnescaped', { myVar: '<img />' });
 // -> "dangerous <img />"
+
+i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escape: false } });
+// -> "no danger <img />" (obviously could be dangerous)
+
 ```
 
 {% endmethod %}
 
+## Additional options
 
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
+
+```js
+i18next.init({
+    interpolation: { ... }
+});
+
+i18next.t('key', {
+    interpolation: { ... }
+});
+```
 
 
 option            | default             | description
@@ -61,37 +123,5 @@ nestingSuffixEscaped     | undefined               | escaped suffix for nesting 
 defaultVariables  | undefined           | default variables to use in interpolation replacements
 
 
-{% method %}
-## Plurals
 
-Plurals are commonly used
-
-keys
-
-```json
-{
-  "key": "item",
-  "key_plural": "items",
-  "keyWithCount": "{{count}} item",
-  "keyWithCount_plural": "{{count}} items"
-}
-```
-
-{% sample lang="js" %}
-Calling t function with options
-
-```js
-i18next.t('key', {count: 0}); // -> "items"
-i18next.t('key', {count: 1}); // -> "item"
-i18next.t('key', {count: 5}); // -> "items"
-i18next.t('key', {count: 100}); // -> "items"
-i18next.t('keyWithCount', {count: 0}); // -> "0 items"
-i18next.t('keyWithCount', {count: 1}); // -> "1 item"
-i18next.t('keyWithCount', {count: 5}); // -> "5 items"
-i18next.t('keyWithCount', {count: 100}); // -> "100 items"
-```
-{% common %}
-Plural can be combined with interpolation, context, ...
-
-{% endmethod %}
 

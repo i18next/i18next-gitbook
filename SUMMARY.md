@@ -13,5 +13,9 @@
 ## Methods
 
 * [Loading Translations](loading-translations.md)
-* [Translation Function](methods.md)
+
+## Translation Function
+
+* [Interpolation](methods.md)
+* [Plurals](plurals.md)
 
