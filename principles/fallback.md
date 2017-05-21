@@ -121,6 +121,46 @@ i18next.init({
 
 ## key fallback
 
+### key not found
+
+If a key does not return a value the key acts as fallback:
+
+```js
+i18next.t('notExistingKey'); // -> "notExistingKey"
+```
+
+So you could configure i18next to have the key being the fallback instead of loading a fallback language:
+
+de.json
+
+```json
+{
+  "No one says a key can not be the fallback.": "Niemand sagt ein key kann nicht als Ersatz dienen."
+}
+```
+
+```js
+i18next.init({
+  lng: 'de',
+
+  // allow keys to be phrases having `:`, `.`
+  nsSeparator: false,
+  keySeparator: false,
+  
+  // do not load a fallback
+  fallbackLng: false
+});
+
+i18next.t('No one says a key can not be the fallback.')
+// -> "Niemand sagt ein key kann nicht als Ersatz dienen."
+
+
+i18next.t('This will be shown if the current loaded translations to not have this.');
+// -> "This will be shown if the current loaded translations to not have this."
+```
+
+### calling with an array of keys
+
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
 
 As a sample think of an error code you get and you like to show a specific warning in some cases:
