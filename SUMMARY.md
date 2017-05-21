@@ -17,7 +17,7 @@
 ## Translation Function
 
 * [Interpolation](interpolation.md)
+* [Formatting](formatting.md)
 * [Plurals](plurals.md)
 * [Nesting](nesting.md)
-* [Formatting](formatting.md)
 

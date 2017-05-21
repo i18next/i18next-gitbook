@@ -1,20 +1,18 @@
 <!-- toc -->
-# Interpolation
+# Nesting
 
-Interpolation is one of the most used functionality used. It enables you to integrate dynamic values into your translations.
-
-Per default those interpolations get escaped to safe you from possible xss attacks.
+Nesting allows you to reference other keys in a translation. Could be useful to build glossary terms.
 
 {% method %}
 ## Basic
-
-Interpolation is one of the most used functionality.
 
 keys
 
 ```json
 {
-    "key": "{{what}} is {{how}}"
+    "nesting1": "1 $t(nesting2)",
+    "nesting2": "2 $t(nesting3)",
+    "nesting3": "3",
 }
 ```
 
@@ -22,14 +20,16 @@ keys
 sample
 
 ```js
-i18next.t('key', { what: 'i18next', how: 'great' });
-// -> "i18next is great"
+i18next.t('nesting1'); // -> "1 2 3"
 ```
+
+You can reference keys from other namespaces by prepending the namespace: `"nesting1": "1 $t(common:nesting2)",
+`
 
 {% endmethod %}
 
 {% method %}
-## Working with data models
+## Passing options to nestings
 
 You can pass entire data models in options.
 
@@ -37,7 +37,10 @@ keys
 
 ```json
 {
-    "key": "i am {{author.name}}"
+      "girlsAndBoys": "$t(girls, {'count': {{girls}} }) and {{count__ boy",
+      "girlsAndBoys_plural": "$t(girls, {'count': {{girls}} }) and {{count}} boys",
+      "girls": "{{count}} girl",
+      "girls_plural": "{{count}} girls"
 }
 ```
 
@@ -45,12 +48,8 @@ keys
 sample
 
 ```js
-const author = { 
-    name: 'Jan',
-    github: 'jamuhl'
-};
-i18next.t('key', { author });
-// -> "i am Jan"
+i18next.t('girlsAndBoys', {count: 2, girls: 3});
+// -> "3 girls and 2 boys"
 ```
 
 {% endmethod %}
@@ -59,16 +58,14 @@ i18next.t('key', { author });
 
 
 {% method %}
-## Unescape
-
-Per default the values get escaped to safe from possible xss attacks. You can toggle escaping off.
+## Passing nesting to interpolated
 
 keys
 
 ```json
 {
-    "keyEscaped": "no danger {{myVar}}",
-    "keyUnescaped": "dangerous {{- myVar}}"
+      "key1": "hello world",
+      "key2": "say: {{val}}"
 }
 ```
 
@@ -76,19 +73,9 @@ keys
 sample
 
 ```js
-i18next.t('keyEscaped', { myVar: '<img />' });
-// -> "no danger &lt;img &#x2F;&gt;"
-
-i18next.t('keyUnescaped', { myVar: '<img />' });
-// -> "dangerous <img />"
-
-i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false } });
-// -> "no danger <img />" (obviously could be dangerous)
-
+i18next.t('key2', {val: '$t(key1)'});
+// -> "say: hello world"
 ```
-
-*Dangerzone:* Toggling escaping off you should escape any user input yourself!
-
 
 {% endmethod %}
 
@@ -97,7 +84,7 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false 
 {% method %}
 ## Additional options
 
-Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
+Prefix/Suffix for nesting and other options can be overridden in init interpolation options or by passing additional options to t function:
 
 {% sample lang="js" %}
 sample
@@ -118,21 +105,9 @@ i18next.t('key', {
 
 option            | default             | description
 ----------------- | --------------------| -----------------
-format            | noop function       | format function `function format(value, format, lng) {}`
-escape            | function            | escape function `function escape(str) { return str; }`
-escapeValue       | true                | escapes passed in values to avoid xss injection
-prefix            | '{{'                | prefix for interpolation
-suffix            | '}}'                | suffix for interpolation
-formatSeparator   | ','                 | used to separate format from interpolation value
-prefixEscaped     | undefined           | escaped prefix for interpolation (regexSafe)
-suffixEscaped     | undefined           | escaped suffix for interpolation (regexSafe)
-unescapeSuffix    | undefined           | suffix to unescaped mode
-unescapePrefix    | '-'                 | prefix to unescaped mode
-nestingPrefix     | '$t('               | prefix for nesting
-nestingSuffix     | ')'                 | suffix for nesting
 nestingPrefixEscaped     | undefined               | escaped prefix for nesting (regexSafe)
 nestingSuffixEscaped     | undefined               | escaped suffix for nesting (regexSafe)
-defaultVariables  | undefined           | default variables to use in interpolation replacements
+
 
 While there are a lot of options going with the defaults should get you covered.
 
