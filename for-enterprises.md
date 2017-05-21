@@ -14,7 +14,7 @@ Translation Management Systems are a great help. But still there is a gap betwee
 # Locize
 
 <a href="http://locize.com" target="_blank">
-<img src="/assets/img/locize.png" width="120px" />
+<img src="/assets/img/locize.png" width="50%" />
 </a>
 
 
