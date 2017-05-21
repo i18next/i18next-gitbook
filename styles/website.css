@@ -52,6 +52,11 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
   padding: 5px 15px;
 }
 
+/* page */
+.page-wrapper {
+  padding-bottom: 20px;
+}
+
 /* page toc */
 .markdown-section > ul:first-child {
     list-style-type: none;
