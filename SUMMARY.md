@@ -13,5 +13,5 @@
 ## Methods
 
 * [Loading Translations](loading-translations.md)
-* [Defining Methods](methods.md)
+* [Translation Function](methods.md)
 
