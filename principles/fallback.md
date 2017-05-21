@@ -144,6 +144,3 @@ i18next.t([`error.${error}`, 'error']) // -> "The page was not found"
 i18next.t([`error.${error}`, 'error']) // -> "Something went wrong"
 
 ```
-
-
-
