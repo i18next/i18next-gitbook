@@ -28,5 +28,6 @@
 ## Misc
 
 * [JSON Format](misc/json-format.md)
+* [Creating own Plugins](misc/creating-own-plugins.md)
 * [Migration Guide](misc/migration-guide.md)
 
