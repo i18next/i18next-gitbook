@@ -36,7 +36,9 @@ i18next.t('keyUnescaped', { myVar: '<img />' });
 // -> "dangerous <img />"
 ```
 
-{% common %}
+{% endmethod %}
+
+
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
 
 
@@ -57,8 +59,6 @@ nestingSuffix     | ')'                 | suffix for nesting
 nestingPrefixEscaped     | undefined               | escaped prefix for nesting (regexSafe)
 nestingSuffixEscaped     | undefined               | escaped suffix for nesting (regexSafe)
 defaultVariables  | undefined           | default variables to use in interpolation replacements
-
-{% endmethod %}
 
 
 {% method %}
