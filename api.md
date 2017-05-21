@@ -252,7 +252,7 @@ Adds one key/value.
 Adds multiple key/values.
 
 
-##addResourceBundle](#add-resource-bundle
+## addResourceBundle
 
 `i18next.addResourceBundle(lng, ns, resources, deep, overwrite)`
 
