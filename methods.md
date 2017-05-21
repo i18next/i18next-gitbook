@@ -23,7 +23,7 @@ keys
 Calling t function with options
 
 ```js
-i18next.t('key', { what: 'i18next', how: 'great });
+i18next.t('key', { what: 'i18next', how: 'great' });
 // -> "i18next is great"
 
 i18next.t('keyDeep', { author: { what: 'happy' } });
