@@ -79,14 +79,16 @@ i18next.t('common:button.save');
 {% method %}
 ## Multiple keys
 
+Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
+
+As a sample think of an error code you get and you like to show a specific warning in some cases:
+
 keys
 
 ```json
 {
-    "key": "value of key",
-    "look": {
-        "deep": "value of look deep"
-    }
+  "error": "Something went wrong.",
+  "error.404": "The page was not found."
 }
 ```
 
@@ -94,12 +96,11 @@ keys
 sample
 
 ```js
-i18next.t('key');
-// -> "value of key"
+// const error = '404';
+i18next.t([`error.${error}`, 'error']); // -> "The page was not found"
 
-i18next.t('look.deep');
-// -> "value of look deep"
-
+// const error = '502';
+i18next.t([`error.${error}`, 'error']); // -> "Something went wrong"
 ```
 
 {% endmethod %}
