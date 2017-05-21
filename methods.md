@@ -92,6 +92,8 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escape: false } });
 
 {% endmethod %}
 
+
+
 {% method %}
 ## Additional options
 
