@@ -20,4 +20,5 @@
 * [Formatting](formatting.md)
 * [Plurals](plurals.md)
 * [Nesting](nesting.md)
+* [Context](context.md)
 
