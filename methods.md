@@ -92,9 +92,13 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escape: false } });
 
 {% endmethod %}
 
+{% method %}
 ## Additional options
 
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
+
+{% sample lang="js" %}
+sample
 
 ```js
 i18next.init({
@@ -105,6 +109,9 @@ i18next.t('key', {
     interpolation: { ... }
 });
 ```
+{% endmethod %}
+
+
 
 
 option            | default             | description
