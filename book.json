@@ -12,7 +12,8 @@
                     "name": "js",
                     "default": true
                 }
-            ]
+            ],
+            "split": true
         },
         "jsfiddle":{
             "type": "script",
