@@ -73,9 +73,18 @@ i18next.t('key', {count: 100}); // -> "plural"
 {% method %}
 ## Interval plurals
 
-Want to define phrases expressing the number of items lies in a range.
+Want to define phrases expressing the number of items lies in a range. Like *a few items* or *a lot of items*.
 
 You will need to add a post processor: [i18next-intervalplural-postprocessor](https://github.com/i18next/i18next-intervalplural-postprocessor)
+
+```js
+import i18next from 'i18next';
+import intervalPlural from 'i18next-intervalplural-postprocessor';
+
+i18next
+  .use(intervalPlural)
+  .init(i18nextOptions);
+```
 
 keys
 
@@ -97,6 +106,12 @@ sample
 i18next.t('key1_interval', {postProcess: 'interval', count: 1}); // -> "one item"
 i18next.t('key1_interval', {postProcess: 'interval', count: 4}); // -> "a few items"
 i18next.t('key1_interval', {postProcess: 'interval', count: 100}); // -> "a lot of items"
+
+// not matching into a range it will fallback to
+// the regular plural form
+i18next.t('key2_interval', {postProcess: 'interval', count: 1}); // -> "one item"
+i18next.t('key2_interval', {postProcess: 'interval', count: 4}); // -> "a few items"
+i18next.t('key2_interval', {postProcess: 'interval', count: 100}); // -> "100 items"
 ```
 
 {% endmethod %}
