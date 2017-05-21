@@ -7,6 +7,7 @@
 * [Supported Frameworks](supported-frameworks.md)
 * [Plugins and Utils](plugins-and-utils.md)
 * [API](api.md)
+* [Configuration Options](configuration-options.md)
 
 ## Principles
 
