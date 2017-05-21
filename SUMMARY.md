@@ -4,6 +4,8 @@
 
 * [Introduction](README.md)
 * [Getting started](getting-started.md)
+* [Supported Frameworks](supported-frameworks.md)
+* [Plugins and Utils](plugins-and-utils.md)
 
 ## Principles
 
