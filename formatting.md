@@ -56,7 +56,7 @@ i18next.on('languageChanged', function(lng) {
 
 {% endmethod %}
 
-
+{% method %}
 ## Additional options
 
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
@@ -81,20 +81,7 @@ i18next.t('key', {
 option            | default             | description
 ----------------- | --------------------| -----------------
 format            | noop function       | format function `function format(value, format, lng) {}`
-escape            | function            | escape function `function escape(str) { return str; }`
-escapeValue       | true                | escapes passed in values to avoid xss injection
-prefix            | '{{'                | prefix for interpolation
-suffix            | '}}'                | suffix for interpolation
 formatSeparator   | ','                 | used to separate format from interpolation value
-prefixEscaped     | undefined           | escaped prefix for interpolation (regexSafe)
-suffixEscaped     | undefined           | escaped suffix for interpolation (regexSafe)
-unescapeSuffix    | undefined           | suffix to unescaped mode
-unescapePrefix    | '-'                 | prefix to unescaped mode
-nestingPrefix     | '$t('               | prefix for nesting
-nestingSuffix     | ')'                 | suffix for nesting
-nestingPrefixEscaped     | undefined               | escaped prefix for nesting (regexSafe)
-nestingSuffixEscaped     | undefined               | escaped suffix for nesting (regexSafe)
-defaultVariables  | undefined           | default variables to use in interpolation replacements
 
 While there are a lot of options going with the defaults should get you covered.
 
