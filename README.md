@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # What is i18next?
 
 The short answer would be i18next is a internationalization **i18n-framework** written in javascript.
