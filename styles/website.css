@@ -1,3 +1,4 @@
+/* header */
 h1, h2, h3, h4, h5, h6 {
   color: #00695C;
 }
@@ -41,10 +42,24 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
     content: "#";
 }
 
+/* active link in summary */
 .book-summary ul.summary li.active>a {
     color: #26A69A;
 }
 
+/* brand */
 .brand-container {
   padding: 5px 15px;
+}
+
+/* page toc */
+.markdown-section > ul:first-child {
+    list-style-type: none;
+    border: solid 1px #eee;
+    padding: 10px;
+    background: #efefef;
+    display: inline-block;
+    min-width: 300px;
+    float: right;
+    margin-left: 40px;
 }
