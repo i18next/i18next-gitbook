@@ -8,6 +8,7 @@
 * [Plugins and Utils](plugins-and-utils.md)
 * [API](api.md)
 * [Configuration Options](configuration-options.md)
+* [For Enterprises](for-enterprises.md)
 
 ## Principles
 
