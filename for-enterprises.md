@@ -11,5 +11,8 @@ There are more points to address:
 
 Translation Management Systems are a great help. But still there is a gap between development and translation process. Files need to be exported / imported / merged and all while new keys get added to be translated. The chaos is inevitable.
 
-![](/assets/locize.png)
+
+<img src="/assets/img/locize.png" width="50%" />
+
+
 
