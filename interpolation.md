@@ -5,6 +5,8 @@ Interpolation is one of the most used functionality used. It enables you to inte
 
 Per default those interpolations get escaped to safe you from possible xss attacks.
 
+If you do not like the interpolation functionality provided you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
+
 {% method %}
 ## Basic
 
