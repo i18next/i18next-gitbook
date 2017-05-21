@@ -7,6 +7,7 @@
 
 ## Principles
 
+* [Namespaces](principles/namespaces.md)
 * [Fallback](principles/fallback.md)
 
 ## Methods
