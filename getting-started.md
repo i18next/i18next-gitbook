@@ -42,3 +42,11 @@ While this is a more complete sample you should look into further options to get
 - Add a **language detector** to detect the preferred language of your user
 - Add a **backend plugin** to load the translations from the server or filesystem
 
+## Extended sample
+
+The extended sample adds the language detector for browser and the xhr-backend to load translations from [https://github.com/i18next/i18next-gitbook/tree/master/locales](https://github.com/i18next/i18next-gitbook/tree/master/locales).
+
+[source code](https://jsfiddle.net/jamuhl/ferfywyf/#tabs=js,result,html)
+
+
+
