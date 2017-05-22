@@ -1,3 +1,4 @@
+<!-- toc -->
 # Getting started
 
 ## Install
@@ -26,7 +27,7 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 - [cdnjs](https://cdnjs.com/libraries/i18next)
 
-## Most basic sample
+## Basic sample
 
 
 
