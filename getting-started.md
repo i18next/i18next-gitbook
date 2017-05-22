@@ -27,9 +27,8 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 - [cdnjs](https://cdnjs.com/libraries/i18next)
 
+
 ## Basic sample
-
-
 
 [source code](https://jsfiddle.net/jamuhl/wb1qvxu9/#tabs=js,result,html)
 
