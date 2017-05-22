@@ -2,7 +2,7 @@
 
 ## Install
 
-i18next can be added to your project using npm and bower:
+i18next can be added to your project using npm or bower:
 
 ```bash
 # npm
@@ -12,13 +12,13 @@ $ npm install i18next --save
 $ bower install i18next
 ```
 
-The default export is umd compatible and can be consumed by umd compatible module loaders (commonjs, requirejs, ...).
+The default export is for UMD (commonjs, requirejs, global).
 
-In the dist folder you find additional exports for commonjs, es6 modules - primary useful if you like to load i18next in webpack or node.js. Normally you will not need to tweak the entry points as those are configured in package.json.
+In the `/dist` folder you find additional builds for commonjs, es6 modules. Useful if you like to load i18next in webpack, rollup, ... or node.js. The correct entry points are already configured in the package.json.
 
 ## Load from CDN
 
-Using no module loader you can directly add the script loaded from one of the CDNs provided:
+You can also directly add a script tag loading i18next from one of the CDNs providing it:
 
 
 [unpkg](https://unpkg.com/i18next/i18next.js)
