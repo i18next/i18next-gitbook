@@ -1,3 +1,4 @@
+<!-- toc -->
 # Load Translations
 
 There are a few options to load translations to your application instrumented by i18next. The most common approach to this adding a so called **backend plugin** to i18next. The range of backends is large from loading translations in the browser using xhr request to loading translations from databases or filesystem in nodejs.  
