@@ -21,10 +21,10 @@ In the `/dist` folder you find additional builds for commonjs, es6 modules. Usef
 You can also directly add a script tag loading i18next from one of the CDNs providing it:
 
 
-[unpkg](https://unpkg.com/i18next/i18next.js)
-[unpkg min](https://unpkg.com/i18next/i18next.min.js)
+- [unpkg](https://unpkg.com/i18next/i18next.js)
+- [unpkg min](https://unpkg.com/i18next/i18next.min.js)
 
-[cdnjs](https://cdnjs.com/libraries/i18next)
+- [cdnjs](https://cdnjs.com/libraries/i18next)
 
 ## Most basic sample
 
