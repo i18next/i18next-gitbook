@@ -30,7 +30,24 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 ## Basic sample
 
-[source code](https://jsfiddle.net/jamuhl/wb1qvxu9/#tabs=js,result,html)
+```js
+import i18next from 'i18next';
+
+i18next.init({
+  lng: 'en',
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+}, function(err, t) {
+  // initialized and ready to go!
+  document.getElementById('output').innerHTML = i18next.t('key');
+});
+```
 
 As you might see this basic sample does not yet display results in different languages...lets extend this:
 
