@@ -11,7 +11,7 @@ option            | description
 ----------------- | -----------------
 defaultValue      | defaultValue to return if translation not found
 count             | count value used for plurals
-context           | used for contexts (eg. male|female)
+context           | used for contexts \(eg. male|female\)
 replace           | object with vars for interpolation - optional as you can put them directly in options
 lng               | language to use
 lngs              | languages to use
