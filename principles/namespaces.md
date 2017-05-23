@@ -39,3 +39,5 @@ i18next.init({
 // load additional namespaces after initialization
 i18next.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
 ```
+
+Check the extended sample on the [getting started](/getting-started.md) page for a running sample.
