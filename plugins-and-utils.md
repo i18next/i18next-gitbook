@@ -32,6 +32,7 @@ name              | description
 
 ## plugins
 
+Want to create your own plugins? Learn more [here](/principles/plugins.md).
 
 ### backends
 
