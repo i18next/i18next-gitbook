@@ -52,7 +52,7 @@ i18next.init({
 });
 ```
 
-As you might see this basic sample provides only one language directly added on init...lets extend this:
+As you might see this basic sample provides only one language directly added on init...lets extend this to have buttons to change language from english to german:
 
 [source code](https://jsfiddle.net/jamuhl/dvk0e8a9/#tabs=js,result,html)
 
