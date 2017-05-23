@@ -163,7 +163,7 @@ While this works and might reduce files to load it makes the management of trans
 
 Possible - but not recommended.
 
-### calling with an array of keys
+### calling with fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
 
