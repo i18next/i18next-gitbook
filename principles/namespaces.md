@@ -37,5 +37,5 @@ i18next.init({
 });
 
 // load additional namespaces after initialization
-locize.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
+i18next.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
 ```
