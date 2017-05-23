@@ -68,6 +68,7 @@ You now have an idea about the basic setup. It's time to learn more about:
 
 - The translation functions like [interpolation](/interpolation.md), [formatting](/formatting.md) and [plurals](/plurals.md).
 - Find an [extension for your project](/supported-frameworks.md), eg. **react-i18next**, **jquery-i18next** and **others**. Using those wrappers around i18next makes using i18next a lot simpler in your project. Most such modules come with extended examples.
+- Find out more about the [configuration options](/configuration-options.md).
 - Add a [language detector](/plugins-and-utils.md) to detect the preferred language of your user
 - Add a [backend plugin](/plugins-and-utils.md) to load the translations from the server or filesystem
 
