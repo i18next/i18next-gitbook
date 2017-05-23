@@ -64,9 +64,9 @@ The extended sample adds the language detector for browser and the xhr-backend t
 
 [source code](https://jsfiddle.net/jamuhl/ferfywyf/#tabs=js,result,html)
 
-You're not covered with the basic setup, you should dig deeper into:
+You now have an idea about the basic setup. It's time to learn more about:
 
-- Learn more about translation functions like [interpolation](/interpolation.md), [formatting](/formatting.md) and [plurals](/plurals.md).
+- The translation functions like [interpolation](/interpolation.md), [formatting](/formatting.md) and [plurals](/plurals.md).
 - Find an [extension for your project](/supported-frameworks.md), eg. **react-i18next**, **jquery-i18next** and **others**. Using those wrappers around i18next makes using i18next a lot simpler in your project. Most such modules come with extended examples.
 - Add a [language detector](/plugins-and-utils.md) to detect the preferred language of your user
 - Add a [backend plugin](/plugins-and-utils.md) to load the translations from the server or filesystem
