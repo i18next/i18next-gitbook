@@ -53,5 +53,5 @@ It even provides with [locize.com](http://locize.com) a own translation manageme
 
 <img src="/assets/img/locize_recap_big_low.gif" />
 
-
+[Learn more about the enterprise offering](/for-enterprises.md)
 
