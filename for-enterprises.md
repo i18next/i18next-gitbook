@@ -4,7 +4,7 @@ We believe not. The closer the release date of your product gets the more obviou
 
 There are more points to address:
 
-- How does the translation process look?
+- How does the translation process work?
 - How do the source files get to the translators and back?
 - How you deploy new languages after release?
 - How do you handle versioning?
