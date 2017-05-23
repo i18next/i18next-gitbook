@@ -18,7 +18,6 @@
 
 ## How to
 
-* [Load Translations](load-translations.md)
 * [Add or Load Translations](add-or-load-translations.md)
 
 ## Translation Function
