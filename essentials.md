@@ -77,7 +77,7 @@ i18next.t('common:button.save');
 
 
 {% method %}
-## Multiple keys
+## Multiple fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
 
