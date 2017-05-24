@@ -74,9 +74,40 @@ appendNamespaceToCIMode | false 		| prefixes the namespace to the returned key w
 
 ### initImmediate
 
+Sample using initImmediate when using a backend plugin allowing sync (blocking) loads.
+
 ```js
 import i18next from 'i18next';
-import SyncBackend from 'i18next-sync-fs-backend'
+import SyncBackend from 'i18next-sync-fs-backend';
+
+// not working
+i18next
+  .use(SyncBackend)
+  .init();
+  
+i18next.t('key'); // -> will not return value as init was run async
+
+/*
+execution order of function calls
+- init
+- t
+- loadResources (as called inside timeout)
+*/
+
+// working
+i18next
+  .use(SyncBackend)
+  .init({ initImmediate: false });
+  
+i18next.t('key'); // -> will return value
+
+/*
+execution order of function calls
+- init
+- loadResources (as called without timeout)
+- t
+*/
+
 ```
 
 
