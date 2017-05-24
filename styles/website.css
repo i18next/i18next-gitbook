@@ -58,7 +58,11 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
 }
 
 /* page toc */
+.markdown-section > * {
+  z-index: 1;
+}
 .markdown-section > ul:first-child {
+    z-index: 3000;
     list-style-type: none;
     border: solid 1px #eee;
     padding: 10px;
