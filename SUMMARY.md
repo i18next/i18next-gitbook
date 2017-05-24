@@ -19,6 +19,7 @@
 ## How to
 
 * [Add or Load Translations](add-or-load-translations.md)
+* [FAQ](faq.md)
 
 ## Translation Function
 
