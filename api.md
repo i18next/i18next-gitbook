@@ -1,19 +1,33 @@
 <!-- toc -->
 # API
 
-## init
+{% method %}
+## i18next.init
 
 `i18next.init(options, callback)`
 
-Initializes the i18next instance.
+The default export of the i18next module is an i18next instance ready to be initialized by calling `init`. You can create additional instances using the [createInstance](//#createinstance) function.
+
+Please read the [options page](../options/) for details on configuration options.
+
+The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
+
+{% sample lang="js" %}
+sample
 
 ```js
-i18next.init(options, (err, t) => {
-  // resources have been loaded
+i18next.init({
+  fallbackLng: 'en',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
 });
 ```
 
-Please read the [options page](../options/) for details.
+
+
+{% endmethod %}
 
 
 ## use
