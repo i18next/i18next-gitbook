@@ -13,7 +13,6 @@ Please read the [options page](../options/) for details on configuration options
 The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
 
 {% sample lang="js" %}
-sample
 
 ```js
 i18next.init({
@@ -25,16 +24,18 @@ i18next.init({
 });
 ```
 
-
-
 {% endmethod %}
 
-
+{% method %}
 ## use
 
 `i18next.use(module)`
 
-Add modules like backend or caching layer to be used.
+The use function is there to load additional plugins to i18next.
+
+For available module see the [plugins page](/plugins-and-utils.md) and don't forget to read the documentation of the plugin.
+
+{% sample lang="js" %}
 
 ```js
 import i18next from 'i18next';
@@ -51,38 +52,65 @@ i18next
   .init(options, callback);
 ```
 
-For details see the documentation of the added module.
+{% endmethod %}
 
+{% method %}
 ## t
 
 `i18next.t(key, options)`
 
-The translation function.
-
-Please read the [translate pages](../../translate/) for details.
+Please have a look at the translation functions like [interpolation](/interpolation.md), [formatting](/formatting.md) and [plurals](/plurals.md) for more details on using it.
 
 
+{% sample lang="js" %}
+
+```js
+i18next.t('my.key'); // -> will return value in set language
+```
+
+{% endmethod %}
+
+
+{% method %}
 ## exists
 
 `i18next.exists(key, options)`
 
 Uses the same resolve functionality as the `t` function and returns true if a key exists.
 
+{% sample lang="js" %}
 
+```js
+i18next.exits('my.key'); // -> true if exists, false if not
+```
+
+{% endmethod %}
+
+
+{% method %}
 ## getFixedT
 
 `i18next.getFixedT(lng, ns)`
 
 Returns a `t` function that defaults to given language or namespace.
 
+Both params could be arrays of languages or namespaces and will be treated as fallbacks in that case.
+
+On the returned function you can like in the `t` function override the languages or namespaces by passing them in options or by prepending namespace.
+
+{% sample lang="js" %}
+
 ```js
-let de = i18next.getFixedT('de');
+// fix language to german
+const de = i18next.getFixedT('de');
 de('myKey');
 
-// or fix the defaultNamespace
-let anotherNamespace = i18next.getFixedT(null, 'anotherNamespace');
+// or fix the namespace to anotherNamespace
+const anotherNamespace = i18next.getFixedT(null, 'anotherNamespace');
 anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('anotherNamespace:anotherNamespaceKey');
 ```
+
+{% endmethod %}
 
 
 ## changeLanguage
