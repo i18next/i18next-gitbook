@@ -3,20 +3,38 @@
 
 `i18next.init(options, callback)`
 
+All options for calling init or createInstance.
+
+## logging
 
 option            | default             | description
 ----------------- | --------------------| -----------------
-debug             | false               | logs out more info (console)
-initImmediate     | true                | triggers resource loading in init function inside setTimeout (default async behaviour)
-resources         | undefined           | resources to initialize with
-lng               | undefined           | language to set (disables user language detection)
-fallbackLng       | 'dev'               | language to lookup key if not found on set language, can be a string (`en`), an array (`['fe', 'en']`) or object defining fallbacks and a default ( ``{ 'de-CH': ['fr', 'it'], 'zh-HANT': ['zh-HANS', 'en'],  'default': ['en'] }`` )
-ns                | 'translation'       | string or array of namespaces
-defaultNS         | 'translation'       | default namespace used if not passed to translation function
-fallbackNS        | false               | string or array of namespaces to lookup key if not found
+debug             | false               | logs info level to console output. Helps finding issues with loading not working.
+
+## languages and namespaces
+
+option            | default             | description
+----------------- | --------------------| -----------------
+lng               | undefined           | language to use (disables language detection)
+fallbackLng       | 'dev'               | language to lookup translations if user language is not available. [Learn more](/principles/fallback.md).
 whitelist         | false               | array of allowed languages
 nonExplicitWhitelist | false            | if true will pass eg. en-US if finding en in whitelist
 lowerCaseLng      | false               | language will be lowercased eg. en-US --> en-us
+ns                | 'translation'       | string or array of namespaces
+defaultNS         | 'translation'       | default namespace used if not passed to translation function
+fallbackNS        | false               | string or array of namespaces to lookup key if not found in given namespace. [Learn more](/principles/fallback.md).
+
+
+
+
+
+option            | default             | description
+----------------- | --------------------| -----------------
+initImmediate     | true                | triggers resource loading in init function inside setTimeout (default async behaviour)
+resources         | undefined           | resources to initialize with
+
+
+
 load              | 'all'               | language codes to lookup, given set language is 'en-US': `'all' --> ['en-US', 'en', 'dev']`, `'currentOnly' --> 'en-US'`, `'languageOnly' --> 'en'`
 preload           | false               | array of languages to preload
 keySeparator      | '.'                 | char to separate keys
