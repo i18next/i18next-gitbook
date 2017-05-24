@@ -2,7 +2,7 @@
 # API
 
 {% method %}
-## i18next.init
+## init
 
 `i18next.init(options, callback)`
 
