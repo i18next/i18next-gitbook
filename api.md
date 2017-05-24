@@ -24,6 +24,12 @@ i18next.init({
   if (err) return console.log('something went wrong loading', err);
   t('key'); // -> same as i18next.t
 });
+
+// with only callback
+i18next.init((err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
+});
 ```
 
 {% endmethod %}
@@ -280,6 +286,19 @@ const newInstance = i18next.createInstance({
   if (err) return console.log('something went wrong loading', err);
   t('key'); // -> same as i18next.t
 }));
+
+// is the same as
+const newInstance = i18next.createInstance();
+newInstance.init({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
+}));
+
 ```
 
 {% endmethod %}
