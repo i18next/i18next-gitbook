@@ -69,6 +69,15 @@ i18next.t('key', {count: 100}); // -> "plural"
 {% endmethod %}
 
 
+## How to find the correct plural suffix?
+
+You can use this small utility to get the correct plural suffixes.
+
+[source code](https://jsfiddle.net/jamuhl/ryz7om9y/#tabs=result)
+
+
+
+
 
 {% method %}
 ## Interval plurals
