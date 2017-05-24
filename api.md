@@ -17,6 +17,8 @@ The callback will be called after all translations were loaded or with an error 
 ```js
 i18next.init({
   fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
   debug: true
 }, (err, t) => {
   if (err) return console.log('something went wrong loading', err);
