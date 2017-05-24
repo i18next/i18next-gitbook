@@ -126,7 +126,7 @@ nsSeparator       | override char to split namespace from key
 returnObjects     | accessing an object not a translation string (can be set globally too)
 joinArrays        | char, eg. '\n' that arrays will be joined by (can be set globally too)
 postProcess       | string or array of postProcessors to apply see  [interval plurals](/plurals.md) as a sample
-interpolation     | override [interpolation options](/configuration-options.md)
+interpolation     | override [interpolation options](/interpolation.md)
 
 
 
