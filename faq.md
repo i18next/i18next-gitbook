@@ -3,7 +3,7 @@
 
 ## Misc
 
-**i18next is awesome. How can i support the project**
+**i18next is awesome. How can i support the project?**
 
 *There are a lot of ways to support us. Make a PR for a feature requested. Improve the documentation. Help others to get started. Spread the word.*
 
@@ -12,7 +12,7 @@
 
 ## Loading issues
 
-**I don't see my translations**
+**I don't see my translations!!!**
 
 *Try setting `debug: true` on init and check the console log. There rather sure is a warning for unable to resolve the loadPath or invalid json. Check if the translation files are accessible via browser.*
 
@@ -24,6 +24,6 @@
 
 ## Process
 
-**How do i keep overview over my translation progress**
+**How do i keep overview over my translation progress?**
 
 *Might be time to use a translation management tool.*
