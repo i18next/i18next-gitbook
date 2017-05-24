@@ -275,7 +275,6 @@ The callback will be called after all translations were loaded or with an error 
 
 {% sample lang="js" %}
 
-
 ```js
 const newInstance = i18next.createInstance({
   fallbackLng: 'en',
@@ -306,59 +305,87 @@ newInstance.init({
 
 
 
-
+{% method %}
 ## cloneInstance
 
 `i18next.cloneInstance(options, callback)`
 
-Creates a clone of the current instance. Shares store and modules.
+Creates a clone of the current instance. Shares store, plugins and initial configuration. Can be used to create an instance sharing storage but being independent on set language or namespaces.
 
+{% sample lang="js" %}
+
+```js
+const newInstance = i18next.cloneInstance({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
+}));
+
+// is the same as
+const newInstance = i18next.cloneInstance();
+newInstance.init({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
+}));
+
+```
+
+{% endmethod %}
 
 -----------
 
 # events
 
-## initialized
+## onInitialized
 
 `i18next.on('initialized', function(options) {})`
 
 Gets fired after initialization.
 
 
-## loaded
+## onLoaded
 
 `i18next.on('loaded', function(loaded) {})`
 
-Gets fired on loading resources.
+Gets fired on loaded resources.
 
-## failedLoading
+## onFailedLoading
 
 `i18next.on('failedLoading', function(lng, ns, msg) {})`
 
-Gets fired on loading resources.
+Gets fired if loading resources failed.
 
-## missingKey
+## onMissingKey
 
 `i18next.on('missingKey', function(lngs, namespace, key, res) {})`
 
 Gets fired on accessing a key not existing.
 
 
-## added
+## onAdded
 
 `i18next.on('added', function(lng, ns) {})`
 
 Gets fired when resources got added.
 
 
-## removed
+## onRemoved
 
 `i18next.on('removed', function(lng, ns) {})`
 
 Gets fired when resources got removed.
 
 
-## languageChanged
+## onLanguageChanged
 
 `i18next.on('languageChanged', function(lng) {})`
 
@@ -369,7 +396,7 @@ Gets fired when changeLanguage got called.
 
 # resource handling
 
-Can be accessed on `i18next` or `i18next.services.resourceStore`
+Can be accessed on `i18next` or `i18next.services.resourceStore`.
 
 
 ## getResource
@@ -378,12 +405,29 @@ Can be accessed on `i18next` or `i18next.services.resourceStore`
 
 Gets one value by given key.
 
+options:
+
+option        | default    | description
+--------------|----------- | -----------------
+keySeparator  | "."   | char to separate keys, or false if no separator is prefered 
+
+
+
+
 
 ## addResource
 
 `i18next.addResource(lng, ns, key, value, options)`
 
 Adds one key/value.
+
+options:
+
+option        | default    | description
+--------------|----------- | -----------------
+keySeparator  | "."   | char to separate keys, or false if no separator is prefered 
+silent        | false | if set to true adding will not emit an added event
+
 
 
 ## addResources
@@ -392,12 +436,26 @@ Adds one key/value.
 
 Adds multiple key/values.
 
-
+{% method %}
 ## addResourceBundle
 
 `i18next.addResourceBundle(lng, ns, resources, deep, overwrite)`
 
-Adds a complete bundle. Optionally extends existing bundle deep and overwrites existing values.
+Adds a complete bundle.
+
+Setting deep param to true will extend existing translations in that file.
+
+Setting overwrite to true it will overwrite existing translations in that file.
+
+{% sample lang="js" %}
+
+```js
+i18next.addResourceBundle('en', 'translations', {
+  key: 'value';
+}, true, true);
+```
+
+{% endmethod %}
 
 
 ## hasResourceBundle
