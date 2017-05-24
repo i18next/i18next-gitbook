@@ -27,3 +27,7 @@
 **How do i keep overview over my translation progress?**
 
 *Might be time to use a translation management tool.*
+
+**How to handle with changes in e2e tests**
+
+**For e2e tests a good tactic is to set language to `cimode` on init. This will set i18next to always return the key on calling `i18next.t`. Want to add the namespace to returned value change `appendNamespaceToCIMode: true` on init.
