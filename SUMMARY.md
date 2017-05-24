@@ -4,10 +4,10 @@
 
 * [Introduction](README.md)
 * [Getting started](getting-started.md)
-* [Supported Frameworks](supported-frameworks.md)
-* [Plugins and Utils](plugins-and-utils.md)
 * [API](api.md)
 * [Configuration Options](configuration-options.md)
+* [Supported Frameworks](supported-frameworks.md)
+* [Plugins and Utils](plugins-and-utils.md)
 * [For Enterprises](for-enterprises.md)
 
 ## Principles
