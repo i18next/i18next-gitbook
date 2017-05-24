@@ -112,34 +112,44 @@ anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('another
 
 {% endmethod %}
 
-
+{% method %}
 ## changeLanguage
 
 `i18next.changeLanguage(lng, callback)`
 
-Changes the language.
+Changes the language. The callback will be called as soon translations were loaded or an error occurs while loading.
+
+**HINT:** For easy testing - setting lng to 'cimode' will set t function to always return the key.
+
+
+{% sample lang="js" %}
 
 ```js
 i18next.changeLanguage('en', (err, t) => {
-  // resources have been loaded
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
 });
 ```
 
-**HINT:** For easy testing - setting lng to 'cimode' will set t function to return the key.
+{% endmethod %}
 
 
 ## language
 
 `i18next.language`
 
-gets the set language.
+Is set to the current detected or set language.
+
+If you need the primary used language depending on your configuration (whilelist, load) you will prefer using `i18next.languages[0]`.
 
 
 ## languages
 
 `i18next.languages`
 
-gets an array of language-codes that will be used it array order to lookup the translation value.
+Is set to an array of language-codes that will be used it order to lookup the translation value.
+
+
 
 
 ## loadNamespaces
