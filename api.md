@@ -153,46 +153,69 @@ Is set to an array of language-codes that will be used it order to lookup the tr
 
 
 
-
+{% method %}
 ## loadNamespaces
 
 `i18next.loadNamespaces(ns, callback)`
 
 Loads additional namespaces not defined in init options.
 
+
+{% sample lang="js" %}
+
+
 ```js
 i18next.loadNamespaces('myNamespace', (err, t) => { /* resources have been loaded */ });
 i18next.loadNamespaces(['myNamespace1', 'myNamespace2'], (err, t) => { /* resources have been loaded */ });
 ```
 
+{% endmethod %}
 
+
+
+{% method %}
 ## loadLanguages
 
 `i18next.loadLanguages(lngs, callback)`
 
-Loads additional languages not defined in init options.
+Loads additional languages not defined in init options (preload).
+
+{% sample lang="js" %}
+
 
 ```js
 i18next.loadLanguages('de', (err, t) => { /* resources have been loaded */ });
 i18next.loadLanguages(['de', 'fr'], (err, t) => { /* resources have been loaded */ });
 ```
+{% endmethod %}
 
 
-## loadResources
-
-`i18next.loadResources(callback)`
-
-Loads resources on given state. Gets called internal on init, changeLanguage.
-
-
-
+{% method %}
 ## reloadResources
 
 `i18next.reloadResources()`
 
-Reloads resources on given state. Optionally you can pass an array of languages and namespaces as params if you don't want to relaod all.
+Reloads resources on given state. Optionally you can pass an array of languages and namespaces as params if you don't want to reload all.
 
-reloadResources(lngs, ns)
+{% sample lang="js" %}
+
+
+```js
+// reload all
+i18next.reloadResources();
+
+// reload languages
+i18next.reload(['de', 'fr']);
+
+// reload namespaces for all languages
+i18next.reload(null, ['ns1', 'ns2']);
+
+// reload namespaces in languages
+i18next.reload(['de', 'fr'], ['ns1', 'ns2']);
+```
+
+
+{% endmethod %}
 
 
 ## setDefaultNamespace
@@ -202,22 +225,67 @@ reloadResources(lngs, ns)
 Changes the default namespace.
 
 
+{% method %}
 ## dir
 
 `i18next.dir(lng)`
 
 Returns `rtl` or `ltr` depending on languages read direction.
 
+{% sample lang="js" %}
+
+
+```js
+i18next.dir('en'); // -> "ltr";
+i18next.dir('ar'); // -> "rtl";
+
+// get direction for the current used language
+const usedLocal = i18next.languages[0]; // -> "en-US"
+const usedLanguage = i18next.services.languageUtils.getLanguagePartFromCode(usedLocal); // -> "en"
+
+i18next.dir(usedLanguage); // -> "ltr"
+
+```
+
+{% endmethod %}
+
 
 ----------
 
 # instance creation
 
+{% method %}
 ## createInstance
 
 `i18next.createInstance(options, callback)`
 
-Creates a new instance.
+Will return a new i18next instance.
+
+Please read the [options page](../options/) for details on configuration options.
+
+Providing a callback will automatically call init.
+
+The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
+
+{% sample lang="js" %}
+
+
+```js
+const newInstance = i18next.createInstance({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
+}))
+```
+
+{% method %}
+
+
+
 
 
 ## cloneInstance
