@@ -8,7 +8,7 @@ What makes i18next outstanding? It goes over just providing the i18n features \(
 
 <img src="/assets/img/frameworks.png" width="50%" />
 
-Learn it once - use it everywhere. The community made integrations for frameworks like react.js, angualar.js, vue.js and many more. But this is not where it ends...you can use i18next with node.js, php, ios, android and other platforms.
+**Learn once - use everywhere**. The community made integrations for frameworks like react.js, angualar.js, vue.js and many more. But this is not where it ends...you can use i18next with node.js, php, ios, android and other platforms.
 
 I18next reached not only the web, but also mobile and desktop development.
 
