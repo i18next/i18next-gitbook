@@ -1,8 +1,6 @@
 <!-- toc -->
 # Configuration options
 
-## init options
-
 `i18next.init(options, callback)`
 
 
