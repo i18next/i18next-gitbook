@@ -451,7 +451,7 @@ Setting overwrite to true it will overwrite existing translations in that file.
 
 ```js
 i18next.addResourceBundle('en', 'translations', {
-  key: 'value';
+  key: 'value',
 }, true, true);
 ```
 
