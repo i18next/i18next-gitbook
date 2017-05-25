@@ -51,7 +51,7 @@ There are tons of modules built for and around i18next from extracting translati
 
 It even provides with [locize.com](http://locize.com) a own translation management tool - localization as a service offering.
 
-<img src="/assets/img/locize_recap_big_low.gif" />
+<img src="/assets/img/dashboard.png" width="50%" />
 
 [Learn more about the enterprise offering](/for-enterprises.md)
 
