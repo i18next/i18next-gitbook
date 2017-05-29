@@ -242,19 +242,36 @@ Returns `rtl` or `ltr` depending on languages read direction.
 
 
 ```js
-i18next.dir('en'); // -> "ltr";
+// for current language
+i18next.dir();
+
+// for another language
+i18next.dir('en-US'); // -> "ltr";
 i18next.dir('ar'); // -> "rtl";
-
-// get direction for the current used language
-const usedLocal = i18next.languages[0]; // -> "en-US"
-const usedLanguage = i18next.services.languageUtils.getLanguagePartFromCode(usedLocal); // -> "en"
-
-i18next.dir(usedLanguage); // -> "ltr"
-
 ```
 
 {% endmethod %}
 
+{% method %}
+## format
+
+`i18next.format(data, format, lng)`
+
+_introduced in v8.4.0_
+
+Exposes `interpolation.format`t function added on init.
+
+For formatting used in translation files checkout the [formatting doc](/formatting.md).
+
+{% sample lang="js" %}
+
+
+```js
+// key = 'hello {{what}}'
+i18next.t('key', { what: i18next.format('world', 'uppercase') }); // -> hello WORLD
+```
+
+{% endmethod %}
 
 ----------
 
