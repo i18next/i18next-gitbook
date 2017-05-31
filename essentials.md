@@ -1,8 +1,9 @@
 <!-- toc -->
 # Essentials
 
-{% method %}
 ## Accessing keys
+{% method %}
+
 
 keys
 
@@ -30,8 +31,9 @@ i18next.t('look.deep');
 {% endmethod %}
 
 
-{% method %}
 ## Accessing keys in different namespaces
+{% method %}
+
 
 Namespaces are a feature in i18next internationalization framework which allows you to separate translations that get loaded into multiple files.
 
@@ -76,8 +78,9 @@ i18next.t('common:button.save');
 {% endmethod %}
 
 
-{% method %}
 ## Multiple fallback keys
+{% method %}
+
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
 
