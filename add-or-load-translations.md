@@ -4,8 +4,9 @@
 There are a few options to load translations to your application instrumented by i18next. The most common approach to this adding a so called **backend plugin** to i18next. The range of backends is large from loading translations in the browser using xhr request to loading translations from databases or filesystem in nodejs.  
 
 
-{% method %}
 ## Add on init
+{% method %}
+
 
 You can add the translations on init
 
@@ -40,8 +41,8 @@ i18next
 {% endmethod %}
 
 
-{% method %}
 ## Add after init
+{% method %}
 
 You can add the translations after init
 
@@ -61,9 +62,9 @@ i18next.addResouceBundle('en, 'namespace1', {
 There are more options to adding, removing translations...learn more about [resource handling](/api.md).
 
 
-  
-{% method %}
+
 ## Load using a backend plugin
+{% method %}
 
 
 Each plugin comes with a set of on configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
