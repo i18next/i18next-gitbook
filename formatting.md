@@ -7,8 +7,8 @@ You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](
 
 
 
-{% method %}
 ## Basic
+{% method %}
 
 As a sample using momentjs to format dates.
 
@@ -56,8 +56,9 @@ i18next.on('languageChanged', function(lng) {
 
 {% endmethod %}
 
-{% method %}
+
 ## Additional options
+{% method %}
 
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
 
