@@ -1,8 +1,10 @@
 <!-- toc -->
 # Objects and arrays
 
-{% method %}
+
 ## Objects
+{% method %}
+
 
 You can return objects or arrays to be used by third party modules localization:
 
@@ -35,8 +37,10 @@ The returned value supports interpolation, plurals, nesting, ...
 
 {% endmethod %}
 
-{% method %}
+
 ## Arrays
+{% method %}
+
 
 You can access array values or join them.
 
