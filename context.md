@@ -3,8 +3,9 @@
 
 By providing a context you can differ translations. Eg. useful to provide gender specific translations.
 
-{% method %}
+
 ## Basic
+{% method %}
 
 keys
 
@@ -27,8 +28,9 @@ i18next.t('friend', { context: 'female' }); // -> "A girlfriend"
 
 {% endmethod %}
 
-{% method %}
 ## Combining with plurals
+{% method %}
+
 
 You can pass entire data models in options.
 
