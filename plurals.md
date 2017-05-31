@@ -3,8 +3,9 @@
 
 Plural can be combined with interpolation, context, ...
 
-{% method %}
+
 ## Singular / Plural
+{% method %}
 
 keys
 
@@ -33,8 +34,9 @@ i18next.t('keyWithCount', {count: 100}); // -> "100 items"
 
 {% endmethod %}
 
-{% method %}
+
 ## Languages with multiple plurals
+{% method %}
 
 Sample uses arabic which has 5 plural forms beside the singular.
 
@@ -78,9 +80,9 @@ You can use this small utility to get the correct plural suffixes.
 
 
 
-
-{% method %}
 ## Interval plurals
+{% method %}
+
 
 Want to define phrases expressing the number of items lies in a range. Like *a few items* or *a lot of items*.
 
