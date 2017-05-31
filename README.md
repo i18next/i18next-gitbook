@@ -1,6 +1,5 @@
 # What is i18next?
 
-<div style="height: 50px">
 <iframe src="https://ghbtns.com/github-btn.html?user=i18next&repo=i18next&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
 [![Travis](https://img.shields.io/travis/i18next/i18next/master.svg?style=flat-square)](https://travis-ci.org/i18next/i18next)
@@ -11,7 +10,7 @@
 [![npm version](https://img.shields.io/npm/v/i18next.svg?style=flat-square)](https://www.npmjs.com/package/i18next)
 [![Bower](https://img.shields.io/bower/v/i18next.svg?style=flat-square)]()
 [![David](https://img.shields.io/david/i18next/i18next.svg?style=flat-square)](https://david-dm.org/i18next/i18next)
-</div>
+
 
 The short answer would be i18next is a internationalization **i18n-framework** written in and for javascript. But it's more than that.
 
