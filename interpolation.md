@@ -7,8 +7,10 @@ Per default those interpolations get escaped to safe you from possible xss attac
 
 If you do not like the interpolation functionality provided you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
 
-{% method %}
+
 ## Basic
+{% method %}
+
 
 Interpolation is one of the most used functionality.
 
@@ -30,8 +32,9 @@ i18next.t('key', { what: 'i18next', how: 'great' });
 
 {% endmethod %}
 
-{% method %}
+
 ## Working with data models
+{% method %}
 
 You can pass entire data models in options.
 
@@ -60,8 +63,9 @@ i18next.t('key', { author });
 
 
 
-{% method %}
 ## Unescape
+{% method %}
+
 
 Per default the values get escaped to safe from possible xss attacks. You can toggle escaping off.
 
@@ -96,8 +100,9 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false 
 
 
 
-{% method %}
+
 ## Additional options
+{% method %}
 
 Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
 
