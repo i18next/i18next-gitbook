@@ -3,8 +3,9 @@
 
 Nesting allows you to reference other keys in a translation. Could be useful to build glossary terms.
 
-{% method %}
+
 ## Basic
+{% method %}
 
 keys
 
@@ -28,8 +29,8 @@ You can reference keys from other namespaces by prepending the namespace: `"nest
 
 {% endmethod %}
 
-{% method %}
 ## Passing options to nestings
+{% method %}
 
 You can pass entire data models in options.
 
@@ -56,9 +57,8 @@ i18next.t('girlsAndBoys', {count: 2, girls: 3});
 
 
 
-
-{% method %}
 ## Passing nesting to interpolated
+{% method %}
 
 keys
 
@@ -81,8 +81,9 @@ i18next.t('key2', {val: '$t(key1)'});
 
 
 
-{% method %}
 ## Additional options
+{% method %}
+
 
 Prefix/Suffix for nesting and other options can be overridden in init interpolation options or by passing additional options to t function:
 
