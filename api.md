@@ -1,8 +1,8 @@
 <!-- toc -->
 # API
 
-{% method %}
 ## init
+{% method %}
 
 `i18next.init(options, callback)`
 
@@ -34,8 +34,9 @@ i18next.init((err, t) => {
 
 {% endmethod %}
 
-{% method %}
+
 ## use
+{% method %}
 
 `i18next.use(module)`
 
@@ -62,8 +63,9 @@ i18next
 
 {% endmethod %}
 
-{% method %}
+
 ## t
+{% method %}
 
 `i18next.t(key, options)`
 
@@ -79,8 +81,8 @@ i18next.t('my.key'); // -> will return value in set language
 {% endmethod %}
 
 
-{% method %}
 ## exists
+{% method %}
 
 `i18next.exists(key, options)`
 
@@ -95,8 +97,9 @@ i18next.exits('my.key'); // -> true if exists, false if not
 {% endmethod %}
 
 
-{% method %}
+
 ## getFixedT
+{% method %}
 
 `i18next.getFixedT(lng, ns)`
 
@@ -120,8 +123,10 @@ anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('another
 
 {% endmethod %}
 
-{% method %}
+
 ## changeLanguage
+{% method %}
+
 
 `i18next.changeLanguage(lng, callback)`
 
@@ -158,9 +163,8 @@ If you need the primary used language depending on your configuration (whilelist
 Is set to an array of language-codes that will be used it order to lookup the translation value.
 
 
-
-{% method %}
 ## loadNamespaces
+{% method %}
 
 `i18next.loadNamespaces(ns, callback)`
 
@@ -196,8 +200,9 @@ i18next.loadLanguages(['de', 'fr'], (err, t) => { /* resources have been loaded 
 {% endmethod %}
 
 
-{% method %}
+
 ## reloadResources
+{% method %}
 
 `i18next.reloadResources()`
 
@@ -231,8 +236,8 @@ i18next.reload(['de', 'fr'], ['ns1', 'ns2']);
 Changes the default namespace.
 
 
-{% method %}
 ## dir
+{% method %}
 
 `i18next.dir(lng)`
 
@@ -252,8 +257,10 @@ i18next.dir('ar'); // -> "rtl";
 
 {% endmethod %}
 
-{% method %}
+
 ## format
+{% method %}
+
 
 `i18next.format(data, format, lng)`
 
@@ -277,8 +284,10 @@ i18next.t('key', { what: i18next.format('world', 'uppercase') }); // -> hello WO
 
 # instance creation
 
-{% method %}
+
 ## createInstance
+{% method %}
+
 
 `i18next.createInstance(options, callback)`
 
@@ -322,8 +331,10 @@ newInstance.init({
 
 
 
-{% method %}
+
 ## cloneInstance
+{% method %}
+
 
 `i18next.cloneInstance(options, callback)`
 
@@ -453,8 +464,10 @@ silent        | false | if set to true adding will not emit an added event
 
 Adds multiple key/values.
 
-{% method %}
+
 ## addResourceBundle
+{% method %}
+
 
 `i18next.addResourceBundle(lng, ns, resources, deep, overwrite)`
 
