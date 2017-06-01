@@ -1,5 +1,5 @@
 {
-    "plugins": [ "edit-link", "theme-api", "jsfiddle", "custom-favicon", "simple-page-toc" ],
+    "plugins": [ "edit-link", "theme-api", "jsfiddle", "custom-favicon" ],
     "pluginsConfig": {
         "edit-link": {
             "base": "https://github.com/i18next/i18next-gitbook/edit/master/",

@@ -54,7 +54,7 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
 
 /* page */
 .page-wrapper {
-  /* padding-bottom: 20px; */
+  padding-bottom: 20px;
 }
 
 /* page toc */
