@@ -1,7 +1,7 @@
 
 # What is i18next?
 
-<iframe src="https://ghbtns.com/github-btn.html?user=i18next&repo=i18next&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
 
 [![Travis](https://img.shields.io/travis/i18next/i18next/master.svg?style=flat-square)](https://travis-ci.org/i18next/i18next)
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/i18next/i18next)
