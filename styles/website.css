@@ -76,3 +76,14 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
 .book-header {
     z-index: 4000;
 }
+
+/* workaround for non working initial top position - initial load scrolls title up 50px */
+.book-body {
+    top: 50px;
+}
+.body-inner {
+    min-height: 100%;
+}
+.page-inner {
+    margin-top: 0;
+}
