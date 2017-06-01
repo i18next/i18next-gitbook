@@ -73,3 +73,6 @@ h2 > a:hover:before, h3 > a:hover:before, h4 > a:hover:before, h5 > a:hover:befo
     float: right;
     margin-left: 40px;
 }
+.book-header {
+    z-index: 4000;
+}
