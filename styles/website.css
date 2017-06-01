@@ -26,7 +26,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h2, h3, h4, h5 {
-    /*position: relative;*/
+    position: relative;
 }
 
 h2 > a:before, h3 > a:before, h4 > a:before, h5 > a:before {
