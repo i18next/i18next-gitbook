@@ -173,8 +173,10 @@ translation.json
 
 ```json
 {
-  "error": "Something went wrong.",
-  "error.404": "The page was not found."
+  "error": {
+    "unspecific": "Something went wrong.",
+    "404": "The page was not found."
+  }
 }
 ```
 
@@ -182,9 +184,9 @@ Sample
 
 ```js
 // const error = '404';
-i18next.t([`error.${error}`, 'error']) // -> "The page was not found"
+i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"
 
 // const error = '502';
-i18next.t([`error.${error}`, 'error']) // -> "Something went wrong"
+i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 
 ```
