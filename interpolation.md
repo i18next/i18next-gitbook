@@ -127,8 +127,8 @@ option            | default             | description
 ----------------- | --------------------| -----------------
 escape            | function            | escape function `function escape(str) { return str; }`
 escapeValue       | true                | escapes passed in values to avoid xss injection
-prefix            | "{{"                | prefix for interpolation
-suffix            | "}}"                | suffix for interpolation
+prefix            | "\{\{"                | prefix for interpolation
+suffix            | "\}\}"                | suffix for interpolation
  from interpolation value
 prefixEscaped     | undefined           | escaped prefix for interpolation (regexSafe)
 suffixEscaped     | undefined           | escaped suffix for interpolation (regexSafe)
@@ -147,8 +147,8 @@ format            | noop function       | format function see [formatting](/form
 formatSeparator   | ","                 | used to separate format from interpolation value
 escape            | function            | escape function `function escape(str) { return str; }`
 escapeValue       | true                | escape passed in values to avoid xss injection
-prefix            | "{{"                | prefix for interpolation
-suffix            | "}}"                | suffix for interpolation
+prefix            | "\{\{"                | prefix for interpolation
+suffix            | "\}\}"                | suffix for interpolation
 prefixEscaped     | undefined           | escaped prefix for interpolation (regexSafe)
 suffixEscaped     | undefined           | escaped suffix for interpolation (regexSafe)
 unescapeSuffix    | undefined           | suffix to unescaped mode
