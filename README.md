@@ -18,7 +18,7 @@ The short answer would be i18next is a internationalization **i18n-framework** w
 
 What makes i18next outstanding? It goes over just providing the i18n features \(plurals, context, interpolation, format\) expected. It provides you with a complete solution to localize your product from client to server, from web to mobile and desktop.
 
-## i18next runs everywhere
+## learn once - translate everywhere
 
 <img src="/assets/img/i18next-frameworks.png" width="50%" />
 
