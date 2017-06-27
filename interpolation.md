@@ -127,13 +127,13 @@ option            | default             | description
 ----------------- | --------------------| -----------------
 escape            | function            | escape function `function escape(str) { return str; }`
 escapeValue       | true                | escapes passed in values to avoid xss injection
-prefix            | '{{'                | prefix for interpolation
-suffix            | '}}'                | suffix for interpolation
+prefix            | "{{"                | prefix for interpolation
+suffix            | "}}"                | suffix for interpolation
  from interpolation value
 prefixEscaped     | undefined           | escaped prefix for interpolation (regexSafe)
 suffixEscaped     | undefined           | escaped suffix for interpolation (regexSafe)
 unescapeSuffix    | undefined           | suffix to unescaped mode
-unescapePrefix    | '-'                 | prefix to unescaped mode
+unescapePrefix    | "-"                 | prefix to unescaped mode
 defaultVariables  | undefined           | default variables to use in interpolation replacements
 
 While there are a lot of options going with the defaults should get you covered.
@@ -144,17 +144,17 @@ While there are a lot of options going with the defaults should get you covered.
 option            | default             | description
 ----------------- | --------------------| -----------------
 format            | noop function       | format function see [formatting](/formatting.md) for details
-formatSeparator   | ','                 | used to separate format from interpolation value
+formatSeparator   | ","                 | used to separate format from interpolation value
 escape            | function            | escape function `function escape(str) { return str; }`
 escapeValue       | true                | escape passed in values to avoid xss injection
-prefix            | '{{'                | prefix for interpolation
-suffix            | '}}'                | suffix for interpolation
+prefix            | "{{"                | prefix for interpolation
+suffix            | "}}"                | suffix for interpolation
 prefixEscaped     | undefined           | escaped prefix for interpolation (regexSafe)
 suffixEscaped     | undefined           | escaped suffix for interpolation (regexSafe)
 unescapeSuffix    | undefined           | suffix to unescaped mode
-unescapePrefix    | '-'                 | prefix to unescaped mode
-nestingPrefix     | '$t('               | prefix for [nesting](/nesting.md)
-nestingSuffix     | ')'                 | suffix for nesting
+unescapePrefix    | "-"                 | prefix to unescaped mode
+nestingPrefix     | "$t("               | prefix for [nesting](/nesting.md)
+nestingSuffix     | ")"                 | suffix for nesting
 nestingPrefixEscaped     | undefined               | escaped prefix for nesting (regexSafe)
 nestingSuffixEscaped     | undefined               | escaped suffix for nesting (regexSafe)
 defaultVariables  | undefined           | global variables to use in interpolation replacements
