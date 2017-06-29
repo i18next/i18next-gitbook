@@ -6,6 +6,7 @@ framework         | url     | description
 react.js | [react-i18next](https://github.com/i18next/react-i18next) | Higher order component and append i18next to context.
 angular.js | [ng-i18next](https://github.com/i18next/ng-i18next) | Angular1/2 provider, directive and filter
 angular.js | [ng2-i18next](https://github.com/actimeo/ng2-i18next) | Angular2 service and directive
+angular.js | [angular-i18next](https://github.com/Romanchuk/angular-i18next) | Angular 2.0+ integration (service, pipes, events)
 vue.js | [vue-i18next](https://github.com/rse/vue-i18next) | Vue plugin for integrating i18next
 vue.js | [vue-i18next](https://github.com/panter/vue-i18next) | Vue plugin for integrating i18next
 elm | [elm-i18next](https://github.com/ChristophP/elm-i18next) | Load and use JSON translations files at runtime
