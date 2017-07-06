@@ -420,6 +420,12 @@ Gets fired when resources got removed.
 Gets fired when changeLanguage got called.
 
 
+## off
+
+`i18next.off('languageChanged', previouslyAddedListenerFunction)`
+
+Unregisters a previously registered event listener.
+
 ---------
 
 # resource handling
