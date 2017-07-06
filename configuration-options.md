@@ -51,7 +51,7 @@ joinArrays        | false               | char, eg. '\n' that arrays will be joi
 overloadTranslationOptionHandler | function(args) { return { defaultValue: args[1] }; }; | default: sets defaultValue
 interpolation     | {...}               | see interpolation 
 
-## plugin options
+## plugin options
 
 option            | default             | description
 ----------------- | --------------------| -----------------
