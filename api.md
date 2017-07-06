@@ -266,7 +266,7 @@ i18next.dir('ar'); // -> "rtl";
 
 _introduced in v8.4.0_
 
-Exposes `interpolation.format`t function added on init.
+Exposes `interpolation.format` function added on init.
 
 For formatting used in translation files checkout the [formatting doc](/formatting.md).
 
