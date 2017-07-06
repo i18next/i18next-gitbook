@@ -69,7 +69,7 @@ i18next
 
 `i18next.t(key, options)`
 
-Please have a look at the translation functions like [interpolation](/interpolation.md), [formatting](/formatting.md) and [plurals](/plurals.md) for more details on using it.
+Please read more about it in [essentials](/essentials.md) and have a look at the translation functions like [interpolation](/interpolation.md), [formatting](/formatting.md) and [plurals](/plurals.md) for more details on using it.
 
 
 {% sample lang="js" %}
