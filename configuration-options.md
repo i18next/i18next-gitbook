@@ -49,7 +49,7 @@ returnObjects     | false               | allows objects as valid translation re
 returnedObjectHandler | noop            | `function(key, value, options) {}` gets called if object was passed in as key but returnObjects was set to false
 joinArrays        | false               | char, eg. '\n' that arrays will be joined by
 overloadTranslationOptionHandler | function(args) { return { defaultValue: args[1] }; }; | default: sets defaultValue
-interpolation     | {...}               | see interpolation 
+interpolation     | {...}               | see [interpolation](/interpolation.md) 
 
 ## plugin options
 
