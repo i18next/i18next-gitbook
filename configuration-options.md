@@ -34,7 +34,7 @@ option            | default             | description
 saveMissing       | false               | calls save missing key function on backend if key not found
 saveMissingTo     | 'fallback'          | 'current' or 'all'
 missingKeyHandler | false               | `function(lng, ns, key, fallbackValue) { }` used for custom  missing key handling (needs saveMissing set to true!)
-parseMissingKeyHandler | noop           | function(key) { // return value to display }
+parseMissingKeyHandler | noop           | `function(key) { }` receives a key that was not found in `t()` and returns a value, that will be returned by `t()`
 appendNamespaceToMissingKey | false     | appends namespace to missing key
 
 ## translation defaults
