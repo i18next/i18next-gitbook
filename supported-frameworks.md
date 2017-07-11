@@ -1,5 +1,7 @@
 # Frameworks
 
+<img src="/assets/img/i18next-ecosystem.jpg" width="50%" />
+
 
 framework         | url     | description
 ----------------- | ------- | --------------------

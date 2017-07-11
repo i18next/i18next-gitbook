@@ -1,6 +1,8 @@
 <!-- toc -->
 # Plugins and Utils
 
+<img src="/assets/img/i18next-ecosystem.jpg" width="50%" />
+
 
 ## utils
 
