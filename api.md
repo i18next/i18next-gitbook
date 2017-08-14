@@ -91,7 +91,7 @@ Uses the same resolve functionality as the `t` function and returns true if a ke
 {% sample lang="js" %}
 
 ```js
-i18next.exits('my.key'); // -> true if exists, false if not
+i18next.exists('my.key'); // -> true if exists, false if not
 ```
 
 {% endmethod %}
