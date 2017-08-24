@@ -67,15 +67,18 @@ i18next
 ## t
 {% method %}
 
-`i18next.t(key, options)`
+`i18next.t(keys, options)`
 
 Please have a look at the translation functions like [interpolation](/interpolation.md), [formatting](/formatting.md) and [plurals](/plurals.md) for more details on using it.
 
+You can specify either one key as a `String` or multiple keys as an `Array` of `String`. The first one that resolves will be returned.
 
 {% sample lang="js" %}
 
 ```js
 i18next.t('my.key'); // -> will return value in set language
+
+i18next.t(['unknown.key', 'my.key']); // -> will return value for 'my.key' in set language
 ```
 
 {% endmethod %}
