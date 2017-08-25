@@ -1,6 +1,12 @@
 <!-- toc -->
 # Migration Guide
 
+## v8.x.x to v9.0.0
+
+With v9 we removed the compatibility for the v1 API. So the `compatibilityAPI: 'v1'` flag won't do anything anymore.
+
+You still can append this manually as we do for our old v1 tests - [learn more](https://github.com/i18next/i18next/blob/master/test/backward/v1.11.1.compat.js#L45-L52).
+
 ## v7.x.x to v8.0.0
 
 The `nonExplicitWhitelist` flag was changed to be used in user detected language too, before it was restricted to defined fallback languages only.
