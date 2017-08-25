@@ -158,4 +158,5 @@ nestingSuffix     | ")"                 | suffix for nesting
 nestingPrefixEscaped     | undefined               | escaped prefix for nesting (regexSafe)
 nestingSuffixEscaped     | undefined               | escaped suffix for nesting (regexSafe)
 defaultVariables  | undefined           | global variables to use in interpolation replacements
+maxReplaces | 1000 | after how many interpolation runs to break out before throwing a stack overflow
 
