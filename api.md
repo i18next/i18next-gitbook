@@ -476,9 +476,10 @@ Adds multiple key/values.
 
 Adds a complete bundle.
 
-Setting deep param to true will extend existing translations in that file.
+Setting deep (default false) param to true will extend existing translations in that file.
+Setting deep and overwrite (default false) to true it will overwrite existing translations in that file.
 
-Setting overwrite to true it will overwrite existing translations in that file.
+So omitting deep and overwrite will overwrite all existing translations with the one provided in resources. Using deep you can choose to keep existing nested translation and to overwrite those with the new ones.
 
 {% sample lang="js" %}
 
