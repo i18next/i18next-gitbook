@@ -64,6 +64,9 @@ backend           | description
 cache             | description
 ----------------- | --------------------
 [localStorage cache](https://github.com/i18next/i18next-localStorage-cache) | caching layer for i18next using browsers localStorage
+[localForage cache](https://github.com/milanito/i18next-localforage-cache) | This is a i18next cache layer to be used in the browser. It will load and cache resources using localForage
+
+
 
 
 ### language detector
