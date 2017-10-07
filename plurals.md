@@ -75,7 +75,7 @@ i18next.t('key', {count: 100}); // -> "plural"
 
 You can use this small utility to get the correct plural suffixes.
 
-[source code](https://jsfiddle.net/jamuhl/ryz7om9y/#tabs=result)
+[source code](https://jsfiddle.net/jamuhl/3sL01fn0/#tabs=result)
 
 
 
