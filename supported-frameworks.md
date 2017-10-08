@@ -11,8 +11,9 @@ angular.js | [ng2-i18next](https://github.com/actimeo/ng2-i18next) | Angular2 se
 angular.js | [angular-i18next](https://github.com/Romanchuk/angular-i18next) | Angular 2.0+ integration (service, pipes, events)
 vue.js | [vue-i18next](https://github.com/rse/vue-i18next) | Vue plugin for integrating i18next
 vue.js | [vue-i18next](https://github.com/panter/vue-i18next) | Vue plugin for integrating i18next
-elm | [elm-i18next](https://github.com/ChristophP/elm-i18next) | Load and use JSON translations files at runtime
-express.js | [nodejs express middleware](https://github.com/i18next/i18next-express-middleware) | Middleware to use i18next in express.js (nodejs).
+inferno.js | [inferno-i18next](https://www.npmjs.com/package/inferno-i18next) | inferno-i18next is a translation utility for Inferno components
+elm | [elm-i18next](https://github.com/ChristophP/elm-i18next) | use i18next in elm
+express.js | [nodejs express middleware](https://github.com/i18next/i18next-express-middleware) | Middleware to use i18next in express.js (nodejs).
 koa.js | [koa-i18next](https://github.com/sunfuze/koa-i18next) | A middleware to use i18next in koajs.
 koa.js | [koa-i18next-middleware](https://github.com/lxzxl/koa-i18next-middleware) | An i18next middleware for Koa framework. Use with koa-i18next-middleware
 hapi.js | [hapi-i18next](https://github.com/kenkouot/hapi-i18next) | i18next integration for hapijs
