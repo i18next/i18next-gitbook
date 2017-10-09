@@ -1,6 +1,17 @@
 <!-- toc -->
 # Migration Guide
 
+## v9.x.x to v10.0.0
+
+brings pt, pt-PT, pt-BR plurals in line with, new pt reflects pt-BR and pt-PT gets a special case for plural handling http://www.unicode.org/cldr/charts/26/supplemental/language_plural_rules.html
+
+code | locale | rule
+-----|--------|----------
+pt-PT|Portugal Portuguese|nplurals=2; plural=(n != 1);
+pt_BR|Brazilian Portuguese|plurals=2; plural=(n > 1);
+pt|Portuguese|plurals=2; plural=(n > 1);
+
+
 ## v8.x.x to v9.0.0
 
 With v9 we removed the compatibility for the v1 API. So the `compatibilityAPI: 'v1'` flag won't do anything anymore.
