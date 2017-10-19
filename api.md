@@ -219,13 +219,13 @@ Reloads resources on given state. Optionally you can pass an array of languages 
 i18next.reloadResources();
 
 // reload languages
-i18next.reload(['de', 'fr']);
+i18next.reloadResources(['de', 'fr']);
 
 // reload namespaces for all languages
-i18next.reload(null, ['ns1', 'ns2']);
+i18next.reloadResources(null, ['ns1', 'ns2']);
 
 // reload namespaces in languages
-i18next.reload(['de', 'fr'], ['ns1', 'ns2']);
+i18next.reloadResources(['de', 'fr'], ['ns1', 'ns2']);
 ```
 
 
