@@ -6,9 +6,9 @@
 
 `i18next.init(options, callback)`
 
-The default export of the i18next module is an i18next instance ready to be initialized by calling `init`. You can create additional instances using the [createInstance](//#createinstance) function.
+The default export of the i18next module is an i18next instance ready to be initialized by calling `init`. You can create additional instances using the [createInstance](#createinstance) function.
 
-Please read the [options page](../options/) for details on configuration options.
+Please read the [options page](../configuration-options.html) for details on configuration options.
 
 The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
 
