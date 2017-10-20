@@ -15,7 +15,7 @@ debug             | false               | logs info level to console output. Hel
 
 option            | default             | description
 ----------------- | --------------------| -----------------
-resources         | undefined           | resources to initialize with (if not using loading or not appending using [addResourceBundle](/api.md))
+resources         | undefined           | resources to initialize with (if not using loading or not appending using [addResourceBundle](/api.md#addresourcebundle))
 lng               | undefined           | language to use (overrides language detection)
 fallbackLng       | 'dev'               | language to use if translations in user language are not available. [Learn more](/principles/fallback.md).
 whitelist         | false               | array of allowed languages
@@ -25,7 +25,7 @@ preload           | false               | array of languages to preload. Importa
 lowerCaseLng      | false               | language will be lowercased eg. `en-US` --> `en-us`
 ns                | 'translation'       | string or array of namespaces to load
 defaultNS         | 'translation'       | default namespace used if not passed to [translation function](/essentials.md)
-fallbackNS        | false               | string or array of namespaces to lookup key if not found in given namespace. [Learn more](/principles/fallback.md).
+fallbackNS        | false               | string or array of namespaces to lookup key if not found in given namespace. [Learn more](/principles/fallback.md#namespace-fallback).
 
 ## missing keys
 
