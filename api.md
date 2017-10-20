@@ -8,7 +8,7 @@
 
 The default export of the i18next module is an i18next instance ready to be initialized by calling `init`. You can create additional instances using the [createInstance](#createinstance) function.
 
-Please read the [options page](../configuration-options.html) for details on configuration options.
+Please read the [options page](/configuration-options.md) for details on configuration options.
 
 The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
 
@@ -296,7 +296,7 @@ i18next.t('key', { what: i18next.format('world', 'uppercase') }); // -> hello WO
 
 Will return a new i18next instance.
 
-Please read the [options page](../options/) for details on configuration options.
+Please read the [options page](/configuration-options.md) for details on configuration options.
 
 Providing a callback will automatically call init.
 
