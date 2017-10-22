@@ -15,17 +15,17 @@ Translation Management Systems are a great help. But most tools out there are bu
 
 # Locize
 
-<a href="http://locize.com" target="_blank">
+<a href="http://locize.com/?utm_source=i18next_com" target="_blank">
 <img src="/assets/img/locize.png" width="50%" />
 </a>
 
 
 
-[Locize](http://locize.com) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
+[Locize](http://locize.com/?utm_source=i18next_com) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
 
 
 
-<a href="http://locize.com" target="_blank">
+<a href="http://locize.com/?utm_source=i18next_com" target="_blank">
 <img src="/assets/img/locize_recap_big_low.gif" />
 </a>
 
