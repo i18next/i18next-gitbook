@@ -3,7 +3,7 @@
 
 You can define a function to handle formattings. Beside formatting numbers or dates you can use this to define custom formattings.
 
-You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](http://numeraljs.com/) or the [intl api](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Intl).
+You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](http://numeraljs.com/) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl).
 
 
 
