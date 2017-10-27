@@ -6,7 +6,6 @@
 framework         | url     | description
 ----------------- | ------- | --------------------
 react.js | [react-i18next](https://github.com/i18next/react-i18next) | Higher order component and append i18next to context.
-react.js | [react-i18next-ondemand](https://github.com/kingatlas/react-i18next-ondemand) | Overload on react-i18next to support ondemand (per key) resource translation.
 angular.js | [ng-i18next](https://github.com/i18next/ng-i18next) | Angular1/2 provider, directive and filter
 angular.js | [ng2-i18next](https://github.com/actimeo/ng2-i18next) | Angular2 service and directive
 angular.js | [angular-i18next](https://github.com/Romanchuk/angular-i18next) | Angular 2.0+ integration (service, pipes, events)
