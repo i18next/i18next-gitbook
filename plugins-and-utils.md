@@ -45,6 +45,7 @@ backend           | description
 ----------------- | --------------------
 [xhr backend](https://github.com/i18next/i18next-xhr-backend) | backend layer for i18next using browsers xhr
 [fetch backend](https://github.com/perrin4869/i18next-fetch-backend) | backend layer for i18next using browsers fetch
+[keys ondemand](https://github.com/kingatlas/i18next-keys-ondemand) | fetch missing keys on demand
 [i18next.gettext](https://github.com/palamccc/i18next.gettext) | gettext backend of i18next
 [nodejs filesystem](https://github.com/i18next/i18next-node-fs-backend) | node.js backend layer for i18next using fs module to load resources from filesystem
 [nodejs filesystem (sync)](https://github.com/sallar/i18next-sync-fs-backend) | node.js backend layer for i18next using fs module to load resources synchronous from filesystem
