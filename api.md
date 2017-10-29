@@ -339,35 +339,17 @@ newInstance.init({
 {% method %}
 
 
-`i18next.cloneInstance(options, callback)`
+`i18next.cloneInstance(options)`
 
-Creates a clone of the current instance. Shares store, plugins and initial configuration. Can be used to create an instance sharing storage but being independent on set language or namespaces.
+Creates a clone of the current instance. Shares store, plugins and initial configuration. Can be used to create an instance sharing storage but being independent on set language or default namespaces.
 
 {% sample lang="js" %}
 
 ```js
 const newInstance = i18next.cloneInstance({
   fallbackLng: 'en',
-  ns: ['file1', 'file2'],
-  defaultNS: 'file1',
-  debug: true
-}, (err, t) => {
-  if (err) return console.log('something went wrong loading', err);
-  t('key'); // -> same as i18next.t
-}));
-
-// is the same as
-const newInstance = i18next.cloneInstance();
-newInstance.init({
-  fallbackLng: 'en',
-  ns: ['file1', 'file2'],
-  defaultNS: 'file1',
-  debug: true
-}, (err, t) => {
-  if (err) return console.log('something went wrong loading', err);
-  t('key'); // -> same as i18next.t
-}));
-
+  defaultNS: 'file1'
+});
 ```
 
 {% endmethod %}
