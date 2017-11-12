@@ -28,6 +28,7 @@ knockout.js | [i18next-ko](https://github.com/leMaik/i18next-ko) | KnockoutJS bi
 phraser | [phaser-i18next](https://github.com/orange-games/phaser-i18next) | Phaser plugin for translations using i18next
 metalsmith | [metalsmith-i18next](https://github.com/macprog-guy/metalsmith-i18next) | Metalsmith plugin for i18next to easily create multiple localised branches of your site.
 django | [django-i18next](http://pythonhosted.org/django-i18next/) | Additions to Django’s i18n module.
+.net **(NEW)** | [i18next-net](https://github.com/leonardobaggio/i18next-net) | .NET C# class for i18next functionality
 php | [i18next-php](https://github.com/Acceptd/i18next-php) | PHP class for basic i18next functionality. [fork of](https://github.com/Mika-/i18next-php)
 rails | [i18next-rails](https://github.com/roblander/i18next-rails) | An asset gem containing bundled i18next javascripts
 rails | [rails-asset-localization](https://github.com/nicolai86/rails-asset-localization) | asset pipeline localization using i18next for rails 3.2 & 4
