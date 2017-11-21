@@ -89,6 +89,7 @@ post processor    | description
 [sprintf post processor](https://github.com/i18next/i18next-sprintf-postProcessor) | sprintf post processor for i18next.
 [interval plurals](https://github.com/i18next/i18next-intervalPlural-postProcessor) | interval based plurals like. "One Item", "A few items", "A lot of items"
 [i18next-react-postprocessor](https://github.com/orzechowskid/i18next-react-postprocessor) | embed React elements inside your i18next translation strings
+[i18next-korean-postposition-processor](https://github.com/Perlmint/i18next-korean-postposition-processor) | i18next post-processor for processing korean postposition
 
 
 ### loggers
