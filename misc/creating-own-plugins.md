@@ -64,7 +64,7 @@ Cache plugins are used to cache resources on consumers.
   },
   load: function(lngs, callback) {
     /* load resources for languages */
-    return {
+    callback({
       en: {
         translations: {
           key: 'value'
@@ -75,7 +75,7 @@ Cache plugins are used to cache resources on consumers.
           key: 'value'
         }
       }
-    };
+    });
   },
   save: function(store) { /* update cache */ }
 }
