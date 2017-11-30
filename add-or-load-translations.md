@@ -59,7 +59,8 @@ i18next.addResourceBundle('en, 'namespace1', {
 
 {% endmethod %}
 
-There are more options to adding, removing translations...learn more about [resource handling](/api.md).
+There are more options to adding, removing translations...learn more about [
+ource handling](/api.md).
 
 
 
