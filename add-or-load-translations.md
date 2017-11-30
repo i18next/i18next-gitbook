@@ -52,14 +52,15 @@ You can add the translations after init
 import i18next from 'i18next';
 
 i18next.init();
-i18next.addResouceBundle('en, 'namespace1', {
+i18next.addResourceBundle('en, 'namespace1', {
   key: 'hello from namespace 1'
 });
 ```
 
 {% endmethod %}
 
-There are more options to adding, removing translations...learn more about [resource handling](/api.md).
+There are more options to adding, removing translations...learn more about [
+ource handling](/api.md).
 
 
 
