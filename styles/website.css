@@ -1,6 +1,6 @@
 /* header */
 h1, h2, h3, h4, h5, h6 {
-  color: #00695C;
+  color: #000;
 }
 
 h2, h3, h4, h5, h6 {
@@ -10,15 +10,15 @@ h2, h3, h4, h5, h6 {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   position: relative;
   text-decoration: none;
-  color: #00695C
+  color: #000
 }
 
 h1 a {
-  color: #00695C
+  color: #000
 }
 
 h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #00796B
+  color: #000
 }
 
 .markdown-section a, a, a:active, a:hover, a:focus, a:visited {
