@@ -33,7 +33,7 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 ## Basic sample
 
-Please be aware this is samples are just showing basic usage of the core functionality. For production usage please consider using one of our [framework integrations](/supported-frameworks.md) to get better and simpler integrations (Setting innerHTML is just done to show how it works).
+Please be aware these samples are just showing basic usage of the core functionality. For production usage please consider using one of our [framework integrations](/supported-frameworks.md) to get better and simpler integrations (Setting innerHTML is just done to show how it works).
 
 ```js
 import i18next from 'i18next';
