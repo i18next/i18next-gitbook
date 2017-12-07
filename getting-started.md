@@ -58,7 +58,7 @@ As you might see this basic sample provides only one language directly added on 
 
 [source code](https://jsfiddle.net/jamuhl/dvk0e8a9/#tabs=js,result,html)
 
-This is a working sample showing translated text. To lear more have a look at the following extended sample.
+This is a working sample showing translated text. To learn more have a look at the following extended sample.
 
 ## Extended sample
 
