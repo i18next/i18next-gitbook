@@ -120,7 +120,7 @@ option            | description
 ----------------- | -----------------
 defaultValue      | defaultValue to return if a translation was not found
 count             | count value used for [plurals](/plurals.md)
-context           | used for [contexts](/context.md) \(eg. male\|female\)
+context           | used for [contexts](/context.md) \(eg. male / female\)
 replace           | object with vars for [interpolation](/interpolation.md) - or put them directly in options
 lng               | override language to use
 lngs              | override languages to use
