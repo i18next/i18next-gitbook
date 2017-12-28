@@ -26,7 +26,7 @@ polymer | [i18next-element](https://github.com/Polymer/i18next-element) | Polyme
 ember.js | [ember-i18next](https://github.com/OCTRI/ember-i18next) | Integrates i18next into Ember CLI apps.
 ember.js | [ember-cli-i18next](https://github.com/recipher/ember-cli-i18next) | Ember CLI addon to wrap i18next
 knockout.js | [i18next-ko](https://github.com/leMaik/i18next-ko) | KnockoutJS bindings for i18next
-phraser | [phaser-i18next](https://github.com/orange-games/phaser-i18next) | Phaser plugin for translations using i18next
+phaser | [phaser-i18next](https://github.com/orange-games/phaser-i18next) | Phaser plugin for translations using i18next
 metalsmith | [metalsmith-i18next](https://github.com/macprog-guy/metalsmith-i18next) | Metalsmith plugin for i18next to easily create multiple localised branches of your site.
 django | [django-i18next](http://pythonhosted.org/django-i18next/) | Additions to Django’s i18n module.
 .net **(NEW)** | [i18next-net](https://github.com/leonardobaggio/i18next-net) | .NET C# class for i18next functionality
