@@ -34,6 +34,7 @@ option            | default             | description
 saveMissing       | false               | calls save missing key function on backend if key not found
 updateMissing     | false               | experimental: enable to update default values using the saveMissing (Works only if defaultValue different from translated value. Only useful on initial development or when keeping code as source of truth not changing values outside of code. Only supported if backend supports it already)
 saveMissingTo     | 'fallback'          | 'current' or 'all'
+saveMissingPlurals | true | will save all plural forms instead of only singular if t was called for plurals
 missingKeyHandler | false               | `function(lng, ns, key, fallbackValue) { }` used for custom  missing key handling (needs saveMissing set to true!)
 parseMissingKeyHandler | noop           | function(key) { // return value to display }
 appendNamespaceToMissingKey | false     | appends namespace to missing key
