@@ -30,6 +30,13 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 - [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)
 
+## Important Read
+
+Before we dive into the first sample please note. i18next by default uses a key based notation to lookup translations, which comes with the benefit of [additional structure](/essentials.md) of your translation files.
+
+The downside of this is your keys can not be in natural language, do not act as a fallback and can not by default include the chars `:` and `.` as those are used by i18next.
+
+If you prefer using natural language please read the [fallback guide](/principles/fallback.md#key-fallback).
 
 ## Basic sample
 
