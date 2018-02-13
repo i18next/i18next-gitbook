@@ -19,7 +19,7 @@ Often you wish to separate some segments out because they belong together. We do
 
 ## technical / editoral reasons
 
-More often you don't want to load all the translations upfront or at least reduce the amount loaded. This reason often goes hand in hand with the one translation file gets to large and you start loosing the overview scrolling through hundred of text fragments.
+More often you don't want to load all the translations upfront or at least reduce the amount loaded. This reason often goes hand in hand with the one translation file gets too large and you start losing the overview scrolling through hundred of text fragments.
 
 - namespace per view/page
 - namespace per application section / feature set (admin area, ...)
