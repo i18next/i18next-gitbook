@@ -52,7 +52,7 @@ You can add the translations after init
 import i18next from 'i18next';
 
 i18next.init();
-i18next.addResourceBundle('en, 'namespace1', {
+i18next.addResourceBundle('en', 'namespace1', {
   key: 'hello from namespace 1'
 });
 ```
