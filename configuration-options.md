@@ -38,6 +38,7 @@ saveMissingPlurals | true | will save all plural forms instead of only singular 
 missingKeyHandler | false               | `function(lng, ns, key, fallbackValue) { }` used for custom  missing key handling (needs saveMissing set to true!)
 parseMissingKeyHandler | noop           | function(key) { // return value to display }
 appendNamespaceToMissingKey | false     | appends namespace to missing key
+missingInterpolationHandler | noop | function(text, value) { return 'stringWithAlternativeValueOrUndefinded' };` gets called in case a interpolation value is missed.
 
 ## translation defaults
 
