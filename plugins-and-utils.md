@@ -60,6 +60,7 @@ backend           | description
 [locize backend](https://github.com/locize/i18next-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com)
 [service backend](https://github.com/timbrandin/i18next-service-backend) | backend layer for external services such as [spacetranslate.com - Simple Translation Service at Scale](http://spacetranslate.com) and [locize.com - localization as a service](http://locize.com).
 [locize nodejs backend](https://github.com/locize/i18next-node-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com)
+[nodejs service backend](https://github.com/timbrandin/i18next-node-service-backend) | backend layer for external services such as [spacetranslate.com - Simple Translation Service at Scale](http://spacetranslate.com) and [locize.com - localization as a service](http://locize.com).
 
 ### caches
 
