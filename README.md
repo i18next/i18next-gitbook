@@ -20,7 +20,7 @@ i18next goes beyond just providing the standard i18n features such as \(plurals,
 
 <img src="/assets/img/i18next-ecosystem.jpg" width="50%" />
 
-The i18next-community created integrations for frontent-frameworks such as React, AngularJS, Vue.js and many more. 
+The i18next-community created integrations for frontend-frameworks such as React, AngularJS, Vue.js and many more. 
 
 But this is not where it ends...you can also use i18next with Node.js, PHP, iOS, Android and other platforms.
 
