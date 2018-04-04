@@ -47,6 +47,11 @@ Backend plugins are used to load data for i18next.
     }
   },
   
+  // only used in backends acting as cache layer
+  save: function(language, namespace, data) {
+    // store the translations
+  }
+  
   create: function(languages, namespace, key, fallbackValue) { 
     /* save the missing translation */
   }
