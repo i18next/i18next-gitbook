@@ -61,8 +61,9 @@ backend           | description
 [locize backend](https://github.com/locize/i18next-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com)
 [locize nodejs backend](https://github.com/locize/i18next-node-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com)
 
-### caches
+### caches [will be deprecated]
 
+Cached will be deprecated in future release and could be replaced with the [chained backend](https://github.com/i18next/i18next-chained-backend). For an example checkout the replacement for [localstorage](https://github.com/i18next/i18next-localstorage-backend).
 
 
 cache             | description
