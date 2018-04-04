@@ -45,6 +45,7 @@ Want to create your own plugins? Learn more [here](/misc/creating-own-plugins.md
 backend           | description
 ----------------- | --------------------
 [chained backend](https://github.com/i18next/i18next-chained-backend) | combine multiple of the existing backends for fallback and caching scenarios
+[localstorage backend](https://github.com/i18next/i18next-localstorage-backend) | This is a i18next cache layer to be used in the browser. It will load and cache resources from localStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend).
 [xhr backend](https://github.com/i18next/i18next-xhr-backend) | backend layer for i18next using browsers xhr
 [fetch backend](https://github.com/perrin4869/i18next-fetch-backend) | backend layer for i18next using browsers fetch
 [keys ondemand](https://github.com/kingatlas/i18next-keys-ondemand) | fetch missing keys on demand
