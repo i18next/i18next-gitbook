@@ -58,39 +58,6 @@ Backend plugins are used to load data for i18next.
 }
 ```
 
-## cache - will be deprecated
-
-Cached will be deprecated in future release and could be replaced with the [chained backend](https://github.com/i18next/i18next-chained-backend). For an example checkout the replacement for [localstorage](https://github.com/i18next/i18next-localstorage-backend).
-
-
-
-
-Cache plugins are used to cache resources on consumers.
-
-```js
-{
-  type: 'cache',
-  init: function(services, cacheOptions, i18nextOptions) {
-    /* use services and options */
-  },
-  load: function(lngs, callback) {
-    /* load resources for languages */
-    callback({
-      en: {
-        translations: {
-          key: 'value'
-        }
-      },
-      de: {
-        translations: {
-          key: 'value'
-        }
-      }
-    });
-  },
-  save: function(store) { /* update cache */ }
-}
-```
 
 ## languageDetector
 
