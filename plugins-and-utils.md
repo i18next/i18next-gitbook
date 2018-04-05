@@ -39,12 +39,19 @@ name              | description
 
 Want to create your own plugins? Learn more [here](/misc/creating-own-plugins.md).
 
-### backends
+### backend extenders
 
 
 backend           | description
 ----------------- | --------------------
 [chained backend](https://github.com/i18next/i18next-chained-backend) | combine multiple of the existing backends for fallback and caching scenarios
+[i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter) | enable another backend's multiload behaviour of loading multiple lng-ns combinations with one request. This behaviour was removed from i18next >=v11.0.0 and could be enabled again by using this adapter
+
+### backends
+
+
+backend | description
+----------------- | --------------------
 [localstorage backend](https://github.com/i18next/i18next-localstorage-backend) | This is a i18next cache layer to be used in the browser. It will load and cache resources from localStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend).
 [xhr backend](https://github.com/i18next/i18next-xhr-backend) | backend layer for i18next using browsers xhr
 [fetch backend](https://github.com/perrin4869/i18next-fetch-backend) | backend layer for i18next using browsers fetch
@@ -60,18 +67,6 @@ backend           | description
 [i18next-smart-bucket-backend](https://github.com/nekuz0r/i18next-smart-bucket-backend) | i18next backend for smart-bucket
 [locize backend](https://github.com/locize/i18next-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com)
 [locize nodejs backend](https://github.com/locize/i18next-node-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com)
-
-### caches [will be deprecated]
-
-Cached will be deprecated in future release and could be replaced with the [chained backend](https://github.com/i18next/i18next-chained-backend). For an example checkout the replacement for [localstorage](https://github.com/i18next/i18next-localstorage-backend).
-
-
-cache             | description
------------------ | --------------------
-[localStorage cache](https://github.com/i18next/i18next-localStorage-cache) | caching layer for i18next using browsers localStorage
-[localForage cache](https://github.com/milanito/i18next-localforage-cache) | This is a i18next cache layer to be used in the browser. It will load and cache resources using localForage
-
-
 
 
 ### language detector
