@@ -1,14 +1,16 @@
-# Summary
+# Table of contents
+
+* [Introduction](README.md)
 
 ## Overview
 
-* [Introduction](README.md)
-* [Getting started](getting-started.md)
-* [API](api.md)
-* [Configuration Options](configuration-options.md)
-* [Supported Frameworks](supported-frameworks.md)
-* [Plugins and Utils](plugins-and-utils.md)
-* [For Enterprises](for-enterprises.md)
+* [Introduction](overview/introduction.md)
+* [Getting started](overview/getting-started.md)
+* [API](overview/api.md)
+* [Configuration Options](overview/configuration-options.md)
+* [Supported Frameworks](overview/supported-frameworks.md)
+* [Plugins and Utils](overview/plugins-and-utils.md)
+* [For Enterprises](overview/for-enterprises.md)
 
 ## Principles
 
@@ -18,18 +20,18 @@
 
 ## How to
 
-* [Add or Load Translations](add-or-load-translations.md)
-* [FAQ](faq.md)
+* [Add or Load Translations](how-to/add-or-load-translations.md)
+* [FAQ](how-to/faq.md)
 
 ## Translation Function
 
-* [Essentials](essentials.md)
-* [Interpolation](interpolation.md)
-* [Formatting](formatting.md)
-* [Plurals](plurals.md)
-* [Nesting](nesting.md)
-* [Context](context.md)
-* [Objects and Arrays](objects-and-arrays.md)
+* [Essentials](translation-function/essentials.md)
+* [Interpolation](translation-function/interpolation.md)
+* [Formatting](translation-function/formatting.md)
+* [Plurals](translation-function/plurals.md)
+* [Nesting](translation-function/nesting.md)
+* [Context](translation-function/context.md)
+* [Objects and Arrays](translation-function/objects-and-arrays.md)
 
 ## Misc
 

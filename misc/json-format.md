@@ -1,9 +1,10 @@
-<!-- toc -->
 # JSON Format
 
-## i18next JSON v3
+## JSON Format
 
-```json
+### i18next JSON v3
+
+```javascript
 {
   "key": "value",
   "keyDeep": {
@@ -28,14 +29,13 @@
 
 This are the defaults. Nesting and Interpolation formats are configurable.
 
-The only difference to *v2* are the plural suffixes for languages with multiple plural forms.
+The only difference to _v2_ are the plural suffixes for languages with multiple plural forms.
 
-
-## i18next JSON v2
+### i18next JSON v2
 
 enabled by:
 
-```js
+```javascript
 i18next.init({
   compatibilityJSON: 'v2'
 });
@@ -43,7 +43,7 @@ i18next.init({
 
 formats:
 
-```json
+```javascript
 {
   "key": "value",
   "keyDeep": {
@@ -67,12 +67,11 @@ formats:
 
 This are the defaults. Nesting and Interpolation formats are configurable.
 
-
-## i18next JSON v1
+### i18next JSON v1
 
 enabled by:
 
-```js
+```javascript
 i18next.init({
   compatibilityJSON: 'v1'
 });
@@ -80,7 +79,7 @@ i18next.init({
 
 formats:
 
-```json
+```javascript
 {
   "key": "value",
   "keyDeep": {
@@ -103,3 +102,4 @@ formats:
 ```
 
 This are the defaults. Nesting and Interpolation formats are configurable.
+

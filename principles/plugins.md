@@ -7,7 +7,7 @@ i18next comes with a lot of modules to enhance the features available. There are
 * detect user language by querystring, navigator, cookie, …
 * post processors to further manipulate values, eg. to add sprintf support
 
-```js
+```javascript
 import i18next from 'i18next';
 import XHR from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';

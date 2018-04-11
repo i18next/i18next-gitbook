@@ -1,23 +1,23 @@
-<!-- toc -->
 # Creating own Plugins
+
+## Creating own Plugins
 
 i18next comes with a lot of modules to enhance the features available. There are modules to:
 
-- load resources, eg. via xhr or from filesystem (node.js)
-- cache resources on client, eg. localStorage
-- detect user language by querystring, navigator, cookie, ...
-- post processors to further manipulate values, eg. to add sprintf support
-
+* load resources, eg. via xhr or from filesystem \(node.js\)
+* cache resources on client, eg. localStorage
+* detect user language by querystring, navigator, cookie, ...
+* post processors to further manipulate values, eg. to add sprintf support
 
 The plugins need to support following APIs:
 
-**HINT:** You can provide a singleton or a prototype constructor (prefered for supporting multiple instances of i18next).
+**HINT:** You can provide a singleton or a prototype constructor \(prefered for supporting multiple instances of i18next\).
 
-## backend
+### backend
 
 Backend plugins are used to load data for i18next.
 
-```js
+```javascript
 {
   type: 'backend',
   init: function(services, backendOptions, i18nextOptions) {
@@ -46,24 +46,23 @@ Backend plugins are used to load data for i18next.
       }
     }
   },
-  
+
   // only used in backends acting as cache layer
   save: function(language, namespace, data) {
     // store the translations
   }
-  
+
   create: function(languages, namespace, key, fallbackValue) { 
     /* save the missing translation */
   }
 }
 ```
 
-
-## languageDetector
+### languageDetector
 
 Language Detector plugins are used to detect language in user land.
 
-```js
+```javascript
 {
   type: 'languageDetector',
   init: function(services, detectorOptions, i18nextOptions) {
@@ -79,14 +78,13 @@ Language Detector plugins are used to detect language in user land.
 }
 ```
 
-
-## post processor
+### post processor
 
 Post Processors are used to extend or manipulate the translated values before returning them in `t` function.
 
-(Post Processors do not need to be prototype functions)
+\(Post Processors do not need to be prototype functions\)
 
-```js
+```javascript
 {
   type: 'postProcessor',
   name: 'nameOfProcessor',
@@ -97,14 +95,13 @@ Post Processors are used to extend or manipulate the translated values before re
 }
 ```
 
-
-## logger
+### logger
 
 Override the built in console logger.
 
-(loggers do not need to be prototype functions)
+\(loggers do not need to be prototype functions\)
 
-```js
+```javascript
 {
   type: 'logger',
 
@@ -113,3 +110,4 @@ Override the built in console logger.
   error: function(args) {}
 }
 ```
+
