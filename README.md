@@ -1,21 +1,5 @@
 # Introduction
 
-![Travis](https://img.shields.io/travis/i18next/i18next/master.svg?style=flat-square)
-
-![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)
-
-![Coveralls](https://img.shields.io/coveralls/i18next/i18next/master.svg?style=flat-square)
-
-![Package Quality](http://npm.packagequality.com/shield/i18next.svg)
-
-![cdnjs version](https://img.shields.io/cdnjs/v/i18next.svg?style=flat-square)
-
-![npm version](https://img.shields.io/npm/v/i18next.svg?style=flat-square)
-
-![Bower](https://img.shields.io/bower/v/i18next.svg?style=flat-square)
-
-![David](https://img.shields.io/david/i18next/i18next.svg?style=flat-square)
-
 I18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that.
 
 i18next goes beyond just providing the standard i18n features such as \(plurals, context, interpolation, format\). It provides you with a complete solution to localize your product from web to mobile and desktop.
