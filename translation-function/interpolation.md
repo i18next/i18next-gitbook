@@ -101,8 +101,6 @@ i18next.t('key', {
 | prefix | "{{" | prefix for interpolation |
 | suffix | "}}" | suffix for interpolation |
 
-from interpolation value prefixEscaped \| undefined \| escaped prefix for interpolation \(regexSafe\) suffixEscaped \| undefined \| escaped suffix for interpolation \(regexSafe\) unescapeSuffix \| undefined \| suffix to unescaped mode unescapePrefix \| "-" \| prefix to unescaped mode defaultVariables \| undefined \| default variables to use in interpolation replacements
-
 While there are a lot of options going with the defaults should get you covered.
 
 ### all interpolation options
