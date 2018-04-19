@@ -39,7 +39,7 @@ All options for calling init or createInstance.
 | missingKeyHandler | false | `function(lng, ns, key, fallbackValue) { }` used for custom  missing key handling \(needs saveMissing set to true!\) |
 | parseMissingKeyHandler | noop | function\(key\) { // return value to display } |
 | appendNamespaceToMissingKey | false | appends namespace to missing key |
-| missingInterpolationHandler | noop | `function(text, value) { return 'stringWithAlternativeValueOrUndefinded' };` gets called in case a interpolation value is missed. |
+| missingInterpolationHandler | noop | `function(text, value) { return 'stringWithAlternativeValueOrUndefinded' };` gets called in case a interpolation value is undefined. This method will not be called if the value is empty string or null |
 
 ### translation defaults
 
