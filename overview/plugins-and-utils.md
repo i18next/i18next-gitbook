@@ -4,9 +4,18 @@
 
 ![](../.gitbook/assets/i18next-ecosystem.jpg)
 
+### i18n formats
+
+While the i18next format \(JSON based\) is the preferred solution and widely supported in translation management tools like eg. [locize.com](https://locize.com) you might prefer an other exiting format:
+
+| **name** | **format** | **description** |
+| --- | --- | --- |
+| [i18next-icu](https://github.com/i18next/i18next-icu) | ICU | i18nFormat plugin to use ICU format with i18next based on [yahoo/intl-messageformat](https://github.com/yahoo/intl-messageformat) |
+| [i18next-polyglot](https://github.com/i18next/i18next-polyglot) | polyglot | i18nFormat plugin to use [airbnb/polyglot.js](https://github.com/airbnb/polyglot.js) format with i18next |
+
 ### utils
 
-| util | type | description |
+| **util** | **type** | **description** |
 | --- | --- | --- |
 | [i18next-gettext-converter](https://github.com/i18next/i18next-gettext-converter) | converter | Converts gettext .mo or .po to 18next json format and vice versa. |
 | [csv2i18next](https://github.com/tmorozov/csv2i18next) | converter | Convert CSV files to JSON & YAML for i18next.js |
@@ -27,7 +36,7 @@
 
 ### services
 
-| name | description |
+| **name** | **description** |
 | --- | --- |
 | [locize](http://locize.com) | localization as a service. Solves your localization process using i18next. |
 
@@ -37,14 +46,14 @@ Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.
 
 #### backend extenders
 
-| backend | description |
+| **backend** | **description** |
 | --- | --- |
 | [chained backend](https://github.com/i18next/i18next-chained-backend) | combine multiple of the existing backends for fallback and caching scenarios |
 | [i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter) | enable another backend's multiload behaviour of loading multiple lng-ns combinations with one request. This behaviour was removed from i18next &gt;=v11.0.0 and could be enabled again by using this adapter |
 
 #### backends
 
-| backend | description |
+| **backend** | **description** |
 | --- | --- |
 | [localstorage backend](https://github.com/i18next/i18next-localstorage-backend) | This is a i18next cache layer to be used in the browser. It will load and cache resources from localStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend). |
 | [xhr backend](https://github.com/i18next/i18next-xhr-backend) | backend layer for i18next using browsers xhr |
@@ -64,7 +73,7 @@ Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.
 
 #### language detector
 
-| language detector | description |
+| **language** **detector** | **description** |
 | --- | --- |
 | [browser](https://github.com/i18next/i18next-browser-languageDetector) | language detector used in browser environment for i18next |
 | [nodejs express](https://github.com/i18next/i18next-express-middleware) | language detector for express.js \(nodejs\). |
@@ -74,7 +83,7 @@ Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.
 
 #### post processors
 
-| post processor | description |
+| **post** **processor** | **description** |
 | --- | --- |
 | [sprintf post processor](https://github.com/i18next/i18next-sprintf-postProcessor) | sprintf post processor for i18next. |
 | [interval plurals](https://github.com/i18next/i18next-intervalPlural-postProcessor) | interval based plurals like. "One Item", "A few items", "A lot of items" |
