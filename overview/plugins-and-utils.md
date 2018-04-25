@@ -40,18 +40,14 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | --- | --- |
 | [locize](http://locize.com) | localization as a service. Solves your localization process using i18next. |
 
-### plugins
-
-Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.md).
-
-#### backend extenders
+### backend extenders
 
 | **backend** | **description** |
 | --- | --- |
 | [chained backend](https://github.com/i18next/i18next-chained-backend) | combine multiple of the existing backends for fallback and caching scenarios |
 | [i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter) | enable another backend's multiload behaviour of loading multiple lng-ns combinations with one request. This behaviour was removed from i18next &gt;=v11.0.0 and could be enabled again by using this adapter |
 
-#### backends
+### backends
 
 | **backend** | **description** |
 | --- | --- |
@@ -71,7 +67,7 @@ Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.
 | [locize backend](https://github.com/locize/i18next-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com) |
 | [locize nodejs backend](https://github.com/locize/i18next-node-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com) |
 
-#### language detector
+### language detector
 
 | **language** **detector** | **description** |
 | --- | --- |
@@ -81,7 +77,7 @@ Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.
 | [react native](https://github.com/DylanVann/i18next-react-native-language-detector) | language detector for React Native. |
 | [electron](https://github.com/neruchev/i18next-electron-language-detector) | language detector for electron apps. |
 
-#### post processors
+### post processors
 
 | **post** **processor** | **description** |
 | --- | --- |
@@ -90,7 +86,11 @@ Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.
 | [i18next-react-postprocessor](https://github.com/orzechowskid/i18next-react-postprocessor) | embed React elements inside your i18next translation strings |
 | [i18next-korean-postposition-processor](https://github.com/Perlmint/i18next-korean-postposition-processor) | i18next post-processor for processing korean postposition |
 
-#### loggers
+### loggers
 
 right now there is only the integrated console logger available.
+
+### Create your own plugin
+
+Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.md).
 
