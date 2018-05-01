@@ -2,17 +2,19 @@
 
 ## Interpolation
 
-Interpolation is one of the most used functionality used. It enables you to integrate dynamic values into your translations.
+Interpolation is one of the most used functionalities in I18N. It enables you to integrate dynamic values into your translations.
 
-Per default those interpolations get escaped to safe you from possible xss attacks.
+Per default, interpolation values get escaped to save you from possible xss attacks.
 
-If you do not like the interpolation functionality provided you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
+If the interpolation functionality provided doesn't suit you, you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
 
 ### Basic
 
-Interpolation is one of the most used functionality.
+Interpolation is one of the most used functionalities in I18N.
 
-keys
+Keys
+
+Keys, by default, are strings surrounded by curly brackets:
 
 ```javascript
 {
@@ -20,7 +22,7 @@ keys
 }
 ```
 
-sample
+Sample
 
 ```javascript
 i18next.t('key', { what: 'i18next', how: 'great' });
@@ -29,17 +31,17 @@ i18next.t('key', { what: 'i18next', how: 'great' });
 
 ### Working with data models
 
-You can pass entire data models in options.
+You can also pass entire data models as a value for interpolation.
 
-keys
+Keys
 
 ```javascript
 {
-    "key": "i am {{author.name}}"
+    "key": "I am {{author.name}}"
 }
 ```
 
-sample
+Sample
 
 ```javascript
 const author = { 
@@ -47,14 +49,14 @@ const author = {
     github: 'jamuhl'
 };
 i18next.t('key', { author });
-// -> "i am Jan"
+// -> "I am Jan"
 ```
 
 ### Unescape
 
-Per default the values get escaped to safe from possible xss attacks. You can toggle escaping off.
+Per default the values get escaped to save you from possible xss attacks. You can toggle escaping off, by either putting `-` before the key, or set the `escapeValue` option to `false` when requesting a translation.
 
-keys
+Keys
 
 ```javascript
 {
@@ -63,7 +65,7 @@ keys
 }
 ```
 
-sample
+Sample
 
 ```javascript
 i18next.t('keyEscaped', { myVar: '<img />' });
@@ -76,13 +78,11 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false 
 // -> "no danger <img />" (obviously could be dangerous)
 ```
 
-_Dangerzone:_ Toggling escaping off you should escape any user input yourself!
+_Warning:_ If you toggle escaping off, you should escape any user input yourself!
 
 ### Additional options
 
-Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
-
-sample
+Prefix/Suffix for interpolation and other options can be overridden in the init options or by passing additional options to the `t` function:
 
 ```javascript
 i18next.init({
@@ -103,7 +103,7 @@ i18next.t('key', {
 
 While there are a lot of options going with the defaults should get you covered.
 
-### all interpolation options
+### All interpolation options
 
 | option | default | description |
 | --- | --- | --- |
