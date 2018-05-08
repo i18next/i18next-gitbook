@@ -113,4 +113,5 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 | joinArrays | char, eg. '\n' that arrays will be joined by \(can be set globally too\) |
 | postProcess | string or array of postProcessors to apply see  [interval plurals](plurals.md) as a sample |
 | interpolation | override [interpolation options](interpolation.md) |
+| skipInterpolation | skip interpolation and nesting for this call to t function |
 
