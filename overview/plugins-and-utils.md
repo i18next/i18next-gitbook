@@ -85,6 +85,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [interval plurals](https://github.com/i18next/i18next-intervalPlural-postProcessor) | interval based plurals like. "One Item", "A few items", "A lot of items" |
 | [i18next-react-postprocessor](https://github.com/orzechowskid/i18next-react-postprocessor) | embed React elements inside your i18next translation strings |
 | [i18next-korean-postposition-processor](https://github.com/Perlmint/i18next-korean-postposition-processor) | i18next post-processor for processing korean postposition |
+| [i18next-pseudo](https://github.com/MattBoatman/i18next-pseudo) | i18next post-processor for pseudolocalization of strings |
 
 ### loggers
 
