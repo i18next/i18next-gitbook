@@ -39,6 +39,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | **name** | **description** |
 | --- | --- |
 | [locize](http://locize.com) | localization as a service. Solves your localization process using i18next. |
+| [spacetranslate](http://spacetranslate.com) | Simple Translation Service at Scale. Solves your localization process using i18next. |
 
 ### backend extenders
 
@@ -66,7 +67,10 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-firebase-backend](https://github.com/inteligator/i18next-firebase-backend) | i18next Backend Using Firebase |
 | [i18next-smart-bucket-backend](https://github.com/nekuz0r/i18next-smart-bucket-backend) | i18next backend for smart-bucket |
 | [locize backend](https://github.com/locize/i18next-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com) |
+| [service backend](https://github.com/timbrandin/i18next-service-backend) | backend layer for external services such as [spacetranslate.com - Simple Translation Service at Scale](http://spacetranslate.com) and [locize.com - localization as a service](http://locize.com). |
 | [locize nodejs backend](https://github.com/locize/i18next-node-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com) |
+| [service node backend](https://github.com/timbrandin/i18next-node-service-backend) | backend layer for external services such as [spacetranslate.com - Simple Translation Service at Scale](http://spacetranslate.com) and [locize.com - localization as a service](http://locize.com). |
+
 
 ### language detector
 
