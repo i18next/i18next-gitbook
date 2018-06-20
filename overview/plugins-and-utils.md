@@ -19,7 +19,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | --- | --- | --- |
 | [i18next-gettext-converter](https://github.com/i18next/i18next-gettext-converter) | converter | Converts gettext .mo or .po to 18next json format and vice versa. |
 | [csv2i18next](https://github.com/tmorozov/csv2i18next) | converter | Convert CSV files to JSON & YAML for i18next.js |
-| [resx2i18next](https://github.com/rolandpd/resx2i18next) | converter | Convert ResX-files to json ressouces compatible with i18next |
+| [resx2i18next](https://github.com/rolandpd/resx2i18next) | converter | Convert ResX-files to json resources compatible with i18next |
 | [i18next-scanner](http://i18next.github.io/i18next-scanner/) | extractor | Scan your code, extract translation keys/values, and merge them into i18n resource files. |
 | [i18next-parser](https://github.com/i18next/i18next-parser) | extractor | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
 | [i18nextResourceGenerator](https://github.com/DREEBIT/i18nextResourceGenerator) | extractor | Intellij IDEA Plugin for i18next resource generation |
