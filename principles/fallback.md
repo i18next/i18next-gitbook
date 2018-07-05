@@ -38,7 +38,7 @@ i18next.init({
   i18next.t('i18n_short'); // -> "i18n" (from en.json)
 
   // force loading en
-  i18next.t('i18n', { lng: 'en' ); // -> "Internationalization"
+  i18next.t('i18n', { lng: 'en' } ); // -> "Internationalization"
 });
 ```
 
