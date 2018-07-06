@@ -12,6 +12,16 @@
 * [Plugins and Utils](overview/plugins-and-utils.md)
 * [For Enterprises](overview/for-enterprises.md)
 
+## Translation Function
+
+* [Essentials](translation-function/essentials.md)
+* [Interpolation](translation-function/interpolation.md)
+* [Formatting](translation-function/formatting.md)
+* [Plurals](translation-function/plurals.md)
+* [Nesting](translation-function/nesting.md)
+* [Context](translation-function/context.md)
+* [Objects and Arrays](translation-function/objects-and-arrays.md)
+
 ## Principles
 
 * [Namespaces](principles/namespaces.md)
@@ -22,16 +32,6 @@
 
 * [Add or Load Translations](how-to/add-or-load-translations.md)
 * [FAQ](how-to/faq.md)
-
-## Translation Function
-
-* [Essentials](translation-function/essentials.md)
-* [Interpolation](translation-function/interpolation.md)
-* [Formatting](translation-function/formatting.md)
-* [Plurals](translation-function/plurals.md)
-* [Nesting](translation-function/nesting.md)
-* [Context](translation-function/context.md)
-* [Objects and Arrays](translation-function/objects-and-arrays.md)
 
 ## Misc
 
