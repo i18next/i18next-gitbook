@@ -257,6 +257,12 @@ const newInstance = i18next.cloneInstance({
 
 ## events
 
+{% hint style="info" %}
+Every event can be unsubscribed using
+
+`i18next.off('name', myFunction);`
+{% endhint %}
+
 ### onInitialized
 
 `i18next.on('initialized', function(options) {})`
