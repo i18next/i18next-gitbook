@@ -98,6 +98,7 @@ i18next.t('key', {
 | --- | --- | --- |
 | escape | function | escape function `function escape(str) { return str; }` |
 | escapeValue | true | escapes passed in values to avoid xss injection |
+| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type check |
 | prefix | "{{" | prefix for interpolation |
 | suffix | "}}" | suffix for interpolation |
 
@@ -111,6 +112,7 @@ While there are a lot of options going with the defaults should get you covered.
 | formatSeparator | "," | used to separate format from interpolation value |
 | escape | function | escape function `function escape(str) { return str; }` |
 | escapeValue | true | escape passed in values to avoid xss injection |
+| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type check |
 | prefix | "{{" | prefix for interpolation |
 | suffix | "}}" | suffix for interpolation |
 | prefixEscaped | undefined | escaped prefix for interpolation \(regexSafe\) |
