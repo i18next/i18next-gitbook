@@ -285,7 +285,7 @@ Gets fired if loading resources failed.
 
 `i18next.on('missingKey', function(lngs, namespace, key, res) {})`
 
-Gets fired on accessing a key not existing.
+Gets fired on accessing a key not existing. Needs [saveMissing](configuration-options.md#missing-keys) set to true.
 
 ### onAdded
 
