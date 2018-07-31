@@ -4,14 +4,14 @@
 
 ### Installation
 
-i18next can be added to your project using **npm** or **bower**:
+i18next can be added to your project using **npm** or **yarn**:
 
 ```bash
 # npm
 $ npm install i18next --save
 
-# bower
-$ bower install i18next
+# yarn
+$ yarn add i18next
 ```
 
 The default export is UMD compatible \(commonjs, requirejs, global\).
