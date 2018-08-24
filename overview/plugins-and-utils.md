@@ -27,6 +27,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [grunt-i18next](https://github.com/i18next/grunt-i18next) | bundler | bundle language resource files for i18next |
 | [i18next-po-loader](https://github.com/queicherius/i18next-po-loader) | bundler | Load gettext PO files as i18next format directly in webpack |
 | [i18next-loader](https://github.com/kamilglod/i18next-loader) | bundler | webpack loader that can translate your code and generate bundle per each language |
+| [@alienfast/i18next-loader](https://github.com/alienfast/i18next-loader) | bundler | This webpack loader generates the resources structure necessary for i18next. The structure is webpacked with the client bundle at build time, thus avoiding loading any language resources via extra HTTP requests. |
 | [webpack i18next-resource-store-loader](https://github.com/atroo/i18next-resource-store-loader) | bundler | This loader generates the resStore config needed for i18next to avoid loading language resources via extra HTTP requests. It generates this config given a directory. |
 | [webpack i18next-loader](https://github.com/alienfast/i18next-loader) | bundler | Webpack loader for client embedded i18next locales from json or yaml. |
 | [ya-i18next-webpack-plugin](https://github.com/Perlmint/ya-i18next-webpack-plugin) | bundler | Yet another i18next webpack plugin. This plugin collects keys from webpack parsing phase, saves missing translations into specified path, copies translation files. |
