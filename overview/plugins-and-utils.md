@@ -23,7 +23,6 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-scanner](http://i18next.github.io/i18next-scanner/) | extractor | Scan your code, extract translation keys/values, and merge them into i18n resource files. |
 | [i18next-parser](https://github.com/i18next/i18next-parser) | extractor | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
 | [i18nextResourceGenerator](https://github.com/DREEBIT/i18nextResourceGenerator) | extractor | Intellij IDEA Plugin for i18next resource generation |
-| [aurelia-i18next-parser](https://github.com/gooy/aurelia-i18next-parser) | extractor | Extracts i18n keys and values from source files. |
 | [grunt-i18next](https://github.com/i18next/grunt-i18next) | bundler | bundle language resource files for i18next |
 | [i18next-po-loader](https://github.com/queicherius/i18next-po-loader) | bundler | Load gettext PO files as i18next format directly in webpack |
 | [i18next-loader](https://github.com/kamilglod/i18next-loader) | bundler | webpack loader that can translate your code and generate bundle per each language |
