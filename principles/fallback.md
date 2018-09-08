@@ -5,34 +5,6 @@
 Doing graceful fallbacks are a core principle of i18next. This enables you to display the most accurate content possible.
 
 
-#### fallback language
-
-If you can not provide the preferred language for a user you can specify a fallback language.
-
-```javascript
-// fallback to one language
-i18next.init({
-    fallbackLng: 'en'
-});
-
-// fallback ordered
-i18next.init({
-    fallbackLng: ['fr', 'en']
-});
-
-// fallback depending on user language
-i18next.init({
-    fallbackLng: { 
-        'de-CH': ['fr', 'it'], 
-        'zh-HANT': ['zh-HANS', 'en'],
-        'es': ['fr'],
-        'default': ['en']
-    }
-});
-```
-
-The default is set to `dev` which means developer language. At first this might look strange to set the default to a language but this enables to set the saveMissing feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing eg. proper english including defined terminology. For production just set fallbackLng to an existing language.
-
 ### namespace fallback
 
 i18next per default loads it translations from one file named `translation`. But you can set and structure it to load from multiple files, we call this files namespaces.
@@ -117,6 +89,34 @@ i18next.init({
   i18next.t('i18n', { lng: 'en' } ); // -> "Internationalization"
 });
 ```
+
+#### fallback language
+
+If you can not provide the preferred language for a user you can specify a fallback language.
+
+```javascript
+// fallback to one language
+i18next.init({
+    fallbackLng: 'en'
+});
+
+// fallback ordered
+i18next.init({
+    fallbackLng: ['fr', 'en']
+});
+
+// fallback depending on user language
+i18next.init({
+    fallbackLng: { 
+        'de-CH': ['fr', 'it'], 
+        'zh-HANT': ['zh-HANS', 'en'],
+        'es': ['fr'],
+        'default': ['en']
+    }
+});
+```
+
+The default is set to `dev` which means developer language. At first this might look strange to set the default to a language but this enables to set the saveMissing feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing eg. proper english including defined terminology. For production just set fallbackLng to an existing language.
 
 ### key fallback
 
