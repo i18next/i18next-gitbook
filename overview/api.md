@@ -124,7 +124,26 @@ If you need the primary used language depending on your configuration \(whilelis
 
 `i18next.languages`
 
-Is set to an array of language-codes that will be used it order to lookup the translation value.
+Is set to an array of language codes that will be used to look up the translation value.
+
+When the language is set, this array is populated with the new language codes. Unless overridden, this array is populated with less-specific versions of that code for fallback purposes, followed by the list of fallback languages.
+
+{% hint style="info" %}
+Values are unique, so if they appear earlier in the array, they will not be added again.
+{% endhint %}
+
+```javascript
+// initialize with fallback languages
+i18next.init({
+  fallbackLng: ["es", "fr", "en-US", "dev"]
+});
+
+// change the language
+i18next.changeLanguage("en-US-xx");
+
+// languages has been updated
+i18next.languages; // ["en-US-xx", "en-US", "en", "es", "fr", "dev"]
+```
 
 ### loadNamespaces
 
