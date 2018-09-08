@@ -58,9 +58,9 @@ For more information on the concept of namespaces and how you might want to use 
 
 However, if that does not work, i18next attempts to gracefully fall-back to a different combination in order to provide the most relevant translation for a piece of content, the core idea being to try to find a key that exists, from _most specific to least specific_. Here is the process that it uses by default:
 
-#### 1. Similar Keys and Context
+#### 1. Similar Keys
 
-i18next tries to match the key you are looking for with a similar key, checking for **plural** versions of the key by default, and the **context separator**.
+If the specific key is not found, i18next tries to match the key you are looking for with a similar key, looking for a key that best fits the **plural** form, **context**, and **singular** form in that order.
 
 #### 2. Languages
 
@@ -70,7 +70,7 @@ If a key is not found, i18next then walks through the list of languages, which c
 
 If no language matches, i18next walks through the list of namespaces, which similarly to languages, consists of the **current namespace\(s\)** and the **fallback namespace\(s\)**.
 
-#### 4. Keys
+#### 4. Fallback Keys
 
 If that key is still not found, i18n will walk through this process with the **fallback key\(s\)**, if specified.
 
@@ -79,4 +79,3 @@ If that key is still not found, i18n will walk through this process with the **f
 If the key is still not found, i18n will then return the **key itself**, that being the first key specified if you also specified fallback keys.
 
 For more information on each method of fallback, please see the [fallback documentation](fallback.md).
-
