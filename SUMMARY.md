@@ -24,6 +24,7 @@
 
 ## Principles
 
+* [Translation Resolution](principles/translation-resolution.md)
 * [Namespaces](principles/namespaces.md)
 * [Fallback](principles/fallback.md)
 * [Plugins](principles/plugins.md)

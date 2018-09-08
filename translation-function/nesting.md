@@ -81,7 +81,7 @@ i18next.t('key', {
 ```
 
 | option | default | description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | nestingPrefixEscaped | undefined | escaped prefix for nesting \(regexSafe\) |
 | nestingSuffixEscaped | undefined | escaped suffix for nesting \(regexSafe\) |
 
