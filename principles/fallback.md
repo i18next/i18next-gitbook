@@ -4,43 +4,6 @@
 
 Doing graceful fallbacks are a core principle of i18next. This enables you to display the most accurate content possible.
 
-### language fallback
-
-#### locals resolving
-
-Per default locals containing region or script will take a translation from the pure language file if not found.
-
-en-GB.json
-
-```javascript
-{
-  "i18n": "Internationalisation"
-}
-```
-
-en.json
-
-```javascript
-{
-  "i18n": "Internationalization",
-  "i18n_short": "i18n"
-}
-```
-
-Sample
-
-```javascript
-// fallback to one language
-i18next.init({
-    lng: 'en-GB'
-}, () => {
-  i18next.t('i18n'); // -> "Internationalisation"
-  i18next.t('i18n_short'); // -> "i18n" (from en.json)
-
-  // force loading en
-  i18next.t('i18n', { lng: 'en' } ); // -> "Internationalization"
-});
-```
 
 #### fallback language
 
@@ -114,6 +77,44 @@ i18next.init({
     // without fallbackNS you would have to prefix namespace 
     // to access keys in that namespace
     i18next.t('common:button.save') // -> "save"
+});
+```
+
+### language fallback
+
+#### locals resolving
+
+Per default locals containing region or script will take a translation from the pure language file if not found.
+
+en-GB.json
+
+```javascript
+{
+  "i18n": "Internationalisation"
+}
+```
+
+en.json
+
+```javascript
+{
+  "i18n": "Internationalization",
+  "i18n_short": "i18n"
+}
+```
+
+Sample
+
+```javascript
+// fallback to one language
+i18next.init({
+    lng: 'en-GB'
+}, () => {
+  i18next.t('i18n'); // -> "Internationalisation"
+  i18next.t('i18n_short'); // -> "i18n" (from en.json)
+
+  // force loading en
+  i18next.t('i18n', { lng: 'en' } ); // -> "Internationalization"
 });
 ```
 
