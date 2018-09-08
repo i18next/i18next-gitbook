@@ -98,7 +98,7 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 `i18next.t(key, options)`
 
 | option | description |
-| :--- | :--- |
+| --- | --- |
 | defaultValue | defaultValue to return if a translation was not found |
 | count | count value used for [plurals](plurals.md) |
 | context | used for [contexts](context.md) \(eg. male / female\) |

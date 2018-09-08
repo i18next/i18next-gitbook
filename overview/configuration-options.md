@@ -9,13 +9,13 @@ All options for calling init or createInstance.
 ### logging
 
 | option | default | description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | debug | false | logs info level to console output. Helps finding issues with loading not working. |
 
 ### languages, namespaces, resources
 
 | option | default | description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | resources | undefined | resources to initialize with \(if not using loading or not appending using [addResourceBundle](api.md#addresourcebundle)\) |
 | lng | undefined | language to use \(overrides language detection\) |
 | fallbackLng | 'dev' | language to use if translations in user language are not available. [Learn more](../principles/fallback.md). |
@@ -31,7 +31,7 @@ All options for calling init or createInstance.
 ### missing keys
 
 | option | default | description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | saveMissing | false | calls save missing key function on backend if key not found |
 | updateMissing | false | experimental: enable to update default values using the saveMissing \(Works only if defaultValue different from translated value. Only useful on initial development or when keeping code as source of truth not changing values outside of code. Only supported if backend supports it already\) |
 | saveMissingTo | 'fallback' | 'current' or 'all' |
@@ -44,7 +44,7 @@ All options for calling init or createInstance.
 ### translation defaults
 
 | option | default | description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | simplifyPluralSuffix | true | will use 'plural' as suffix for languages only having 1 plural form, setting it to false will suffix all with numbers |
 | postProcess | false | string or array of postProcessors to apply per default |
 | returnNull | true | allows null values as valid translation |
@@ -58,7 +58,7 @@ All options for calling init or createInstance.
 ### plugin options
 
 | option | default | description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | detection | undefined | options for language detection - check documentation of plugin |
 | backend | undefined | options for backend - check documentation of plugin |
 | cache | undefined | options for cache layer - check documentation of plugin |
@@ -66,7 +66,7 @@ All options for calling init or createInstance.
 ### misc
 
 | option | default | description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | initImmediate | true | triggers resource loading in init function inside a setTimeout \(default async behaviour\). Set it to false if your backend loads resources sync - that way calling i18next.t after init is possible without relaying on the init callback. |
 | keySeparator | '.' | char to separate keys |
 | nsSeparator | ':' | char to split namespace from key |

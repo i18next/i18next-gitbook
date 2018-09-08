@@ -68,7 +68,7 @@ i18next.t('key', {
 ```
 
 | option | default | description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | format | noop function | format function `function format(value, format, lng) {}` |
 | formatSeparator | ',' | used to separate format from interpolation value |
 
