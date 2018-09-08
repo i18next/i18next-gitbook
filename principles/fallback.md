@@ -4,6 +4,54 @@
 
 Doing graceful fallbacks are a core principle of i18next. This enables you to display the most accurate content possible.
 
+
+### namespace fallback
+
+i18next per default loads it translations from one file named `translation`. But you can set and structure it to load from multiple files, we call this files namespaces.
+
+Additional to defining multiple namespaces to load you also can set fallback namespaces. So if a key to translate gets not found in the namespace it looks it up in the fallbacks.
+
+app.json
+
+```javascript
+{
+  "title": "i18next"
+}
+```
+
+common.json
+
+```javascript
+{
+  "button": {
+    "save": "save"
+  }
+}
+```
+
+Sample
+
+```javascript
+i18next.init({
+    // files to load
+    namespaces: ['app', 'common'],
+
+    // default namespace (needs no prefix on calling t)
+    defaultNS: 'app',
+
+    // fallback, can be a string or an array of namespaces
+    fallbackNS: 'common'
+}, () => {
+    i18next.t('title') // -> "i18next"
+
+    i18next.t('button.save') // -> "save" (fallback from common)
+
+    // without fallbackNS you would have to prefix namespace 
+    // to access keys in that namespace
+    i18next.t('common:button.save') // -> "save"
+});
+```
+
 ### language fallback
 
 #### locals resolving
@@ -69,53 +117,6 @@ i18next.init({
 ```
 
 The default is set to `dev` which means developer language. At first this might look strange to set the default to a language but this enables to set the saveMissing feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing eg. proper english including defined terminology. For production just set fallbackLng to an existing language.
-
-### namespace fallback
-
-i18next per default loads it translations from one file named `translation`. But you can set and structure it to load from multiple files, we call this files namespaces.
-
-Additional to defining multiple namespaces to load you also can set fallback namespaces. So if a key to translate gets not found in the namespace it looks it up in the fallbacks.
-
-app.json
-
-```javascript
-{
-  "title": "i18next"
-}
-```
-
-common.json
-
-```javascript
-{
-  "button": {
-    "save": "save"
-  }
-}
-```
-
-Sample
-
-```javascript
-i18next.init({
-    // files to load
-    namespaces: ['app', 'common'],
-
-    // default namespace (needs no prefix on calling t)
-    defaultNS: 'app',
-
-    // fallback, can be a string or an array of namespaces
-    fallbackNS: 'common'
-}, () => {
-    i18next.t('title') // -> "i18next"
-
-    i18next.t('button.save') // -> "save" (fallback from common)
-
-    // without fallbackNS you would have to prefix namespace 
-    // to access keys in that namespace
-    i18next.t('common:button.save') // -> "save"
-});
-```
 
 ### key fallback
 
