@@ -4,7 +4,6 @@
 
 Doing graceful fallbacks are a core principle of i18next. This enables you to display the most accurate content possible.
 
-
 ### namespace fallback
 
 i18next per default loads it translations from one file named `translation`. But you can set and structure it to load from multiple files, we call this files namespaces.
