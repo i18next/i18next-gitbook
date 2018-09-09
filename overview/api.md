@@ -141,8 +141,14 @@ i18next.init({
 // change the language
 i18next.changeLanguage("en-US-xx");
 
-// languages has been updated
+// new language and its more generic forms, followed by fallbacks
 i18next.languages; // ["en-US-xx", "en-US", "en", "es", "fr", "dev"]
+
+// change the language again
+i18next.changeLanguage("de-DE");
+
+// previous language is not retained
+i18next.languages; // ["de-DE", "de", "es", "fr", "en-US", "dev"]
 ```
 
 ### loadNamespaces
