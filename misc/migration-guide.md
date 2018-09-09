@@ -12,7 +12,7 @@
 brings pt, pt-PT, pt-BR plurals in line with, new pt reflects pt-BR and pt-PT gets a special case for plural handling [http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/26/supplemental/language_plural_rules.html)
 
 | code | locale | rule |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | pt-PT | Portugal Portuguese | nplurals=2; plural=\(n != 1\); |
 | pt\_BR | Brazilian Portuguese | plurals=2; plural=\(n &gt; 1\); |
 | pt | Portuguese | plurals=2; plural=\(n &gt; 1\); |
@@ -170,7 +170,7 @@ i18next.init({
 ```
 
 | option | description |
-| --- | --- |
+| :--- | :--- |
 | compatibilityAPI | Will convert init and t options and expose old API functions. Will be removed with future update. |
 | compatibilityJSON | Will allow to use JSON files in v1 format. Using old interpolation prefix, suffix and no need for singular suffix \[0\] for singular in languages with more then just 1 plural form. |
 

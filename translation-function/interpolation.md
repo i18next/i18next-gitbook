@@ -95,7 +95,7 @@ i18next.t('key', {
 ```
 
 | option | default | description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | escape | function | escape function `function escape(str) { return str; }` |
 | escapeValue | true | escapes passed in values to avoid xss injection |
 | useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type check |
@@ -107,7 +107,7 @@ While there are a lot of options going with the defaults should get you covered.
 ### All interpolation options
 
 | option | default | description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | format | noop function | format function see [formatting](formatting.md) for details |
 | formatSeparator | "," | used to separate format from interpolation value |
 | escape | function | escape function `function escape(str) { return str; }` |

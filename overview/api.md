@@ -337,7 +337,7 @@ Gets one value by given key.
 options:
 
 | option | default | description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | keySeparator | "." | char to separate keys, or false if no separator is prefered |
 
 ### addResource
@@ -349,7 +349,7 @@ Adds one key/value.
 options:
 
 | option | default | description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | keySeparator | "." | char to separate keys, or false if no separator is prefered |
 | silent | false | if set to true adding will not emit an added event |
 

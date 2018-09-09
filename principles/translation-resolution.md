@@ -54,7 +54,7 @@ For more information on the concept of namespaces and how you might want to use 
 
 ## Resolution Order
 
- By default, when translating a key, i18next tries the first combination of your **namespace**, **language**, and **key**.
+By default, when translating a key, i18next tries the first combination of your **namespace**, **language**, and **key**.
 
 However, if that does not work, i18next attempts to gracefully fall-back to a different combination in order to provide the most relevant translation for a piece of content, the core idea being to try to find a key that exists, from _most specific to least specific_. Here is the process that it uses by default:
 
@@ -79,3 +79,4 @@ If that key is still not found, i18n will walk through this process with the **f
 If the key is still not found, i18n will then return the **key itself**, that being the first key specified if you also specified fallback keys.
 
 For more information on each method of fallback, please see the [fallback documentation](fallback.md).
+

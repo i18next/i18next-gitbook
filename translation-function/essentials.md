@@ -98,8 +98,8 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 `i18next.t(key, options)`
 
 | option | description |
-| --- | --- |
-| defaultValue | defaultValue to return if a translation was not found |
+| :--- | :--- |
+| defaultValue | defaultValue to return if a translation was not found, you also can define defaults for plurals by adding defaultValue\_plural / defaultValue\_2 -&gt; \_suffix depends on same [pluralrules](plurals.md). |
 | count | count value used for [plurals](plurals.md) |
 | context | used for [contexts](context.md) \(eg. male / female\) |
 | replace | object with vars for [interpolation](interpolation.md) - or put them directly in options |
