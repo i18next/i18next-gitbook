@@ -5,13 +5,13 @@
 ## Overview
 
 * [Introduction](overview/introduction.md)
+* [Comparison to others](overview/comparison-to-others.md)
 * [Getting started](overview/getting-started.md)
 * [API](overview/api.md)
 * [Configuration Options](overview/configuration-options.md)
 * [Supported Frameworks](overview/supported-frameworks.md)
 * [Plugins and Utils](overview/plugins-and-utils.md)
 * [For Enterprises](overview/for-enterprises.md)
-* [Comparison to others](overview/comparison-to-others.md)
 
 ## Translation Function
 
