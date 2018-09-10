@@ -59,7 +59,7 @@ Hm...ask this in one year again...when you're i18n framework needs to catch up w
 
 We work hard on keeping the code base clean and readable. We add new features which might help a lot of users and not based on we think it's easy to solve.
 
-### i18next is to big {#i-18-next-is-to-big}
+### i18next is too big {#i-18-next-is-to-big}
 
 Yes a size of 33kb minified and 9kb gzipped is huge. But like you saw before there is a lot more inside than just the basic i18n functionality.
 
