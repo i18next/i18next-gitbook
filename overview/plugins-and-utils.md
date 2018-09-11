@@ -10,6 +10,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 
 | **name** | **format** | **description** |
 | :--- | :--- | :--- |
+| [i18next-fluent](https://github.com/i18next/i18next-fluent) | fluent | i18nFormat plugin to use mozilla [fluent format](https://projectfluent.org/) with i18next |
 | [i18next-icu](https://github.com/i18next/i18next-icu) | ICU | i18nFormat plugin to use ICU format with i18next based on [yahoo/intl-messageformat](https://github.com/yahoo/intl-messageformat) |
 | [i18next-polyglot](https://github.com/i18next/i18next-polyglot) | polyglot | i18nFormat plugin to use [airbnb/polyglot.js](https://github.com/airbnb/polyglot.js) format with i18next |
 
@@ -57,6 +58,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [async storage backend](https://github.com/timbrandin/i18next-async-storage-backend) | This is a i18next cache layer to be used in react native. It will load and cache resources from AsyncStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend). |
 | [xhr backend](https://github.com/i18next/i18next-xhr-backend) | backend layer for i18next using browsers xhr |
 | [fetch backend](https://github.com/perrin4869/i18next-fetch-backend) | backend layer for i18next using browsers fetch |
+| [fluent backend](https://github.com/i18next/i18next-fluent-backend) | backend to load [fluent syntax](https://projectfluent.org/) .ftl files via xhr |
 | [keys ondemand](https://github.com/kingatlas/i18next-keys-ondemand) | fetch missing keys on demand |
 | [i18next.gettext](https://github.com/palamccc/i18next.gettext) | gettext backend of i18next |
 | [nodejs filesystem](https://github.com/i18next/i18next-node-fs-backend) | node.js backend layer for i18next using fs module to load resources from filesystem |
