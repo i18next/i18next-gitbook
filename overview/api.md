@@ -191,6 +191,12 @@ i18next.reloadResources(null, ['ns1', 'ns2']);
 
 // reload namespaces in languages
 i18next.reloadResources(['de', 'fr'], ['ns1', 'ns2']);
+
+// reload a namespace in a language
+i18next.reloadResources('de', 'ns1');
+
+// optional third param callback i18next@>=11.9.0
+i18next.reloadResources('de', 'ns1', () => { /* reloaded */ });
 ```
 
 ### setDefaultNamespace
