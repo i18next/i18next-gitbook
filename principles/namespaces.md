@@ -4,7 +4,7 @@ Namespaces are a feature in i18next internationalization framework which allows 
 
 While in a smaller project it might be reasonable to just put everything in one file you might get at a point where you want to break translations into multiple files. Reasons might be:
 
-* You start loosing the overview having more than 300 segments in a file
+* You start losing the overview having more than 300 segments in a file
 * Not every translation needs to be loaded on the first page, speed up load time
 
 ## semantic reasons
