@@ -49,8 +49,20 @@ True i18next's documentation is bigger than that of other i18n frameworks - but 
 
 If you do not need that i18next is as simple as any other i18n framework:
 
-```text
-import i18next from 'i18next';​i18next.init({  lng: 'de',  resources: {    de: {      translation: {        "hello world": "hallo welt"      }    }  }});​i18next.t('hello world'); // hallo welt
+```js
+import i18next from 'i18next';​
+
+i18next.init({
+    lng: 'de',
+    resources: {
+        de: {
+            translation: {
+                "hello world": "hallo Welt"
+            }
+        }
+    }
+});​
+i18next.t('hello world'); // hallo Welt
 ```
 
 ### i18next is bloated {#i-18-next-is-bloated}
@@ -75,14 +87,23 @@ Just two samples of extended functionality you can get:
 
 translation.json
 
-```text
-{  "error": {    "unspecific": "Something went wrong.",    "404": "The page was not found."  }}
+```js
+{
+    "error": {
+        "unspecific": "Something went wrong.",
+        "404": "The page was not found."
+    }
+}
 ```
 
 Sample
 
-```text
-// const error = '404';i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"​// const error = '502';i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
+```js
+const error = '404';
+i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"​
+
+const error = '502';
+i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 ```
 
 #### b\) Or like to say something like **interval plurals**: {#b-or-like-to-say-something-like-interval-plurals}
@@ -93,8 +114,10 @@ Sample
 
 Just drop in the [interval-postprocessor](https://github.com/i18next/i18next-intervalPlural-postProcessor)​
 
-```text
-{  key_interval: '(0){no goodies remaining...sorry you`re to late};(1-100){just a few goodies remaining...};(100-inf){many goodies still available};'}
+```js
+{
+    key_interval: '(0){no goodies remaining...sorry you`re to late};(1-100){just a few goodies remaining...};(100-inf){many goodies still available};'
+}
 ```
 
 ### Works on serverside {#works-on-serverside}
