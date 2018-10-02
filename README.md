@@ -10,7 +10,7 @@ i18next goes beyond just providing the standard i18n features such as \(plurals,
 
 The i18next-community created integrations for frontend-frameworks such as React, AngularJS, Vue.js and many more.
 
-But this is not where it ends...you can also use i18next with Node.js, PHP, iOS, Android and other platforms.
+But this is not where it ends. You can also use i18next with Node.js, PHP, iOS, Android and other platforms.
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
 
@@ -31,7 +31,7 @@ i18next takes care of these issue for you. We provide you with plugins to:
 
 i18next comes with strong defaults but it is flexible enough to fulfill custom needs.
 
-* Use moment.js over intl for date formatting? 
+* Use moment.js over intl for date formatting?
 * Prefer different pre- and suffixes for interpolation?
 * Like gettext style keys better?
 
@@ -59,4 +59,3 @@ Through [locize.com](http://locize.com/?utm_source=i18next_com&utm_medium=gitboo
 ![](.gitbook/assets/dashboard.png)
 
 [Learn more about the enterprise offering](overview/for-enterprises.md)
-
