@@ -49,8 +49,20 @@ True i18next's documentation is bigger than that of other i18n frameworks - but 
 
 If you do not need that i18next is as simple as any other i18n framework:
 
-```text
-import i18next from 'i18next';​i18next.init({  lng: 'de',  resources: {    de: {      translation: {        "hello world": "hallo welt"      }    }  }});​i18next.t('hello world'); // hallo welt
+```javascript
+import i18next from 'i18next';​
+
+i18next.init({
+    lng: 'de',
+    resources: {
+        de: {
+            translation: {
+                "hello world": "hallo Welt"
+            }
+        }
+    }
+});​
+i18next.t('hello world'); // hallo Welt
 ```
 
 ### i18next is bloated {#i-18-next-is-bloated}
@@ -75,14 +87,23 @@ Just two samples of extended functionality you can get:
 
 translation.json
 
-```text
-{  "error": {    "unspecific": "Something went wrong.",    "404": "The page was not found."  }}
+```javascript
+{
+    "error": {
+        "unspecific": "Something went wrong.",
+        "404": "The page was not found."
+    }
+}
 ```
 
 Sample
 
-```text
-// const error = '404';i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"​// const error = '502';i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
+```javascript
+const error = '404';
+i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"​
+
+const error = '502';
+i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 ```
 
 #### b\) Or like to say something like **interval plurals**: {#b-or-like-to-say-something-like-interval-plurals}
@@ -93,8 +114,10 @@ Sample
 
 Just drop in the [interval-postprocessor](https://github.com/i18next/i18next-intervalPlural-postProcessor)​
 
-```text
-{  key_interval: '(0){no goodies remaining...sorry you`re to late};(1-100){just a few goodies remaining...};(100-inf){many goodies still available};'}
+```javascript
+{
+    key_interval: '(0){no goodies remaining...sorry you`re to late};(1-100){just a few goodies remaining...};(100-inf){many goodies still available};'
+}
 ```
 
 ### Works on serverside {#works-on-serverside}
@@ -116,4 +139,3 @@ With [https://locize.com](https://locize.com/) we fill this gap and enable a loc
 {% embed data="{\"url\":\"https://www.youtube.com/watch?v=9NOzJhgmyQE\",\"type\":\"video\",\"title\":\"react-i18next and locize\",\"description\":\"Awesome work experience using react-i18next with locize.\\n\\nexample: https://github.com/i18next/react-i18next/tree/master/example/locize-example\\n\\nhttp://locize.com\",\"icon\":{\"type\":\"icon\",\"url\":\"https://www.youtube.com/yts/img/favicon\_144-vfliLAfaB.png\",\"width\":144,\"height\":144,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://i.ytimg.com/vi/9NOzJhgmyQE/maxresdefault.jpg\",\"width\":1280,\"height\":720,\"aspectRatio\":0.5625},\"embed\":{\"type\":\"player\",\"url\":\"https://www.youtube.com/embed/9NOzJhgmyQE?rel=0&showinfo=0\",\"html\":\"<div style=\\\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.2493%;\\\"><iframe src=\\\"https://www.youtube.com/embed/9NOzJhgmyQE?rel=0&amp;showinfo=0\\\" style=\\\"border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;\\\" allowfullscreen scrolling=\\\"no\\\"></iframe></div>\",\"aspectRatio\":1.7778}}" %}
 
 ​
-
