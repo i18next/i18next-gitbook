@@ -300,6 +300,12 @@ Every event can be unsubscribed using
 
 Gets fired after initialization.
 
+### onLanguageChanged
+
+`i18next.store.on('languageChanged', function(lng) {})`
+
+Gets fired when changeLanguage got called.
+
 ### onLoaded
 
 `i18next.on('loaded', function(loaded) {})`
@@ -333,12 +339,6 @@ Gets fired when resources got added.
 `i18next.store.on('removed', function(lng, ns) {})`
 
 Gets fired when resources got removed.
-
-### onLanguageChanged
-
-`i18next.store.on('languageChanged', function(lng) {})`
-
-Gets fired when changeLanguage got called.
 
 ## resource handling
 
