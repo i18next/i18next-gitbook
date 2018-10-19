@@ -59,3 +59,4 @@ Through [locize.com](http://locize.com/?utm_source=i18next_com&utm_medium=gitboo
 ![](.gitbook/assets/dashboard.png)
 
 [Learn more about the enterprise offering](overview/for-enterprises.md)
+

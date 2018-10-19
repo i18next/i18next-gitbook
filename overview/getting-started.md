@@ -33,10 +33,9 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 ### Important Caveat
 
-Before we dive into the first sample, please note the following: 
-By default, i18next uses a key-based notation to look up translations, which comes with the benefit of [additional structure](../translation-function/essentials.md) for your translation files.
+Before we dive into the first sample, please note the following: By default, i18next uses a key-based notation to look up translations, which comes with the benefit of [additional structure](../translation-function/essentials.md) for your translation files.
 
-The downside of this is that your keys must not be in natural language &mdash; the names of the keys are not used as fallback content and the key names must not include  reserved characters `:` and `.` since those are used by i18next.
+The downside of this is that your keys must not be in natural language — the names of the keys are not used as fallback content and the key names must not include reserved characters `:` and `.` since those are used by i18next.
 
 If you prefer using natural language in keys, please read the [fallback guide](../principles/fallback.md#key-fallback).
 
@@ -63,7 +62,7 @@ i18next.init({
 });
 ```
 
-As you might see, this basic sample provides only one language directly added on init&#8230; let's extend this to have buttons to change language from English to German:
+As you might see, this basic sample provides only one language directly added on init… let's extend this to have buttons to change language from English to German:
 
 [source code](https://jsfiddle.net/jamuhl/dvk0e8a9/#tabs=js,result,html)
 

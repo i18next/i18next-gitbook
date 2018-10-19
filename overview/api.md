@@ -318,21 +318,25 @@ Gets fired if loading resources failed.
 
 Gets fired on accessing a key not existing. Needs [saveMissing](configuration-options.md#missing-keys) set to true.
 
+## store events
+
+Please be aware the `i18next.store` is only available on i18next after the init call.
+
 ### onAdded
 
-`i18next.on('added', function(lng, ns) {})`
+`i18next.store.on('added', function(lng, ns) {})`
 
 Gets fired when resources got added.
 
 ### onRemoved
 
-`i18next.on('removed', function(lng, ns) {})`
+`i18next.store.on('removed', function(lng, ns) {})`
 
 Gets fired when resources got removed.
 
 ### onLanguageChanged
 
-`i18next.on('languageChanged', function(lng) {})`
+`i18next.store.on('languageChanged', function(lng) {})`
 
 Gets fired when changeLanguage got called.
 
