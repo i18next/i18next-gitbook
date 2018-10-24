@@ -12,6 +12,7 @@
 | vue.js | [vue-i18next](https://github.com/rse/vue-i18next) | Vue plugin for integrating i18next |
 | vue.js | [vue-i18next](https://github.com/panter/vue-i18next) | Vue plugin for integrating i18next |
 | vue.js | [vue-i18next2](https://github.com/bluelovers/vue-i18next2) | Vue plugin for integrating i18next |
+| omi.js | [omi-i18n](https://github.com/i18next/omi-i18n) | omi-i18n solution for omi.js using i18next ecosystem |
 | inferno.js | [inferno-i18next](https://www.npmjs.com/package/inferno-i18next) | inferno-i18next is a translation utility for Inferno components |
 | elm | [elm-i18next](https://github.com/ChristophP/elm-i18next) | use i18next in elm |
 | express.js | [nodejs express middleware](https://github.com/i18next/i18next-express-middleware) | Middleware to use i18next in express.js \(nodejs\). |
