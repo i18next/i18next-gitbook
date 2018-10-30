@@ -153,8 +153,8 @@ i18next.t('No one says a key can not be the fallback.')
 // -> "Niemand sagt ein key kann nicht als Ersatz dienen."
 
 
-i18next.t('This will be shown if the current loaded translations to not have this.');
-// -> "This will be shown if the current loaded translations to not have this."
+i18next.t('This will be shown if the current loaded translations do not have this.');
+// -> "This will be shown if the current loaded translations do not have this."
 ```
 
 While this works and might reduce files to load it makes the management of translations a lot harder as you will need to update changes to fallback values in code and json files.
