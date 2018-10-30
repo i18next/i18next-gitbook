@@ -21,7 +21,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-gettext-converter](https://github.com/i18next/i18next-gettext-converter) | converter | Converts gettext .mo or .po to 18next json format and vice versa. |
 | [csv2i18next](https://github.com/tmorozov/csv2i18next) | converter | Convert CSV files to JSON & YAML for i18next.js |
 | [resx2i18next](https://github.com/rolandpd/resx2i18next) | converter | Convert ResX-files to json resources compatible with i18next |
-| [i18next-scanner](http://i18next.github.io/i18next-scanner/) | extractor | Scan your code, extract translation keys/values, and merge them into i18n resource files. |
+| [i18next-scanner](http://i18next.github.io/i18next-scanner) | extractor | Scan your code, extract translation keys/values, and merge them into i18n resource files. |
 | [i18next-parser](https://github.com/i18next/i18next-parser) | extractor | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
 | [i18nextResourceGenerator](https://github.com/DREEBIT/i18nextResourceGenerator) | extractor | Intellij IDEA Plugin for i18next resource generation |
 | [aurelia-i18next-parser](https://github.com/gooy/aurelia-i18next-parser) | extractor | Extracts i18n keys and values from source files. |
@@ -33,7 +33,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [webpack i18next-loader](https://github.com/alienfast/i18next-loader) | bundler | Webpack loader for client embedded i18next locales from json or yaml. |
 | [ya-i18next-webpack-plugin](https://github.com/Perlmint/ya-i18next-webpack-plugin) | bundler | Yet another i18next webpack plugin. This plugin collects keys from webpack parsing phase, saves missing translations into specified path, copies translation files. |
 | [rollup-plugin-i18next-conv](https://github.com/perrin4869/rollup-plugin-i18next-conv) | bundler/converter | Import .po files with rollup |
-| [i18next-static-analysis\)](https://github.com/Cellule/i18next-static-analysis) | util | analyse statically your code to find calls to i18next and validates them for all your supported languages |
+| [i18next-static-analysis](https://github.com/Cellule/i18next-static-analysis) | util | analyse statically your code to find calls to i18next and validates them for all your supported languages |
 | [i18next-json-sync](https://github.com/jwbay/i18next-json-sync) | util | Keep i18next JSON resource files in sync with source language file |
 
 ### services
