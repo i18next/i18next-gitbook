@@ -302,7 +302,7 @@ Gets fired after initialization.
 
 ### onLanguageChanged
 
-`i18next.store.on('languageChanged', function(lng) {})`
+`i18next.on('languageChanged', function(lng) {})`
 
 Gets fired when changeLanguage got called.
 
