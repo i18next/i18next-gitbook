@@ -20,8 +20,8 @@ With v2 of i18next we completely rebuild i18next to be as extensible as possible
 
 Just have a look at what the community built around the i18next core:
 
-* ​[Supported Frameworks](https://www.i18next.com/~/drafts/-LLU0VQ-n0MCsRRnS6Dp/primary/overview/supported-frameworks)​
-* ​[Plugins and Utils](https://www.i18next.com/~/drafts/-LLU0VQ-n0MCsRRnS6Dp/primary/overview/plugins-and-utils)​
+* ​[Supported Frameworks​](supported-frameworks.md)
+* ​[Plugins and Utils](plugins-and-utils.md)​
 
 ## Richness <a id="richness"></a>
 
