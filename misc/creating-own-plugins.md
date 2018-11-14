@@ -25,15 +25,15 @@ Backend plugins are used to load data for i18next.
   },
   read: function(language, namespace, callback) {
     /* return resources */
-    return {
+    callback(null, {
       key: 'value'
-    };
+    });
   },
 
   // optional
   readMulti: function(languages, namespaces, callback) {
     /* return multiple resources - usefull eg. for bundling loading in one xhr request */
-    return {
+    callback(null, {
       en: {
         translations: {
           key: 'value'
@@ -44,7 +44,7 @@ Backend plugins are used to load data for i18next.
           key: 'value'
         }
       }
-    }
+    });
   },
 
   // only used in backends acting as cache layer
