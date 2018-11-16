@@ -25,6 +25,14 @@ i18next.t('look.deep');
 // -> "value of look deep"
 ```
 
+### Passing a default value
+
+You can pass in a default value for cases the key could not be found in translations like:
+
+```javascript
+i18next.t('key', 'default value to show');
+```
+
 ### Accessing keys in different namespaces
 
 Namespaces are a feature in i18next internationalization framework which allows you to separate translations that get loaded into multiple files.
