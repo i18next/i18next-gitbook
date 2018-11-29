@@ -5,6 +5,7 @@
 | framework | url | description |
 | :--- | :--- | :--- |
 | react.js | [react-i18next](https://github.com/i18next/react-i18next) | Higher order component and append i18next to context. |
+| next.js | [next-i18next](https://github.com/isaachinman/next-i18next) | The easiest way to translate your NextJs apps. |
 | react.js | [ns-react-i18next](https://github.com/dmtrKovalenko/ns-react-18next) | Namespaced i18next localization in react. |
 | angular.js | [ng-i18next](https://github.com/i18next/ng-i18next) | Angular1/2 provider, directive and filter |
 | angular.js | [ng2-i18next](https://github.com/actimeo/ng2-i18next) | Angular2 service and directive |
