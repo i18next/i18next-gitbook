@@ -2,7 +2,7 @@
 
 You now might expect we compare eg. react-i18next to react-intl but that won't happen ;\). But we will list why you should trust i18next to be the best choice for internationalization.
 
-## Substainability <a id="substainability"></a>
+## Sustainability <a id="sustainability"></a>
 
 I18next was created in late 2011. What does that mean? It's older than most of the libraries you will use nowadays, including your main frontend tech \(react, vue, ...\).
 
