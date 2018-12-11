@@ -144,6 +144,9 @@ i18next.init({
   // allow keys to be phrases having `:`, `.`
   nsSeparator: false,
   keySeparator: false,
+  
+  // allow an empty value to count as invalid (by default is true)
+  returnEmptyString: false
 
   // do not load a fallback
   fallbackLng: false
