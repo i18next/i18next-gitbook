@@ -161,6 +161,15 @@ While this works and might reduce files to load it makes the management of trans
 
 Possible - but not recommended.
 
+#### Missing values for existing keys
+
+In addition to the above, if you want missing values to fallback to the key in cases where the keys (eg. got extracted by a code parser) exist in your JSON translation file with empty string as value, you also need this setting:
+
+```
+// allow an empty value to count as invalid (by default is true)
+  returnEmptyString: false
+```
+
 #### calling with fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
