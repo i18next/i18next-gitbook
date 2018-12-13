@@ -144,9 +144,6 @@ i18next.init({
   // allow keys to be phrases having `:`, `.`
   nsSeparator: false,
   keySeparator: false,
-  
-  // allow an empty value to count as invalid (by default is true)
-  returnEmptyString: false
 
   // do not load a fallback
   fallbackLng: false
@@ -163,6 +160,15 @@ i18next.t('This will be shown if the current loaded translations do not have thi
 While this works and might reduce files to load it makes the management of translations a lot harder as you will need to update changes to fallback values in code and json files.
 
 Possible - but not recommended.
+
+#### Missing values for existing keys
+
+In addition to the above, if you want missing values to fallback to the key and not just a blank, you also need this setting:
+
+```
+// allow an empty value to count as invalid (by default is true)
+  returnEmptyString: false
+```
 
 #### calling with fallback keys
 
