@@ -163,7 +163,7 @@ Possible - but not recommended.
 
 #### Missing values for existing keys
 
-In addition to the above, if you want missing values to fallback to the key and not just a blank, you also need this setting:
+In addition to the above, if you want missing values to fallback to the key in cases where the keys (eg. got extracted by a code parser) exist in your JSON translation file with empty string as value, you also need this setting:
 
 ```
 // allow an empty value to count as invalid (by default is true)
