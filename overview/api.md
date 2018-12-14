@@ -4,7 +4,7 @@
 
 ### init
 
-`i18next.init(options, callback)`
+`i18next.init(options, callback) // -> returns a Promise`
 
 The default export of the i18next module is an i18next instance ready to be initialized by calling `init`. You can create additional instances using the [createInstance](api.md#createinstance) function.
 
@@ -28,6 +28,11 @@ i18next.init((err, t) => {
   if (err) return console.log('something went wrong loading', err);
   t('key'); // -> same as i18next.t
 });
+
+// using Promises
+i18next
+  .init({ /* options */ )})
+  .then(function(t) { t('key'); });
 ```
 
 ### use
@@ -99,7 +104,7 @@ anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('another
 
 ### changeLanguage
 
-`i18next.changeLanguage(lng, callback)`
+`i18next.changeLanguage(lng, callback) // -> returns a Promise`
 
 Changes the language. The callback will be called as soon translations were loaded or an error occurs while loading.
 
@@ -110,6 +115,13 @@ i18next.changeLanguage('en', (err, t) => {
   if (err) return console.log('something went wrong loading', err);
   t('key'); // -> same as i18next.t
 });
+
+// using Promises
+i18next
+  .changeLanguage('en')
+  .then((t) => {
+    t('key'); // -> same as i18next.t
+  });
 ```
 
 ### language
@@ -153,29 +165,39 @@ i18next.languages; // ["de-DE", "de", "es", "fr", "en-US", "dev"]
 
 ### loadNamespaces
 
-`i18next.loadNamespaces(ns, callback)`
+`i18next.loadNamespaces(ns, callback) // -> returns a Promise`
 
 Loads additional namespaces not defined in init options.
 
 ```javascript
-i18next.loadNamespaces('myNamespace', (err, t) => { /* resources have been loaded */ });
-i18next.loadNamespaces(['myNamespace1', 'myNamespace2'], (err, t) => { /* resources have been loaded */ });
+i18next.loadNamespaces('myNamespace', (err) => { /* resources have been loaded */ });
+i18next.loadNamespaces(['myNamespace1', 'myNamespace2'], (err) => { /* resources have been loaded */ });
+
+// using Promises
+i18next
+  .loadNamespaces(['myNamespace1', 'myNamespace2'])
+  .then(() => {});
 ```
 
 ### loadLanguages
 
-`i18next.loadLanguages(lngs, callback)`
+`i18next.loadLanguages(lngs, callback) // -> returns a Promise`
 
 Loads additional languages not defined in init options \(preload\).
 
 ```javascript
-i18next.loadLanguages('de', (err, t) => { /* resources have been loaded */ });
-i18next.loadLanguages(['de', 'fr'], (err, t) => { /* resources have been loaded */ });
+i18next.loadLanguages('de', (err) => { /* resources have been loaded */ });
+i18next.loadLanguages(['de', 'fr'], (err) => { /* resources have been loaded */ });
+
+// using Promises
+i18next
+  .loadLanguages(['de', 'fr'])
+  .then(() => {});
 ```
 
 ### reloadResources
 
-`i18next.reloadResources()`
+`i18next.reloadResources() // -> returns a Promise`
 
 Reloads resources on given state. Optionally you can pass an array of languages and namespaces as params if you don't want to reload all.
 
@@ -197,6 +219,11 @@ i18next.reloadResources('de', 'ns1');
 
 // optional third param callback i18next@>=11.9.0
 i18next.reloadResources('de', 'ns1', () => { /* reloaded */ });
+
+// using Promises
+i18next
+  .reloadResources()
+  .then(() => {});
 ```
 
 ### setDefaultNamespace

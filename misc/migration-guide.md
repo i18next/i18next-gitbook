@@ -2,6 +2,11 @@
 
 ## Migration Guide
 
+### v12.x.x to v13.0.0
+
+* typescript definitions now can directly be used from the i18next module - no longer needed to get them from DefinitelyTyped
+* functions used to return a callback \(eg. init, changeLanguage, loadNamespaces\) now also return a Promise - while this enables easier handling using async await this also means eg. i18next.init does not return this anylonger and therefore you can't chain calls like `i18next.init().on()` anylonger.
+
 ### v11.x.x to v12.0.0
 
 * plural form for hebrew was updated to latest [CLDR](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html#he). Before it had one plural form. You will have to update your JSON files containing hebrew plurals. Or patch back the plural form to: [https://github.com/i18next/i18next/blob/master/src/PluralResolver.js\#L43](https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L43) using the [addRule function](https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L90).  Learn more about plurals: [https://www.i18next.com/translation-function/plurals](https://www.i18next.com/translation-function/plurals)

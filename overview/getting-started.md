@@ -62,6 +62,25 @@ i18next.init({
 });
 ```
 
+Or using Promises:
+
+```javascript
+i18next.init({
+  lng: 'en',
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+}).then(function(t) {
+  // initialized and ready to go!
+  document.getElementById('output').innerHTML = i18next.t('key');
+});
+```
+
 As you might see, this basic sample provides only one language directly added on init… let's extend this to have buttons to change language from English to German:
 
 [source code](https://jsfiddle.net/jamuhl/dvk0e8a9/#tabs=js,result,html)
