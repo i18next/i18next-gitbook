@@ -53,16 +53,12 @@ i18next.on('languageChanged', function(lng) {
 
 ### Additional options
 
-Prefix/Suffix for interpolation and other options can be overridden in init option or by passing additional options to t function:
+Prefix/Suffix for interpolation and other options can be overridden in init option:
 
 sample
 
 ```javascript
 i18next.init({
-    interpolation: { ... }
-});
-
-i18next.t('key', {
     interpolation: { ... }
 });
 ```
