@@ -36,10 +36,10 @@ What you don't get by others - but get with i18next
 * There are plugins to **detect languages** for most environments \(browser, native, server\). This enables to set priority of where to detect and even enables to cache set languages over requests / visits.
 * There are endless plugins to **load translation** from server, filesystem, ... this backends also assert that loading gets retried on failure, or that a file does not get loaded twice and callbacks of success are only called once. Those backends can even provide an additional layer for **local caching** eg. in localStorage.
 * Options what to load and how to fallback depending on language.
-* Support for [objects and arrays](https://www.i18next.com/~/drafts/-LLU0VQ-n0MCsRRnS6Dp/primary/translation-function/objects-and-arrays)​
+* Support for [objects and arrays](https://www.i18next.com/translation-function/objects-and-arrays)
 * Full control over management of the translations stored.
 * Rich system of events to react on changes important to your application.
-* Freedom of [i18n formats](https://www.i18next.com/~/drafts/-LLU0VQ-n0MCsRRnS6Dp/primary/overview/plugins-and-utils#i-18-n-formats) - prefer ICU? Just use i18next-icu plugin.
+* Freedom of [i18n formats](https://www.i18next.com/overview/plugins-and-utils#i-18-n-formats) - prefer ICU? Just use i18next-icu plugin.
 
 ## But i heard  <a id="but-i-heard"></a>
 
