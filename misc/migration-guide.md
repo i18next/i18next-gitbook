@@ -2,6 +2,10 @@
 
 ## Migration Guide
 
+### v13.x.x to v14.0.0
+
+* Breaking changes in typescript typings for details have a look at this [pull request](https://github.com/i18next/i18next/pull/1180).
+
 ### v12.x.x to v13.0.0
 
 * typescript definitions now can directly be used from the i18next module - no longer needed to get them from DefinitelyTyped

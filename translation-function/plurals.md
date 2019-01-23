@@ -43,7 +43,7 @@ keys
   "key_2": "two",
   "key_3": "few",
   "key_4": "many",
-  "key_5": "plural"
+  "key_5": "other"
 }
 ```
 
@@ -58,7 +58,7 @@ i18next.t('key', {count: 4}); // -> "few"
 i18next.t('key', {count: 5}); // -> "few"
 i18next.t('key', {count: 11}); // -> "many"
 i18next.t('key', {count: 99}); // -> "many"
-i18next.t('key', {count: 100}); // -> "plural"
+i18next.t('key', {count: 100}); // -> "other"
 ```
 
 ### How to find the correct plural suffix?
