@@ -6,7 +6,7 @@
 
 ### i18n formats
 
-While the i18next format \(JSON based\) is the preferred solution and widely supported in translation management tools like eg. [locize.com](https://locize.com) you might prefer an other exiting format:
+While the i18next format \(JSON based\) is the preferred solution and widely supported in translation management tools like eg. [locize](https://locize.com), [lokalise](https://lokalise.co), [phraseapp](https://phraseapp.com) you might prefer an other exiting format:
 
 | **name** | **format** | **description** |
 | :--- | :--- | :--- |
