@@ -27,6 +27,7 @@ All options for calling init or createInstance.
 | ns | 'translation' | string or array of namespaces to load |
 | defaultNS | 'translation' | default namespace used if not passed to [translation function](../translation-function/essentials.md) |
 | fallbackNS | false | string or array of namespaces to lookup key if not found in given namespace. [Learn more](../principles/fallback.md#namespace-fallback). |
+| partialBundledLanguages | false | allows some resources to be set on initialization while others can be loaded using a backend connector |
 
 ### missing keys
 
