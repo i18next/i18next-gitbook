@@ -4,6 +4,8 @@
 
 Plural can be combined with interpolation, context, ...
 
+Note: The variable name must be `count`.
+
 ### Singular / Plural
 
 keys
