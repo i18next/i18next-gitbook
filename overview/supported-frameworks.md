@@ -29,6 +29,7 @@
 | ember.js | [ember-cli-i18next](https://github.com/recipher/ember-cli-i18next) | Ember CLI addon to wrap i18next |
 | knockout.js | [i18next-ko](https://github.com/leMaik/i18next-ko) | KnockoutJS bindings for i18next |
 | phaser | [phaser-i18next](https://github.com/orange-games/phaser-i18next) | Phaser plugin for translations using i18next |
+| construct 3 | [c3-i18next](https://github.com/nagyv/c3-i18next/) | A translation plugin for Construct 3 built on top of i18next |
 | metalsmith | [metalsmith-i18next](https://github.com/macprog-guy/metalsmith-i18next) | Metalsmith plugin for i18next to easily create multiple localised branches of your site. |
 | django | [django-i18next](http://pythonhosted.org/django-i18next/) | Additions to Django’s i18n module. |
 | .net | [I18Next.Net](https://github.com/DarkLiKally/I18Next.Net) | .NET library based on .NET Standard 2.0 with a rich featureset like the original i18next supporting .net DI and translations; also comes with plugin support |
