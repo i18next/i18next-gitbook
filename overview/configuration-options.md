@@ -23,7 +23,8 @@ All options for calling init or createInstance.
 | nonExplicitWhitelist | false | if true will pass eg. `en-US` if finding `en` in whitelist |
 | load | 'all' | language codes to lookup, given set language is 'en-US': `'all' --> ['en-US', 'en', 'dev']`, `'currentOnly' --> 'en-US'`, `'languageOnly' --> 'en'` |
 | preload | false | array of languages to preload. Important on serverside to assert translations are loaded before rendering views. |
-| lowerCaseLng | false | language will be lowercased eg. `en-US` --&gt; `en-us` |
+| lowerCaseLng | false | locale will be fully lowercased eg. `en-US` --&gt; `en-us` |
+| cleanCode | false | language will be lowercased `EN` --&gt; `en` while leaving full locales like `en-US` |
 | ns | 'translation' | string or array of namespaces to load |
 | defaultNS | 'translation' | default namespace used if not passed to [translation function](../translation-function/essentials.md) |
 | fallbackNS | false | string or array of namespaces to lookup key if not found in given namespace. [Learn more](../principles/fallback.md#namespace-fallback). |
