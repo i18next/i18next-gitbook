@@ -6,11 +6,11 @@ You now might expect we compare eg. react-i18next to react-intl but that won't h
 
 I18next was created in late 2011. What does that mean? It's older than most of the libraries you will use nowadays, including your main frontend tech \(react, vue, ...\).
 
-Believe it or not but by time of writing the v11.x.x can be dropped in as a replacement for v1 by just adding a minimal compatibility layer. It's important to us not breaking things just for the sake of using new fancy stuff \(which does not mean we do not keep up with lastest possibilities of development\).
+Believe it or not but by the time of writing, the v11.x.x can be dropped in as a replacement for v1 by just adding a minimal compatibility layer. It's important to us not breaking things just for the sake of using new fancy stuff \(which does not mean we do not keep up with lastest possibilities of development\).
 
 ## Maturity   <a id="maturity"></a>
 
-Based on how long i18next already is available open source there is no real i18n case that could not be solved with i18next.
+Based on how long i18next already is available open source, there is no real i18n case that could not be solved with i18next.
 
 i18next and it's localization service [https://locize.com](https://locize.com/) are used by companies small to very large.
 
@@ -45,7 +45,7 @@ What you don't get by others - but get with i18next
 
 ### i18next is complicated   <a id="i-18-next-is-complicated"></a>
 
-True, i18next's documentation is bigger than that of other i18n frameworks - but thats also a tribute to offering a lot more features that you would have to build yourself otherwise \(language detection, translation loading, ...\).
+True, i18next's documentation is bigger than that of other i18n frameworks - but that's also a tribute to offering a lot more features that you would have to build yourself otherwise \(language detection, translation loading, ...\).
 
 If you do not need that i18next is as simple as any other i18n framework:
 
@@ -110,13 +110,13 @@ i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 
 * many goodies still available
 * just a few goodies remaining...
-* no goodies remaining...sorry you're to late
+* no goodies remaining...sorry you're too late
 
 Just drop in the [interval-postprocessor](https://github.com/i18next/i18next-intervalPlural-postProcessor)​
 
 ```javascript
 {
-    key_interval: '(0){no goodies remaining...sorry you`re to late};(1-100){just a few goodies remaining...};(100-inf){many goodies still available};'
+    key_interval: '(0){no goodies remaining...sorry you`re too late};(1-100){just a few goodies remaining...};(100-inf){many goodies still available};'
 }
 ```
 
@@ -132,7 +132,7 @@ Should speak for itself.
 
 ### We bridge the gap to localization   <a id="we-bridge-the-gap-to-localization"></a>
 
-Being honest internationalization is the smaller pain in getting a site translated. Localization and the translation process is where the real hard work starts.
+Being honest, internationalization is the smaller pain in getting a site translated. Localization and the translation process is where the real hard work starts.
 
 With [https://locize.com](https://locize.com/) we fill this gap and enable a localization workflow as never seen before:
 
