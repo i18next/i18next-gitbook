@@ -56,6 +56,7 @@ All options for calling init or createInstance.
 | joinArrays | false | char, eg. '\n' that arrays will be joined by |
 | overloadTranslationOptionHandler | function\(args\) { return { defaultValue: args\[1\] }; }; | default: sets defaultValue |
 | interpolation | {...} | see interpolation |
+| skipInterpolation | false | Allow translate function to skip interpolation and return raw values instead |
 
 ### plugin options
 
