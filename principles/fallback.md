@@ -61,7 +61,7 @@ i18next.init({
 i18next.init({
     fallbackLng: { 
         'de-CH': ['fr', 'it'], 
-        'zh-HANT': ['zh-HANS', 'en'],
+        'zh-Hant': ['zh-Hans', 'en'],
         'es': ['fr'],
         'default': ['en']
     }
