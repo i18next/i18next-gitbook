@@ -12,7 +12,7 @@ Believe it or not but by the time of writing, the v11.x.x can be dropped in as a
 
 Based on how long i18next already is available open source, there is no real i18n case that could not be solved with i18next.
 
-i18next and it's localization service [https://locize.com](https://locize.com/) are used by companies small to very large.
+i18next and its localization service [https://locize.com](https://locize.com/) are used by companies small to very large.
 
 ## Extensibility    <a id="extensibility"></a>
 
@@ -34,14 +34,14 @@ What you don't get by others - but get with i18next
 
 * Splitting translations into multiple files. Only load translations needed.
 * There are plugins to **detect languages** for most environments \(browser, native, server\). This enables to set priority of where to detect and even enables to cache set languages over requests / visits.
-* There are endless plugins to **load translation** from server, filesystem, ... this backends also assert that loading gets retried on failure, or that a file does not get loaded twice and callbacks of success are only called once. Those backends can even provide an additional layer for **local caching** eg. in localStorage.
+* There are endless plugins to **load translation** from server, filesystem, ... these backends also assert that loading gets retried on failure, or that a file does not get loaded twice and callbacks of success are only called once. Those backends can even provide an additional layer for **local caching** eg. in localStorage.
 * Options what to load and how to fallback depending on language.
 * Support for [objects and arrays](https://www.i18next.com/translation-function/objects-and-arrays)
 * Full control over management of the translations stored.
 * Rich system of events to react on changes important to your application.
 * Freedom of [i18n formats](https://www.i18next.com/overview/plugins-and-utils#i-18-n-formats) - prefer ICU? Just use i18next-icu plugin.
 
-## But i heard    <a id="but-i-heard"></a>
+## But I heard    <a id="but-i-heard"></a>
 
 ### i18next is complicated    <a id="i-18-next-is-complicated"></a>
 
