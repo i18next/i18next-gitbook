@@ -24,8 +24,13 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 **unpkg.com**
 
-* [https://unpkg.com/i18next/i18next.js](https://unpkg.com/i18next/i18next.js)
-* [https://unpkg.com/i18next/i18next.min.js](https://unpkg.com/i18next/i18next.min.js)
+* [https://unpkg.com/i18next/dist/umd/i18next.js](https://unpkg.com/i18next@16.0.0/dist/umd/i18next.js)
+* [https://unpkg.com/i18next/dist/umd/i18next.min.js](https://unpkg.com/i18next@16.0.0/dist/umd/i18next.min.js)
+
+esm or cjs:
+
+* [https://unpkg.com/i18next/dist/esm/i18next.js](https://unpkg.com/i18next@16.0.0/dist/esm/i18next.js)
+* [https://unpkg.com/i18next/dist/cjs/i18next.js](https://unpkg.com/i18next@16.0.0/dist/esm/i18next.js)
 
 **cdnjs.com**
 
