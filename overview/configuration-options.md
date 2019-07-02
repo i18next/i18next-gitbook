@@ -70,7 +70,7 @@ All options for calling init or createInstance.
 
 | option | default | description |
 | :--- | :--- | :--- |
-| initImmediate | true | triggers resource loading in init function inside a setTimeout \(default async behaviour\). Set it to false if your backend loads resources sync - that way calling i18next.t after init is possible without relaying on the init callback. |
+| initImmediate | true | triggers resource loading in init function inside a setTimeout \(default async behaviour\). Set it to false if your backend loads resources sync - that way calling i18next.t after init is possible without relying on the init callback. |
 | keySeparator | '.' | char to separate keys |
 | nsSeparator | ':' | char to split namespace from key |
 | pluralSeparator | '\_' | char to split plural from key |
