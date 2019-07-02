@@ -67,7 +67,7 @@ i18next.t('key', {count: 100}); // -> "other"
 
 You can use this small utility to get the correct plural suffixes.
 
-[source code](https://jsfiddle.net/jamuhl/3sL01fn0/#tabs=result)
+[source code](https://jsfiddle.net/sm9wgLze)
 
 ### Interval plurals
 
