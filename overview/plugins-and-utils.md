@@ -14,6 +14,14 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-icu](https://github.com/i18next/i18next-icu) | ICU | i18nFormat plugin to use ICU format with i18next based on [yahoo/intl-messageformat](https://github.com/yahoo/intl-messageformat) |
 | [i18next-polyglot](https://github.com/i18next/i18next-polyglot) | polyglot | i18nFormat plugin to use [airbnb/polyglot.js](https://github.com/airbnb/polyglot.js) format with i18next |
 
+### extraction tools
+
+| **name** | **description** |
+| :--- | :--- |
+| [i18next-scanner](http://i18next.github.io/i18next-scanner) | Scan your code, extract translation keys/values, and merge them into i18n resource files. |
+| [i18next-parser](https://github.com/i18next/i18next-parser) | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
+| [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) | A babel plugin that can extract keys in JSONv3 format. |
+
 ### utils
 
 | **util** | **type** | **description** |
@@ -21,8 +29,6 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-gettext-converter](https://github.com/i18next/i18next-gettext-converter) | converter | Converts gettext .mo or .po to 18next json format and vice versa. |
 | [csv2i18next](https://github.com/tmorozov/csv2i18next) | converter | Convert CSV files to JSON & YAML for i18next.js |
 | [resx2i18next](https://github.com/rolandpd/resx2i18next) | converter | Convert ResX-files to json resources compatible with i18next |
-| [i18next-scanner](http://i18next.github.io/i18next-scanner) | extractor | Scan your code, extract translation keys/values, and merge them into i18n resource files. |
-| [i18next-parser](https://github.com/i18next/i18next-parser) | extractor | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
 | [i18nextResourceGenerator](https://github.com/DREEBIT/i18nextResourceGenerator) | extractor | Intellij IDEA Plugin for i18next resource generation |
 | [aurelia-i18next-parser](https://github.com/gooy/aurelia-i18next-parser) | extractor | Extracts i18n keys and values from source files. |
 | [grunt-i18next](https://github.com/i18next/grunt-i18next) | bundler | bundle language resource files for i18next |
