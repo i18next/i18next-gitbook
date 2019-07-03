@@ -6,7 +6,7 @@ You now might expect we compare eg. react-i18next to react-intl but that won't h
 
 I18next was created in late 2011. What does that mean? It's older than most of the libraries you will use nowadays, including your main frontend tech \(react, vue, ...\).
 
-Believe it or not but by the time of writing, the v11.x.x can be dropped in as a replacement for v1 by just adding a minimal compatibility layer. It's important to us not breaking things just for the sake of using new fancy stuff \(which does not mean we do not keep up with lastest possibilities of development\).
+Believe it or not but by the time of writing, the v11.x.x can be dropped in as a replacement for v1 by just adding a minimal compatibility layer. It's important to us not breaking things just for the sake of using new fancy stuff \(which does not mean we do not keep up with latest possibilities of development\).
 
 ## Maturity     <a id="maturity"></a>
 
