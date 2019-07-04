@@ -424,6 +424,12 @@ i18next.addResourceBundle('en', 'translations', {
 
 Checks if a resource bundle exists.
 
+### getDataByLanguage
+
+`i18next.getDataByLanguage(lng)`
+
+Returns a resource data by language.
+
 ### getResourceBundle
 
 `i18next.getResourceBundle(lng, ns)`
