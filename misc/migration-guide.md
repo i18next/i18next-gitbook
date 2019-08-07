@@ -2,6 +2,19 @@
 
 ## Migration Guide
 
+### v16.x.x to v17.0.0
+
+* removes named exports in index.js to avoid issues in bundlers
+
+### v15.x.x to v16.0.0
+
+* Build process was updated - no API changes
+* **note:** dist/es -&gt; dist/esm, dist/commonjs -&gt; dist/cjs \(individual files -&gt; one bundled file\)
+
+### v14.x.x to v15.0.0
+
+* Build process was updated - no API changes
+
 ### v13.x.x to v14.0.0
 
 * Breaking changes in typescript typings for details have a look at this [pull request](https://github.com/i18next/i18next/pull/1180).
