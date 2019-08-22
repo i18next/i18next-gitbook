@@ -6,7 +6,7 @@
 
 ### i18n formats
 
-While the i18next format \(JSON based\) is the preferred solution and widely supported in translation management tools like eg. [locize.com](https://locize.com) you might prefer an other exiting format:
+While the i18next format \(JSON based\) is the preferred solution and widely supported in translation management tools like [locize.com](https://locize.com), you might prefer another exciting format, like:
 
 | **name** | **format** | **description** |
 | :--- | :--- | :--- |
@@ -104,7 +104,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 
 ### loggers
 
-right now there is only the integrated console logger available.
+Only the integrated console logger is available for now.
 
 ### Create your own plugin
 
