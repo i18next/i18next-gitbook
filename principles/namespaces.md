@@ -13,7 +13,7 @@ Often you wish to separate some segments out because they belong together. We do
 
 * **common.json** -&gt; Things that are reused everywhere, eg. Button labels 'save', 'cancel'
 * **validation.json** -&gt; All validation texts
-* **glossary.json** -&gt; Words we want to be reused consistent inside texts
+* **glossary.json** -&gt; Words we want to be reused consistently inside texts
 
 ## technical / editoral reasons
 
