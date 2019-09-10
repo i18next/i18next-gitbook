@@ -18,7 +18,7 @@ But this is not where it ends...you can also use i18next with Node.js, PHP, iOS,
 
 Most frameworks leave it to you how translations are being loaded. You are responsible to detect the user language, to load the translations and push them into the framework.
 
-i18next takes care of these issue for you. We provide you with plugins to:
+i18next takes care of these issues for you. We provide you with plugins to:
 
 * detect the user language
 * load the translations
