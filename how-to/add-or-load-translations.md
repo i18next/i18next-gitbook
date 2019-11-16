@@ -41,13 +41,17 @@ You can add the translations after init
 ```javascript
 import i18next from 'i18next';
 
-i18next.init();
+i18next.init({ resources: {} });
 i18next.addResourceBundle('en', 'namespace1', {
   key: 'hello from namespace 1'
 });
 ```
 
 There are more options to adding, removing translations...learn more about [resource handling](../overview/api.md).
+
+{% hint style="info" %}
+Please make sure to at least pass in an empty resources object on init. Else i18next will try to load translations and give you a warning that you are not using a backend.
+{% endhint %}
 
 ### Load using a backend plugin
 
