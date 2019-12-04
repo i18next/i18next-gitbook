@@ -14,6 +14,10 @@ The callback will be called after all translations were loaded or with an error 
 
 **So you should wait for init to complete \(wait for the callback or promise resolution\) before using the t function!**
 
+{% hint style="info" %}
+In case of [react-i18next](https://react.i18next.com/) make sure useSuspense is enabled or handle the ready state in [HOCs](https://react.i18next.com/latest/withtranslation-hoc#not-using-suspense) or [hooks](https://react.i18next.com/latest/usetranslation-hook#not-using-suspense) yourself.
+{% endhint %}
+
 ```javascript
 i18next.init({
   fallbackLng: 'en',
