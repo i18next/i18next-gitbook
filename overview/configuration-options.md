@@ -68,16 +68,55 @@ All options for calling init or createInstance.
 
 ### misc
 
-| option | default | description |
-| :--- | :--- | :--- |
-| initImmediate | true | triggers resource loading in init function inside a setTimeout \(default async behaviour\). Set it to false if your backend loads resources sync - that way calling i18next.t after init is possible without relying on the init callback. |
-| keySeparator | '.' | char to separate keys |
-| nsSeparator | ':' | char to split namespace from key |
-| pluralSeparator | '\_' | char to split plural from key |
-| contextSeparator | '\_' | char to split context from key |
-| appendNamespaceToCIMode | false | prefixes the namespace to the returned key when using `cimode` |
-
-#### initImmediate
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">option</th>
+      <th style="text-align:left">default</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">initImmediate</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">
+        <p>triggers resource loading in init function inside a setTimeout (default
+          async behaviour). Set it to false if your backend loads resources sync
+          - that way calling i18next.t after init is possible without relying on
+          the init callback.</p>
+        <p><b>This option only works for sync (blocking) loading backend, like i18next-sync-fs-backend!</b>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">keySeparator</td>
+      <td style="text-align:left">&apos;.&apos;</td>
+      <td style="text-align:left">char to separate keys</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nsSeparator</td>
+      <td style="text-align:left">&apos;:&apos;</td>
+      <td style="text-align:left">char to split namespace from key</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">pluralSeparator</td>
+      <td style="text-align:left">&apos;_&apos;</td>
+      <td style="text-align:left">char to split plural from key</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">contextSeparator</td>
+      <td style="text-align:left">&apos;_&apos;</td>
+      <td style="text-align:left">char to split context from key</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">appendNamespaceToCIMode</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">prefixes the namespace to the returned key when using <code>cimode</code>
+      </td>
+    </tr>
+  </tbody>
+</table>#### initImmediate
 
 Sample using initImmediate when using a backend plugin allowing sync \(blocking\) loads.
 
