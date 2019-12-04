@@ -12,6 +12,8 @@ Please read the [options page](configuration-options.md) for details on configur
 
 The callback will be called after all translations were loaded or with an error when failed \(in case of using a backend\).
 
+**So you should wait for init to complete \(wait for the callback or promise resolution\) before using the t function!**
+
 ```javascript
 i18next.init({
   fallbackLng: 'en',

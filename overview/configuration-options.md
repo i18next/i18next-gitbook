@@ -120,6 +120,8 @@ All options for calling init or createInstance.
 
 Sample using initImmediate when using a backend plugin allowing sync \(blocking\) loads.
 
+**This option only works for sync \(blocking\) loading backend, like i18next-sync-fs-backend!**
+
 ```javascript
 import i18next from 'i18next';
 import SyncBackend from 'i18next-sync-fs-backend';
