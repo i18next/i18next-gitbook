@@ -43,6 +43,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-json-sync](https://github.com/jwbay/i18next-json-sync) | util | Keep i18next JSON resource files in sync with source language file |
 | [eslint-plugin-i18next](https://github.com/edvardchen/eslint-plugin-i18next) | util | Make sure that all text shown are translated |
 | [i18next support for JetBrains IDEs](https://plugins.jetbrains.com/plugin/12981-i18n-support/) | IDE integration | Navigation, code completion, highlighting |
+| [i18next-hmr](https://github.com/felixmosh/i18next-hmr) | bundler / DX | HMR webpack plugin that allows to reload translation resources on client & server |
 
 ### services
 
