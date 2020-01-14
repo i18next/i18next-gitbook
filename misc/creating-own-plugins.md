@@ -28,11 +28,14 @@ Backend plugins are used to load data for i18next.
     callback(null, {
       key: 'value'
     });
+
+    /* if method fails/returns an error, call this: */
+    /* callback(truthyValue, null); */
   },
 
   // optional
   readMulti: function(languages, namespaces, callback) {
-    /* return multiple resources - usefull eg. for bundling loading in one xhr request */
+    /* return multiple resources - useful eg. for bundling loading in one xhr request */
     callback(null, {
       en: {
         translations: {
@@ -45,6 +48,9 @@ Backend plugins are used to load data for i18next.
         }
       }
     });
+
+    /* if method fails/returns an error, call this: */
+    /* callback(truthyValue, null); */
   },
 
   // only used in backends acting as cache layer
@@ -113,3 +119,63 @@ Override the built in console logger.
 }
 ```
 
+## Helpful tips
+### Make sure to set the plugin type
+If you do not set the plugin type, you may get an error like this.
+
+`... No [plugin type] was added via i18next.use. Will not load resources.`
+
+If you are creating a class for your plugin, you may set the type like in the following example (the following is an example if you are making a backend plugin):
+```javascript
+class Backend {
+  constructor(services, backendOptions, i18nextOptions){
+
+  }
+
+  // other required methods;
+  // ie. read, create, etc.
+}
+Backend.type = "backend";
+
+export default Backend;
+```
+
+### Create a private method to initialize your plugin
+The constructor of your plugin (if the plugin is of type `backend` or `languageDetector`) will be [called without arguments](https://github.com/i18next/i18next/issues/1379#issuecomment-571913660) if you use the plugin as a class. Using the plugin as a class looks like this:
+```javascript
+import i18n from "i18next";
+import {
+  initReactI18next
+} from "react-i18next";
+import i18nBackend from "my-custom-backend";
+
+i18n
+  .use(i18nBackend)
+  .use(initReactI18next)
+  .init({
+    backend: {
+      // custom options
+    },
+    // other options
+  });
+```
+
+While using your plugin in this way, you may want to validate the `options` passed into the **backend** property of the `.init` method. A good way to validate them is to have a private method where you initialize your plugin.
+
+```javascript
+class Backend {
+  constructor(services, backendOptions = {}, i18nextOptions = {}){
+    this.init(services, backendOptions, i18nextOptions);
+  }
+
+  init(services, backendOptions, i18nextOptions){
+    // Validate backendOptions
+  }
+
+  // other required methods;
+  // ie. read, create, etc.
+}
+Backend.type = "backend";
+
+export default Backend;
+```
