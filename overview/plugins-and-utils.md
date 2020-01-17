@@ -72,6 +72,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next.gettext](https://github.com/palamccc/i18next.gettext) | gettext backend of i18next |
 | [nodejs filesystem](https://github.com/i18next/i18next-node-fs-backend) | node.js backend layer for i18next using fs module to load resources from filesystem |
 | [nodejs filesystem \(sync\)](https://github.com/sallar/i18next-sync-fs-backend) | node.js backend layer for i18next using fs module to load resources synchronous from filesystem |
+| [nodejs filesystem (electron)](https://github.com/reZach/i18next-electron-fs-backend) | node.js backend for i18next using fs module to load resources securely in an electron app from filesystem |
 | [nodejs remote](https://github.com/i18next/i18next-node-remote-backend) | node.js backend layer for i18next using request module to load resources from another server |
 | [nodejs mongodb](https://github.com/gian788/i18next-node-mongodb-backend) | i18next node.js backend layer for i18next using mongodb |
 | [nodejs couchbase](https://github.com/kvaillant/i18next.couchbase) | i18next node.js backend layer for i18next using couchbase |
