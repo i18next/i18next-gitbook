@@ -64,6 +64,10 @@ Backend plugins are used to load data for i18next.
 }
 ```
 
+{% hint style="info" %}
+Using `readMulti` is only supported when using the [https://github.com/i18next/i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter)
+{% endhint %}
+
 ### languageDetector
 
 Language Detector plugins are used to detect language in user land.
@@ -120,12 +124,15 @@ Override the built in console logger.
 ```
 
 ## Helpful tips
+
 ### Make sure to set the plugin type
+
 If you do not set the plugin type, you may get an error like this.
 
 `... No [plugin type] was added via i18next.use. Will not load resources.`
 
-If you are creating a class for your plugin, you may set the type like in the following example (the following is an example if you are making a backend plugin):
+If you are creating a class for your plugin, you may set the type like in the following example \(the following is an example if you are making a backend plugin\):
+
 ```javascript
 class Backend {
   constructor(services, backendOptions, i18nextOptions){
@@ -141,7 +148,9 @@ export default Backend;
 ```
 
 ### Create a private method to initialize your plugin
-The constructor of your plugin (if the plugin is of type `backend` or `languageDetector`) will be [called without arguments](https://github.com/i18next/i18next/issues/1379#issuecomment-571913660) if you use the plugin as a class. Using the plugin as a class looks like this:
+
+The constructor of your plugin \(if the plugin is of type `backend` or `languageDetector`\) will be [called without arguments](https://github.com/i18next/i18next/issues/1379#issuecomment-571913660) if you use the plugin as a class. Using the plugin as a class looks like this:
+
 ```javascript
 import i18n from "i18next";
 import {
@@ -179,3 +188,4 @@ Backend.type = "backend";
 
 export default Backend;
 ```
+
