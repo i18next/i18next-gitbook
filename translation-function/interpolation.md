@@ -123,6 +123,7 @@ While there are a lot of options going with the defaults should get you covered.
 | nestingSuffix | "\)" | suffix for nesting |
 | nestingPrefixEscaped | undefined | escaped prefix for nesting \(regexSafe\) |
 | nestingSuffixEscaped | undefined | escaped suffix for nesting \(regexSafe\) |
+| nestingOptionsSeparator | "," | separates the options from nesting key |
 | defaultVariables | undefined | global variables to use in interpolation replacements `defaultVariables: { key: "value" }` |
 | maxReplaces | 1000 | after how many interpolation runs to break out before throwing a stack overflow |
 
