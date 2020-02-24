@@ -46,6 +46,12 @@ i18next.t('girlsAndBoys', {count: 2, girls: 3});
 // -> "3 girls and 2 boys"
 ```
 
+{% hint style="info" %}
+Make sure the options string is valid JSON and can be parsed using JSON.parse  
+  
+`'sampleKey': 'test $t(nest2, { "changedVarName": "{{var}}" })'`
+{% endhint %}
+
 ### Passing nesting to interpolated
 
 keys
