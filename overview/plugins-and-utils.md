@@ -33,6 +33,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18nextResourceGenerator](https://github.com/DREEBIT/i18nextResourceGenerator) | extractor | Intellij IDEA Plugin for i18next resource generation |
 | [aurelia-i18next-parser](https://github.com/gooy/aurelia-i18next-parser) | extractor | Extracts i18n keys and values from source files. |
 | [grunt-i18next](https://github.com/i18next/grunt-i18next) | bundler | bundle language resource files for i18next |
+| [i18next-gettext-loader](https://github.com/openculinary/i18next-gettext-loader) | bundler | Convert gettext PO files into i18next JSON format during webpack builds |
 | [i18next-po-loader](https://github.com/queicherius/i18next-po-loader) | bundler | Load gettext PO files as i18next format directly in webpack |
 | [i18next-loader](https://github.com/kamilglod/i18next-loader) | bundler | webpack loader that can translate your code and generate bundle per each language |
 | [@alienfast/i18next-loader](https://github.com/alienfast/i18next-loader) | bundler | This webpack loader generates the resources structure necessary for i18next. The structure is webpacked with the client bundle at build time, thus avoiding loading any language resources via extra HTTP requests. |
