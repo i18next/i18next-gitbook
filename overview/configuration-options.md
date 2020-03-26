@@ -17,7 +17,7 @@ All options for calling init or createInstance.
 | option | default | description |
 | :--- | :--- | :--- |
 | resources | undefined | resources to initialize with \(if not using loading or not appending using [addResourceBundle](api.md#addresourcebundle)\) |
-| lng | undefined | language to use \(overrides language detection\) |
+| lng | undefined | language to use \(overrides language detection\). If set to `'cimode'` the output text will be the key. |
 | fallbackLng | 'dev' | language to use if translations in user language are not available. [Learn more](../principles/fallback.md). |
 | whitelist | false | array of allowed languages |
 | nonExplicitWhitelist | false | if true will pass eg. `en-US` if finding `en` in whitelist |
@@ -112,7 +112,7 @@ All options for calling init or createInstance.
     <tr>
       <td style="text-align:left">appendNamespaceToCIMode</td>
       <td style="text-align:left">false</td>
-      <td style="text-align:left">prefixes the namespace to the returned key when using <code>cimode</code>
+      <td style="text-align:left">prefixes the namespace to the returned key when using <code>lng: 'cimode'</code>
       </td>
     </tr>
   </tbody>
