@@ -11,7 +11,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | **name** | **format** | **description** |
 | :--- | :--- | :--- |
 | [i18next-fluent](https://github.com/i18next/i18next-fluent) | fluent | i18nFormat plugin to use mozilla [fluent format](https://projectfluent.org/) with i18next |
-| [i18next-icu](https://github.com/i18next/i18next-icu) | ICU | i18nFormat plugin to use ICU format with i18next based on [yahoo/intl-messageformat](https://github.com/yahoo/intl-messageformat) |
+| [i18next-icu](https://github.com/i18next/i18next-icu) | ICU | i18nFormat plugin to use ICU format with i18next based on [yahoo/intl-messageformat](https://github.com/formatjs/formatjs/tree/master/packages/intl-messageformat) |
 | [i18next-polyglot](https://github.com/i18next/i18next-polyglot) | polyglot | i18nFormat plugin to use [airbnb/polyglot.js](https://github.com/airbnb/polyglot.js) format with i18next |
 
 ### extraction tools
