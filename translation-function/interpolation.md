@@ -2,9 +2,9 @@
 
 ## Interpolation
 
-Interpolation is one of the most used functionalities in I18N. It enables you to integrate dynamic values into your translations.
+Interpolation is one of the most used functionalities in I18N. It allows integratint dynamic values into your translations.
 
-Per default, interpolation values get escaped to save you from possible xss attacks.
+Per default, interpolation values get escaped to mitigate XSS attacks.
 
 If the interpolation functionality provided doesn't suit you, you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
 
@@ -54,7 +54,7 @@ i18next.t('key', { author });
 
 ### Unescape
 
-Per default the values get escaped to save you from possible xss attacks. You can toggle escaping off, by either putting `-` before the key, or set the `escapeValue` option to `false` when requesting a translation.
+Per default, the values get escaped to mitigate XSS attacks. You can toggle escaping off, by either putting `-` before the key, or set the `escapeValue` option to `false` when requesting a translation.
 
 Keys
 
@@ -78,7 +78,7 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false 
 // -> "no danger <img />" (obviously could be dangerous)
 ```
 
-_Warning:_ If you toggle escaping off, you should escape any user input yourself!
+_Warning:_ If you toggle escaping off, escape any user input yourself!
 
 ### Additional options
 
@@ -97,8 +97,8 @@ i18next.t('key', {
 | option | default | description |
 | :--- | :--- | :--- |
 | escape | function | escape function `function escape(str) { return str; }` |
-| escapeValue | true | escapes passed in values to avoid xss injection |
-| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type check |
+| escapeValue | true | escapes passed in values to avoid XSS injection |
+| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type-checking |
 | prefix | "{{" | prefix for interpolation |
 | suffix | "}}" | suffix for interpolation |
 
@@ -108,11 +108,11 @@ While there are a lot of options going with the defaults should get you covered.
 
 | option | default | description |
 | :--- | :--- | :--- |
-| format | noop function | format function see [formatting](formatting.md) for details |
+| format | noop function | format function, read [formatting](formatting.md) for details |
 | formatSeparator | "," | used to separate format from interpolation value |
 | escape | function | escape function `function escape(str) { return str; }` |
-| escapeValue | true | escape passed in values to avoid xss injection |
-| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type check |
+| escapeValue | true | escape passed in values to avoid XSS injection |
+| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type-checking |
 | prefix | "{{" | prefix for interpolation |
 | suffix | "}}" | suffix for interpolation |
 | prefixEscaped | undefined | escaped prefix for interpolation \(regexSafe\) |
