@@ -116,7 +116,9 @@ All options for calling init or createInstance.
       </td>
     </tr>
   </tbody>
-</table>#### initImmediate
+</table>
+
+### initImmediate
 
 Sample using initImmediate when using a backend plugin allowing sync \(blocking\) loads.
 
