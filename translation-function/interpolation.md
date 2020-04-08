@@ -2,7 +2,7 @@
 
 ## Interpolation
 
-Interpolation is one of the most used functionalities in I18N. It allows integratint dynamic values into your translations.
+Interpolation is one of the most used functionalities in I18N. It allows integration dynamic values into your translations.
 
 Per default, interpolation values get escaped to mitigate XSS attacks.
 
