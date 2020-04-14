@@ -96,7 +96,7 @@ This is a working sample showing translated text. To learn more, have a look at 
 
 ### Extended sample
 
-The extended sample adds the language detector for our browser and the xhr-backend to load translation files from this documentation's [i18next-gitbook repo](https://github.com/i18next/i18next-gitbook/tree/master/locales).
+The extended sample adds the language detector for our browser and the http-backend to load translation files from this documentation's [i18next-gitbook repo](https://github.com/i18next/i18next-gitbook/tree/master/locales).
 
 [source code](https://jsfiddle.net/jamuhl/ferfywyf/#tabs=js,result,html)
 
