@@ -57,11 +57,11 @@ Please make sure to at least pass in an empty resources object on init. Else i18
 
 Each plugin comes with a set of on configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
 
-Here is a sample using the [i18next-xhr-backend](https://github.com/i18next/i18next-xhr-backend) to load resources from the server.
+Here is a sample using the [i18next-http-backend](https://github.com/i18next/i18next-http-backend) to load resources from the server.
 
 ```javascript
 import i18next from 'i18next';
-import Backend from 'i18next-xhr-backend';
+import Backend from 'i18next-http-backend';
 
 i18next
   .use(Backend)
