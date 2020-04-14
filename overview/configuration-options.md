@@ -112,13 +112,11 @@ All options for calling init or createInstance.
     <tr>
       <td style="text-align:left">appendNamespaceToCIMode</td>
       <td style="text-align:left">false</td>
-      <td style="text-align:left">prefixes the namespace to the returned key when using <code>lng: 'cimode'</code>
+      <td style="text-align:left">prefixes the namespace to the returned key when using <code>lng: &apos;cimode&apos;</code>
       </td>
     </tr>
   </tbody>
-</table>
-
-### initImmediate
+</table>### initImmediate
 
 Sample using initImmediate when using a backend plugin allowing sync \(blocking\) loads.
 

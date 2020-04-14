@@ -66,6 +66,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | :--- | :--- |
 | [localstorage backend](https://github.com/i18next/i18next-localstorage-backend) | This is a i18next cache layer to be used in the browser. It will load and cache resources from localStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend). |
 | [async storage backend](https://github.com/timbrandin/i18next-async-storage-backend) | This is a i18next cache layer to be used in react native. It will load and cache resources from AsyncStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend). |
+| [http backend](https://github.com/i18next/i18next-http-backend) | backend layer for i18next using in node.js, in the browser and for deno \(will use xhr or fetch\) |
 | [xhr backend](https://github.com/i18next/i18next-xhr-backend) | backend layer for i18next using browsers xhr |
 | [fetch backend](https://github.com/perrin4869/i18next-fetch-backend) | backend layer for i18next using browsers fetch |
 | [fluent backend](https://github.com/i18next/i18next-fluent-backend) | backend to load [fluent syntax](https://projectfluent.org/) .ftl files via xhr |
@@ -73,7 +74,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next.gettext](https://github.com/palamccc/i18next.gettext) | gettext backend of i18next |
 | [nodejs filesystem](https://github.com/i18next/i18next-node-fs-backend) | node.js backend layer for i18next using fs module to load resources from filesystem |
 | [nodejs filesystem \(sync\)](https://github.com/sallar/i18next-sync-fs-backend) | node.js backend layer for i18next using fs module to load resources synchronous from filesystem |
-| [nodejs filesystem (electron)](https://github.com/reZach/i18next-electron-fs-backend) | node.js backend for i18next using fs module to load resources securely in an electron app from filesystem |
+| [nodejs filesystem \(electron\)](https://github.com/reZach/i18next-electron-fs-backend) | node.js backend for i18next using fs module to load resources securely in an electron app from filesystem |
 | [nodejs remote](https://github.com/i18next/i18next-node-remote-backend) | node.js backend layer for i18next using request module to load resources from another server |
 | [nodejs mongodb](https://github.com/laodemalfatih/i18next-node-mongo-backend) | i18next node.js backend layer for i18next using mongodb |
 | [nodejs couchbase](https://github.com/kvaillant/i18next.couchbase) | i18next node.js backend layer for i18next using couchbase |
@@ -89,7 +90,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 
 | **language** **detector** | **description** |
 | :--- | :--- |
-| [universal (browser + nodejs)](https://github.com/UnlyEd/universal-language-detector) | Language detector that works universally (browser + server) - Meant to be used with a universal framework, such as Next.js |
+| [universal \(browser + nodejs\)](https://github.com/UnlyEd/universal-language-detector) | Language detector that works universally \(browser + server\) - Meant to be used with a universal framework, such as Next.js |
 | [browser](https://github.com/i18next/i18next-browser-languageDetector) | language detector used in browser environment for i18next |
 | [nodejs express](https://github.com/i18next/i18next-express-middleware) | language detector for express.js \(nodejs\). |
 | [nodejs koa](https://github.com/lxzxl/koa-i18next-detector) | A i18next language detecting plugin for Koa framework. |
