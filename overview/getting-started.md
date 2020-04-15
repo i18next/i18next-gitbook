@@ -24,8 +24,8 @@ i18next can be imported like this:
 
 ```javascript
 import i18next from 'https://deno.land/x/i18next/index.js'
-// or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js'
 // or import i18next from 'https://raw.githubusercontent.com/i18next/i18next/master/src/index.js'
+// or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js'
 ```
 
 ### Load from CDN
