@@ -18,6 +18,15 @@ The default export is UMD compatible \(commonjs, requirejs, global\).
 
 In the `/dist` folder you may find additional builds for commonjs, es6 modules. Optimized to load i18next in webpack, rollup, ... or node.js. The correct entry points are already configured in the package.json so there should be no extra setup to get the best build option.
 
+### Load in [Deno](https://deno.land/)
+
+i18next can be imported like this:
+
+```javascript
+import i18next from 'https://deno.land/x/i18next/i18next.js'
+// or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/i18next.js'
+```
+
 ### Load from CDN
 
 You can also directly add a script tag loading i18next from one of the CDNs providing it:
