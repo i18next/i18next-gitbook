@@ -23,8 +23,8 @@ In the `/dist` folder you may find additional builds for commonjs, es6 modules. 
 i18next can be imported like this:
 
 ```javascript
-import i18next from 'https://deno.land/x/i18next/i18next.js'
-// or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/i18next.js'
+import i18next from 'https://deno.land/x/i18next/index.js'
+// or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js'
 ```
 
 ### Load from CDN
