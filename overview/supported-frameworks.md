@@ -41,6 +41,6 @@
 | ios | [i18next-ios](https://github.com/i18next/i18next-ios) | i18next for iOS |
 | android | [i18next-android](https://github.com/i18next/i18next-android) | i18next for android |
 | webcomponent | [kwc-i18next](https://github.com/successk/kwc-i18next) | Web component interfacing i18next |
+| webcomponent | [i18next-wc](https://github.com/spurreiter/i18next-wc) | Web components interfacing i18next and Intl |
 | marko.js | [marko-i18next](https://github.com/gunjam/marko-i18next) | Components to use i18next in Marko templates. |
 | virtualdom | [i18nextify](https://github.com/i18next/i18nextify) | one liner script to enable i18next one any site |
-
