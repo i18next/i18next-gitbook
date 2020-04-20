@@ -16,6 +16,7 @@
 | omi.js | [omi-i18n](https://github.com/i18next/omi-i18n) | omi-i18n solution for omi.js using i18next ecosystem |
 | inferno.js | [inferno-i18next](https://www.npmjs.com/package/inferno-i18next) | inferno-i18next is a translation utility for Inferno components |
 | elm | [elm-i18next](https://github.com/ChristophP/elm-i18next) | use i18next in elm |
+| any http | [http-middleware](https://github.com/i18next/i18next-http-middleware) | Middleware to be used with Node.js web frameworks like express or Fastify and also for Deno. |
 | express.js | [nodejs express middleware](https://github.com/i18next/i18next-express-middleware) | Middleware to use i18next in express.js \(nodejs\). |
 | koa.js | [koa-i18next](https://github.com/sunfuze/koa-i18next) | A middleware to use i18next in koajs. |
 | koa.js | [koa-i18next-middleware](https://github.com/lxzxl/koa-i18next-middleware) | An i18next middleware for Koa framework. Use with koa-i18next-middleware |
