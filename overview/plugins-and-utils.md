@@ -92,6 +92,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | :--- | :--- |
 | [universal \(browser + nodejs\)](https://github.com/UnlyEd/universal-language-detector) | Language detector that works universally \(browser + server\) - Meant to be used with a universal framework, such as Next.js |
 | [browser](https://github.com/i18next/i18next-browser-languageDetector) | language detector used in browser environment for i18next |
+| [http](https://github.com/i18next/i18next-http-middleware) | language detector for "any" http backend, also for Deno |
 | [nodejs express](https://github.com/i18next/i18next-express-middleware) | language detector for express.js \(nodejs\). |
 | [nodejs koa](https://github.com/lxzxl/koa-i18next-detector) | A i18next language detecting plugin for Koa framework. |
 | [react native](https://github.com/DylanVann/i18next-react-native-language-detector) | language detector for React Native. |

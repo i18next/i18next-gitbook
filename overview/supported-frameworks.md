@@ -44,3 +44,4 @@
 | webcomponent | [i18next-wc](https://github.com/spurreiter/i18next-wc) | Web components interfacing i18next and Intl |
 | marko.js | [marko-i18next](https://github.com/gunjam/marko-i18next) | Components to use i18next in Marko templates. |
 | virtualdom | [i18nextify](https://github.com/i18next/i18nextify) | one liner script to enable i18next one any site |
+
