@@ -72,6 +72,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [fluent backend](https://github.com/i18next/i18next-fluent-backend) | backend to load [fluent syntax](https://projectfluent.org/) .ftl files via xhr |
 | [keys ondemand](https://github.com/kingatlas/i18next-keys-ondemand) | fetch missing keys on demand |
 | [i18next.gettext](https://github.com/palamccc/i18next.gettext) | gettext backend of i18next |
+| [filesystem](https://github.com/i18next/i18next-fs-backend) | backend layer for i18next used in Node.js and for Deno to load translations from the filesystem. |
 | [nodejs filesystem](https://github.com/i18next/i18next-node-fs-backend) | node.js backend layer for i18next using fs module to load resources from filesystem |
 | [nodejs filesystem \(sync\)](https://github.com/sallar/i18next-sync-fs-backend) | node.js backend layer for i18next using fs module to load resources synchronous from filesystem |
 | [nodejs filesystem \(electron\)](https://github.com/reZach/i18next-electron-fs-backend) | node.js backend for i18next using fs module to load resources securely in an electron app from filesystem |
