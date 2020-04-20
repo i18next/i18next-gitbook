@@ -85,7 +85,7 @@ All options for calling init or createInstance.
           async behaviour). Set it to false if your backend loads resources sync
           - that way calling i18next.t after init is possible without relying on
           the init callback.</p>
-        <p><b>This option only works for sync (blocking) loading backend, like i18next-sync-fs-backend!</b>
+        <p><b>This option only works for sync (blocking) loading backend, like i18next-fs-backend and i18next-sync-fs-backend!</b>
         </p>
       </td>
     </tr>
@@ -120,11 +120,11 @@ All options for calling init or createInstance.
 
 Sample using initImmediate when using a backend plugin allowing sync \(blocking\) loads.
 
-**This option only works for sync \(blocking\) loading backend, like i18next-sync-fs-backend!**
+**This option only works for sync \(blocking\) loading backend, like i18next-fs-backend and i18next-sync-fs-backend!**
 
 ```javascript
 import i18next from 'i18next';
-import SyncBackend from 'i18next-sync-fs-backend';
+import SyncBackend from 'i18next-fs-backend';
 
 // not working
 i18next
