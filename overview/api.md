@@ -114,7 +114,11 @@ anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('another
 
 Changes the language. The callback will be called as soon translations were loaded or an error occurs while loading.
 
-**HINT:** For easy testing - setting lng to 'cimode' will set t function to always return the key.
+Calling `changeLanguage` without `lng` uses the 
+[language detector](../misc/creating-own-plugins.md#languagedetector)
+to choose the language to set.
+
+**HINT:** For easy testing—setting `lng` to 'cimode' will cause the `t` function to always return the key.
 
 ```javascript
 i18next.changeLanguage('en', (err, t) => {
@@ -128,6 +132,9 @@ i18next
   .then((t) => {
     t('key'); // -> same as i18next.t
   });
+  
+// manually re-detecting language
+i18next.changeLanguage().then(...)
 ```
 
 ### language
