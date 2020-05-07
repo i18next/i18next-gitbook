@@ -92,7 +92,11 @@ All options for calling init or createInstance.
     <tr>
       <td style="text-align:left">keySeparator</td>
       <td style="text-align:left">&apos;.&apos;</td>
-      <td style="text-align:left">char to separate keys</td>
+      <td style="text-align:left">
+        <p>char to separate keys</p>
+        <p><em>(if working with a flat json, it&apos;s recommended to set keySeparator to false)</em>
+        </p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">nsSeparator</td>
