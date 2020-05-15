@@ -330,6 +330,10 @@ const newInstance = i18next.cloneInstance({
 Every event can be unsubscribed using
 
 `i18next.off('name', myFunction);`
+
+All attached listeners can be unsubscribed using
+
+`i18next.off('name');`
 {% endhint %}
 
 ### onInitialized
