@@ -126,7 +126,7 @@ While some other i18n frameworks run on serverside too there are not many optimi
 
 ### Learn once - translate everywhere      <a id="learn-once-translate-everywhere"></a>
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-L9iS6Wm2hynS5H9Gj7j%2F-L9iS7LlT2W7wFtJH-2n%2F-L9iSBP9U65-bHJBRSDv%2Fi18next-ecosystem.jpg?generation=1523345318122913&alt=media)
+![](../.gitbook/assets/i18next-ecosystem.jpg)
 
 Should speak for itself.
 
