@@ -73,11 +73,11 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [keys ondemand](https://github.com/kingatlas/i18next-keys-ondemand) | fetch missing keys on demand |
 | [i18next.gettext](https://github.com/palamccc/i18next.gettext) | gettext backend of i18next |
 | [filesystem](https://github.com/i18next/i18next-fs-backend) | backend layer for i18next used in Node.js and for Deno to load translations from the filesystem. |
+| [mongodb backend](https://github.com/laodemalfatih/i18next-node-mongo-backend) | backend layer for i18next used in Node.js & Deno to load translations from the MongoDB. |
 | [nodejs filesystem](https://github.com/i18next/i18next-node-fs-backend) | node.js backend layer for i18next using fs module to load resources from filesystem |
 | [nodejs filesystem \(sync\)](https://github.com/sallar/i18next-sync-fs-backend) | node.js backend layer for i18next using fs module to load resources synchronous from filesystem |
 | [nodejs filesystem \(electron\)](https://github.com/reZach/i18next-electron-fs-backend) | node.js backend for i18next using fs module to load resources securely in an electron app from filesystem |
 | [nodejs remote](https://github.com/i18next/i18next-node-remote-backend) | node.js backend layer for i18next using request module to load resources from another server |
-| [nodejs mongodb](https://github.com/laodemalfatih/i18next-node-mongo-backend) | i18next node.js backend layer for i18next using mongodb |
 | [nodejs couchbase](https://github.com/kvaillant/i18next.couchbase) | i18next node.js backend layer for i18next using couchbase |
 | [Zanata nodejs backend](https://bitbucket.org/tagoh/i18next-node-zanata-backend) | i18next node.js backend layer for [Zanata](http://zanata.org) |
 | [i18next-firebase-backend](https://github.com/inteligator/i18next-firebase-backend) | i18next Backend Using Firebase |
