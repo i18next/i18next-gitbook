@@ -99,7 +99,7 @@ Sample
 ```javascript
 i18next.init({
     // files to load
-    namespaces: ['app', 'common'],
+    ns: ['app', 'common'],
 
     // default namespace (needs no prefix on calling t)
     defaultNS: 'app',
