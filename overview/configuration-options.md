@@ -19,8 +19,8 @@ All options for calling init or createInstance.
 | resources | undefined | resources to initialize with \(if not using loading or not appending using [addResourceBundle](api.md#addresourcebundle)\) |
 | lng | undefined | language to use \(overrides language detection\). If set to `'cimode'` the output text will be the key. |
 | fallbackLng | 'dev' | language to use if translations in user language are not available. [Learn more](../principles/fallback.md). |
-| whitelist | false | array of allowed languages |
-| nonExplicitWhitelist | false | if true will pass eg. `en-US` if finding `en` in whitelist |
+| supportedLngs | false | array of allowed languages |
+| nonExplicitSupportedLngs | false | if true will pass eg. `en-US` if finding `en` in supportedLngs |
 | load | 'all' | language codes to lookup, given set language is 'en-US': `'all' --> ['en-US', 'en', 'dev']`, `'currentOnly' --> 'en-US'`, `'languageOnly' --> 'en'` |
 | preload | false | array of languages to preload. Important on serverside to assert translations are loaded before rendering views. |
 | lowerCaseLng | false | locale will be fully lowercased eg. `en-US` --&gt; `en-us` |

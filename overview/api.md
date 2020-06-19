@@ -141,7 +141,7 @@ i18next.changeLanguage().then(...)
 
 Is set to the current detected or set language.
 
-If you need the primary used language depending on your configuration \(whilelist, load\) you will prefer using `i18next.languages[0]`.
+If you need the primary used language depending on your configuration \(supportedLngs, load\) you will prefer using `i18next.languages[0]`.
 
 ### languages
 
