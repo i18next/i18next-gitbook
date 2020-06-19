@@ -110,6 +110,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-react-postprocessor](https://github.com/orzechowskid/i18next-react-postprocessor) | embed React elements inside your i18next translation strings |
 | [i18next-korean-postposition-processor](https://github.com/Perlmint/i18next-korean-postposition-processor) | i18next post-processor for processing korean postposition |
 | [i18next-pseudo](https://github.com/MattBoatman/i18next-pseudo) | i18next post-processor for pseudolocalization of strings |
+| [i18next-emoji-postprocessor](https://github.com/i18next/i18next-emoji-postprocessor) | i18next postProcessor plugin for Node.js and in the browser that replaces all words with emojis. |
 
 ### loggers
 
