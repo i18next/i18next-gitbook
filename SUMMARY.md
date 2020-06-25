@@ -41,3 +41,7 @@
 * [Creating own Plugins](misc/creating-own-plugins.md)
 * [Migration Guide](misc/migration-guide.md)
 
+---
+
+* [localization as a service](https://locize.com)
+
