@@ -52,7 +52,7 @@ There are tons of modules built for and around i18next: from extracting translat
 * [Learn more about plugins and utils](overview/plugins-and-utils.md)
 * [Learn more about frameworks supported](overview/supported-frameworks.md)
 
-## Localization as a service
+## [Localization as a service](https://locize.com)
 
 Through [locize.com](http://locize.com/?utm_source=i18next_com&utm_medium=gitbook), i18next even provides its own translation management tool: localization as a service.
 
