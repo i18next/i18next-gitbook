@@ -106,24 +106,123 @@ While there are a lot of options going with the defaults should get you covered.
 
 ### All interpolation options
 
-| option | default | description |
-| :--- | :--- | :--- |
-| format | noop function | format function, read [formatting](formatting.md) for details |
-| formatSeparator | "," | used to separate format from interpolation value |
-| escape | function | escape function `function escape(str) { return str; }` |
-| escapeValue | true | escape passed in values to avoid XSS injection |
-| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type-checking |
-| prefix | "{{" | prefix for interpolation |
-| suffix | "}}" | suffix for interpolation |
-| prefixEscaped | undefined | escaped prefix for interpolation \(regexSafe\) |
-| suffixEscaped | undefined | escaped suffix for interpolation \(regexSafe\) |
-| unescapeSuffix | undefined | suffix to unescaped mode |
-| unescapePrefix | "-" | prefix to unescaped mode |
-| nestingPrefix | "$t\(" | prefix for [nesting](nesting.md) |
-| nestingSuffix | "\)" | suffix for nesting |
-| nestingPrefixEscaped | undefined | escaped prefix for nesting \(regexSafe\) |
-| nestingSuffixEscaped | undefined | escaped suffix for nesting \(regexSafe\) |
-| nestingOptionsSeparator | "," | separates the options from nesting key |
-| defaultVariables | undefined | global variables to use in interpolation replacements `defaultVariables: { key: "value" }` |
-| maxReplaces | 1000 | after how many interpolation runs to break out before throwing a stack overflow |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">option</th>
+      <th style="text-align:left">default</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">format</td>
+      <td style="text-align:left">noop function</td>
+      <td style="text-align:left">format function, read <a href="formatting.md">formatting</a> for details</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">formatSeparator</td>
+      <td style="text-align:left">&quot;,&quot;</td>
+      <td style="text-align:left">used to separate format from interpolation value</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">escape</td>
+      <td style="text-align:left">function</td>
+      <td style="text-align:left">escape function <code>function escape(str) { return str; }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">escapeValue</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">escape passed in values to avoid XSS injection</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">useRawValueToEscape</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">If true, then value passed into escape function is not casted to string,
+        use with custom escape function that does its own type-checking</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">prefix</td>
+      <td style="text-align:left">&quot;{{&quot;</td>
+      <td style="text-align:left">prefix for interpolation</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">suffix</td>
+      <td style="text-align:left">&quot;}}&quot;</td>
+      <td style="text-align:left">suffix for interpolation</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">prefixEscaped</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">escaped prefix for interpolation (regexSafe)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">suffixEscaped</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">escaped suffix for interpolation (regexSafe)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">unescapeSuffix</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">suffix to unescaped mode</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">unescapePrefix</td>
+      <td style="text-align:left">&quot;-&quot;</td>
+      <td style="text-align:left">prefix to unescaped mode</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nestingPrefix</td>
+      <td style="text-align:left">&quot;$t(&quot;</td>
+      <td style="text-align:left">prefix for <a href="nesting.md">nesting</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nestingSuffix</td>
+      <td style="text-align:left">&quot;)&quot;</td>
+      <td style="text-align:left">suffix for nesting</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nestingPrefixEscaped</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">escaped prefix for nesting (regexSafe)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nestingSuffixEscaped</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">escaped suffix for nesting (regexSafe)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nestingOptionsSeparator</td>
+      <td style="text-align:left">&quot;,&quot;</td>
+      <td style="text-align:left">separates the options from nesting key</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">defaultVariables</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">global variables to use in interpolation replacements <code>defaultVariables: { key: &quot;value&quot; }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">maxReplaces</td>
+      <td style="text-align:left">1000</td>
+      <td style="text-align:left">after how many interpolation runs to break out before throwing a stack
+        overflow</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">skipOnVariables</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">
+        <p>Setting this to true will skip to interpolate the variables, example:</p>
+        <p><code>t(&apos;key&apos;, { a: &apos;$t(nested)&apos; })</code>
+        </p>
+        <p>this will not resolve the nested key and will use<code>$t(nested)</code> as
+          the variable value.</p>
+        <p><b>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to set this option to true.</b>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
