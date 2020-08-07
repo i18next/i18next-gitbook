@@ -32,8 +32,8 @@ keys
 
 ```javascript
 {
-      "girlsAndBoys": "$t(girls, {\"count\": \"{{girls}}\" }) and {{count}} boy",
-      "girlsAndBoys_plural": "$t(girls, {\"count\": \"{{girls}}\" }) and {{count}} boys",
+      "girlsAndBoys": "$t(girls, {\"count\": {{girls}} }) and {{count}} boy",
+      "girlsAndBoys_plural": "$t(girls, {\"count\": {{girls}} }) and {{count}} boys",
       "girls": "{{count}} girl",
       "girls_plural": "{{count}} girls"
 }
