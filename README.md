@@ -23,7 +23,7 @@ i18next takes care of these issue for you. We provide you with plugins to:
 * detect the user language
 * load the translations
 * optionally cache the translations
-* extention, by using post-processing - e.g. to enable sprintf support
+* extension, by using post-processing - e.g. to enable sprintf support
 
 [Learn more about plugins and utilities](overview/plugins-and-utils.md)
 
