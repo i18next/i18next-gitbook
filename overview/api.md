@@ -358,7 +358,7 @@ Gets fired on loaded resources.
 
 `i18next.on('failedLoading', function(lng, ns, msg) {})`
 
-Gets fired if loading resources failed.
+Gets fired if loading resources failed \(after the in-built retry algorithm\).
 
 ### onMissingKey
 

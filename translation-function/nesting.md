@@ -47,8 +47,8 @@ i18next.t('girlsAndBoys', {count: 2, girls: 3});
 ```
 
 {% hint style="info" %}
-Make sure the options string is valid JSON and can be parsed using JSON.parse  
-  
+Make sure the options string is valid JSON and can be parsed using JSON.parse
+
 `'sampleKey': 'test $t(nest2, { "changedVarName": "{{var}}" })'`
 {% endhint %}
 
