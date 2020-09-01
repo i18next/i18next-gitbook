@@ -72,7 +72,7 @@ The default is set to `dev` which means developer language. At first this might 
 
 ### namespace fallback
 
-i18next per default loads it translations from one file named `translation`. But you can set and structure it to load from multiple files, we call this files namespaces.
+i18next per default loads its translations from one file named `translation`. But you can set and structure it to load from multiple files, we call this files namespaces.
 
 Additional to defining multiple namespaces to load you also can set fallback namespaces. So if a key to translate gets not found in the namespace it looks it up in the fallbacks.
 
