@@ -44,4 +44,5 @@
 ---
 
 * [localization as a service](https://locize.com)
+* [Find your translator](https://localistars.com)
 
