@@ -108,7 +108,7 @@ This is a working sample showing translated text. To learn more, have a look at 
 
 The extended sample adds the language detector for our browser and the http-backend to load translation files from this documentation's [i18next-gitbook repo](https://github.com/i18next/i18next-gitbook/tree/master/locales).
 
-[source code](https://jsfiddle.net/jamuhl/ferfywyf/#tabs=js,result,html)
+[source code](https://jsfiddle.net/jamuhl/ferfywyf/525/)
 
 You should now have an idea about how to achieve the basic setup. It's time to learn more about:
 
