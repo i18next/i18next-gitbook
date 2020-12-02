@@ -56,7 +56,7 @@ There are tons of modules built for and around i18next: from extracting translat
 
 Through [locize.com](http://locize.com/?utm_source=i18next_com&utm_medium=gitbook), i18next even provides its own translation management tool: localization as a service.
 
-![](../.gitbook/assets/dashboard.png)
+![](../.gitbook/assets/general-locize-screen.png)
 
 [Learn more about the enterprise offering](for-enterprises.md)
 

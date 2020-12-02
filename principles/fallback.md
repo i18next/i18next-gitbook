@@ -73,14 +73,14 @@ i18next.init({
   fallbackLng: (code) => {
     if (!code || code === 'en') return ['en-US'];
     const fallbacks = [code];
-    
+
     // We maintain en-US and en-AU. Some regions will prefer en-AU.
     if (code.startsWith('en-') && !['en-US', 'en-AU'].includes(code)) {
       if (['en-GB', 'en-NZ', 'en-IR'].includes(code)) fallbacks.push('en-AU');
       else fallbacks.push('en-US');
       return fallbacks;
     }
-    
+
     // add pure lang
     const langPart = code.split('-')[0];
     if (langPart !== code) fallbacks.push(langPart);
@@ -90,7 +90,6 @@ i18next.init({
     return fallbacks;
   }
 });
-
 ```
 
 The default is set to `dev` which means developer language. At first this might look strange to set the default to a language but this enables to set the saveMissing feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing eg. proper english including defined terminology. For production just set fallbackLng to an existing language.
