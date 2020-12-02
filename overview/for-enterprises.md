@@ -21,7 +21,7 @@ Translation Management Systems are a great help. But most tools out there are bu
 
 [Locize](http://locize.com/?utm_source=i18next_com&utm_medium=gitbook) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
 
-![](../.gitbook/assets/general-locize-screen.png)
+![](../.gitbook/assets/locize-teaser_small.gif)
 
 Locize brings you:
 
