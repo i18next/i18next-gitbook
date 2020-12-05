@@ -136,7 +136,5 @@ Being honest, internationalization is the smaller pain in getting a site transla
 
 With [https://locize.com](https://locize.com/) we fill this gap and enable a localization workflow as never seen before:
 
-{% embed url="https://www.youtube.com/watch?v=9NOzJhgmyQE" caption="" %}
-
-​
+{% embed url="https://youtu.be/osScyaGMVqo" %}
 
