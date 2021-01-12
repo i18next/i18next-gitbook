@@ -2,7 +2,7 @@
 
 ## Plugins and Utils
 
-![](../.gitbook/assets/i18next-ecosystem.jpg)
+![](../.gitbook/assets/ecosys.jpg)
 
 ### i18n formats
 
