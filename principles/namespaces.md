@@ -15,9 +15,9 @@ Often you wish to separate some segments out because they belong together. We do
 * **validation.json** -&gt; All validation texts
 * **glossary.json** -&gt; Words we want to be reused consistently inside texts
 
-## technical / editoral reasons
+## technical / editorial reasons
 
-More often you don't want to load all the translations upfront or at least reduce the amount loaded. This reason often goes hand in hand with the one translation file gets too large and you start losing the overview scrolling through hundred of text fragments.
+More often you don't want to load all the translations upfront or at least reduce the amount loaded. This reason often goes hand in hand with the one translation file gets too large and you start losing the overview scrolling through hundreds of text fragments.
 
 * namespace per view/page
 * namespace per application section / feature set \(admin area, ...\)
