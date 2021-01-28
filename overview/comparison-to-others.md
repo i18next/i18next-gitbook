@@ -90,7 +90,7 @@ translation.json
 ```javascript
 {
     "error": {
-        "unspecific": "Something went wrong.",
+        "502": "Something went wrong.",
         "404": "The page was not found."
     }
 }
