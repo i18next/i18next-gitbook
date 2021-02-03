@@ -45,3 +45,7 @@
 | marko.js | [marko-i18next](https://github.com/gunjam/marko-i18next) | Components to use i18next in Marko templates. |
 | virtualdom | [i18nextify](https://github.com/i18next/i18nextify) | one liner script to enable i18next on any site |
 
+## Supported Environments
+
+i18next supports the two most recent versions of evergreen browsers (Chrome, Firefox, Safari, etc). i18next also runs in Node.
+
