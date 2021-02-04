@@ -47,5 +47,5 @@
 
 ## Supported Environments
 
-i18next supports the two most recent versions of evergreen browsers (Chrome, Firefox, Safari, etc). i18next also runs in Node.
+i18next supports the two most recent versions of evergreen browsers \(Chrome, Firefox, Safari, etc\). i18next also runs in Node and Deno.
 
