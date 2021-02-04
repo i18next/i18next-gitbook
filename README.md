@@ -60,3 +60,5 @@ Through [locize.com](http://locize.com/?utm_source=i18next_com&utm_medium=gitboo
 
 [Learn more about the enterprise offering](overview/for-enterprises.md)
 
+## [Ready to take i18next to the next level?](http://locize.com/?utm_source=i18next_com&utm_medium=gitbook)
+
