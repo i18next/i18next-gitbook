@@ -12,6 +12,7 @@
 * [Supported Frameworks](overview/supported-frameworks.md)
 * [Plugins and Utils](overview/plugins-and-utils.md)
 * [For Enterprises](overview/for-enterprises.md)
+* [First setup help](overview/first-setup-help.md)
 
 ## Translation Function
 
