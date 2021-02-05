@@ -13,7 +13,7 @@ description: Let's try to figure out what you need.
 
 ## For which environment are you looking for an i18n solution?
 
-Client, server, browser, mobile, desktop, Node.js, Deno...
+[Client](https://react.i18next.com/), [server](https://github.com/i18next/i18next-http-middleware), [browser](https://github.com/i18next/jquery-i18next), [mobile](https://github.com/i18next/react-i18next/tree/master/example/react-native), [desktop](https://github.com/i18next/react-i18next/tree/master/example/react_native_windows), [Node.js](https://github.com/i18next/i18next-fs-backend/blob/master/example/node/index.js), [Deno](https://github.com/i18next/i18next-fs-backend/blob/master/example/deno/index.js)...
 
 There are a lot of appropriate libraries. [Have a look at this list.](supported-frameworks.md)
 
