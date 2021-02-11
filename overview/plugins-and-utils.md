@@ -42,6 +42,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [rollup-plugin-i18next-conv](https://github.com/perrin4869/rollup-plugin-i18next-conv) | bundler/converter | Import .po files with rollup |
 | [i18next-static-analysis](https://github.com/Cellule/i18next-static-analysis) | util | analyse statically your code to find calls to i18next and validates them for all your supported languages |
 | [i18next-json-sync](https://github.com/jwbay/i18next-json-sync) | util | Keep i18next JSON resource files in sync with source language file |
+| [i18next-locales-sync](https://github.com/felixmosh/i18next-locales-sync) | util | Syncs i18next locale resource files against a primary language. Supports namespaces, plural forms and key sorting. |
 | [eslint-plugin-i18next](https://github.com/edvardchen/eslint-plugin-i18next) | util | Make sure that all text shown are translated |
 | [i18next support for JetBrains IDEs](https://plugins.jetbrains.com/plugin/12981-i18n-support/) | IDE integration | Navigation, code completion, highlighting |
 | [i18next-hmr](https://github.com/felixmosh/i18next-hmr) | bundler / DX | HMR webpack plugin that allows to reload translation resources on client & server |
