@@ -43,9 +43,13 @@ All options for calling init or createInstance.
     <tr>
       <td style="text-align:left">fallbackLng</td>
       <td style="text-align:left">&apos;dev&apos;</td>
-      <td style="text-align:left">language to use if translations in user language are not available.
-        <a
-        href="../principles/fallback.md">Learn more</a>.</td>
+      <td style="text-align:left">
+        <p>language to use if translations in user language are not available.
+          <br
+          />Setting it explicitly to false will not trigger to load the fallbackLng
+          at all.</p>
+        <p><a href="../principles/fallback.md">Learn more</a>.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">supportedLngs</td>
