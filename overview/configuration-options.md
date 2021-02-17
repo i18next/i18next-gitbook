@@ -46,8 +46,8 @@ All options for calling init or createInstance.
       <td style="text-align:left">
         <p>language to use if translations in user language are not available.
           <br
-          />Setting it explicitly to false will not trigger to load the fallbackLng
-          at all.</p>
+          /><em>Setting it explicitly to false will not trigger to load the fallbackLng at all.</em>
+        </p>
         <p><a href="../principles/fallback.md">Learn more</a>.</p>
       </td>
     </tr>
