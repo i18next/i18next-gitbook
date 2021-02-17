@@ -18,6 +18,11 @@ The callback will be called after all translations were loaded or with an error 
 In case of [react-i18next](https://react.i18next.com/) make sure useSuspense is enabled or handle the ready state in [HOCs](https://react.i18next.com/latest/withtranslation-hoc#not-using-suspense) or [hooks](https://react.i18next.com/latest/usetranslation-hook#not-using-suspense) yourself.
 {% endhint %}
 
+{% hint style="danger" %}
+Do not call init multiple times.  
+To change language use [changeLanguage](api.md#changelanguage). If you need complete different configs use [createInstance](api.md#createinstance) or [cloneInstance](api.md#cloneinstance).
+{% endhint %}
+
 ```javascript
 i18next.init({
   fallbackLng: 'en',
