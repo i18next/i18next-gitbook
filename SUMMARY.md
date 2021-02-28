@@ -34,6 +34,7 @@
 ## How to
 
 * [Add or Load Translations](how-to/add-or-load-translations.md)
+* [Caching](how-to/caching.md)
 * [FAQ](how-to/faq.md)
 
 ## Misc
