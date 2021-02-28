@@ -63,30 +63,155 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 
 ### backends
 
-| **backend** | **description** |
-| :--- | :--- |
-| [localstorage backend](https://github.com/i18next/i18next-localstorage-backend) | This is a i18next cache layer to be used in the browser. It will load and cache resources from localStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend). |
-| [async storage backend](https://github.com/timbrandin/i18next-async-storage-backend) | This is a i18next cache layer to be used in react native. It will load and cache resources from AsyncStorage and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend). |
-| [http backend](https://github.com/i18next/i18next-http-backend) | backend layer for i18next using in node.js, in the browser and for deno \(will use xhr or fetch\) |
-| [xhr backend](https://github.com/i18next/i18next-xhr-backend) | backend layer for i18next using browsers xhr **deprecated** |
-| [fetch backend](https://github.com/perrin4869/i18next-fetch-backend) | backend layer for i18next using browsers fetch |
-| [fluent backend](https://github.com/i18next/i18next-fluent-backend) | backend to load [fluent syntax](https://projectfluent.org/) .ftl files via xhr |
-| [keys ondemand](https://github.com/kingatlas/i18next-keys-ondemand) | fetch missing keys on demand |
-| [i18next.gettext](https://github.com/palamccc/i18next.gettext) | gettext backend of i18next |
-| [filesystem](https://github.com/i18next/i18next-fs-backend) | backend layer for i18next used in Node.js and for Deno to load translations from the filesystem. |
-| [mongodb backend](https://github.com/laodemalfatih/i18next-node-mongo-backend) | backend layer for i18next used in Node.js & Deno to load translations from the MongoDB. |
-| [nodejs filesystem](https://github.com/i18next/i18next-node-fs-backend) | node.js backend layer for i18next using fs module to load resources from filesystem |
-| [nodejs filesystem \(sync\)](https://github.com/sallar/i18next-sync-fs-backend) | node.js backend layer for i18next using fs module to load resources synchronous from filesystem |
-| [nodejs filesystem \(electron\)](https://github.com/reZach/i18next-electron-fs-backend) | node.js backend for i18next using fs module to load resources securely in an electron app from filesystem |
-| [nodejs remote](https://github.com/i18next/i18next-node-remote-backend) | node.js backend layer for i18next using request module to load resources from another server |
-| [nodejs couchbase](https://github.com/kvaillant/i18next.couchbase) | i18next node.js backend layer for i18next using couchbase |
-| [Zanata nodejs backend](https://bitbucket.org/tagoh/i18next-node-zanata-backend) | i18next node.js backend layer for [Zanata](http://zanata.org) |
-| [i18next-firebase-backend](https://github.com/inteligator/i18next-firebase-backend) | i18next Backend Using Firebase |
-| [i18next-smart-bucket-backend](https://github.com/nekuz0r/i18next-smart-bucket-backend) | i18next backend for smart-bucket |
-| [locize backend](https://github.com/locize/i18next-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com) |
-| [service backend](https://github.com/timbrandin/i18next-service-backend) | backend layer for external services such as [spacetranslate.com - Simple Translation Service at Scale](https://spacetranslate.com) and [locize.com - localization as a service](http://locize.com). |
-| [locize nodejs backend](https://github.com/locize/i18next-node-locize-backend) | backend layer for [locize.com - localization as a service](http://locize.com) |
-| [service node backend](https://github.com/timbrandin/i18next-node-service-backend) | backend layer for external services such as [spacetranslate.com - Simple Translation Service at Scale](https://spacetranslate.com) and [locize.com - localization as a service](http://locize.com). |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>backend</b>
+      </th>
+      <th style="text-align:left"><b>description</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-localstorage-backend">localstorage backend</a>
+      </td>
+      <td style="text-align:left">This is a i18next cache layer to be used in the browser. It will load
+        and cache resources from localStorage and can be used in combination with
+        the <a href="https://github.com/i18next/i18next-chained-backend">chained backend</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/timbrandin/i18next-async-storage-backend">async storage backend</a>
+      </td>
+      <td style="text-align:left">This is a i18next cache layer to be used in react native. It will load
+        and cache resources from AsyncStorage and can be used in combination with
+        the <a href="https://github.com/i18next/i18next-chained-backend">chained backend</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-fs-backend">filesystem</a>
+      </td>
+      <td style="text-align:left">
+        <p>backend layer for i18next used in Node.js and for Deno to load translations
+          from the filesystem.</p>
+        <p>It can also be used as cache layer in combination with the <a href="https://github.com/i18next/i18next-chained-backend">chained backend</a>,
+          <a
+          href="https://github.com/i18next/i18next-fs-backend/blob/master/example/caching/app.js">i.e. a chained backend together with the http backend</a>or with the
+            <a
+            href="https://github.com/locize/i18next-locize-backend">locize backend</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-http-backend">http backend</a>
+      </td>
+      <td style="text-align:left">backend layer for i18next using in node.js, in the browser and for deno
+        (will use xhr or fetch)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-xhr-backend">xhr backend</a>
+      </td>
+      <td style="text-align:left">backend layer for i18next using browsers xhr <b>deprecated</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/perrin4869/i18next-fetch-backend">fetch backend</a>
+      </td>
+      <td style="text-align:left">backend layer for i18next using browsers fetch</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-fluent-backend">fluent backend</a>
+      </td>
+      <td style="text-align:left">backend to load <a href="https://projectfluent.org/">fluent syntax</a> .ftl
+        files via xhr</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/kingatlas/i18next-keys-ondemand">keys ondemand</a>
+      </td>
+      <td style="text-align:left">fetch missing keys on demand</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/palamccc/i18next.gettext">i18next.gettext</a>
+      </td>
+      <td style="text-align:left">gettext backend of i18next</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/laodemalfatih/i18next-node-mongo-backend">mongodb backend</a>
+      </td>
+      <td style="text-align:left">backend layer for i18next used in Node.js &amp; Deno to load translations
+        from the MongoDB.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-node-fs-backend">nodejs filesystem</a>
+      </td>
+      <td style="text-align:left">node.js backend layer for i18next using fs module to load resources from
+        filesystem</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/sallar/i18next-sync-fs-backend">nodejs filesystem (sync)</a>
+      </td>
+      <td style="text-align:left">node.js backend layer for i18next using fs module to load resources synchronous
+        from filesystem</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/reZach/i18next-electron-fs-backend">nodejs filesystem (electron)</a>
+      </td>
+      <td style="text-align:left">node.js backend for i18next using fs module to load resources securely
+        in an electron app from filesystem</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-node-remote-backend">nodejs remote</a>
+      </td>
+      <td style="text-align:left">node.js backend layer for i18next using request module to load resources
+        from another server</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/kvaillant/i18next.couchbase">nodejs couchbase</a>
+      </td>
+      <td style="text-align:left">i18next node.js backend layer for i18next using couchbase</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://bitbucket.org/tagoh/i18next-node-zanata-backend">Zanata nodejs backend</a>
+      </td>
+      <td style="text-align:left">i18next node.js backend layer for <a href="http://zanata.org">Zanata</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/inteligator/i18next-firebase-backend">i18next-firebase-backend</a>
+      </td>
+      <td style="text-align:left">i18next Backend Using Firebase</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/nekuz0r/i18next-smart-bucket-backend">i18next-smart-bucket-backend</a>
+      </td>
+      <td style="text-align:left">i18next backend for smart-bucket</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/locize/i18next-locize-backend">locize backend</a>
+      </td>
+      <td style="text-align:left">backend layer for <a href="http://locize.com">locize.com - localization as a service</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/timbrandin/i18next-service-backend">service backend</a>
+      </td>
+      <td style="text-align:left">backend layer for external services such as <a href="https://spacetranslate.com">spacetranslate.com - Simple Translation Service at Scale</a> and
+        <a
+        href="http://locize.com">locize.com - localization as a service</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/locize/i18next-node-locize-backend">locize nodejs backend</a>
+      </td>
+      <td style="text-align:left">backend layer for <a href="http://locize.com">locize.com - localization as a service</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/timbrandin/i18next-node-service-backend">service node backend</a>
+      </td>
+      <td style="text-align:left">backend layer for external services such as <a href="https://spacetranslate.com">spacetranslate.com - Simple Translation Service at Scale</a> and
+        <a
+        href="http://locize.com">locize.com - localization as a service</a>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### language detector
 
