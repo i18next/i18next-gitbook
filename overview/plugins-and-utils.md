@@ -140,16 +140,10 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
         from the MongoDB.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><a href="https://github.com/i18next/i18next-node-fs-backend">nodejs filesystem</a>
+      <td style="text-align:left"><a href="https://github.com/i18next/i18next-fs-backend">nodejs filesystem</a>
       </td>
       <td style="text-align:left">node.js backend layer for i18next using fs module to load resources from
         filesystem</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="https://github.com/sallar/i18next-sync-fs-backend">nodejs filesystem (sync)</a>
-      </td>
-      <td style="text-align:left">node.js backend layer for i18next using fs module to load resources synchronous
-        from filesystem</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="https://github.com/reZach/i18next-electron-fs-backend">nodejs filesystem (electron)</a>
