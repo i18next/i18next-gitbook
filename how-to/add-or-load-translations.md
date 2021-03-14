@@ -55,7 +55,7 @@ Please make sure to at least pass in an empty resources object on init. Else i18
 
 ### Load using a backend plugin
 
-Each plugin comes with a set of on configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
+Each [plugin](../principles/plugins.md) comes with a set of on configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
 
 Here is a sample using the [i18next-http-backend](https://github.com/i18next/i18next-http-backend) to load resources from the server.
 
@@ -77,5 +77,9 @@ i18next
 Having a combination of [defining resources](add-or-load-translations.md#add-on-init) + [having a backend](add-or-load-translations.md#load-using-a-backend-plugin) will not implicitly take one or the other source as fallback resources.  
 If you need some fallback behaviour you may use the [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend). A short example can be found [here](https://github.com/i18next/i18next-http-backend/blob/master/example/fallback/app.js).  
 With [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend) you can also create some [caching behaviour](caching.md).
+{% endhint %}
+
+{% hint style="info" %}
+[What's a plugin?](../principles/plugins.md)
 {% endhint %}
 
