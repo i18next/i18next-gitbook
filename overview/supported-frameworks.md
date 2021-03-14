@@ -44,8 +44,8 @@
 | webcomponent | [i18next-wc](https://github.com/spurreiter/i18next-wc) | Web components interfacing i18next and Intl |
 | marko.js | [marko-i18next](https://github.com/gunjam/marko-i18next) | Components to use i18next in Marko templates. |
 | virtualdom | [i18nextify](https://github.com/i18next/i18nextify) | one liner script to enable i18next on any site |
-| Handlebars | [handlebars-i18next](https://github.com/UUDigitalHumanitieslab/handlebars-i18next) | Handlebars helper that lets you translate with i18next inside your templates.
-| Handlebars | [handlebars-i18n](https://github.com/fwalzel/handlebars-i18n) | adds the internationalization features of i18next and Intl to handlebars.js.
+| Handlebars | [handlebars-i18next](https://github.com/UUDigitalHumanitieslab/handlebars-i18next) | Handlebars helper that lets you translate with i18next inside your templates. |
+| Handlebars | [handlebars-i18n](https://github.com/fwalzel/handlebars-i18n) | adds the internationalization features of i18next and Intl to handlebars.js. |
 
 ## Supported Environments
 

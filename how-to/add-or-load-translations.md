@@ -73,3 +73,8 @@ i18next
   });
 ```
 
+{% hint style="danger" %}
+Having a combination of [defining resources](add-or-load-translations.md#add-on-init) + [having a backend](add-or-load-translations.md#load-using-a-backend-plugin) will not implicitly take one or the other source as fallback resources.  
+If you need some fallback behaviour you may use the [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend). A short example can be found [here](https://github.com/i18next/i18next-http-backend/blob/master/example/fallback/app.js).
+{% endhint %}
+
