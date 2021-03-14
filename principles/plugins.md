@@ -2,7 +2,7 @@
 
 i18next comes with a lot of modules to enhance the features available. There are modules to:
 
-* load resources, eg. via xhr or from filesystem \(node.js\)
+* load resources, eg. via http fetch or from filesystem \(node.js\)
 * cache resources using eg. [i18next-localstorage-backend](https://github.com/i18next/i18next-localstorage-backend)
 * detect user language by querystring, navigator, cookie, …
 * post processors to further manipulate values, eg. to add sprintf support
@@ -21,4 +21,14 @@ i18next
 ```
 
 For usage details please read the documentation of the plugin \(readme file in the repository or npm website\).
+
+{% hint style="info" %}
+If you're not sure on why you may need such a plugin, have a look at the [First setup help](../overview/first-setup-help.md) page.
+{% endhint %}
+
+{% hint style="success" %}
+[Do you like to create your own plugin?](../misc/creating-own-plugins.md)
+{% endhint %}
+
+
 
