@@ -1,11 +1,11 @@
 # Plugins
 
-i18next comes with a lot of modules to enhance the features available. There are modules to:
+i18next [comes with a lot of modules](../overview/plugins-and-utils.md) to enhance the features available. There are modules to:
 
-* load resources, eg. via http fetch or from filesystem \(node.js\)
-* cache resources using eg. [i18next-localstorage-backend](https://github.com/i18next/i18next-localstorage-backend)
-* detect user language by querystring, navigator, cookie, …
-* post processors to further manipulate values, eg. to add sprintf support
+* [load resources](https://www.i18next.com/overview/plugins-and-utils#backends), eg. via [http fetch](https://github.com/i18next/i18next-http-backend) or from [filesystem](https://github.com/i18next/i18next-fs-backend) \(Node.js, Deno\)
+* [cache resources](../how-to/caching.md) using eg. [i18next-localstorage-backend](https://github.com/i18next/i18next-localstorage-backend)
+* [detect user language](https://www.i18next.com/overview/plugins-and-utils#language-detector) by querystring, navigator, cookie, …
+* [post processors](https://www.i18next.com/overview/plugins-and-utils#post-processors) to further manipulate values, eg. to add sprintf support
 
 ```javascript
 import i18next from 'i18next';
