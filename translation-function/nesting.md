@@ -32,18 +32,19 @@ keys
 
 ```javascript
 {
-      "girlsAndBoys": "$t(girls, {\"count\": {{girls}} }) and {{count}} boy",
-      "girlsAndBoys_plural": "$t(girls, {\"count\": {{girls}} }) and {{count}} boys",
-      "girls": "{{count}} girl",
-      "girls_plural": "{{count}} girls"
+    "girlsAndBoys": "They have $t(girls, {\"count\": {{girls}} }) and $t(boys, {\"count\": {{boys}} })",
+    "boys": "{{count}} boy",
+    "boys_plural": "{{count}} boys",
+    "girls": "{{count}} girl",
+    "girls_plural": "{{count}} girls",
 }
 ```
 
 sample
 
 ```javascript
-i18next.t('girlsAndBoys', {count: 2, girls: 3});
-// -> "3 girls and 2 boys"
+i18next.t('girlsAndBoys', {girls: 3, boys: 2});
+// -> "They have 3 girls and 2 boys"
 ```
 
 {% hint style="info" %}
