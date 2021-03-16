@@ -4,7 +4,13 @@
 
 Plural can be combined with interpolation, context, ...
 
-Note: The variable name must be `count`.
+{% hint style="danger" %}
+Note: The variable name must be `count`. 
+{% endhint %}
+
+{% hint style="info" %}
+If you need multiple counts, take a look at [nesting](nesting.md#passing-options-to-nestings)
+{% endhint %}
 
 ### Singular / Plural
 
