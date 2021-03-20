@@ -5,7 +5,7 @@
 Plural can be combined with interpolation, context, ...
 
 {% hint style="danger" %}
-Note: The variable name must be `count`. 
+Note: The variable name must be `count`.
 {% endhint %}
 
 {% hint style="info" %}

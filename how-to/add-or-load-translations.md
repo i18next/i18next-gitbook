@@ -83,3 +83,34 @@ With [i18next-chained-backend](https://github.com/i18next/i18next-chained-backen
 [What's a plugin?](../principles/plugins.md)
 {% endhint %}
 
+### Load using a [smart backend plugin](https://github.com/locize/i18next-locize-backend) serving directly from a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
+
+Just use the [i18next-locize-backend](https://github.com/locize/i18next-locize-backend) to load resources from the [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network).
+
+```javascript
+import i18next from 'i18next';
+import Backend from 'i18next-locize-backend';
+
+i18next
+  .use(Backend)
+  .init({
+    backend: {
+      projectId: '[PROJECT_ID]',
+      apiKey: '[API_KEY]',
+      referenceLng: '[LNG]'
+    }
+  });
+```
+
+[Here](https://github.com/locize/react-tutorial) you can find a step by step guide with a React.js app, which will unleash the full power of i18next in combination with locize.  
+See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).  
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation \(like [Google Translate](https://cloud.google.com/translate)\).
+
+{% embed url="https://youtu.be/osScyaGMVqo" %}
+
+{% embed url="https://youtu.be/VfxBpSXarlU" %}
+
+### [**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
+
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
+
