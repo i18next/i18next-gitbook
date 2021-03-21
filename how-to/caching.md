@@ -144,7 +144,7 @@ module.exports = {
     }]
   },
   use: [ChainedBackend],
-  ns: ['common', 'footer', 'second-page'], // the namespaces nees to be listed here, to make sure they got preloaded
+  ns: ['common', 'footer', 'second-page'], // the namespaces needs to be listed here, to make sure they got preloaded
   serializeConfig: false, // because of the custom use i18next plugin
   // debug: true,
 }
