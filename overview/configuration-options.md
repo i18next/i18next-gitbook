@@ -209,7 +209,7 @@ All options for calling init or createInstance.
 
 Sample using initImmediate when using a backend plugin allowing sync \(blocking\) loads.
 
-**This option only works for sync \(blocking\) loading backend, like i18next-fs-backend and i18next-sync-fs-backend!**
+**This option only works for sync \(blocking\) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend#if-set-i18next-initimmediate-option-to-false-it-will-load-the-files-synchronously)**!**
 
 ```javascript
 import i18next from 'i18next';
