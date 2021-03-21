@@ -33,6 +33,10 @@ You can pass in a default value for cases the key could not be found in translat
 i18next.t('key', 'default value to show');
 ```
 
+{% hint style="info" %}
+In case you're using the [saveMissing functionality](../overview/configuration-options.md#missing-keys), it will also pass the defaultValue to your chosen backend, like shown in [this React.js example](https://github.com/locize/react-tutorial).
+{% endhint %}
+
 ### Accessing keys in different namespaces
 
 Namespaces are a feature in i18next internationalization framework which allows you to separate translations that get loaded into multiple files.

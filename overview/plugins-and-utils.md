@@ -143,7 +143,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
       <td style="text-align:left"><a href="https://github.com/gregfenton/i18next-node-firestore-backend">Firestore backend</a>
       </td>
       <td style="text-align:left">backend layer for i18next used in Node.js &amp; Deno to load translations
-        from Google's Firestore DB.</td>
+        from Google&apos;s Firestore DB.</td>
     </tr>
     <tr>
       <td style="text-align:left"><a href="https://github.com/i18next/i18next-fs-backend">nodejs filesystem</a>
