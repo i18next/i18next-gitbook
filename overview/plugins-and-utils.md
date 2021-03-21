@@ -140,6 +140,12 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
         from the MongoDB.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><a href="https://github.com/gregfenton/i18next-node-firestore-backend">Firestore backend</a>
+      </td>
+      <td style="text-align:left">backend layer for i18next used in Node.js &amp; Deno to load translations
+        from Google's Firestore DB.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><a href="https://github.com/i18next/i18next-fs-backend">nodejs filesystem</a>
       </td>
       <td style="text-align:left">node.js backend layer for i18next using fs module to load resources from
