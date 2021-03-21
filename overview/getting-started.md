@@ -117,4 +117,5 @@ You should now have an idea about how to achieve the basic setup. It's time to l
 * Find out more about the [configuration options](configuration-options.md).
 * Add a [language detector](plugins-and-utils.md) to detect the preferred language of your user
 * Add a [backend plugin](plugins-and-utils.md) to load the translations from the server or filesystem
+* Connect i18next with a smart [Translation Management System](https://locize.com), like in [this React.js example](https://github.com/locize/react-tutorial)
 
