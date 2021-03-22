@@ -202,6 +202,11 @@ All options for calling init or createInstance.
       <td style="text-align:left">prefixes the namespace to the returned key when using <code>lng: &apos;cimode&apos;</code>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">ignoreJSONStructure</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">if a key is not found as nested key, it will try to lookup as flat key</td>
+    </tr>
   </tbody>
 </table>
 

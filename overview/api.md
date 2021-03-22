@@ -401,7 +401,8 @@ options:
 
 | option | default | description |
 | :--- | :--- | :--- |
-| keySeparator | "." | char to separate keys, or false if no separator is prefered |
+| keySeparator | "." | char to separate keys, or false if no separator is preferred |
+| ignoreJSONStructure | true | if a key is not found as nested key, it will try to lookup as flat key |
 
 ### addResource
 
@@ -413,7 +414,7 @@ options:
 
 | option | default | description |
 | :--- | :--- | :--- |
-| keySeparator | "." | char to separate keys, or false if no separator is prefered |
+| keySeparator | "." | char to separate keys, or false if no separator is preferred |
 | silent | false | if set to true adding will not emit an added event |
 
 ### addResources

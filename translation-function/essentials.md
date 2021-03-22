@@ -126,4 +126,5 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 | postProcess | string or array of postProcessors to apply see  [interval plurals](plurals.md) as a sample |
 | interpolation | override [interpolation options](interpolation.md) |
 | skipInterpolation | skip interpolation and nesting for this call to t function |
+| ignoreJSONStructure | if a key is not found as nested key, it will try to lookup as flat key |
 
