@@ -65,6 +65,7 @@ i18next.init({
 
 | option | default | description |
 | :--- | :--- | :--- |
+| alwaysFormat | false | used to always call the format function for all interpolated values |
 | format | noop function | format function `function format(value, format, lng) {}` |
 | formatSeparator | ',' | used to separate format from interpolation value |
 
