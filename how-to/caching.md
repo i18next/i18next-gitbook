@@ -6,8 +6,8 @@ With i18next you can configure a cache layer to be used in the browser. It will 
 
 ```javascript
 import i18next from "i18next";
-import HttpBackend from "i18next-http-backend";
 import ChainedBackend from "i18next-chained-backend";
+import HttpBackend from "i18next-http-backend";
 import LocalStorageBackend from "i18next-localstorage-backend";
 
 i18next
@@ -43,8 +43,8 @@ With i18next you can configure a cache layer to be used on server side. It will 
 
 ```javascript
 import i18next from "i18next";
-import HttpBackend from "i18next-http-backend";
 import ChainedBackend from "i18next-chained-backend";
+import HttpBackend from "i18next-http-backend";
 import FsBackend from "i18next-fs-backend";
 
 i18next
@@ -82,8 +82,8 @@ With i18next you can configure a cache layer to be used on react-native. It will
 
 ```javascript
 import i18next from "i18next";
-import HttpBackend from "i18next-http-backend";
 import ChainedBackend from "i18next-chained-backend";
+import HttpBackend from "i18next-http-backend";
 import AsyncStorageBackend from "i18next-async-storage-backend";
 
 i18next
