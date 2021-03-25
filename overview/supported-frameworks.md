@@ -4,7 +4,7 @@
 
 | framework | url | description |
 | :--- | :--- | :--- |
-| react.js | [react-i18next](https://github.com/i18next/react-i18next) | Higher order component and append i18next to context. |
+| react.js | [react-i18next](https://github.com/i18next/react-i18next) | Internationalization for react done right. Using the i18next i18n ecosystem. |
 | next.js | [next-i18next](https://github.com/isaachinman/next-i18next) | The easiest way to translate your NextJs apps. |
 | next.js | [next-right-now](https://github.com/UnlyEd/next-right-now) | Flexible production-grade boilerplate with Next.js 9 and Zeit Now, with pre-configured Sentry, cookies, Amplitude, Emotion, FontAwesome, GraphQL/GraphCMS \(Apollo\), Bootstrap \(Reactstrap\), **i18next \(Locize\)**, Jest, Cypress \(E2E tests\) and CI/CD \(GH Actions\), with full TypeScript support and support for B2B multi-tenants web apps \(monorepo\) |
 | angular.js | [ng-i18next](https://github.com/i18next/ng-i18next) | Angular1/2 provider, directive and filter |
