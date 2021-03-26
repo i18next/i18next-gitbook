@@ -2,6 +2,11 @@
 
 ## Migration Guide
 
+### v19.x.x to v20.0.0
+
+There should not be any breaking change, but regarding of some misuse of i18next that pop up in last minor releases, we opted for a major version this time.  
+The relevant change behind the scene for this major version was [ignoreJSONStructure](https://github.com/i18next/i18next/blob/master/CHANGELOG.md#2000).
+
 ### v18.x.x to v19.0.0
 
 Typescript use `export default` for esm-first approach [1352](https://github.com/i18next/i18next/pull/1352). No API changes.
