@@ -75,6 +75,10 @@ You can use this small utility to get the correct plural suffixes.
 
 [source code](https://jsfiddle.net/sm9wgLze)
 
+#### Or you use a smart translation management system, like [locize](https://locize.com)
+
+![](../.gitbook/assets/locize_plurals.png)
+
 ### Interval plurals
 
 Want to define phrases expressing the number of items lies in a range. Like _a few items_ or _a lot of items_.
