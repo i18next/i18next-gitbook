@@ -218,6 +218,11 @@ While there are a lot of options going with the defaults should get you covered.
         <p><code>t(&apos;key&apos;, { a: &apos;$t(nested)&apos; })</code>
         </p>
         <p>this will not resolve the nested key and will use<code>$t(nested)</code> as
+          the variable value.
+          <br />Another example:</p>
+        <p><code>t(&apos;key&apos;, { a: &apos;{{otherVar}}&apos;: otherVar: &apos;another value&apos; })</code>
+        </p>
+        <p>this will not resolve the otherVar variable and will use<code>{{otherVar}}</code>as
           the variable value.</p>
         <p><b>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to set this option to true.</b>
         </p>
