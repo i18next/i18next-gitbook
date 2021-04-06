@@ -73,7 +73,7 @@ i18next.t('key2', {val: '$t(key1)'});
 
 ### Additional options
 
-Prefix/Suffix for nesting and other options can be overridden in init interpolation options or by passing additional options to t function:
+Prefix/Suffix for nesting and other options can be overridden in init [interpolation options](interpolation.md#all-interpolation-options) or by passing additional options to t function:
 
 sample
 

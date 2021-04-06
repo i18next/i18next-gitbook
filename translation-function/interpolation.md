@@ -181,7 +181,8 @@ While there are a lot of options going with the defaults should get you covered.
     <tr>
       <td style="text-align:left">nestingSuffix</td>
       <td style="text-align:left">&quot;)&quot;</td>
-      <td style="text-align:left">suffix for nesting</td>
+      <td style="text-align:left">suffix for <a href="nesting.md">nesting</a>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">nestingPrefixEscaped</td>
