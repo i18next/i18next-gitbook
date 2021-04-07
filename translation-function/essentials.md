@@ -4,7 +4,7 @@
 
 ### Accessing keys
 
-keys
+resources with 2 keys:
 
 ```javascript
 {
