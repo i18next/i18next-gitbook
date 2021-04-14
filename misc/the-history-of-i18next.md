@@ -37,7 +37,7 @@ Helping developers to get their applications translated is great - but there is 
 Having created the foundation with i18next it was a long journey to [**localization as a service**](https://locize.com).
 
 * [Easy to integrate](https://docs.locize.com/integration/instrumenting-your-code)
-* Continuous deployment? [Continuous localization with a CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)!
+* Continuous deployment? [Continuous localization](https://locize.com//how-it-works.html#continouslocalization) with a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)!
 * Manage the translation files with ease
 * [Order professional translations](https://docs.locize.com/guides-tips-and-tricks/working-with-translators/localistars)
 * Analytics & Statistics
