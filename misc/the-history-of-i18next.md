@@ -41,11 +41,11 @@ Having created the foundation with i18next it was a long journey to [**localizat
 * Manage the translation files with ease
 * [Order professional translations](https://docs.locize.com/guides-tips-and-tricks/working-with-translators/localistars)
 * Analytics & Statistics
-* [Profit from our content delivery network](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
+* [Profit from a content delivery network](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
 * [Versioning of your translations](https://docs.locize.com/more/versioning)
+* [Automatic and On-Demand Machine Translation](https://docs.locize.com/whats-inside/auto-machine-translation)
 * [Riskfree: Take your data with you](https://docs.locize.com/more/general-questions/how-is-locize-different-from-the-alternatives#service-lock-in)
 * [Transparent and fair pricing](https://locize.com/pricing.html)
-* [Automatic and On-Demand Machine Translation](https://docs.locize.com/whats-inside/auto-machine-translation)
 * and a lot more...
 
 ![](../.gitbook/assets/transform-your-localization-process-small.png)
