@@ -14,6 +14,12 @@ But this is not where it ends. You can also use i18next with Node.js, PHP, iOS, 
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
 
+{% hint style="success" %}
+[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).  
+Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
+ ![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+{% endhint %}
+
 ## Complete solution
 
 Most frameworks leave it to you how translations are being loaded. You are responsible to detect the user language, to load the translations and push them into the framework.
