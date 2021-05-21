@@ -210,6 +210,12 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
         <a
         href="http://locize.com">locize.com - localization as a service</a>.</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://gist.github.com/SimeonC/6a738467c691eef7f21ebf96918cd95f">webpack import backend</a>
+      </td>
+      <td style="text-align:left">Use webpack code splitting to load files as a javascript bundle</a>
+      </td>
+    </tr>
   </tbody>
 </table>
 
