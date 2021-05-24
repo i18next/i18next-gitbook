@@ -1,6 +1,10 @@
+---
+description: Do you want to define a fallback which uses local translations?
+---
+
 # Backend Fallback
 
-## Browser fallback with local/bundled translations
+## Browser fallback with local / bundled translations
 
 With i18next you can configure a fallback backend to be used in the browser. It will try to load from your primary backend \(in this case from your [http backend](https://github.com/i18next/i18next-http-backend)\) and if the primary backend is not reachable or does not serve translations, your second backend \(in this case [local or bundled](https://github.com/i18next/i18next-resources-to-backend) translations\) will be used. This is all possible thanks to the [chained backend](https://github.com/i18next/i18next-chained-backend).
 
