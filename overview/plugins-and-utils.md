@@ -213,8 +213,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
     <tr>
       <td style="text-align:left"><a href="https://gist.github.com/SimeonC/6a738467c691eef7f21ebf96918cd95f">webpack import backend</a>
       </td>
-      <td style="text-align:left">Use webpack code splitting to load files as a javascript bundle</a>
-      </td>
+      <td style="text-align:left">Use webpack code splitting to load files as a javascript bundle</td>
     </tr>
   </tbody>
 </table>

@@ -35,6 +35,7 @@
 
 * [Add or Load Translations](how-to/add-or-load-translations.md)
 * [Caching](how-to/caching.md)
+* [Backend Fallback](how-to/backend-fallback.md)
 * [FAQ](how-to/faq.md)
 
 ## Misc

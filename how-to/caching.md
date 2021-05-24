@@ -12,7 +12,6 @@ import LocalStorageBackend from "i18next-localstorage-backend";
 
 i18next
   .use(ChainedBackend)
-  .use(LanguageDetector)
   .init({
     fallbackLng: "en",
     // ... your i18next config
@@ -49,7 +48,6 @@ import FsBackend from "i18next-fs-backend";
 
 i18next
   .use(ChainedBackend)
-  .use(LanguageDetector)
   .init({
     fallbackLng: "en",
     // ... your i18next config
@@ -88,7 +86,6 @@ import AsyncStorageBackend from "i18next-async-storage-backend";
 
 i18next
   .use(ChainedBackend)
-  .use(LanguageDetector)
   .init({
     fallbackLng: "en",
     // ... your i18next config
