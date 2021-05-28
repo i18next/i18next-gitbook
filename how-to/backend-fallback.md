@@ -111,5 +111,7 @@ More information can be found here:
 [i18next-http-backend](https://github.com/i18next/i18next-http-backend)
 {% endhint %}
 
-
+{% hint style="danger" %}
+We suggest not to use multiple backends with the [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend) in combination with saveMissing or updateMissing, because it may happen, that the trigger for this is based on stale data.
+{% endhint %}
 
