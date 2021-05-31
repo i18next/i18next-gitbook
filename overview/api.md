@@ -42,7 +42,7 @@ i18next.init((err, t) => {
 
 // using Promises
 i18next
-  .init({ /* options */ )})
+  .init({ /* options */ })
   .then(function(t) { t('key'); });
 ```
 
