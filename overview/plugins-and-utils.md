@@ -49,10 +49,11 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 
 ### services
 
+Services that are known to fully support the i18next format \(plural handling, ...\) and sponsoring or contributing to the development of i18next.
+
 | **name** | **description** |
 | :--- | :--- |
 | [locize](http://locize.com) | localization as a service. Solves your localization process using i18next. |
-| [spacetranslate](https://spacetranslate.com) | Simple Translation Service at Scale. Solves your localization process using i18next. |
 
 ### backend extenders
 
