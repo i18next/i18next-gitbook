@@ -53,6 +53,9 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | :--- | :--- |
 | [locize](http://locize.com) | localization as a service. Solves your localization process using i18next. |
 | [spacetranslate](https://spacetranslate.com) | Simple Translation Service at Scale. Solves your localization process using i18next. |
+| [i18nexus](https://i18nexus.com/)| Quickly edit, automate, and manage your translations and connect them to your website, app, or video game with the power of i18next. ([Integrate with i18next](https://i18nexus.com/quick-integration/)) |
+| [localazy](https://localazy.com/) | The modern way of multilingual development. ([JSON format](https://localazy.com/docs/cli/json-format) ) |
+| [crowdin](https://crowdin.com/) | Crowdin is a cloud-based solution that streamlines localization management for your team. (Supported [i18next JSON](https://support.crowdin.com/file-formats/json/)  |
 
 ### backend extenders
 
