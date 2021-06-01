@@ -50,3 +50,7 @@ Having created the foundation with i18next it was a long journey to [**localizat
 
 ![](../.gitbook/assets/transform-your-localization-process-small.png)
 
+{% hint style="success" %}
+🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://locize.com)**.** 💙
+{% endhint %}
+
