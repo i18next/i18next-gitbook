@@ -64,7 +64,7 @@ Please be aware these samples are just showing basic usage of the core functiona
 import i18next from 'i18next';
 
 i18next.init({
-  lng: 'en',
+  lng: 'en', // if you're using a language detector, do not define the lng option
   debug: true,
   resources: {
     en: {
@@ -83,7 +83,7 @@ Or using Promises:
 
 ```javascript
 i18next.init({
-  lng: 'en',
+  lng: 'en', // if you're using a language detector, do not define the lng option
   debug: true,
   resources: {
     en: {

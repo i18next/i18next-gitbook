@@ -34,7 +34,7 @@ All options for calling init or createInstance.
       <td style="text-align:left">lng</td>
       <td style="text-align:left">undefined</td>
       <td style="text-align:left">
-        <p>language to use (overrides language detection). If set to <code>&apos;cimode&apos;</code> the
+        <p>language to use (<b>overrides language detection</b>). If set to <code>&apos;cimode&apos;</code> the
           output text will be the key.</p>
         <p><em>Make sure you use <code>&apos;en-US&apos;</code> language code format and not with underscore or similar.</em>
         </p>
