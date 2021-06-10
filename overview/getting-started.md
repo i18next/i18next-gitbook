@@ -75,7 +75,7 @@ i18next.init({
   }
 });
 // initialized and ready to go!
-// i18next is only already initialized, because the translation resources are already passed in via init function
+// i18next is already initialized, because the translation resources where passed via init function
 document.getElementById('output').innerHTML = i18next.t('key');
 ```
 
@@ -138,7 +138,7 @@ document.getElementById('output').innerHTML = i18next.t('key');
 ```
 
 {% hint style="info" %}
-if you are [lacy loading the translation resources](../how-to/add-or-load-translations.md), you may need to wait for i18next to have finished to initialize.
+if you are [lazy loading the translation resources](../how-to/add-or-load-translations.md), you may need to wait for i18next to have finished to initialize.
 {% endhint %}
 
 As you might see, this basic sample provides only one language directly added on init… let's extend this to have buttons to change language from English to German:
