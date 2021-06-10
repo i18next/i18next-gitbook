@@ -73,6 +73,26 @@ i18next.init({
       }
     }
   }
+});
+// initialized and ready to go!
+document.getElementById('output').innerHTML = i18next.t('key');
+```
+
+Or using callback init signature:
+
+```javascript
+import i18next from 'i18next';
+
+i18next.init({
+  lng: 'en', // if you're using a language detector, do not define the lng option
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
 }, function(err, t) {
   // initialized and ready to go!
   document.getElementById('output').innerHTML = i18next.t('key');
@@ -97,6 +117,28 @@ i18next.init({
   document.getElementById('output').innerHTML = i18next.t('key');
 });
 ```
+
+Or using async/await:
+
+```javascript
+await i18next.init({
+  lng: 'en', // if you're using a language detector, do not define the lng option
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+});
+// initialized and ready to go!
+document.getElementById('output').innerHTML = i18next.t('key');
+```
+
+{% hint style="info" %}
+if you are [lacy loading the translation resources](../how-to/add-or-load-translations.md), you may need to wait for i18next to have finished to initialize.
+{% endhint %}
 
 As you might see, this basic sample provides only one language directly added on init… let's extend this to have buttons to change language from English to German:
 
