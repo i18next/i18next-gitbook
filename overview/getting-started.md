@@ -75,6 +75,7 @@ i18next.init({
   }
 });
 // initialized and ready to go!
+// i18next is only already initialized, because the translation resources are already passed in via init function
 document.getElementById('output').innerHTML = i18next.t('key');
 ```
 
