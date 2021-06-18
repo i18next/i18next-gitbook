@@ -4,9 +4,8 @@
 
 ## Overview
 
-* [Introduction](overview/introduction.md)
-* [Comparison to others](overview/comparison-to-others.md)
 * [Getting started](overview/getting-started.md)
+* [Comparison to others](overview/comparison-to-others.md)
 * [API](overview/api.md)
 * [Configuration Options](overview/configuration-options.md)
 * [Supported Frameworks](overview/supported-frameworks.md)
