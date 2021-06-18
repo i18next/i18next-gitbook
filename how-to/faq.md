@@ -20,6 +20,14 @@ _Try setting_ `debug: true` _on init and check the console log. There rather sur
 
 _On the_ [_plural page_](../translation-function/plurals.md) _there is a tool to get them._
 
+_Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. It shows also the appropriate plural forms._
+
+_Or you use a smart translation management system, like_ [_locize_](https://locize.com)_._
+
+![](../.gitbook/assets/locize_plurals.png)
+
+\_\_
+
 ### How should the language codes be formatted?
 
 _Theoretically, you're not bound to any specific language code format, but if you want to make use of all the in built language features, like proper_ [_pluralization_](../translation-function/plurals.md) _and correct_ [_fallback resolution_](../principles/fallback.md#language-fallback)_, we strongly suggest to use the following iso norm:_
@@ -37,9 +45,11 @@ _And more information about the format can be found here:_ [_https://www.w3.org/
 
 ## Process
 
-### **How do i keep overview over my translation progress?**
+### **How do I keep overview over my translation progress?**
 
-_Might be time to use a translation management tool._
+_Try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._
+
+_If you need more, it might be time to use a_ [_translation management tool_](https://locize.com)_._
 
 ### **How to handle with changes in e2e tests?**
 

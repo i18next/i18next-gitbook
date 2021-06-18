@@ -21,6 +21,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-scanner](http://i18next.github.io/i18next-scanner) | Scan your code, extract translation keys/values, and merge them into i18n resource files. |
 | [i18next-parser](https://github.com/i18next/i18next-parser) | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
 | [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) | A babel plugin that can extract keys in JSONv3 format. |
+| [translation-check](https://github.com/locize/translation-check) | Nicely shows an overview of your translations in a UI. Check which keys are not yet translated. |
 
 ### utils
 
@@ -46,6 +47,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [eslint-plugin-i18next](https://github.com/edvardchen/eslint-plugin-i18next) | util | Make sure that all text shown are translated |
 | [i18next support for JetBrains IDEs](https://plugins.jetbrains.com/plugin/12981-i18n-support/) | IDE integration | Navigation, code completion, highlighting |
 | [i18next-hmr](https://github.com/felixmosh/i18next-hmr) | bundler / DX | HMR webpack plugin that allows to reload translation resources on client & server |
+| [translation-check](https://github.com/locize/translation-check) | util / DX | Nicely shows an overview of your translations in a UI. Check which keys are not yet translated. |
 
 ### services
 
