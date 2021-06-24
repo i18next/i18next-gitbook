@@ -53,9 +53,30 @@ There are more options to adding, removing translations...learn more about [reso
 Please make sure to at least pass in an empty resources object on init. Else i18next will try to load translations and give you a warning that you are not using a backend.
 {% endhint %}
 
+### Lazy load in memory translations
+
+[i18next-resources-to-backend](https://github.com/i18next/i18next-resources-to-backend) helps to transform resources to an i18next backend. This means, you can also lazy load translations, for example when using webpack:
+
+```javascript
+import i18next from 'i18next';
+import resourcesToBackend from 'i18next-resources-to-backend';
+
+i18next
+  .use(resourcesToBackend((language, namespace, callback) => {
+    import(`./locales/${language}/${namespace}.json`)
+      .then((resources) => {
+        callback(null, resources)
+      })
+      .catch((error) => {
+        callback(error, null)
+      })
+  }))
+  .init({ /* other options */ })
+```
+
 ### Load using a backend plugin
 
-Each [plugin](../principles/plugins.md) comes with a set of on configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
+Each [plugin](../principles/plugins.md) comes with a set of configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
 
 Here is a sample using the [i18next-http-backend](https://github.com/i18next/i18next-http-backend) to load resources from the server.
 
