@@ -59,8 +59,8 @@ i18next
 
 ## Do you need a language detector for your environment?
 
-* for example for the browser: [you can load translations from filesystem](https://github.com/i18next/i18next-browser-languageDetector)
-* for example for http server \(express, Fastify, etc...\): [you can load translations from filesystem](https://github.com/i18next/i18next-http-middleware)
+* for example for the browser: [i18next-browser-languageDetector](https://github.com/i18next/i18next-browser-languageDetector)
+* for example for http server \(express, Fastify, etc...\): [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware#language-detection)
 * [there are other plugins here](https://www.i18next.com/overview/plugins-and-utils#language-detector)
 
 ## Do you want to bundle the translations with your app?
