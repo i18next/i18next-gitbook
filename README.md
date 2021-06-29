@@ -20,6 +20,11 @@ Some basics of i18next and some cool possibilities on how to optimize your local
  ![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
+{% hint style="success" %}
+Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c) you can check out how this works.[  
+](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)[![](.gitbook/assets/server_side_backend.jpg) ](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c)
+{% endhint %}
+
 ## Complete solution
 
 Most frameworks leave it to you how translations are being loaded. You are responsible to detect the user language, to load the translations and push them into the framework.
