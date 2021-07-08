@@ -33,6 +33,7 @@
 ## How to
 
 * [Add or Load Translations](how-to/add-or-load-translations.md)
+* [Extracting translations](how-to/extracting-translations.md)
 * [Caching](how-to/caching.md)
 * [Backend Fallback](how-to/backend-fallback.md)
 * [FAQ](how-to/faq.md)
