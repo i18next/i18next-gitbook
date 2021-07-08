@@ -23,13 +23,23 @@
   "keyPluralMultipleEgArabic_2": "the plural form 2",
   "keyPluralMultipleEgArabic_3": "the plural form 3",
   "keyPluralMultipleEgArabic_4": "the plural form 4",
-  "keyPluralMultipleEgArabic_5": "the plural form 5"
+  "keyPluralMultipleEgArabic_5": "the plural form 5",
+  "keyWithArrayValue": ["multipe", "things"],
+  "keyWithObjectValue": { "valueA": "return this with valueB", "valueB": "more text" }
 }
 ```
 
-This are the defaults. Nesting and Interpolation formats are configurable.
+This are the defaults. Nesting and Interpolation formats are configurable.  
+  
+To learn more about the features check the documentation:  
+  
+- [Interpolation](../translation-function/interpolation.md)  
+- [Formatting](../translation-function/formatting.md)  
+- [Plurals](../translation-function/plurals.md)  
+- [Nesting](../translation-function/nesting.md)  
+- [Objects and Arrays](../translation-function/objects-and-arrays.md)
 
-The only difference to _v2_ are the plural suffixes for languages with multiple plural forms.
+The only difference to _v2_ is the plural suffixes for languages with multiple plural forms.
 
 ### i18next JSON v2
 
