@@ -2,52 +2,57 @@
 
 ![](../.gitbook/assets/ecosys.jpg)
 
-| framework | url | description |
+This list is not officially maintained; information here is contributed by the library maintainers themselves.
+
+Besides the libraries marked as *official*, we don't offer support or help on how to integrate them. Consult their GitHub page for details on issues and implementation. Libraries built by the framework/lib maintainers themselves are marked as _"by XYZ"_.
+
+Lastly, some of those libraries might stop being updated without further notice, while others warn it in their pages. In the latter scenario, they're tagged as *deprecated* below.
+
+| Framework | Home | Extra details |
 | :--- | :--- | :--- |
-| react.js | [react-i18next](https://github.com/i18next/react-i18next) | Internationalization for react done right. Using the i18next i18n ecosystem. |
-| next.js | [next-i18next](https://github.com/isaachinman/next-i18next) | The easiest way to translate your NextJs apps. |
-| next.js | [next-right-now](https://github.com/UnlyEd/next-right-now) | Flexible production-grade boilerplate with Next.js 9 and Zeit Now, with pre-configured Sentry, cookies, Amplitude, Emotion, FontAwesome, GraphQL/GraphCMS \(Apollo\), Bootstrap \(Reactstrap\), **i18next \(Locize\)**, Jest, Cypress \(E2E tests\) and CI/CD \(GH Actions\), with full TypeScript support and support for B2B multi-tenants web apps \(monorepo\) |
-| angular.js | [ng-i18next](https://github.com/i18next/ng-i18next) | Angular1/2 provider, directive and filter |
-| angular.js | [ng2-i18next](https://github.com/actimeo/ng2-i18next) | Angular2 service and directive |
-| angular.js | [angular-i18next](https://github.com/Romanchuk/angular-i18next) | Angular 2.0+ integration \(service, pipes, events\) |
-| vue.js | [vue-i18next](https://github.com/rse/vue-i18next) | Vue plugin for integrating i18next |
-| vue.js | [vue-i18next](https://github.com/panter/vue-i18next) | Vue plugin for integrating i18next |
-| vue.js | [vue-i18next2](https://github.com/bluelovers/vue-i18next2) | Vue plugin for integrating i18next |
-| omi.js | [omi-i18n](https://github.com/i18next/omi-i18n) | omi-i18n solution for omi.js using i18next ecosystem |
-| inferno.js | [inferno-i18next](https://www.npmjs.com/package/inferno-i18next) | inferno-i18next is a translation utility for Inferno components |
-| elm | [elm-i18next](https://github.com/ChristophP/elm-i18next) | use i18next in elm |
-| any http | [http-middleware](https://github.com/i18next/i18next-http-middleware) | Middleware to be used with Node.js web frameworks like express or Fastify and also for Deno. |
-| express.js | [nodejs express middleware](https://github.com/i18next/i18next-express-middleware) | Middleware to use i18next in express.js \(nodejs\). |
-| koa.js | [koa-i18next](https://github.com/sunfuze/koa-i18next) | A middleware to use i18next in koajs. |
-| koa.js | [koa-i18next-middleware](https://github.com/lxzxl/koa-i18next-middleware) | An i18next middleware for Koa framework. Use with koa-i18next-middleware |
-| hapi.js | [hapi-i18next](https://github.com/kenkouot/hapi-i18next) | i18next integration for hapijs |
-| jquery.js | [jquery plugin](https://github.com/i18next/jquery-i18next) | Plugin to use i18next on jquery selectors. |
-| html5 | [loc-i18next](https://github.com/mthh/loc-i18next) | Plugin to use same API as jquery-i18next but with html5 selectors |
-| aurelia.js | [aurelia-i18next](https://github.com/aurelia/i18n) | An Aurelia-Wrapper for the i18next library |
-| meteor.js | [i18next-meteor](https://github.com/ckir/i18next-meteor) | i18next repackaged for Meteor |
-| polymer | [i18next-element](https://github.com/Polymer/i18next-element) | Polymer friendly interface to i18next |
-| ember.js | [ember-i18next](https://github.com/OCTRI/ember-i18next) | Integrates i18next into Ember CLI apps. |
-| ember.js | [ember-cli-i18next](https://github.com/recipher/ember-cli-i18next) | Ember CLI addon to wrap i18next |
-| knockout.js | [i18next-ko](https://github.com/leMaik/i18next-ko) | KnockoutJS bindings for i18next |
-| phaser | [phaser-i18next](https://github.com/orange-games/phaser-i18next) | Phaser plugin for translations using i18next |
-| construct 3 | [c3-i18next](https://github.com/nagyv/c3-i18next/) | A translation plugin for Construct 3 built on top of i18next |
-| metalsmith | [metalsmith-i18next](https://github.com/macprog-guy/metalsmith-i18next) | Metalsmith plugin for i18next to easily create multiple localised branches of your site. |
-| .net | [I18Next.Net](https://github.com/DarkLiKally/I18Next.Net) | .NET library based on .NET Standard 2.0 with a rich featureset like the original i18next supporting .net DI and translations; also comes with plugin support |
-| .net | [i18next-net](https://github.com/leonardobaggio/i18next-net) | .NET C\# class for i18next functionality |
-| php | [i18next-php](https://github.com/Acceptd/i18next-php) | PHP class for basic i18next functionality. [fork of](https://github.com/Mika-/i18next-php) |
-| php | [i18next-php](https://github.com/pkly/i18next-php) | Port of i18next for PHP |
-| rails | [i18next-rails](https://github.com/roblander/i18next-rails) | An asset gem containing bundled i18next javascripts |
-| rails | [rails-asset-localization](https://github.com/nicolai86/rails-asset-localization) | asset pipeline localization using i18next for rails 3.2 & 4 |
-| ios | [i18next-ios](https://github.com/i18next/i18next-ios) | i18next for iOS |
-| android | [i18next-android](https://github.com/i18next/i18next-android) | i18next for android |
-| webcomponent | [kwc-i18next](https://github.com/successk/kwc-i18next) | Web component interfacing i18next |
-| webcomponent | [i18next-wc](https://github.com/spurreiter/i18next-wc) | Web components interfacing i18next and Intl |
-| marko.js | [marko-i18next](https://github.com/gunjam/marko-i18next) | Components to use i18next in Marko templates. |
-| virtualdom | [i18nextify](https://github.com/i18next/i18nextify) | one liner script to enable i18next on any site |
-| Handlebars | [handlebars-i18next](https://github.com/UUDigitalHumanitieslab/handlebars-i18next) | Handlebars helper that lets you translate with i18next inside your templates. |
-| Handlebars | [handlebars-i18n](https://github.com/fwalzel/handlebars-i18n) | adds the internationalization features of i18next and Intl to handlebars.js. |
+| React | [react-i18next](https://github.com/i18next/react-i18next) | **(official)** |
+| Next.js | [next-i18next](https://github.com/isaachinman/next-i18next) | The easiest way to translate your Next.js apps |
+| Next.js | [next-right-now](https://github.com/UnlyEd/next-right-now) | Flexible production-grade boilerplate with Next.js 9 and Zeit Now, with pre-configured Sentry, cookies, Amplitude, Emotion, FontAwesome, GraphQL/GraphCMS \(Apollo\), Bootstrap \(Reactstrap\), **i18next \(Locize\)**, Jest, Cypress \(E2E tests\) and CI/CD \(GH Actions\), with full TypeScript support and support for B2B multi-tenants web apps \(monorepo\) |
+| AngularJS | [ng-i18next](https://github.com/i18next/ng-i18next) | **(official)** Angular1/2 provider, directive and filter |
+| Angular | [ng2-i18next](https://github.com/actimeo/ng2-i18next) *(actimeo)* | Angular2 service and directive |
+| Angular | [angular-i18next](https://github.com/Romanchuk/angular-i18next) *(Romanchuk)* | Angular 2.0+ integration \(service, pipes, events\) |
+| Vue.js | [vue-i18next](https://github.com/rse/vue-i18next) *(rse)* |  |
+| Vue.js | [@panter/vue-i18next](https://github.com/panter/vue-i18next) |  |
+| Vue.js | [vue-i18next2](https://github.com/bluelovers/vue-i18next2) *(bluelovers)* |  |
+| Omi | [omi-i18n](https://github.com/i18next/omi-i18n) | **(official)** i18n solution for Omi |
+| Inferno | [inferno-i18next](https://www.npmjs.com/package/inferno-i18next) | **(deprecated or gone)** Translation utility for Inferno components |
+| Elm | [elm-i18next](https://github.com/ChristophP/elm-i18next) |  |
+| Node/Deno HTTP server | [http-middleware](https://github.com/i18next/i18next-http-middleware) | **(official)** Middleware to be used with Node.js web frameworks like Express or Fastify, and also for Deno. |
+| Express | [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware) | **(deprecated / official)** Middleware for the Express HTTP server/framework \(Node\) |
+| Koa | [koa-i18next](https://github.com/sunfuze/koa-i18next) | **(deprecated)** |
+| Koa | [koa-i18next-middleware](https://github.com/lxzxl/koa-i18next-middleware) | Middleware for the Koa framework |
+| Hapi | [hapi-i18next](https://github.com/kenkouot/hapi-i18next) |  |
+| jQuery | [jquery plugin](https://github.com/i18next/jquery-i18next) | **(official)** Plugin to use i18next on jQuery selectors |
+| HTML5 | [loc-i18next](https://github.com/mthh/loc-i18next) | Plugin to use the same API as `jquery-i18next`, but with HTML5 selectors |
+| Aurelia | [aurelia-i18next](https://github.com/aurelia/i18n) | **(by Aurelia)** An Aurelia-Wrapper |
+| Meteor | [i18next-meteor](https://github.com/ckir/i18next-meteor) | i18next repackaged for Meteor |
+| Polymer | [i18next-element](https://github.com/Polymer/i18next-element) | **(deprecated / by Polymer)** Polymer-friendly interface |
+| Ember.js | [ember-i18next](https://github.com/OCTRI/ember-i18next) | Integrates i18next into Ember CLI apps |
+| Ember.js | [ember-cli-i18next](https://github.com/recipher/ember-cli-i18next) | Ember CLI addon |
+| Knockout.js | [i18next-ko](https://github.com/leMaik/i18next-ko) | KnockoutJS bindings |
+| Phaser | [phaser-i18next](https://github.com/orange-games/phaser-i18next) | Plugin for the HTML5 game framework |
+| Construct 3 | [c3-i18next](https://github.com/nagyv/c3-i18next/) | Translation plugin for the Construct 3 game software |
+| Metalsmith | [metalsmith-i18next](https://github.com/macprog-guy/metalsmith-i18next) | **(deprecated)** Metalsmith plugin to easily create multiple localised branches of your site |
+| .NET | [I18Next.Net](https://github.com/DarkLiKally/I18Next.Net) | Library based on .NET Standard 2.0 with a rich feature-set like the original i18next, supporting .NET DI and translations; also comes with plugin support |
+| .NET | [i18next-net](https://github.com/leonardobaggio/i18next-net) | .NET C\# class |
+| PHP | [kopfwelt/i18next-php](https://github.com/Acceptd/i18next-php) | Class for basic i18next functionality. There's also a [fork by Mika-](https://github.com/Mika-/i18next-php) |
+| PHP | [pkly/i18next-php](https://github.com/pkly/i18next-php) | **(deprecated)** Port of i18next for PHP |
+| Rails | [i18next-rails](https://github.com/roblander/i18next-rails) | Asset gem containing bundled i18next JavaScript files |
+| Rails | [rails-asset-localization](https://github.com/nicolai86/rails-asset-localization) | **(deprecated)** Asset pipeline localization using i18next for rails 3.2 & 4 |
+| iOS | [i18next-ios](https://github.com/i18next/i18next-ios) | **(official)** |
+| Android | [i18next-android](https://github.com/i18next/i18next-android) | **(official)** |
+| Web Components | [kwc-i18next](https://github.com/successk/kwc-i18next) | Web component interfacing i18next |
+| Web Components | [i18next-wc](https://github.com/spurreiter/i18next-wc) | Web component interfacing i18next and Intl |
+| Marko | [marko-i18next](https://github.com/gunjam/marko-i18next) | Components for Marko templates |
+| Virtual DOM | [i18nextify](https://github.com/i18next/i18nextify) | **(official)** One-liner script to enable i18next on any site not using its own Virtual DOM |
+| Handlebars | [handlebars-i18next](https://github.com/UUDigitalHumanitieslab/handlebars-i18next) | Helper that lets you translate inside your templates |
+| Handlebars | [handlebars-i18n](https://github.com/fwalzel/handlebars-i18n) | Adds the features of i18next and Intl to Handlebars |
 
 ## Supported Environments
 
 i18next supports the two most recent versions of evergreen browsers \(Chrome, Firefox, Safari, etc\). i18next also runs in Node and Deno.
-
