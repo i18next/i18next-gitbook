@@ -2,49 +2,45 @@
 
 ## Fallback
 
-Doing graceful fallbacks are a core principle of i18next. This enables you to display the most accurate content possible.
+Doing graceful fallbacks is a core principle of i18next. This enables you to display the most accurate content possible, while not repeating content over and over.
 
-### language fallback
+### Language fallback
 
-#### locals resolving
+#### Variant resolving - fallback from dialects or scripts
 
-Per default locals containing region or script will take a translation from the pure language file if not found.
+By default, if a variant (containing region, script, etc) is not found, i18next will look for the same key in the broader version of that language. With this in mind, a common strategy if you're supporting language variants is to write common text inside the pure language, specifying only what differs in the variants.
 
-en-GB.json
-
-```javascript
-{
-  "i18n": "Internationalisation"
-}
-```
-
-en.json
-
-```javascript
-{
-  "i18n": "Internationalization",
-  "i18n_short": "i18n"
-}
-```
-
-Sample
+Example:
 
 ```javascript
 // fallback to one language
 i18next.init({
-    lng: 'en-GB'
+  lng: "en-GB",
+  resources: {
+    "en-GB": {
+      "translation": {
+        "i18n": "Internationalisation"
+      }
+    },
+    "en": {
+      "translation": {
+        "i18n": "Internationalization",
+        "i18n_short": "i18n"
+      }
+    }
+  }
 }, () => {
-  i18next.t('i18n'); // -> "Internationalisation"
-  i18next.t('i18n_short'); // -> "i18n" (from en.json)
+  i18next.t('i18n'); // -> finds "Internationalisation"
+  i18next.t('i18n_short'); // -> falls back to "en": "i18n"
 
-  // force loading en
-  i18next.t('i18n', { lng: 'en' } ); // -> "Internationalization"
+  // force using en
+  i18next.t('i18n', { lng: 'en' }); // -> "Internationalization"
 });
 ```
 
-#### fallback language
+#### Fallback to different languages
 
-If you can not provide the preferred language for a user you can specify a fallback language.
+If you can not provide the preferred language for a user, you can specify another language as fallback. This is useful to indicate the main language or, for instance, if you want to keep the fallbacks different per region.
 
 ```javascript
 // fallback to one language
@@ -60,7 +56,7 @@ i18next.init({
 // fallback depending on user language
 i18next.init({
     fallbackLng: { 
-        'de-CH': ['fr', 'it'], 
+        'de-CH': ['fr', 'it'], //French and Italian are also spoken in Switzerland
         'zh-Hant': ['zh-Hans', 'en'],
         'es': ['fr'],
         'default': ['en']
@@ -92,13 +88,13 @@ i18next.init({
 });
 ```
 
-The default is set to `dev` which means developer language. At first this might look strange to set the default to a language but this enables to set the saveMissing feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing eg. proper english including defined terminology. For production just set fallbackLng to an existing language.
+The default is set to `dev` which means developer language. At first this might look strange to set the default to a language, but this enables to set the `saveMissing` feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing, for instance, proper English, including defined terminology. For production use, just set `fallbackLng` to an existing language.
 
-### namespace fallback
+### Namespace fallback
 
-i18next per default loads its translations from one file named `translation`. But you can set and structure it to load from multiple files, we call this files namespaces.
+i18next by default loads its translations from one file named `translation`. However, you can configure it to load from multiple files, called _namespaces_.
 
-Additional to defining multiple namespaces to load you also can set fallback namespaces. So if a key to translate gets not found in the namespace it looks it up in the fallbacks.
+Besides defining multiple namespaces to load from, you also can set fallback namespaces. Thus, if a key to translate isn't found in the given namespace, it will look it up in the indicated fallbacks.
 
 app.json
 
@@ -141,9 +137,9 @@ i18next.init({
 });
 ```
 
-### key fallback
+### Key fallback
 
-#### key not found
+#### Key not found
 
 If a key does not return a value the key acts as fallback:
 
@@ -181,20 +177,20 @@ i18next.t('This will be shown if the current loaded translations do not have thi
 // -> "This will be shown if the current loaded translations do not have this."
 ```
 
-While this works and might reduce files to load it makes the management of translations a lot harder as you will need to update changes to fallback values in code and json files.
+While this works and might reduce files to load it makes the management of translations a lot harder as you will need to update changes to fallback values in code and JSON files.
 
 Possible - but not recommended.
 
 #### Missing values for existing keys
 
-In addition to the above, if you want missing values to fallback to the key in cases where the keys \(eg. got extracted by a code parser\) exist in your JSON translation file with empty string as value, you also need this setting:
+In addition to the above, if you want missing values to fallback to the key in cases where the keys \(e.g. got extracted by a code parser\) exist in your JSON translation file with empty string as value, you also need this setting:
 
 ```text
 // allow an empty value to count as invalid (by default is true)
   returnEmptyString: false
 ```
 
-#### calling with fallback keys
+#### Calling with fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
 

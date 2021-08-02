@@ -16,13 +16,13 @@ A key is not unlike a key in any object structure, like JSON or a dictionary in 
 
 This example shows the very core concept of what a key is capable of expressing, but the ability to express this formally is very important, as it allows us to expand its utility going forward.
 
-Keys are very powerful ways of specifying the different forms of an element, be it a piece of text or other forms of content, into its potential variations.
+Keys are a very powerful way of specifying the different forms of an element, be it a piece of text or other forms of content, into its potential variations.
 
 For more information on all of the different ways keys can be used, please see the documentation for the [translation function](../translation-function/essentials.md).
 
 ### Languages
 
-A language is what you would expect; the language to be used for translating a key. When we look for a key, we specify a language with it, so that we know which version of the key to use. The important thing to note about this is that _if a key is not found, you can gracefully fall back to other languages_.
+A language is what you would expect: the idiom to be used for translating a key. When we look for a key, we specify a language with it, so that we know which version of the key to use. The important thing to note about this is that _if a key is not found, you can [gracefully fall back to a parent language or a default one](../principles/fallback.md)_.
 
 In i18next, a language is a particular value which can be known as a "code". A language code can be expressed in variety of ways, but they generally look something like the following example:
 
@@ -32,7 +32,7 @@ In i18next, a language is a particular value which can be known as a "code". A l
 "en-US"
 ```
 
-For more information on the subject, it is recommended to read up on [IETF Language Codes](https://en.wikipedia.org/wiki/IETF_language_tag).
+Long story short, you'll either use a "pure language" code, such as `en` or `de` for English and German, or a language + a variant identification, such as `pt-BR` for the Brazilian Portuguese, `es-419` for Latin American Spanish, or `zh-cmn-Hant-HK` which is Chinese in the Mandarin variation, written in the Traditional script, as used in Hong Kong. For more information on the subject, it is recommended to read up on [IETF Language Codes](https://en.wikipedia.org/wiki/IETF_language_tag). 
 
 ### Namespaces
 
@@ -56,7 +56,7 @@ For more information on the concept of namespaces and how you might want to use 
 
 By default, when translating a key, i18next tries the first combination of your **namespace**, **language**, and **key**.
 
-However, if that does not work, i18next attempts to gracefully fall-back to a different combination in order to provide the most relevant translation for a piece of content, the core idea being to try to find a key that exists, from _most specific to least specific_. Here is the process that it uses by default:
+However, if that does not work, i18next attempts to [gracefully fallback](../principles/fallback.md) to a different combination in order to provide the most relevant translation for a piece of content. The core idea is to try to find a key that exists, from _most specific to least specific_. Here is the process that it uses by default:
 
 #### 1. Similar Keys
 
