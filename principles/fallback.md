@@ -8,7 +8,7 @@ Doing graceful fallbacks is a core principle of i18next. This enables you to dis
 
 #### Variant resolving - fallback from dialects or scripts
 
-By default, if a variant (containing region, script, etc) is not found, i18next will look for the same key in the broader version of that language. With this in mind, a common strategy if you're supporting language variants is to write common text inside the pure language, specifying only what differs in the variants.
+By default, if a variant \(containing region, script, etc\) is not found, i18next will look for the same key in the broader version of that language. With this in mind, a common strategy if you're supporting language variants is to write common text inside the pure language, specifying only what differs in the variants.
 
 Example:
 

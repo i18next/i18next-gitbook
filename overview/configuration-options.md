@@ -13,23 +13,22 @@ All options for calling `init()` or `createInstance()`.
 | debug | false | logs info level to console output. Helps finding issues with loading not working. |
 
 ### Languages, namespaces, resources
-|option|default|description|
+
+| option | default | description |
 | :--- | :--- | :--- |
-| resources | undefined | resources to initialize with (if not using loading or not appending using [`addResourceBundle`](../overview/api#addresourcebundle))|
-| lng | undefined | language to use (**overrides language detection**). If set to `'cimode'` the output text will be the key.<br />_Make sure you use the `'en-US'` format, instead of underscores or similar._ |
-| fallbackLng | 'dev' | language to use if translations in user language are not available.<br />_Setting it explicitly to `false` will not trigger to load the `fallbackLng` at all._<br />[See the Fallback docs](../principles/fallback#language-fallback). |
+| resources | undefined | resources to initialize with \(if not using loading or not appending using [`addResourceBundle`](api.md#addresourcebundle)\) |
+| lng | undefined | language to use \(**overrides language detection**\). If set to `'cimode'` the output text will be the key. _Make sure you use the `'en-US'` format, instead of underscores or similar._ |
+| fallbackLng | 'dev' | language to use if translations in user language are not available. _Setting it explicitly to `false` will not trigger to load the `fallbackLng` at all._ [See the Fallback docs](../principles/fallback.md#language-fallback). |
 | supportedLngs | false | array of allowed languages |
 | nonExplicitSupportedLngs | false | if true, will consider variants as supported when the main language is. E.g. `en-US` will be valid if `en` is in `supportedLngs` |
-| load | 'all' | strategy to define which language codes to lookup.<br />Example: given set language is `en-US`:<br />- `'all'`  &rArr; `['en-US', 'en', 'dev']`<br />- `'currentOnly'`  &rArr; `'en-US'`<br />- `'languageOnly'`  &rArr; `'en'` |
+| load | 'all' | strategy to define which language codes to lookup. Example: given set language is `en-US`: - `'all'`  ⇒ `['en-US', 'en', 'dev']` - `'currentOnly'`  ⇒ `'en-US'` - `'languageOnly'`  ⇒ `'en'` |
 | preload | false | array of languages to preload. Important on server-side to assert translations are loaded before rendering views. |
-| lowerCaseLng | false | locale will be fully lowercased; e.g. `en-US` &rArr; `en-us` |
-| cleanCode | false | main language will be lowercased; e.g. `EN`  &rArr; `en`, while leaving full locales like `en-US` |
+| lowerCaseLng | false | locale will be fully lowercased; e.g. `en-US` ⇒ `en-us` |
+| cleanCode | false | main language will be lowercased; e.g. `EN`  ⇒ `en`, while leaving full locales like `en-US` |
 | ns | 'translation' | string or array of namespaces to load |
-| defaultNS | 'translation' | default namespace used if not passed to the [translation function](../translation-function/essentials) |
-| fallbackNS | false | string or array of namespaces to lookup key if not found in given namespace. [See NS fallback docs](../principles/fallback#namespace-fallback). |
+| defaultNS | 'translation' | default namespace used if not passed to the [translation function](../translation-function/essentials.md) |
+| fallbackNS | false | string or array of namespaces to lookup key if not found in given namespace. [See NS fallback docs](../principles/fallback.md#namespace-fallback). |
 | partialBundledLanguages | false | allows some resources to be set on initialization while others can be loaded using a backend connector |
-
-
 
 ### Missing keys
 
@@ -63,22 +62,21 @@ All options for calling `init()` or `createInstance()`.
 
 | option | default | description |
 | :--- | :--- | :--- |
-| detection | undefined | options for language detection - [check docs](overview/plugins-and-utils#language-detector) |
-| backend | undefined | options for backend - [check docs](overview/plugins-and-utils#backends) |
+| detection | undefined | options for language detection - [check docs](https://github.com/i18next/i18next-gitbook/tree/c874a56e8aa1bf16de562d44eda1f22450492fd4/overview/overview/plugins-and-utils/README.md#language-detector) |
+| backend | undefined | options for backend - [check docs](https://github.com/i18next/i18next-gitbook/tree/c874a56e8aa1bf16de562d44eda1f22450492fd4/overview/overview/plugins-and-utils/README.md#backends) |
 | cache | undefined | options for a cache layer - check documentation of plugin |
 
 ### Others
 
 | option | default | description |
 | :--- | :--- | :--- |
-| initImmediate | true | triggers resource loading in `init()` inside a `setTimeout` (default async behaviour). Set it to `false` if your backend loads resources synchronously - that way, calling `i18next.t()` after `init()` is possible without relying on the initialization callback.<br /> **This option only works for sync (blocking) loading backend, like i18next-fs-backend and i18next-sync-fs-backend!** |
-| keySeparator | `'.'` | char to separate keys.<br />*If working with a flat JSON, it's recommended to set this to `false`.* |
-| nsSeparator |`':'`| char to split namespace from key |
-| pluralSeparator |`'_'`| char to split plural from key |
-| contextSeparator |`'_'`| char to split context from key |
+| initImmediate | true | triggers resource loading in `init()` inside a `setTimeout` \(default async behaviour\). Set it to `false` if your backend loads resources synchronously - that way, calling `i18next.t()` after `init()` is possible without relying on the initialization callback.  **This option only works for sync \(blocking\) loading backend, like i18next-fs-backend and i18next-sync-fs-backend!** |
+| keySeparator | `'.'` | char to separate keys. _If working with a flat JSON, it's recommended to set this to `false`._ |
+| nsSeparator | `':'` | char to split namespace from key |
+| pluralSeparator | `'_'` | char to split plural from key |
+| contextSeparator | `'_'` | char to split context from key |
 | appendNamespaceToCIMode | false | prefixes the namespace to the returned key when using `lng: 'cimode'` |
 | ignoreJSONStructure | true | if a key is not found as nested key, it will try to lookup as flat key |
-
 
 ### initImmediate
 
