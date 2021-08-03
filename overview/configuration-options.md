@@ -138,7 +138,7 @@ All options for calling init or createInstance.
 | returnedObjectHandler | noop | `function(key, value, options) {}` gets called if object was passed in as key but returnObjects was set to false |
 | joinArrays | false | char, eg. '\n' that arrays will be joined by |
 | overloadTranslationOptionHandler | function\(args\) { return { defaultValue: args\[1\] }; }; | default: sets defaultValue |
-| interpolation | {...} | see interpolation |
+| interpolation | [{...}](../translation-function/interpolation.md#all-interpolation-options) | see [interpolation](../translation-function/interpolation.md#all-interpolation-options) |
 | skipInterpolation | false | Allow translate function to skip interpolation and return raw values instead |
 
 ### plugin options
