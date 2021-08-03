@@ -49,5 +49,4 @@
 
 * [localization as a service](https://locize.com)
 * [Find your translator](https://localistars.com)
-* [Ready to take i18next to the next level?](https://locize.com)
 
