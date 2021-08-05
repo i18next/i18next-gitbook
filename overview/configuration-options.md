@@ -64,7 +64,7 @@ All options for calling `init()` or `createInstance()`.
 | :--- | :--- | :--- |
 | detection | undefined | options for language detection - [check docs](plugins-and-utils.md#language-detector) |
 | backend | undefined | options for backend - [check docs](plugins-and-utils.md#backends) |
-| cache | undefined | options for a cache layer - check documentation of plugin |
+| cache | undefined | options for a cache layer in backends - [check docs](plugins-and-utils.md#backends) |
 
 ### Others
 
