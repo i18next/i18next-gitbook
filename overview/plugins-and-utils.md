@@ -132,11 +132,6 @@ Services that are known to fully support the i18next format \(plural handling, .
       <td style="text-align:left">fetch missing keys on demand</td>
     </tr>
     <tr>
-      <td style="text-align:left"><a href="https://github.com/palamccc/i18next.gettext">i18next.gettext</a>
-      </td>
-      <td style="text-align:left">gettext backend of i18next</td>
-    </tr>
-    <tr>
       <td style="text-align:left"><a href="https://github.com/laodemalfatih/i18next-node-mongo-backend">mongodb backend</a>
       </td>
       <td style="text-align:left">backend layer for i18next used in Node.js &amp; Deno to load translations
