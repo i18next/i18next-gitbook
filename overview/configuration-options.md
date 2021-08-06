@@ -62,9 +62,9 @@ All options for calling `init()` or `createInstance()`.
 
 | option | default | description |
 | :--- | :--- | :--- |
-| detection | undefined | options for language detection - [check docs](https://github.com/i18next/i18next-gitbook/tree/c874a56e8aa1bf16de562d44eda1f22450492fd4/overview/overview/plugins-and-utils/README.md#language-detector) |
-| backend | undefined | options for backend - [check docs](https://github.com/i18next/i18next-gitbook/tree/c874a56e8aa1bf16de562d44eda1f22450492fd4/overview/overview/plugins-and-utils/README.md#backends) |
-| cache | undefined | options for a cache layer - check documentation of plugin |
+| detection | undefined | options for language detection - [check docs](plugins-and-utils.md#language-detector) |
+| backend | undefined | options for backend - [check docs](plugins-and-utils.md#backends) |
+| cache | undefined | options for a cache layer in backends - [check docs](plugins-and-utils.md#backends) |
 
 ### Others
 
