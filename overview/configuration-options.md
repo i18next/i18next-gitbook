@@ -38,7 +38,7 @@ All options for calling `init()` or `createInstance()`.
 | updateMissing | false | experimental: enable to update default values using the `saveMissing` \(Works only if defaultValue is different from translated value. Only useful on initial development or when keeping code as source of truth not changing values outside of code. Only supported if backend supports it already\) |
 | saveMissingTo | 'fallback' | 'current' or 'all' |
 | saveMissingPlurals | true | will save all plural forms instead of only singular if t was called for plurals |
-| missingKeyHandler | false | `function(lng, ns, key, fallbackValue) { }` used for custom missing key handling \(needs `saveMissing` set to true!\) |
+| missingKeyHandler | false | `function(lng, ns, key, fallbackValue, options) { }` used for custom missing key handling \(needs `saveMissing` set to true!\) |
 | parseMissingKeyHandler | noop | `function(key) { // return value to display }` |
 | appendNamespaceToMissingKey | false | appends namespace to missing key |
 | missingInterpolationHandler | noop | `function(text, value) { return 'stringWithAlternativeValueOrUndefined' }` gets called in case a interpolation value is undefined. This method will not be called if the value is an empty string or null |
