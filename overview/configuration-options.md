@@ -32,16 +32,72 @@ All options for calling `init()` or `createInstance()`.
 
 ### Missing keys
 
-| option | default | description |
-| :--- | :--- | :--- |
-| saveMissing | false | calls save missing key function on backend if key not found |
-| updateMissing | false | experimental: enable to update default values using the `saveMissing` \(Works only if defaultValue is different from translated value. Only useful on initial development or when keeping code as source of truth not changing values outside of code. Only supported if backend supports it already\) |
-| saveMissingTo | 'fallback' | 'current' or 'all' |
-| saveMissingPlurals | true | will save all plural forms instead of only singular if t was called for plurals |
-| missingKeyHandler | false | `function(lng, ns, key, fallbackValue, options) { }` used for custom missing key handling \(needs `saveMissing` set to true!\) |
-| parseMissingKeyHandler | noop | `function(key) { // return value to display }` |
-| appendNamespaceToMissingKey | false | appends namespace to missing key |
-| missingInterpolationHandler | noop | `function(text, value) { return 'stringWithAlternativeValueOrUndefined' }` gets called in case a interpolation value is undefined. This method will not be called if the value is an empty string or null |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">option</th>
+      <th style="text-align:left">default</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">saveMissing</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">calls save missing key function on backend if key not found</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">updateMissing</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">experimental: enable to update default values using the <code>saveMissing</code> (Works
+        only if defaultValue is different from translated value. Only useful on
+        initial development or when keeping code as source of truth not changing
+        values outside of code. Only supported if backend supports it already)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">saveMissingTo</td>
+      <td style="text-align:left">&apos;fallback&apos;</td>
+      <td style="text-align:left">&apos;current&apos; or &apos;all&apos;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">saveMissingPlurals</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">will save all plural forms instead of only singular if t was called for
+        plurals</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">missingKeyHandler</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">
+        <p><code>function(lngs, ns, key, fallbackValue, updateMissing, options) { }</code> used
+          for custom missing key handling (needs <code>saveMissing</code> set to true!)</p>
+        <p><em>The <code>options</code> are an internal value container  similar to the </em>
+          <a
+          href="../translation-function/essentials.md#overview-options"><em><code>t() options</code></em>
+            </a><em>.</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">parseMissingKeyHandler</td>
+      <td style="text-align:left">noop</td>
+      <td style="text-align:left"><code>function(key) { // return value to display }</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">appendNamespaceToMissingKey</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">appends namespace to missing key</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">missingInterpolationHandler</td>
+      <td style="text-align:left">noop</td>
+      <td style="text-align:left"><code>function(text, value) { return &apos;stringWithAlternativeValueOrUndefined&apos; }</code> gets
+        called in case a interpolation value is undefined. This method will not
+        be called if the value is an empty string or null</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Translation defaults
 
