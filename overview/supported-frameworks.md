@@ -6,6 +6,7 @@ This list is not officially maintained; information here is contributed by the l
 
 | Framework | Home | Extra details |
 | :--- | :--- | :--- |
+| Flutter | [i18next](https://pub.dev/packages/i18next) | Also supports Flutter's LocalizationsDelegate |
 | React | [react-i18next](https://github.com/i18next/react-i18next) |  |
 | Next.js | [next-i18next](https://github.com/isaachinman/next-i18next) | The easiest way to translate your Next.js apps |
 | Next.js | [next-right-now](https://github.com/UnlyEd/next-right-now) | Flexible production-grade boilerplate with Next.js 9 and Zeit Now, with pre-configured Sentry, cookies, Amplitude, Emotion, FontAwesome, GraphQL/GraphCMS \(Apollo\), Bootstrap \(Reactstrap\), **i18next \(Locize\)**, Jest, Cypress \(E2E tests\) and CI/CD \(GH Actions\), with full TypeScript support and support for B2B multi-tenants web apps \(monorepo\) |
