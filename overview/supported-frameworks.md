@@ -47,6 +47,7 @@ This list is not officially maintained; information here is contributed by the l
 | Virtual DOM | [i18nextify](https://github.com/i18next/i18nextify) | One-liner script to enable i18next on any site not using its own Virtual DOM |
 | Handlebars | [handlebars-i18next](https://github.com/UUDigitalHumanitieslab/handlebars-i18next) | Helper that lets you translate inside your templates |
 | Handlebars | [handlebars-i18n](https://github.com/fwalzel/handlebars-i18n) | Adds the features of i18next and Intl to Handlebars |
+| lit-html/lit-element | [lit-i18n](https://github.com/colscott/lit-i18n) | i18next translations using lit-html directives |
 
 ## Supported Environments
 
