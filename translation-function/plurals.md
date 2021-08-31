@@ -122,6 +122,7 @@ i18next.t('key2_interval', {postProcess: 'interval', count: 1}); // -> "one item
 i18next.t('key2_interval', {postProcess: 'interval', count: 4}); // -> "a few items"
 i18next.t('key2_interval', {postProcess: 'interval', count: 100}); // -> "100 items"
 ```
+
 {% hint style="danger" %}
 Note: The regex for the interval entry has changed in `v3.0.0` of `i18next-intervalPlural-postProcessor` so if you are using the older versions, you need to use the curly braces instead of the bracketes, e.g.:
 
@@ -129,3 +130,4 @@ Note: The regex for the interval entry has changed in `v3.0.0` of `i18next-inter
 "key2_interval": "(1){one item};(2-7){a few items};"
 ```
 {% endhint %}
+

@@ -96,6 +96,13 @@ All options for calling `init()` or `createInstance()`.
         called in case a interpolation value is undefined. This method will not
         be called if the value is an empty string or null</td>
     </tr>
+    <tr>
+      <td style="text-align:left">missingKeyNoValueFallbackToKey</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Used to not fallback to the key as default value, when using saveMissing
+        functionality. * i.e. when using with i18next-http-backend this will result
+        in having a key with an empty string value.</td>
+    </tr>
   </tbody>
 </table>
 
