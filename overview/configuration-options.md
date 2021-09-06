@@ -4,7 +4,7 @@
 
 `i18next.init(options, callback)`
 
-All options for calling `init()` or `createInstance()`.
+All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#createinstance).
 
 ### Logging
 
@@ -149,11 +149,11 @@ Sample using `initImmediate` when using a backend plugin allowing sync \(blockin
 
 ```javascript
 import i18next from 'i18next';
-import SyncBackend from 'i18next-fs-backend';
+import Backend from 'i18next-fs-backend';
 
 // not working
 i18next
-  .use(SyncBackend)
+  .use(Backend)
   .init();
 
 i18next.t('key'); // -> will not return value as init was run async
@@ -167,7 +167,7 @@ execution order of function calls
 
 // working
 i18next
-  .use(SyncBackend)
+  .use(Backend)
   .init({ initImmediate: false });
 
 i18next.t('key'); // -> will return value
