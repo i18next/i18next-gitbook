@@ -16,7 +16,7 @@ All options for calling `init()` or `createInstance()`.
 
 | option | default | description |
 | :--- | :--- | :--- |
-| resources | undefined | resources to initialize with \(if not using loading or not appending using [`addResourceBundle`](api.md#addresourcebundle)\) |
+| resources | undefined | resources to initialize with \(if not using a [backend plugin](plugins-and-utils.md#backends) or not using [`addResourceBundle`](api.md#addresourcebundle)\) |
 | lng | undefined | language to use \(**overrides language detection**\). If set to `'cimode'` the output text will be the key. _Make sure you use the `'en-US'` format, instead of underscores or similar._ |
 | fallbackLng | 'dev' | language to use if translations in user language are not available. _Setting it explicitly to `false` will not trigger to load the `fallbackLng` at all._ [See the Fallback docs](../principles/fallback.md#language-fallback). |
 | supportedLngs | false | array of allowed languages |
