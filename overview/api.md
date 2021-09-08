@@ -95,11 +95,20 @@ i18next.exists('my.key'); // -> true if exists, false if not
 
 ### getFixedT
 
-`i18next.getFixedT(lng, ns)`
+`i18next.getFixedT(lng, ns, keyPrefix)`
 
 Returns a `t` function that defaults to given language or namespace.
 
-Both params could be arrays of languages or namespaces and will be treated as fallbacks in that case.
+All arguments can be optional/null.
+
+`lng` and `ns` params could be arrays of languages or namespaces and will be treated as fallbacks in that case.
+
+The optional `keyPrefix` will be automatically applied to the returned t function. i.e.
+
+```javascript
+const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
+const title = t('title'); // same as i18next.t('user.accountSettings.changePassword.title');
+```
 
 On the returned function you can like in the `t` function override the languages or namespaces by passing them in options or by prepending namespace.
 
