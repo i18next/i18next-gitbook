@@ -48,6 +48,7 @@ This list is not officially maintained; information here is contributed by the l
 | Handlebars | [handlebars-i18next](https://github.com/UUDigitalHumanitieslab/handlebars-i18next) | Helper that lets you translate inside your templates |
 | Handlebars | [handlebars-i18n](https://github.com/fwalzel/handlebars-i18n) | Adds the features of i18next and Intl to Handlebars |
 | lit-html/lit-element | [lit-i18n](https://github.com/colscott/lit-i18n) | i18next translations using lit-html directives |
+| Solid | [solid-i18next](https://github.com/mbarzda/solid-i18next) | Small library which covers i18next for Solid applications |
 
 ## Supported Environments
 
