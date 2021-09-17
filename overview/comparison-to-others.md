@@ -122,7 +122,7 @@ Just drop in the [interval-postprocessor](https://github.com/i18next/i18next-int
 
 ### Works on serverside <a id="works-on-serverside"></a>
 
-While some other i18n frameworks run on serverside too there are not many optimized for it. Loading translations only once \(think of a render to string in react.js were you create a new instance and inject translations over and over\). Also does it keep the set language during async requests or do simultaneous requests create race conditions in setting the right language?
+While some other i18n frameworks run on serverside too there are not many optimized for it. Loading translations only once \(think of a render to string in react.js where you create a new instance and inject translations over and over\). Also does it keep the set language during async requests or do simultaneous requests create race conditions in setting the right language?
 
 ### Learn once - translate everywhere <a id="learn-once-translate-everywhere"></a>
 
