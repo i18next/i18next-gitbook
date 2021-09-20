@@ -2,6 +2,42 @@
 
 ## Migration Guide
 
+### v20.x.x to v21.0.0
+
+#### v4 json format - pluralization
+
+One of the biggest breaking changes is regarding suffixing plurals.  
+This change streamlines the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).  
+To enforce old behaviour you can enable `compatibilityJSON = 'v3'` on i18next init call.
+
+```javascript
+import i18next from 'i18next';
+
+i18next.init({
+  compatibilityJSON: 'v3'
+}, (err, t) => { /* resources are loaded */ });
+```
+
+There is also support for ordinal numbers _\(refering to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English\)_.  
+Learn more about plurals: [https://www.i18next.com/translation-function/plurals](https://www.i18next.com/translation-function/plurals)
+
+#### skipOnVariables = true
+
+By default the `skipOnVariables` option now is set to true.
+
+#### natural language detection
+
+i18next now automatically tries to detect natural language keys.  
+This way there is no need to set `nsSeparator` or `keySeparator` to false.
+
+#### removed deprecated
+
+The old deprecated whitelist properties and functions have been definitively removed.
+
+#### new resolvedLanguage
+
+There is a new i18next.resolvedLanguage property, that represents the current resolved language. It can be used as primary used language, for example in a language switcher.
+
 ### v19.x.x to v20.0.0
 
 There should not be any breaking change, but regarding of some misuse of i18next that pop up in last minor releases, we opted for a major version this time.  
