@@ -213,9 +213,9 @@ While there are a lot of options going with the defaults should get you covered.
     </tr>
     <tr>
       <td style="text-align:left">skipOnVariables</td>
-      <td style="text-align:left">false</td>
+      <td style="text-align:left">true</td>
       <td style="text-align:left">
-        <p>Setting this to true will skip to interpolate the variables, example:</p>
+        <p>Will skip to interpolate the variables, example:</p>
         <p><code>t(&apos;key&apos;, { a: &apos;$t(nested)&apos; })</code>
         </p>
         <p>this will not resolve the nested key and will use<code>$t(nested)</code> as
@@ -225,7 +225,9 @@ While there are a lot of options going with the defaults should get you covered.
         </p>
         <p>this will not resolve the otherVar variable and will use<code>{{otherVar}}</code>as
           the variable value.</p>
-        <p><b>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to set this option to true.</b>
+        <p><b>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to keep this option to true.</b>
+        </p>
+        <p><em>If you know what you&apos;re doing, you can also set this to false.</em>
         </p>
       </td>
     </tr>
