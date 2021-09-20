@@ -19,9 +19,20 @@ keys
 ```javascript
 {
   "key": "item",
-  "key_plural": "items",
+  "key_other": "items",
   "keyWithCount": "{{count}} item",
-  "keyWithCount_plural": "{{count}} items"
+  "keyWithCount_other": "{{count}} items"
+}
+```
+
+even better:
+
+```javascript
+{
+  "key_one": "item",
+  "key_other": "items",
+  "keyWithCount_one": "{{count}} item",
+  "keyWithCount_other": "{{count}} items"
 }
 ```
 
@@ -38,6 +49,10 @@ i18next.t('keyWithCount', {count: 5}); // -> "5 items"
 i18next.t('keyWithCount', {count: 100}); // -> "100 items"
 ```
 
+{% hint style="warning" %}
+With [v21.0.0](../misc/migration-guide.md#json-format-v4-pluralization) a new [JSON format v4](../misc/json-format.md#i-18-next-json-v4) was introduced that changed the suffixes.
+{% endhint %}
+
 ### Languages with multiple plurals
 
 Sample uses arabic which has 5 plural forms beside the singular.
@@ -46,12 +61,12 @@ keys
 
 ```javascript
 {
-  "key_0": "zero",
-  "key_1": "singular",
-  "key_2": "two",
-  "key_3": "few",
-  "key_4": "many",
-  "key_5": "other"
+  "key_zero": "zero",
+  "key_one": "singular",
+  "key_two": "two",
+  "key_few": "few",
+  "key_many": "many",
+  "key_other": "other"
 }
 ```
 
@@ -73,7 +88,7 @@ i18next.t('key', {count: 100}); // -> "other"
 
 You can use this small utility to get the correct plural suffixes.
 
-[source code](https://jsfiddle.net/sm9wgLze)
+[source code](https://jsfiddle.net/6bpxsgd4)
 
 _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. It shows also the appropriate plural forms._
 
