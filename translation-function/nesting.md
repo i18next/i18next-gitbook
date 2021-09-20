@@ -34,9 +34,9 @@ keys
 {
     "girlsAndBoys": "They have $t(girls, {\"count\": {{girls}} }) and $t(boys, {\"count\": {{boys}} })",
     "boys": "{{count}} boy",
-    "boys_plural": "{{count}} boys",
+    "boys_other": "{{count}} boys",
     "girls": "{{count}} girl",
-    "girls_plural": "{{count}} girls",
+    "girls_other": "{{count}} girls",
 }
 ```
 
