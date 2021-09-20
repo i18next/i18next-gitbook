@@ -213,7 +213,12 @@ While there are a lot of options going with the defaults should get you covered.
     </tr>
     <tr>
       <td style="text-align:left">skipOnVariables</td>
-      <td style="text-align:left">true</td>
+      <td style="text-align:left">
+        <p>true</p>
+        <p></p>
+        <p><em>(was false for  &lt;v21.0.0)</em>
+        </p>
+      </td>
       <td style="text-align:left">
         <p>Will skip to interpolate the variables, example:</p>
         <p><code>t(&apos;key&apos;, { a: &apos;$t(nested)&apos; })</code>
