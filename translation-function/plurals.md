@@ -50,7 +50,8 @@ i18next.t('keyWithCount', {count: 100}); // -> "100 items"
 ```
 
 {% hint style="warning" %}
-With [v21.0.0](../misc/migration-guide.md#json-format-v4-pluralization) a new [JSON format v4](../misc/json-format.md#i-18-next-json-v4) was introduced that changed the suffixes.
+With [v21.0.0](../misc/migration-guide.md#json-format-v4-pluralization) a new [JSON format v4](../misc/json-format.md#i-18-next-json-v4) was introduced that changed the suffixes.  
+To convert your existing translations to the new v4 format, have a look at [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter) or [this web tool](https://i18next.github.io/i18next-v4-format-converter-web/).
 {% endhint %}
 
 ### Languages with multiple plurals
