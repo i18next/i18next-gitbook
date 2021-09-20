@@ -36,7 +36,7 @@ The old deprecated whitelist properties and functions have been definitively rem
 
 #### new resolvedLanguage
 
-There is a new i18next.resolvedLanguage property, that represents the current resolved language. It can be used as primary used language, for example in a language switcher.
+There is a new [`i18next.resolvedLanguage`](../overview/api.md#resolvedlanguage) property, that represents the current resolved language. It can be used as primary used language, for example in a language switcher.
 
 ### v19.x.x to v20.0.0
 
