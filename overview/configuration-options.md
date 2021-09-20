@@ -108,18 +108,78 @@ All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#c
 
 ### Translation defaults
 
-| option | default | description |
-| :--- | :--- | :--- |
-| simplifyPluralSuffix | true | will use 'plural' as suffix for languages only having 1 plural form, setting it to false will suffix all with numbers |
-| postProcess | false | string or array of postProcessors to apply per default |
-| returnNull | true | allows null values as valid translation |
-| returnEmptyString | true | allows empty string as valid translation |
-| returnObjects | false | allows objects as valid translation result |
-| returnedObjectHandler | noop | `function(key, value, options) {}` gets called if object was passed in as key but `returnObjects` was set to false |
-| joinArrays | false | char that arrays will be joined by; e.g. `\n` |
-| overloadTranslationOptionHandler | function\(args\) { return { defaultValue: args\[1\] }; }; | default: sets defaultValue |
-| interpolation | [{...}](../translation-function/interpolation.md#all-interpolation-options) | see [interpolation](../translation-function/interpolation.md#all-interpolation-options) |
-| skipInterpolation | false | Allow translate function to skip interpolation and return raw values instead |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">option</th>
+      <th style="text-align:left">default</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">postProcess</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">string or array of postProcessors to apply per default</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">returnNull</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">allows null values as valid translation</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">returnEmptyString</td>
+      <td style="text-align:left">true</td>
+      <td style="text-align:left">allows empty string as valid translation</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">returnObjects</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">allows objects as valid translation result</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">returnedObjectHandler</td>
+      <td style="text-align:left">noop</td>
+      <td style="text-align:left"><code>function(key, value, options) {}</code> gets called if object was
+        passed in as key but <code>returnObjects</code> was set to false</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">joinArrays</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">char that arrays will be joined by; e.g. <code>\n</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">overloadTranslationOptionHandler</td>
+      <td style="text-align:left">function(args) { return { defaultValue: args[1] }; };</td>
+      <td style="text-align:left">default: sets defaultValue</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">interpolation</td>
+      <td style="text-align:left"><a href="../translation-function/interpolation.md#all-interpolation-options">{...}</a>
+      </td>
+      <td style="text-align:left">see <a href="../translation-function/interpolation.md#all-interpolation-options">interpolation</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">skipInterpolation</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">Allow translate function to skip interpolation and return raw values instead</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p><del>simplifyPluralSuffix</del>
+        </p>
+        <p><em>(used in format &lt; format v4)</em>
+        </p>
+      </td>
+      <td style="text-align:left"><del>true</del>
+      </td>
+      <td style="text-align:left"><del>will use &apos;plural&apos; as suffix for languages only having 1 plural form, setting it to false will suffix all with numbers</del>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### Plugin options
 
