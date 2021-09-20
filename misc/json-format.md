@@ -43,6 +43,16 @@ The only difference to _v3_ is the plural suffixes.
 
 ### i18next JSON v3
 
+enabled by:
+
+```javascript
+i18next.init({
+  compatibilityJSON: 'v3'
+});
+```
+
+formats:
+
 ```javascript
 {
   "key": "value",
@@ -67,16 +77,6 @@ The only difference to _v3_ is the plural suffixes.
   "keyWithObjectValue": { "valueA": "return this with valueB", "valueB": "more text" }
 }
 ```
-
-This are the defaults. Nesting and Interpolation formats are configurable.  
-  
-To learn more about the features check the documentation:  
-  
-- [Interpolation](../translation-function/interpolation.md)  
-- [Formatting](../translation-function/formatting.md)  
-- [Plurals](../translation-function/plurals.md)  
-- [Nesting](../translation-function/nesting.md)  
-- [Objects and Arrays](../translation-function/objects-and-arrays.md)
 
 The only difference to _v2_ is the plural suffixes for languages with multiple plural forms.
 
