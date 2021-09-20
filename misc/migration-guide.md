@@ -4,7 +4,7 @@
 
 ### v20.x.x to v21.0.0
 
-#### v4 json format - pluralization
+#### [json format v4](json-format.md#i-18-next-json-v4) - pluralization
 
 One of the biggest breaking changes is regarding suffixing plurals.  
 This change streamlines the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).  
