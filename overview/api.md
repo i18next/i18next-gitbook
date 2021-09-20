@@ -195,6 +195,8 @@ i18next.languages; // ["de-DE", "de", "es", "fr", "en-US", "dev"]
 Is set to the current resolved language.  
 It can be used as primary used language, for example in a language switcher.
 
+_\(introduced in v21.0.0\)_
+
 ### loadNamespaces
 
 `i18next.loadNamespaces(ns, callback) // -> returns a Promise`
