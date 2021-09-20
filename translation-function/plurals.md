@@ -97,6 +97,31 @@ _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it
 
 ![](../.gitbook/assets/locize_plurals.png)
 
+### Ordinal plurals
+
+There is also support for ordinal numbers _\(refering to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English\)_.
+
+keys
+
+```javascript
+// i.e. italian
+{
+  "key_one": "singular", // cardinal form
+  "key_other": "other", // cardinal form
+  "key_many": "many" // ordinal form
+}
+```
+
+sample
+
+```javascript
+i18next.t('key', {count: 0}); // -> "other"
+i18next.t('key', {count: 1}); // -> "singular"
+i18next.t('key', {count: 2}); // -> "other"
+i18next.t('key', {count: 11}); // -> "other"
+i18next.t('key', {count: 11, ordinal: true}); // -> "many"
+```
+
 ### Interval plurals
 
 Want to define phrases expressing the number of items lies in a range. Like _a few items_ or _a lot of items_.
