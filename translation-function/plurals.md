@@ -4,6 +4,8 @@
 
 Plural can be combined with interpolation, context, ...
 
+This plurals are streamlines with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).
+
 {% hint style="danger" %}
 Note: The variable name must be `count`.
 {% endhint %}
