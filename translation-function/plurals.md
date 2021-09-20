@@ -20,17 +20,6 @@ keys
 
 ```javascript
 {
-  "key": "item",
-  "key_other": "items",
-  "keyWithCount": "{{count}} item",
-  "keyWithCount_other": "{{count}} items"
-}
-```
-
-even better:
-
-```javascript
-{
   "key_one": "item",
   "key_other": "items",
   "keyWithCount_one": "{{count}} item",
