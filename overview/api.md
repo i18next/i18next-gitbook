@@ -155,7 +155,7 @@ i18next.changeLanguage().then(...)
 
 Is set to the current detected or set language.
 
-If you need the primary used language depending on your configuration \(supportedLngs, load\) you will prefer using `i18next.languages[0]`.
+If you need the primary used language depending on your configuration \(supportedLngs, load\) you will prefer using [`i18next.resolvedLanguage`](api.md#resolvedlanguage) or [`i18next.languages[0]`](api.md#languages).
 
 ### languages
 
@@ -187,6 +187,13 @@ i18next.changeLanguage("de-DE");
 // previous language is not retained
 i18next.languages; // ["de-DE", "de", "es", "fr", "en-US", "dev"]
 ```
+
+### resolvedLanguage
+
+`i18next.resolvedLanguage`
+
+Is set to the current resolved language.  
+It can be used as primary used language, for example in a language switcher.
 
 ### loadNamespaces
 
