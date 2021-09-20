@@ -21,6 +21,8 @@ i18next.init({
 There is also support for ordinal numbers _\(refering to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English\)_.  
 Learn more about plurals: [https://www.i18next.com/translation-function/plurals](https://www.i18next.com/translation-function/plurals)
 
+To convert your existing translations to the new v4 format, have a look at [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter) or [this web tool](https://i18next.github.io/i18next-v4-format-converter-web/).
+
 #### skipOnVariables = true
 
 By default the `skipOnVariables` option now is set to true.
