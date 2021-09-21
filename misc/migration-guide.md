@@ -25,16 +25,31 @@ To convert your existing translations to the new v4 format, have a look at [i18n
 
 #### skipOnVariables = true
 
-By default the `skipOnVariables` option now is set to true.
+By default the `skipOnVariables` option now is set to true.  
+To enforce old behaviour you can set `skipOnVariables = false` on i18next init call.
+
+```javascript
+import i18next from 'i18next';
+
+i18next.init({
+  interpolation: {
+    skipOnVariables: false
+  }
+}, (err, t) => { /* resources are loaded */ });
+```
 
 #### natural language detection
 
 i18next now automatically tries to detect natural language keys.  
-This way there is no need to set `nsSeparator` or `keySeparator` to false.
+This way there is no need to set `nsSeparator` or `keySeparator` to `false`.
 
 #### removed deprecated
 
-The old deprecated whitelist properties and functions have been definitively removed.
+The old [deprecated whitelist options](https://github.com/i18next/i18next/issues/1466) and functions have been definitively removed.
+
+* _rename option `whitelist` to `supportedLngs`_
+* _rename option `nonExpicitWhitelist` to `nonExplicitSupportedLngs`_
+* _rename function `languageUtils.isWhitelisted` to `languageUtils.isSupportedCode`_
 
 #### new resolvedLanguage
 
