@@ -90,7 +90,7 @@ _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it
 
 ### Ordinal plurals
 
-There is also support for ordinal numbers _\(refering to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English\)_.
+There is also support for ordinal numbers _\(referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English\)_.
 
 keys
 

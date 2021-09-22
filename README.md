@@ -17,11 +17,11 @@ But this is not where it ends. You can also use i18next with Node.js, PHP, iOS, 
 {% hint style="success" %}
 [Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).  
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
- ![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
 {% hint style="success" %}
-Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c) you can check out how this works.[  
+Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c) you can check out how this works.[    
 ](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)[![](.gitbook/assets/server_side_backend.jpg) ](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c)
 {% endhint %}
 
