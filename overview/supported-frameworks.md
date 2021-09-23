@@ -9,6 +9,7 @@ This list is not officially maintained; information here is contributed by the l
 | Flutter | [i18next](https://pub.dev/packages/i18next) | Also supports Flutter's LocalizationsDelegate |
 | React | [react-i18next](https://github.com/i18next/react-i18next) |  |
 | Next.js | [next-i18next](https://github.com/isaachinman/next-i18next) | The easiest way to translate your Next.js apps |
+| Next.js | [n18n](https://jcquintas.gitbook.io/ni18n/) | An easy to use integration for [Next.js](https://nextjs.org/) to enable [i18next](https://www.i18next.com/) translations on your application with support for SSR, SSG and Client translation loading. |
 | Next.js | [next-right-now](https://github.com/UnlyEd/next-right-now) | Flexible production-grade boilerplate with Next.js 9 and Zeit Now, with pre-configured Sentry, cookies, Amplitude, Emotion, FontAwesome, GraphQL/GraphCMS \(Apollo\), Bootstrap \(Reactstrap\), **i18next \(Locize\)**, Jest, Cypress \(E2E tests\) and CI/CD \(GH Actions\), with full TypeScript support and support for B2B multi-tenants web apps \(monorepo\) |
 | AngularJS | [ng-i18next](https://github.com/i18next/ng-i18next) | Angular1/2 provider, directive and filter |
 | Angular | [ng2-i18next](https://github.com/actimeo/ng2-i18next) _\(actimeo\)_ | Angular2 service and directive |
