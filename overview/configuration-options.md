@@ -14,21 +14,103 @@ All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#c
 
 ### Languages, namespaces, resources
 
-| option | default | description |
-| :--- | :--- | :--- |
-| resources | undefined | resources to initialize with \(if not using a [backend plugin](plugins-and-utils.md#backends) or not using [`addResourceBundle`](api.md#addresourcebundle)\) |
-| lng | undefined | language to use \(**overrides language detection**\). If set to `'cimode'` the output text will be the key. [_Make sure you use the `'en-US'` format, instead of underscores or similar._](../how-to/faq.md#how-should-the-language-codes-be-formatted)\_\_ |
-| fallbackLng | 'dev' | language to use if translations in user language are not available. _Setting it explicitly to `false` will not trigger to load the `fallbackLng` at all._ [See the Fallback docs](../principles/fallback.md#language-fallback). |
-| supportedLngs | false | array of allowed languages |
-| nonExplicitSupportedLngs | false | if true, will consider variants as supported when the main language is. E.g. `en-US` will be valid if `en` is in `supportedLngs` |
-| load | 'all' | strategy to define which language codes to lookup. Example: given set language is `en-US`: - `'all'`  ⇒ `['en-US', 'en', 'dev']` - `'currentOnly'`  ⇒ `'en-US'` - `'languageOnly'`  ⇒ `'en'` |
-| preload | false | array of languages to preload. Important on server-side to assert translations are loaded before rendering views. |
-| lowerCaseLng | false | locale will be fully lowercased; e.g. `en-US` ⇒ `en-us` |
-| cleanCode | false | main language will be lowercased; e.g. `EN`  ⇒ `en`, while leaving full locales like `en-US` |
-| ns | 'translation' | string or array of namespaces to load |
-| defaultNS | 'translation' | default namespace used if not passed to the [translation function](../translation-function/essentials.md) |
-| fallbackNS | false | string or array of namespaces to lookup key if not found in given namespace. [See NS fallback docs](../principles/fallback.md#namespace-fallback). |
-| partialBundledLanguages | false | allows some resources to be set on initialization while others can be loaded using a backend connector |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">option</th>
+      <th style="text-align:left">default</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">resources</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">resources to initialize with (if not using a <a href="plugins-and-utils.md#backends">backend plugin</a> or
+        not using <a href="api.md#addresourcebundle"><code>addResourceBundle</code></a>)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">lng</td>
+      <td style="text-align:left">undefined</td>
+      <td style="text-align:left">language to use (<b>overrides language detection</b>). If set to <code>&apos;cimode&apos;</code> the
+        output text will be the key. <a href="../how-to/faq.md#how-should-the-language-codes-be-formatted"><em>Make sure you use the <code>&apos;en-US&apos;</code> format, instead of underscores or similar.</em></a>&lt;em&gt;&lt;/em&gt;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">fallbackLng</td>
+      <td style="text-align:left">&apos;dev&apos;</td>
+      <td style="text-align:left">language to use if translations in user language are not available. <em>Setting it explicitly to <code>false</code> will not trigger to load the <code>fallbackLng</code> at all.</em> 
+        <a
+        href="../principles/fallback.md#language-fallback">See the Fallback docs</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">supportedLngs</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">array of allowed languages</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">nonExplicitSupportedLngs</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">if true, will consider variants as supported when the main language is.
+        E.g. <code>en-US</code> will be valid if <code>en</code> is in <code>supportedLngs</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">load</td>
+      <td style="text-align:left">&apos;all&apos;</td>
+      <td style="text-align:left">strategy to define which language codes to lookup. Example: given set
+        language is <code>en-US</code>: - <code>&apos;all&apos;</code> &#x21D2; <code>[&apos;en-US&apos;, &apos;en&apos;, &apos;dev&apos;]</code> - <code>&apos;currentOnly&apos;</code> &#x21D2; <code>&apos;en-US&apos;</code> - <code>&apos;languageOnly&apos;</code> &#x21D2; <code>&apos;en&apos;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">preload</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">array of languages to preload. Important on server-side to assert translations
+        are loaded before rendering views.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">lowerCaseLng</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">locale will be fully lowercased; e.g. <code>en-US</code> &#x21D2; <code>en-us</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">cleanCode</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">main language will be lowercased; e.g. <code>EN</code> &#x21D2; <code>en</code>,
+        while leaving full locales like <code>en-US</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ns</td>
+      <td style="text-align:left">&apos;translation&apos;</td>
+      <td style="text-align:left">string or array of namespaces to load</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">defaultNS</td>
+      <td style="text-align:left">
+        <p>&apos;translation&apos;</p>
+        <p>&lt;em&gt;&lt;/em&gt;</p>
+        <p><em>(if a <code>ns</code> option and no <code>defaultNS</code> option is defined, the first namespace is used as <code>defaultNS</code> option)</em>
+        </p>
+      </td>
+      <td style="text-align:left">default namespace used if not passed to the <a href="../translation-function/essentials.md">translation function</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">fallbackNS</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">string or array of namespaces to lookup key if not found in given namespace.
+        <a
+        href="../principles/fallback.md#namespace-fallback">See NS fallback docs</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">partialBundledLanguages</td>
+      <td style="text-align:left">false</td>
+      <td style="text-align:left">allows some resources to be set on initialization while others can be
+        loaded using a backend connector</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Missing keys
 
