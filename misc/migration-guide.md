@@ -53,6 +53,10 @@ The old [deprecated whitelist options](https://github.com/i18next/i18next/issues
 
 There is a new [`i18next.resolvedLanguage`](../overview/api.md#resolvedlanguage) property, that represents the current resolved language. It can be used as primary used language, for example in a language switcher.
 
+#### defaultNS
+
+If passing the `ns` option, the `defaultNS` will, by default, be set to the first ns passed.
+
 ### v19.x.x to v20.0.0
 
 There should not be any breaking change, but regarding of some misuse of i18next that pop up in last minor releases, we opted for a major version this time.  
