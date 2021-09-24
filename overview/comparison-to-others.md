@@ -132,7 +132,7 @@ Should speak for itself.
 
 ### We bridge the gap to localization <a id="we-bridge-the-gap-to-localization"></a>
 
-Being honest, internationalization is the smaller pain in getting a site translated. Localization and the translation process is where the real hard work starts.
+Being honest, internationalization is the smaller pain in getting a site translated. Localization and the translation process are where the real hard work starts.
 
 With [https://locize.com](https://locize.com/) we fill this gap and enable a localization workflow as never seen before:
 
