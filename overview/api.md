@@ -319,7 +319,7 @@ const newInstance = i18next.createInstance({
 }, (err, t) => {
   if (err) return console.log('something went wrong loading', err);
   t('key'); // -> same as i18next.t
-}));
+});
 
 // is the same as
 const newInstance = i18next.createInstance();
@@ -331,7 +331,7 @@ newInstance.init({
 }, (err, t) => {
   if (err) return console.log('something went wrong loading', err);
   t('key'); // -> same as i18next.t
-}));
+});
 ```
 
 ### cloneInstance
