@@ -228,7 +228,7 @@ Services that are known to fully support the i18next format \(plural handling, .
 | [nodejs express](https://github.com/i18next/i18next-express-middleware) | language detector for express.js \(nodejs\). |
 | [nodejs koa](https://github.com/lxzxl/koa-i18next-detector) | A i18next language detecting plugin for Koa framework. |
 | [react native](https://github.com/DylanVann/i18next-react-native-language-detector) | language detector for React Native. |
-| [react native Async Storage](https://github.com/0xClpz/i18next-react-native-async-storage) | language detector for React Native that saves the user's choice in Async Storage, used for persistance. |
+| [react native Async Storage](https://github.com/0xClpz/i18next-react-native-async-storage) | language detector for React Native that saves the user's choice in Async Storage, used for persistence. |
 | [electron](https://github.com/neruchev/i18next-electron-language-detector) | language detector for electron apps. |
 | [CLI](https://github.com/neet/i18next-cli-language-detector) | language detector for CLI. |
 
