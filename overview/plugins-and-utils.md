@@ -1,10 +1,8 @@
 # Plugins and Utils
 
-## Plugins and Utils
-
 ![](../.gitbook/assets/ecosys.jpg)
 
-### i18n formats
+## i18n formats
 
 While the i18next format \(JSON based\) is the preferred solution and widely supported in translation management tools like [locize.com](https://locize.com), you might prefer another exciting format, like:
 
@@ -14,7 +12,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-icu](https://github.com/i18next/i18next-icu) | ICU | i18nFormat plugin to use ICU format with i18next based on [yahoo/intl-messageformat](https://github.com/formatjs/formatjs/tree/master/packages/intl-messageformat) |
 | [i18next-polyglot](https://github.com/i18next/i18next-polyglot) | polyglot | i18nFormat plugin to use [airbnb/polyglot.js](https://github.com/airbnb/polyglot.js) format with i18next |
 
-### extraction tools
+## extraction tools
 
 | **name** | **description** |
 | :--- | :--- |
@@ -23,7 +21,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) | A babel plugin that can extract keys in JSONv3 format. |
 | [translation-check](https://github.com/locize/translation-check) | Nicely shows an overview of your translations in a UI. Check which keys are not yet translated. |
 
-### utils
+## utils
 
 | **util** | **type** | **description** |
 | :--- | :--- | :--- |
@@ -51,7 +49,7 @@ While the i18next format \(JSON based\) is the preferred solution and widely sup
 | [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter) | converter | Convert old i18next translation resources to the new [i18next v4 json format](../misc/json-format.md#i-18-next-json-v4). Via CLI or programmatically. |
 | [i18next-v4-format-converter-web](https://i18next.github.io/i18next-v4-format-converter-web/) | online-converter | Convert old i18next translation resources to the new [i18next v4 json format](../misc/json-format.md#i-18-next-json-v4) directly in your browser. |
 
-### services
+## services
 
 Services that are known to fully support the i18next format \(plural handling, ...\) and sponsoring or contributing to the development of i18next.
 
@@ -59,14 +57,14 @@ Services that are known to fully support the i18next format \(plural handling, .
 | :--- | :--- |
 | [locize](http://locize.com) | localization as a service. Solves your localization process using i18next. |
 
-### backend extenders
+## backend extenders
 
 | **backend** | **description** |
 | :--- | :--- |
 | [chained backend](https://github.com/i18next/i18next-chained-backend) | combine multiple of the existing backends for fallback and caching scenarios |
 | [i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter) | enable another backend's multiload behaviour of loading multiple lng-ns combinations with one request. This behaviour was removed from i18next &gt;=v11.0.0 and could be enabled again by using this adapter |
 
-### backends
+## backends
 
 <table>
   <thead>
@@ -218,7 +216,7 @@ Services that are known to fully support the i18next format \(plural handling, .
   </tbody>
 </table>
 
-### language detector
+## language detector
 
 | **language** **detector** | **description** |
 | :--- | :--- |
@@ -232,7 +230,7 @@ Services that are known to fully support the i18next format \(plural handling, .
 | [electron](https://github.com/neruchev/i18next-electron-language-detector) | language detector for electron apps. |
 | [CLI](https://github.com/neet/i18next-cli-language-detector) | language detector for CLI. |
 
-### post processors
+## post processors
 
 | **post** **processor** | **description** |
 | :--- | :--- |
@@ -243,11 +241,11 @@ Services that are known to fully support the i18next format \(plural handling, .
 | [i18next-pseudo](https://github.com/MattBoatman/i18next-pseudo) | i18next post-processor for pseudolocalization of strings |
 | [i18next-emoji-postprocessor](https://github.com/i18next/i18next-emoji-postprocessor) | i18next postProcessor plugin for Node.js and in the browser that replaces all words with emojis. |
 
-### loggers
+## loggers
 
 Only the integrated console logger is available for now.
 
-### Create your own plugin
+## Create your own plugin
 
 Want to create your own plugins? Learn more [here](../misc/creating-own-plugins.md).
 

@@ -1,14 +1,12 @@
 # Interpolation
 
-## Interpolation
-
 Interpolation is one of the most used functionalities in I18N. It allows integrating dynamic values into your translations.
 
 Per default, interpolation values get escaped to mitigate XSS attacks.
 
 If the interpolation functionality provided doesn't suit you, you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
 
-### Basic
+## Basic
 
 Interpolation is one of the most used functionalities in I18N.
 
@@ -29,7 +27,7 @@ i18next.t('key', { what: 'i18next', how: 'great' });
 // -> "i18next is great"
 ```
 
-### Working with data models
+## Working with data models
 
 You can also pass entire data models as a value for interpolation.
 
@@ -52,7 +50,7 @@ i18next.t('key', { author });
 // -> "I am Jan"
 ```
 
-### Unescape
+## Unescape
 
 Per default, the values get escaped to mitigate XSS attacks. You can toggle escaping off, by either putting `-` before the key, or set the `escapeValue` option to `false` when requesting a translation.
 
@@ -80,7 +78,7 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false 
 
 _Warning:_ If you toggle escaping off, escape any user input yourself!
 
-### Additional options
+## Additional options
 
 Prefix/Suffix for interpolation and other options can be overridden in the init options or by passing additional options to the `t` function:
 
@@ -104,7 +102,7 @@ i18next.t('key', {
 
 While there are a lot of options going with the defaults should get you covered.
 
-### All interpolation options
+## All interpolation options
 
 <table>
   <thead>

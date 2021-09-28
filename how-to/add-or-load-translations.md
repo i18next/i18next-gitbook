@@ -1,10 +1,8 @@
 # Add or Load Translations
 
-## Add or Load Translations
-
 There are a few options to load translations to your application instrumented by i18next. The most common approach to this adding a so called [**backend plugin**](https://www.i18next.com/overview/plugins-and-utils#backends) to i18next. The range of backends is large from loading translations in the browser using xhr request to loading translations from databases or filesystem in nodejs.
 
-### Add on init
+## Add on init
 
 You can add the translations on init
 
@@ -34,7 +32,7 @@ i18next
   });
 ```
 
-### Add after init
+## Add after init
 
 You can add the translations after init
 
@@ -53,7 +51,7 @@ There are more options to adding, removing translations...learn more about [reso
 Please make sure to at least pass in an empty resources object on init. Else i18next will try to load translations and give you a warning that you are not using a backend.
 {% endhint %}
 
-### Lazy load in memory translations
+## Lazy load in memory translations
 
 [i18next-resources-to-backend](https://github.com/i18next/i18next-resources-to-backend) helps to transform resources to an i18next backend. This means, you can also lazy load translations, for example when using webpack:
 
@@ -74,7 +72,7 @@ i18next
   .init({ /* other options */ })
 ```
 
-### Load using a backend plugin
+## Load using a backend plugin
 
 Each [plugin](../principles/plugins.md) comes with a set of configuration settings like path to load resources from. Those settings are documented on the individual readme file of each repository.
 
@@ -104,7 +102,7 @@ With [i18next-chained-backend](https://github.com/i18next/i18next-chained-backen
 [What's a plugin?](../principles/plugins.md)
 {% endhint %}
 
-### Load using a [smart backend plugin](https://github.com/locize/i18next-locize-backend) serving directly from a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
+## Load using a [smart backend plugin](https://github.com/locize/i18next-locize-backend) serving directly from a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
 
 Just use the [i18next-locize-backend](https://github.com/locize/i18next-locize-backend) to load resources from the [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network).
 

@@ -1,8 +1,6 @@
 # Essentials
 
-## Essentials
-
-### Accessing keys
+## Accessing keys
 
 resources with 2 keys:
 
@@ -25,7 +23,7 @@ i18next.t('look.deep');
 // -> "value of look deep"
 ```
 
-### Passing a default value
+## Passing a default value
 
 You can pass in a default value for cases the key could not be found in translations like:
 
@@ -37,7 +35,7 @@ i18next.t('key', 'default value to show');
 In case you're using the [saveMissing functionality](../overview/configuration-options.md#missing-keys), it will also pass the defaultValue to your chosen backend, like shown in [this React.js example](https://github.com/locize/react-tutorial).
 {% endhint %}
 
-### Accessing keys in different namespaces
+## Accessing keys in different namespaces
 
 Namespaces are a feature in i18next internationalization framework which allows you to separate translations that get loaded into multiple files.
 
@@ -78,7 +76,7 @@ i18next.t('common:button.save');
 // -> "save"
 ```
 
-### Multiple fallback keys
+## Multiple fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
 
@@ -105,7 +103,7 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "The page was not found
 i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 ```
 
-### Overview options
+## Overview options
 
 `i18next.t(key, options)`
 

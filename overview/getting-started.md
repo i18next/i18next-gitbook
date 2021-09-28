@@ -1,8 +1,6 @@
 # Getting started
 
-## Getting started
-
-### Installation
+## Installation
 
 i18next can be added to your project using **npm** or **yarn**:
 
@@ -18,7 +16,7 @@ The default export is UMD compatible \(commonjs, requirejs, global\).
 
 In the `/dist` folder you may find additional builds for commonjs, es6 modules. Optimized to load i18next in webpack, rollup, ... or node.js. The correct entry points are already configured in the package.json so there should be no extra setup to get the best build option.
 
-### Load in [Deno](https://deno.land/)
+## Load in [Deno](https://deno.land/)
 
 i18next can be imported like this:
 
@@ -28,7 +26,7 @@ import i18next from 'https://deno.land/x/i18next/index.js'
 // or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js'
 ```
 
-### Load from CDN
+## Load from CDN
 
 You can also directly add a script tag loading i18next from one of the CDNs providing it:
 
@@ -48,7 +46,7 @@ Make sure to use a fixed version in production like [https://unpkg.com/i18next@1
 
 * [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)
 
-### Important Caveat
+## Important Caveat
 
 Before we dive into the first sample, please note the following: By default, i18next uses a key-based notation to look up translations, which comes with the benefit of [additional structure](../translation-function/essentials.md) for your translation files.
 
@@ -56,7 +54,7 @@ The downside of this is that your keys must not be in natural language — the n
 
 If you prefer using natural language in keys, please read the [fallback guide](../principles/fallback.md#key-fallback).
 
-### Basic sample
+## Basic sample
 
 Please be aware these samples are just showing basic usage of the core functionality. For production usage please consider using one of our [framework integrations](supported-frameworks.md) to get better and simpler integrations \(Setting innerHTML is just done to show how it works\).
 
@@ -147,7 +145,7 @@ As you might see, this basic sample provides only one language directly added on
 
 This is a working sample showing translated text. To learn more, have a look at the following extended sample:
 
-### Extended sample
+## Extended sample
 
 The extended sample adds the language detector for our browser and the http-backend to load translation files from this documentation's [i18next-gitbook repo](https://github.com/i18next/i18next-gitbook/tree/master/locales).
 

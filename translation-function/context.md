@@ -1,10 +1,8 @@
 # Context
 
-## Context
-
 By providing a context you can differ translations. Eg. useful to provide gender specific translations.
 
-### Basic
+## Basic
 
 keys
 
@@ -24,7 +22,7 @@ i18next.t('friend', { context: 'male' }); // -> "A boyfriend"
 i18next.t('friend', { context: 'female' }); // -> "A girlfriend"
 ```
 
-### Combining with plurals
+## Combining with plurals
 
 You can pass entire data models in options.
 

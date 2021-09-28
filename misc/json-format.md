@@ -1,8 +1,6 @@
 # JSON Format
 
-## JSON Format
-
-### i18next JSON v4
+## i18next JSON v4
 
 ```javascript
 {
@@ -41,7 +39,7 @@ To learn more about the features check the documentation:
 
 The only difference to _v3_ is the plural suffixes.
 
-### i18next JSON v3
+## i18next JSON v3
 
 enabled by:
 
@@ -80,7 +78,7 @@ formats:
 
 The only difference to _v2_ is the plural suffixes for languages with multiple plural forms.
 
-### i18next JSON v2
+## i18next JSON v2
 
 enabled by:
 
@@ -116,7 +114,7 @@ formats:
 
 This are the defaults. Nesting and Interpolation formats are configurable.
 
-### i18next JSON v1
+## i18next JSON v1
 
 enabled by:
 

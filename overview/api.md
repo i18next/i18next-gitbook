@@ -1,7 +1,5 @@
 # API
 
-## API
-
 ### init
 
 `i18next.init(options, callback) // -> returns a Promise`

@@ -1,8 +1,6 @@
 # Objects and Arrays
 
-## Objects and arrays
-
-### Objects
+## Objects
 
 You can return objects or arrays to be used by third party modules localization:
 
@@ -31,7 +29,7 @@ The returned value supports interpolation, plurals, nesting, ...
 
 `returnObjects` can be set to true on init.
 
-### Arrays
+## Arrays
 
 You can access array values or join them.
 

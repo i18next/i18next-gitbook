@@ -1,7 +1,5 @@
 # Creating own Plugins
 
-## Creating own Plugins
-
 i18next comes with a lot of modules to enhance the features available. There are modules to:
 
 * load resources, eg. via xhr or from filesystem \(node.js\)
@@ -13,7 +11,7 @@ The plugins need to support following APIs:
 
 **HINT:** You can provide a singleton or a prototype constructor \(prefered for supporting multiple instances of i18next\).
 
-### backend
+## backend
 
 Backend plugins are used to load data for i18next.
 
@@ -68,7 +66,7 @@ Backend plugins are used to load data for i18next.
 Using `readMulti` is only supported when using the [https://github.com/i18next/i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter)
 {% endhint %}
 
-### languageDetector
+## languageDetector
 
 Language Detector plugins are used to detect language in user land.
 
@@ -90,7 +88,7 @@ Language Detector plugins are used to detect language in user land.
 }
 ```
 
-### post processor
+## post processor
 
 Post Processors are used to extend or manipulate the translated values before returning them in `t` function.
 
@@ -107,7 +105,7 @@ Post Processors are used to extend or manipulate the translated values before re
 }
 ```
 
-### logger
+## logger
 
 Override the built in console logger.
 

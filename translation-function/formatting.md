@@ -1,12 +1,10 @@
 # Formatting
 
-## Formatting
-
 You can define a function to handle formattings. Beside formatting numbers or dates you can use this to define custom formattings.
 
 You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](http://numeraljs.com/) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl).
 
-### Basic
+## Basic
 
 As a sample using momentjs to format dates.
 
@@ -51,7 +49,7 @@ i18next.on('languageChanged', function(lng) {
 });
 ```
 
-### Additional options
+## Additional options
 
 Prefix/Suffix for interpolation and other options can be overridden in init option:
 

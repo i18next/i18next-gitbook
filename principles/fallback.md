@@ -1,12 +1,10 @@
 # Fallback
 
-## Fallback
-
 Doing graceful fallbacks is a core principle of i18next. This enables you to display the most accurate content possible, while not repeating content over and over.
 
-### Language fallback
+## Language fallback
 
-#### Variant resolving - fallback from dialects or scripts
+### Variant resolving - fallback from dialects or scripts
 
 By default, if a variant \(containing region, script, etc\) is not found, i18next will look for the same key in the broader version of that language. With this in mind, a common strategy if you're supporting language variants is to write common text inside the pure language, specifying only what differs in the variants.
 
@@ -38,7 +36,7 @@ i18next.init({
 });
 ```
 
-#### Fallback to different languages
+### Fallback to different languages
 
 If you can not provide the preferred language for a user, you can specify another language as fallback. This is useful to indicate the main language or, for instance, if you want to keep the fallbacks different per region.
 
@@ -90,7 +88,7 @@ i18next.init({
 
 The default is set to `dev` which means developer language. At first this might look strange to set the default to a language, but this enables to set the `saveMissing` feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing, for instance, proper English, including defined terminology. For production use, just set `fallbackLng` to an existing language.
 
-### Namespace fallback
+## Namespace fallback
 
 i18next by default loads its translations from one file named `translation`. However, you can configure it to load from multiple files, called _namespaces_.
 
@@ -137,9 +135,9 @@ i18next.init({
 });
 ```
 
-### Key fallback
+## Key fallback
 
-#### Key not found
+### Key not found
 
 If a key does not return a value the key acts as fallback:
 
@@ -181,7 +179,7 @@ While this works and might reduce files to load it makes the management of trans
 
 Possible - but not recommended.
 
-#### Missing values for existing keys
+### Missing values for existing keys
 
 In addition to the above, if you want missing values to fallback to the key in cases where the keys \(e.g. got extracted by a code parser\) exist in your JSON translation file with empty string as value, you also need this setting:
 
@@ -190,7 +188,7 @@ In addition to the above, if you want missing values to fallback to the key in c
   returnEmptyString: false
 ```
 
-#### Calling with fallback keys
+### Calling with fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
 

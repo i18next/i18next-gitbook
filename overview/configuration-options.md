@@ -1,18 +1,16 @@
 # Configuration Options
 
-## Configuration options
-
 `i18next.init(options, callback)`
 
 All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#createinstance).
 
-### Logging
+## Logging
 
 | option | default | description |
 | :--- | :--- | :--- |
 | debug | false | logs info level to console output. Helps finding issues with loading not working. |
 
-### Languages, namespaces, resources
+## Languages, namespaces, resources
 
 <table>
   <thead>
@@ -112,7 +110,7 @@ All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#c
   </tbody>
 </table>
 
-### Missing keys
+## Missing keys
 
 <table>
   <thead>
@@ -188,7 +186,7 @@ All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#c
   </tbody>
 </table>
 
-### Translation defaults
+## Translation defaults
 
 <table>
   <thead>
@@ -263,7 +261,7 @@ All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#c
   </tbody>
 </table>
 
-### Plugin options
+## Plugin options
 
 | option | default | description |
 | :--- | :--- | :--- |
@@ -271,7 +269,7 @@ All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#c
 | backend | undefined | options for backend - [check docs](plugins-and-utils.md#backends) |
 | cache | undefined | options for a cache layer in backends - [check docs](plugins-and-utils.md#backends) |
 
-### Others
+## Others
 
 | option | default | description |
 | :--- | :--- | :--- |
@@ -283,7 +281,7 @@ All options for calling [`init()`](api.md#init) or [`createInstance()`](api.md#c
 | appendNamespaceToCIMode | false | prefixes the namespace to the returned key when using `lng: 'cimode'` |
 | ignoreJSONStructure | true | if a key is not found as nested key, it will try to lookup as flat key |
 
-### initImmediate
+## initImmediate
 
 Sample using `initImmediate` when using a backend plugin allowing sync \(blocking\) loads.
 
