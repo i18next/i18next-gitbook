@@ -27,7 +27,7 @@
 }
 ```
 
-This are the defaults. Nesting and Interpolation formats are configurable.  
+These are the defaults. Nesting and Interpolation formats are configurable.  
   
 To learn more about the features check the documentation:  
   
@@ -112,7 +112,7 @@ formats:
 }
 ```
 
-This are the defaults. Nesting and Interpolation formats are configurable.
+These are the defaults. Nesting and Interpolation formats are configurable.
 
 ## i18next JSON v1
 
@@ -148,5 +148,5 @@ formats:
 }
 ```
 
-This are the defaults. Nesting and Interpolation formats are configurable.
+These are the defaults. Nesting and Interpolation formats are configurable.
 
