@@ -39,7 +39,8 @@ i18next.init({
 #### natural language detection
 
 i18next now automatically tries to detect natural language keys.  
-This way there is no need to set `nsSeparator` or `keySeparator` [option](../overview/configuration-options.md#others) to `false`.
+This way there is no need to set `nsSeparator` or `keySeparator` [option](../overview/configuration-options.md#others) to `false`.  
+_In case you want to skip this natural language detection, provide a `keySeparator` option._
 
 #### removed deprecated
 
