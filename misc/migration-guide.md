@@ -6,6 +6,7 @@
 
 One of the biggest breaking changes is regarding suffixing plurals.  
 This change streamlines the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).  
+You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API, in case it is not available it will fallback to the [i18next JSON format v3](json-format.md#i-18-next-json-v3) plural handling.  
 To enforce old behaviour you can enable `compatibilityJSON = 'v3'` on i18next init call.
 
 ```javascript
