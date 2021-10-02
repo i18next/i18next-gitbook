@@ -3,7 +3,7 @@
 Plural can be combined with interpolation, context, ...
 
 This plurals are streamlines with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).  
-_You may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API_, in case it is not available it will fallback to the_ [_v3 JSON format_](../misc/json-format.md#i-18-next-json-v3) _plural handling._
+_You may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API, in case it is not available it will fallback to the_ [_v3 JSON format_](../misc/json-format.md#i-18-next-json-v3) _plural handling._
 
 {% hint style="danger" %}
 Note: The variable name must be `count`.   
