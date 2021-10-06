@@ -133,11 +133,11 @@ keys
 
 ```javascript
 {
-  "key1": "{{count}} item",
-  "key1_plural": "{{count}} items",
+  "key1_one": "{{count}} item",
+  "key1_other": "{{count}} items",
   "key1_interval": "(1)[one item];(2-7)[a few items];(7-inf)[a lot of items];",
-  "key2": "{{count}} item",
-  "key2_plural": "{{count}} items",
+  "key2_one": "{{count}} item",
+  "key2_other": "{{count}} items",
   "key2_interval": "(1)[one item];(2-7)[a few items];"
 }
 ```
