@@ -40,7 +40,7 @@ A namespace can be thought of as logical groupings of different sets of translat
 
 For instance, you might have a 3 sections of your app, each with many individual pages in them, but only 2 sections share similar content. If that's the case, instead of loading all of the keys for all 3 sections, you can instead load keys from a "shared" set of translations and break up the other sections into much smaller sets of keys, loading them as needed.
 
-In a given namespace you could have a set of languages, each with their own set of keys.
+In a given namespace you could have a set of languages, each with its own set of keys.
 
 #### Example
 
