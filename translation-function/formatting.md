@@ -1,10 +1,190 @@
 # Formatting
 
-You can define a function to handle formattings. Besides formatting numbers or dates you can use this to define custom formattings.
+Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the intl API.
 
-You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](http://numeraljs.com/) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl).
+## Basic usage
 
-## Basic
+The translation string has the following signature:
+
+```json
+{
+  "key": "Some format {{value, formatname}}",
+  "keyWithOptions": "Some format {{value, formatname(option1Name: option1Value; option2Name: option2Value)}}"
+}
+```
+
+#### Passing options to the formatting:
+
+1. In the translation string using `{{value, formatName(options1: options1Value)}}`
+2. Using the rootlevel options when calling `t('key', { option1: option1Value })`
+3. Using the per value options like: `t('key', { formatParams: { value: { option1: option1Value } })`
+
+Samples
+
+```javascript
+// JSON
+{
+  "intlNumber": "Some {{val, number}}",
+  "intlNumberWithOptions": "Some {{val, number(minimumFractionDigits: 2)}}"
+}
+
+i18next.t('intlNumber', { val: 1000 });
+// --> Some 1,000
+i18next.t('intlNumber', { val: 1000.1, minimumFractionDigits: 3 });
+// --> Some 1,000.100
+i18next.t('intlNumber', { val: 1000.1, formatParams: { val: { minimumFractionDigits: 3 } } });
+// --> Some 1,000.100
+i18next.t('intlNumberWithOptions', { val: 2000 });
+// --> Some 2,000.00,
+i18next.t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 });
+// --> Some 2,000.000
+```
+
+#### Overriding the language to use
+
+The language can be overriden by passing it in t.options
+
+```javascript
+i18next.t('intlNumber', { val: 1000.1, lng: 'de' }); // or: i18next.t('intlNumber', { val: 1000.1, locale: 'de' });
+i18next.t('intlNumber', { val: 1000.1, formatParams: { val: { lng: 'de' } } }); // or: i18next.t('intlNumber', { val: 1000.1, formatParams: { val: { locale: 'de' } } });
+```
+
+#### Adding custom format function
+
+It's rather simple to add own function:
+
+```javascript
+// after i18next.init(options);
+i18next.services.formatter.add('lowercase', (value, lng, options) => {
+  return value.toLowerCase();
+});
+i18next.services.formatter.add('underscore', (value, lng, options) => {
+  return value.replace(/\s+/g, '_');
+});
+```
+
+#### Using multiple formatters
+
+```json
+{
+  "key": "Some format {{value, formatter1, formatter2}}"
+}
+```
+
+## Built-in formats
+
+### Number
+
+```javascript
+// JSON
+{
+  "intlNumber": "Some {{val, number}}",
+  "intlNumberWithOptions": "Some {{val, number(minimumFractionDigits: 2)}}"
+}
+
+i18next.t('intlNumber', { val: 1000 });
+// --> Some 1,000
+i18next.t('intlNumber', { val: 1000.1, minimumFractionDigits: 3 });
+// --> Some 1,000.100
+i18next.t('intlNumber', { val: 1000.1, formatParams: { val: { minimumFractionDigits: 3 } } });
+// --> Some 1,000.100
+i18next.t('intlNumberWithOptions', { val: 2000 });
+// --> Some 2,000.00
+i18next.t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 });
+// --> Some 2,000.000
+```
+
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+
+### Currency
+
+```javascript
+// JSON
+{
+  "intlCurrencyWithOptionsSimplified": "The value is {{val, currency(USD)}}",
+  "intlCurrencyWithOptions": "The value is {{val, currency(currency: USD)}}",
+  "twoIntlCurrencyWithUniqueFormatOptions": "The value is {{localValue, currency}} or {{altValue, currency}}",
+}
+
+i18next.t('intlCurrencyWithOptionsSimplified', { val: 2000 });
+// --> The value is $2,000.00
+i18next.t('intlCurrencyWithOptions', { val: 2300 });
+// --> The value is $2,300.00
+i18next.t('twoIntlCurrencyWithUniqueFormatOptions',
+          {
+            localValue: 12345.67,
+            altValue: 16543.21,
+            formatParams: {
+              localValue: { currency: 'USD', locale: 'en-US' },
+              altValue: { currency: 'CAD', locale: 'fr-CA' },
+            },
+          },);
+// --> The value is $12,345.67 or 16 543,21 $ CA
+```
+
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+
+### DateTime
+
+```javascript
+// JSON
+{
+  "intlDateTime": "On the {{val, datetime}}",
+}
+
+i18next.t('intlDateTime', { val: new Date(Date.UTC(2012, 11, 20, 3, 0, 0)) });
+// --> On the 12/20/2012
+i18next.t('intlDateTime',
+          {
+            val: new Date(Date.UTC(2012, 11, 20, 3, 0, 0)),
+            formatParams: {
+              val: { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' },
+            },
+          });
+// --> On the Thursday, December 20, 2012
+```
+
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+
+### RelativeTime
+
+```javascript
+// JSON
+{
+  "intlRelativeTime": "Lorem {{val, relativetime}}",
+  "intlRelativeTimeWithOptions": "Lorem {{val, relativetime(quarter)}}",
+  "intlRelativeTimeWithOptionsExplicit": "Lorem {{val, relativetime(range: quarter; style: narrow;)}}",
+}
+
+i18next.t('intlRelativeTime', { val: 3 });
+// --> Lorem in 3 days
+i18next.t('intlRelativeTimeWithOptions', { val: -3 });
+// --> Lorem 3 quarters ago
+i18next.t('intlRelativeTimeWithOptionsExplicit', { val: -3 });
+// --> Lorem 3 qtrs. ago
+i18next.t('intlRelativeTimeWithOptionsExplicit', { val: -3, style: 'long' });
+// --> Lorem 3 quarters ago
+```
+
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
+
+### List
+
+```javascript
+// JSON
+{
+  "intlList": "A list of {{val, list}}"
+}
+
+i18next.t(['intlList', { val: ['locize', 'i18next', 'awesomeness'] });
+// --> A list of locize, i18next, and awesomeness
+```
+
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat)
+
+## Legacy format function i18next<21.3.0
+
+You can add formatting using [moment.js](http://momentjs.com) and [numeral.js](http://numeraljs.com) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl).
 
 As a sample using momentjs to format dates.
 
@@ -61,11 +241,10 @@ i18next.init({
 });
 ```
 
-| option | default | description |
-| :--- | :--- | :--- |
-| alwaysFormat | false | used to always call the format function for all interpolated values |
-| format | noop function | format function `function format(value, format, lng) {}` |
-| formatSeparator | ',' | used to separate format from interpolation value |
+| option          | default       | description                                                                                                                                                 |
+| --------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| alwaysFormat    | false         | used to always call the format function for all interpolated values                                                                                         |
+| format          | noop function | <p>Passing this function is considered LEGACY in i18next>=21.3.0</p><p></p><p>format function <code>function format(value, format, lng, edit) {}</code></p> |
+| formatSeparator | ','           | used to separate format from interpolation value                                                                                                            |
 
 While there are a lot of options going with the defaults should get you covered.
-
