@@ -16,7 +16,7 @@ The translation string has the following signature:
 #### Passing options to the formatting:
 
 1. In the translation string using `{{value, formatName(options1: options1Value)}}`
-2. Using the rootlevel options when calling `t('key', { option1: option1Value })`
+2. Using the root level options when calling `t('key', { option1: option1Value })`
 3. Using the per value options like: `t('key', { formatParams: { value: { option1: option1Value } })`
 
 Samples
@@ -35,7 +35,7 @@ i18next.t('intlNumber', { val: 1000.1, minimumFractionDigits: 3 });
 i18next.t('intlNumber', { val: 1000.1, formatParams: { val: { minimumFractionDigits: 3 } } });
 // --> Some 1,000.100
 i18next.t('intlNumberWithOptions', { val: 2000 });
-// --> Some 2,000.00,
+// --> Some 2,000.00
 i18next.t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 });
 // --> Some 2,000.000
 ```
