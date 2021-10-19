@@ -30,10 +30,10 @@ keys
 
 ```javascript
 {
-      "friend_male": "A boyfriend",
-      "friend_female": "A girlfriend",
-      "friend_male_plural": "{{count}} boyfriends",
-      "friend_female_plural": "{{count}} girlfriends"
+      "friend_male_one": "A boyfriend",
+      "friend_female_one": "A girlfriend",
+      "friend_male_other": "{{count}} boyfriends",
+      "friend_female_other": "{{count}} girlfriends"
 }
 ```
 
