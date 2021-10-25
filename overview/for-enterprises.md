@@ -8,12 +8,12 @@ There are more points to address:
 
 * How does the translation process work?
 * How do the source files get to the translators and back?
-* How do you keep track which parts are already translated and which parts not - and additional are all target languages fully translated?
-* How you deploy new languages after release?
+* How do you keep track which parts are already translated and which parts are not - and additional are all target languages fully translated?
+* How do you deploy new languages after release?
 * How do you handle versioning?
-* How you update / fix typos in translations after deployment?
+* How do you update / fix typos in translations after deployment?
 
-Translation Management Systems are a great help. But most tools out there are build for onetime translation of your documents. Not for continuously translating your application. So there is still a gap between the development and the translation process.
+Translation Management Systems are a great help. But most tools out there are built for one-time translation of your documents. Not for continuously translating your application. So there is still a gap between the development and the translation process.
 
 ## Locize
 
@@ -30,7 +30,7 @@ Locize brings you:
 * An incontext editor to edit on your own website
 * Progress reporting
 * Usage reporting
-* Plural convertion between languages
+* Plural conversion between languages
 * Support for versions
 * Gets your missing keys passed directly to the project
 * Hosts translation on its CDN and allows for automatic or manual publishing \(You still have the option to host translations yourself\)
