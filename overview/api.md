@@ -8,16 +8,16 @@ The default export of the i18next module is an i18next instance ready to be init
 
 Please read the [options page](configuration-options.md) for details on configuration options.
 
-The callback will be called after all translations were loaded or with an error when failed \(in case of using a backend\).
+The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
 
-**So you should wait for init to complete \(wait for the callback or promise resolution\) before using the `t` function!**
+**So you should wait for init to complete (wait for the callback or promise resolution) before using the `t` function!**
 
 {% hint style="info" %}
-In case of [react-i18next](https://react.i18next.com/) make sure useSuspense is enabled or handle the ready state in [HOCs](https://react.i18next.com/latest/withtranslation-hoc#not-using-suspense) or [hooks](https://react.i18next.com/latest/usetranslation-hook#not-using-suspense) yourself.
+In case of [react-i18next](https://react.i18next.com) make sure useSuspense is enabled or handle the ready state in [HOCs](https://react.i18next.com/latest/withtranslation-hoc#not-using-suspense) or [hooks](https://react.i18next.com/latest/usetranslation-hook#not-using-suspense) yourself.
 {% endhint %}
 
 {% hint style="danger" %}
-Do not call init multiple times.  
+Do not call init multiple times.\
 To change language use [changeLanguage](api.md#changelanguage). If you need complete different configs use [createInstance](api.md#createinstance) or [cloneInstance](api.md#cloneinstance).
 {% endhint %}
 
@@ -108,6 +108,17 @@ const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
 const title = t('title'); // same as i18next.t('user.accountSettings.changePassword.title');
 ```
 
+{% hint style="warning" %}
+Do **not** use the `keyPrefix` option if you want to use keys with prefixed namespace notation:
+
+i.e.
+
+```javascript
+const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
+const title = t('ns:title'); 
+```
+{% endhint %}
+
 On the returned function you can like in the `t` function override the languages or namespaces by passing them in options or by prepending namespace.
 
 ```javascript
@@ -153,7 +164,7 @@ i18next.changeLanguage().then(...)
 
 Is set to the current detected or set language.
 
-If you need the primary used language depending on your configuration \(supportedLngs, load\) you will prefer using [`i18next.resolvedLanguage`](api.md#resolvedlanguage) or [`i18next.languages[0]`](api.md#languages).
+If you need the primary used language depending on your configuration (supportedLngs, load) you will prefer using [`i18next.resolvedLanguage`](api.md#resolvedlanguage) or [`i18next.languages[0]`](api.md#languages).
 
 ### languages
 
@@ -190,10 +201,10 @@ i18next.languages; // ["de-DE", "de", "es", "fr", "en-US", "dev"]
 
 `i18next.resolvedLanguage`
 
-Is set to the current resolved language.  
+Is set to the current resolved language.\
 It can be used as primary used language, for example in a language switcher.
 
-_\(introduced in v21.0.0\)_
+_(introduced in v21.0.0)_
 
 ### loadNamespaces
 
@@ -215,7 +226,7 @@ i18next
 
 `i18next.loadLanguages(lngs, callback) // -> returns a Promise`
 
-Loads additional languages not defined in init options \(preload\).
+Loads additional languages not defined in init options (preload).
 
 ```javascript
 i18next.loadLanguages('de', (err) => { /* resources have been loaded */ });
@@ -306,7 +317,7 @@ Please read the [options page](configuration-options.md) for details on configur
 
 Providing a callback will automatically call init.
 
-The callback will be called after all translations were loaded or with an error when failed \(in case of using a backend\).
+The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
 
 ```javascript
 const newInstance = i18next.createInstance({
@@ -379,7 +390,7 @@ Gets fired on loaded resources.
 
 `i18next.on('failedLoading', function(lng, ns, msg) {})`
 
-Gets fired if loading resources failed \(after the in-built retry algorithm\).
+Gets fired if loading resources failed (after the in-built retry algorithm).
 
 ### onMissingKey
 
@@ -415,10 +426,10 @@ Gets one value by given key.
 
 options:
 
-| option | default | description |
-| :--- | :--- | :--- |
-| keySeparator | "." | char to separate keys, or false if no separator is preferred |
-| ignoreJSONStructure | true | if a key is not found as nested key, it will try to lookup as flat key |
+| option              | default | description                                                            |
+| ------------------- | ------- | ---------------------------------------------------------------------- |
+| keySeparator        | "."     | char to separate keys, or false if no separator is preferred           |
+| ignoreJSONStructure | true    | if a key is not found as nested key, it will try to lookup as flat key |
 
 ### addResource
 
@@ -428,10 +439,10 @@ Adds one key/value.
 
 options:
 
-| option | default | description |
-| :--- | :--- | :--- |
-| keySeparator | "." | char to separate keys, or false if no separator is preferred |
-| silent | false | if set to true adding will not emit an added event |
+| option       | default | description                                                  |
+| ------------ | ------- | ------------------------------------------------------------ |
+| keySeparator | "."     | char to separate keys, or false if no separator is preferred |
+| silent       | false   | if set to true adding will not emit an added event           |
 
 ### addResources
 
@@ -445,7 +456,7 @@ Adds multiple key/values.
 
 Adds a complete bundle.
 
-Setting deep \(default false\) param to true will extend existing translations in that file. Setting deep and overwrite \(default false\) to true it will overwrite existing translations in that file.
+Setting deep (default false) param to true will extend existing translations in that file. Setting deep and overwrite (default false) to true it will overwrite existing translations in that file.
 
 So omitting deep and overwrite will overwrite all existing translations with the one provided in resources. Using deep you can choose to keep existing nested translation and to overwrite those with the new ones.
 
@@ -478,4 +489,3 @@ Returns a resource bundle.
 `i18next.removeResourceBundle(lng, ns)`
 
 Removes an existing bundle.
-
