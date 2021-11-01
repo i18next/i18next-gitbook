@@ -115,7 +115,7 @@ i.e.
 
 ```javascript
 const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
-const title = t('ns:title'); 
+const title = t('ns:title'); // this will not work
 ```
 {% endhint %}
 
