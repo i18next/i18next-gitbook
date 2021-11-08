@@ -15,13 +15,15 @@ There are more points to address:
 
 Translation Management Systems are a great help. But most tools out there are built for one-time translation of your documents. Not for continuously translating your application. So there is still a gap between the development and the translation process.
 
+> So is there a smart localization management platform? An [i18n(ext) platform](https://locize.com/i18next.html)?
+
 ## Locize
 
 ![](../.gitbook/assets/locize.png)
 
-[Locize](http://locize.com/?utm_source=i18next_com&utm_medium=gitbook) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
+[Locize](http://locize.com) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
 
-![](../.gitbook/assets/locize-teaser_small.gif)
+![](../.gitbook/assets/locize-teaser\_small.gif)
 
 Locize brings you:
 
@@ -33,5 +35,4 @@ Locize brings you:
 * Plural conversion between languages
 * Support for versions
 * Gets your missing keys passed directly to the project
-* Hosts translation on its CDN and allows for automatic or manual publishing \(You still have the option to host translations yourself\)
-
+* Hosts translation on its CDN and allows for automatic or manual publishing (You still have the option to host translations yourself)
