@@ -15,6 +15,11 @@ There will be **no** fallback to the `'key'` value if count is not provided.
 If you need multiple counts, take a look at [nesting](nesting.md#passing-options-to-nestings)
 {% endhint %}
 
+{% hint style="info" %}
+We provide the ability to have special translation for 0, so that more natural language can be used.
+If the count is 0, and a `_zero` entry is present, then it will be used instead of language plural suffix.
+{% endhint %}
+
 ## Singular / Plural
 
 keys
