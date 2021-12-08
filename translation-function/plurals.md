@@ -2,12 +2,12 @@
 
 Plural can be combined with interpolation, context, ...
 
-These plurals are streamlines with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).  
-_You may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API, in case it is not available it will fallback to the_ [_i18next JSON format v3_](../misc/json-format.md#i-18-next-json-v3) _plural handling._
+These plurals are streamlines with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/PluralRules/PluralRules).\
+_You may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) _API, in case it is not available it will fallback to the_ [_i18next JSON format v3_](../misc/json-format.md#i-18-next-json-v3) _plural handling._
 
 {% hint style="danger" %}
-Note: The variable name must be `count`.   
-And it must be present: `i18next.t('key', {count: 1});`  
+Note: The variable name must be `count`.\
+And it must be present: `i18next.t('key', {count: 1});`\
 There will be **no** fallback to the `'key'` value if count is not provided.
 {% endhint %}
 
@@ -16,8 +16,7 @@ If you need multiple counts, take a look at [nesting](nesting.md#passing-options
 {% endhint %}
 
 {% hint style="info" %}
-We provide the ability to have special translation for 0, so that more natural language can be used.
-If the count is 0, and a `_zero` entry is present, then it will be used instead of language plural suffix.
+We provide the ability to have special translation for `{count: 0}`, so that a more natural language can be used. If the count is 0, and a `_zero` entry is present, then it will be used instead of the language plural suffix.
 {% endhint %}
 
 ## Singular / Plural
@@ -47,7 +46,7 @@ i18next.t('keyWithCount', {count: 100}); // -> "100 items"
 ```
 
 {% hint style="warning" %}
-With [v21.0.0](../misc/migration-guide.md#json-format-v4-pluralization) a new [JSON format v4](../misc/json-format.md#i-18-next-json-v4) was introduced that changed the suffixes.  
+With [v21.0.0](../misc/migration-guide.md#json-format-v4-pluralization) a new [JSON format v4](../misc/json-format.md#i-18-next-json-v4) was introduced that changed the suffixes.\
 To convert your existing translations to the new v4 format, have a look at [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter) or [this web tool](https://i18next.github.io/i18next-v4-format-converter-web/).
 {% endhint %}
 
@@ -92,11 +91,11 @@ _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it
 
 #### Or you use a smart translation management system, like [locize](https://locize.com)
 
-![](../.gitbook/assets/locize_plurals.png)
+![](../.gitbook/assets/locize\_plurals.png)
 
 ## Ordinal plurals
 
-There is also support for ordinal numbers _\(referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English\)_.
+There is also support for ordinal numbers _(referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English)_.
 
 keys
 
@@ -168,4 +167,3 @@ Note: The regex for the interval entry has changed in `v3.0.0` of `i18next-inter
 "key2_interval": "(1){one item};(2-7){a few items};"
 ```
 {% endhint %}
-
