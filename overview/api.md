@@ -21,6 +21,10 @@ Do not call init multiple times.\
 To change language use [changeLanguage](api.md#changelanguage). If you need complete different configs use [createInstance](api.md#createinstance) or [cloneInstance](api.md#cloneinstance).
 {% endhint %}
 
+{% hint style="warning" %}
+An error can occur if for example there was a loading issue when using a [backend](plugins-and-utils.md#backends) plugin.
+{% endhint %}
+
 ```javascript
 i18next.init({
   fallbackLng: 'en',
