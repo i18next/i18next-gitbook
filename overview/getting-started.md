@@ -12,11 +12,11 @@ $ npm install i18next --save
 $ yarn add i18next
 ```
 
-The default export is UMD compatible \(commonjs, requirejs, global\).
+The default export is UMD compatible (commonjs, requirejs, global).
 
 In the `/dist` folder you may find additional builds for commonjs, es6 modules. Optimized to load i18next in webpack, rollup, ... or node.js. The correct entry points are already configured in the package.json so there should be no extra setup to get the best build option.
 
-## Load in [Deno](https://deno.land/)
+## Load in [Deno](https://deno.land)
 
 i18next can be imported like this:
 
@@ -44,7 +44,11 @@ Make sure to use a fixed version in production like [https://unpkg.com/i18next@1
 
 **cdnjs.com**
 
-* [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)
+* [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)****
+
+**jsdelivr.com**
+
+* [https://www.jsdelivr.com/package/npm/i18next](https://www.jsdelivr.com/package/npm/i18next)
 
 ## Important Caveat
 
@@ -56,7 +60,7 @@ If you prefer using natural language in keys, please read the [fallback guide](.
 
 ## Basic sample
 
-Please be aware these samples are just showing basic usage of the core functionality. For production usage please consider using one of our [framework integrations](supported-frameworks.md) to get better and simpler integrations \(Setting innerHTML is just done to show how it works\).
+Please be aware these samples are just showing basic usage of the core functionality. For production usage please consider using one of our [framework integrations](supported-frameworks.md) to get better and simpler integrations (Setting innerHTML is just done to show how it works).
 
 ```javascript
 import i18next from 'i18next';
@@ -159,4 +163,3 @@ You should now have an idea about how to achieve the basic setup. It's time to l
 * Add a [language detector](plugins-and-utils.md) to detect the preferred language of your user
 * Add a [backend plugin](plugins-and-utils.md) to load the translations from the server or filesystem
 * Connect i18next with a smart [Translation Management System](https://locize.com), like in [this React.js example](https://github.com/locize/react-tutorial)
-
