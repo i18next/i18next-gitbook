@@ -69,6 +69,16 @@ i18next.t('key2', {val: '$t(key1)'});
 // -> "say: hello world"
 ```
 
+{% hint style="info" %}
+If you're using >= v21.0.0 you need to set [skipOnVariables](../misc/migration-guide.md#skiponvariables-true) to false:
+
+```
+interpolation: {
+  skipOnVariables: false
+}
+```
+{% endhint %}
+
 ## Additional options
 
 Prefix/Suffix for nesting and other options can be overridden in init [interpolation options](interpolation.md#all-interpolation-options) or by passing additional options to t function:
@@ -85,10 +95,9 @@ i18next.t('key', {
 });
 ```
 
-| option | default | description |
-| :--- | :--- | :--- |
-| nestingPrefixEscaped | undefined | escaped prefix for nesting \(regexSafe\) |
-| nestingSuffixEscaped | undefined | escaped suffix for nesting \(regexSafe\) |
+| option               | default   | description                            |
+| -------------------- | --------- | -------------------------------------- |
+| nestingPrefixEscaped | undefined | escaped prefix for nesting (regexSafe) |
+| nestingSuffixEscaped | undefined | escaped suffix for nesting (regexSafe) |
 
 While there are a lot of options going with the defaults should get you covered.
-
