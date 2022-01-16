@@ -36,3 +36,5 @@ Locize brings you:
 * Support for versions
 * Gets your missing keys passed directly to the project
 * Hosts translation on its CDN and allows for automatic or manual publishing (You still have the option to host translations yourself)
+
+Checkout how it works => [https://youtu.be/ds-yEEYP1Ks](https://youtu.be/ds-yEEYP1Ks)
