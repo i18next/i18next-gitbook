@@ -1,6 +1,6 @@
 # Formatting
 
-Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl).
+Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl).
 
 ## Basic usage
 
@@ -15,7 +15,7 @@ The translation string has the following signature:
 
 #### Passing options to the formatting:
 
-1. In the translation string using `{{value, formatName(options1: options1Value)}}`
+1. In the translation string using `{{value, formatname(options1: options1Value)}}`
 2. Using the root level options when calling `t('key', { option1: option1Value })`
 3. Using the per value options like: `t('key', { formatParams: { value: { option1: option1Value } })`
 
@@ -42,7 +42,7 @@ i18next.t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 });
 
 #### Overriding the language to use
 
-The language can be overriden by passing it in t.options
+The language can be overridden by passing it in t.options
 
 ```javascript
 i18next.t('intlNumber', { val: 1000.1, lng: 'de' }); // or: i18next.t('intlNumber', { val: 1000.1, locale: 'de' });
@@ -94,7 +94,7 @@ i18next.t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 });
 // --> Some 2,000.000
 ```
 
-For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/NumberFormat)
 
 ### Currency
 
@@ -122,7 +122,7 @@ i18next.t('twoIntlCurrencyWithUniqueFormatOptions',
 // --> The value is $12,345.67 or 16 543,21 $ CA
 ```
 
-For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/NumberFormat)
 
 ### DateTime
 
@@ -144,7 +144,7 @@ i18next.t('intlDateTime',
 // --> On the Thursday, December 20, 2012
 ```
 
-For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/DateTimeFormat)
 
 ### RelativeTime
 
@@ -166,7 +166,7 @@ i18next.t('intlRelativeTimeWithOptionsExplicit', { val: -3, style: 'long' });
 // --> Lorem 3 quarters ago
 ```
 
-For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/RelativeTimeFormat)
 
 ### List
 
@@ -180,11 +180,11 @@ i18next.t(['intlList', { val: ['locize', 'i18next', 'awesomeness'] });
 // --> A list of locize, i18next, and awesomeness
 ```
 
-For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat)
+For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/ListFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/ListFormat)
 
 ## Legacy format function i18next<21.3.0
 
-You can add formatting using [moment.js](http://momentjs.com) and [numeral.js](http://numeraljs.com) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl).
+You can add formatting using [moment.js](http://momentjs.com) and [numeral.js](http://numeraljs.com) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global\_Objects/Intl).
 
 As a sample using momentjs to format dates.
 
