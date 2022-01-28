@@ -6,7 +6,7 @@ Doing graceful fallbacks is a core principle of i18next. This enables you to dis
 
 ### Variant resolving - fallback from dialects or scripts
 
-By default, if a variant \(containing region, script, etc\) is not found, i18next will look for the same key in the broader version of that language. With this in mind, a common strategy if you're supporting language variants is to write common text inside the pure language, specifying only what differs in the variants.
+By default, if a variant (containing region, script, etc) is not found, i18next will look for the same key in the broader version of that language. With this in mind, a common strategy if you're supporting language variants is to write common text inside the pure language, specifying only what differs in the variants.
 
 Example:
 
@@ -131,7 +131,10 @@ i18next.init({
 
     // without fallbackNS you would have to prefix namespace 
     // to access keys in that namespace
+    // and this is not recommended when used in combination with natural language keys
     i18next.t('common:button.save') // -> "save"
+    // better use the ns option:
+    i18next.t('button.save', { ns: 'common' }) // -> "save"
 });
 ```
 
@@ -181,9 +184,9 @@ Possible - but not recommended.
 
 ### Missing values for existing keys
 
-In addition to the above, if you want missing values to fallback to the key in cases where the keys \(e.g. got extracted by a code parser\) exist in your JSON translation file with empty string as value, you also need this setting:
+In addition to the above, if you want missing values to fallback to the key in cases where the keys (e.g. got extracted by a code parser) exist in your JSON translation file with empty string as value, you also need this setting:
 
-```text
+```
 // allow an empty value to count as invalid (by default is true)
   returnEmptyString: false
 ```
@@ -214,4 +217,3 @@ i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"
 // const error = '502';
 i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 ```
-

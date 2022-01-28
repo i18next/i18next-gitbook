@@ -10,7 +10,7 @@ i18next goes beyond just providing the standard i18n features such as (plurals, 
 
 The i18next-community created integrations for frontend-frameworks such as React, AngularJS, Vue.js and many more.
 
-But this is not where it ends. You can also use i18next with Node.js, PHP, iOS, Android and other platforms.
+But this is not where it ends. You can also use i18next with [Node.js](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c), [Deno](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l), PHP, iOS, Android and other platforms.
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
 

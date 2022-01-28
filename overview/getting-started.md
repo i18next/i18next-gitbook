@@ -26,6 +26,11 @@ import i18next from 'https://deno.land/x/i18next/index.js'
 // or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js'
 ```
 
+{% hint style="success" %}
+In [this tutorial blog post](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l) you can check out how this works.[  \
+](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)[![](../.gitbook/assets/deno\_i18next.jpg) ](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l)
+{% endhint %}
+
 ## Load from CDN
 
 You can also directly add a script tag loading i18next from one of the CDNs providing it:
