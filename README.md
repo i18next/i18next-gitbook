@@ -12,6 +12,14 @@ The i18next-community created integrations for frontend-frameworks such as React
 
 But this is not where it ends. You can also use i18next with [Node.js](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c), [Deno](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l), PHP, iOS, Android and other platforms.
 
+{% hint style="info" %}
+**Your software is using i18next? **_**-** Spread the word and let the world know!_
+
+make a tweet... write it on your website...  create a blog post... etc...
+
+![](.gitbook/assets/speaker.jpg)
+{% endhint %}
+
 [Learn more about supported frameworks](overview/supported-frameworks.md)
 
 {% hint style="success" %}
