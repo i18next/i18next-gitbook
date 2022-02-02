@@ -33,6 +33,12 @@ Did you know internationalization is also important on your app's backend? In [t
 ](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)[![](.gitbook/assets/server\_side\_backend.jpg) ](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c)
 {% endhint %}
 
+{% hint style="success" %}
+Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://dev.to/adrai/the-progressive-guide-to-jquery-internationalization-i18n-using-i18next-3dc3).
+
+[![](.gitbook/assets/jquery-localization.jpg)](https://dev.to/adrai/the-progressive-guide-to-jquery-internationalization-i18n-using-i18next-3dc3)
+{% endhint %}
+
 ## Complete solution
 
 Most frameworks leave it to you how translations are being loaded. You are responsible to detect the user language, to load the translations and push them into the framework.
