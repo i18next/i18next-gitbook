@@ -48,7 +48,7 @@ _In case you want to skip this natural language detection, provide a `keySeparat
 The old [deprecated whitelist options](https://github.com/i18next/i18next/issues/1466) and functions have been definitively removed.
 
 * _rename option `whitelist` to `supportedLngs`_
-* _rename option `nonExpicitWhitelist` to `nonExplicitSupportedLngs`_
+* _rename option `nonExplicitWhitelist` to `nonExplicitSupportedLngs`_
 * _rename function `languageUtils.isWhitelisted` to `languageUtils.isSupportedCode`_
 
 #### new resolvedLanguage
