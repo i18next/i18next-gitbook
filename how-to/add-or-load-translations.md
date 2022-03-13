@@ -51,6 +51,29 @@ There are more options to adding, removing translations...learn more about [reso
 Please make sure to at least pass in an empty resources object on init. Else i18next will try to load translations and give you a warning that you are not using a backend.
 {% endhint %}
 
+### Combined with a backend plugin
+
+If you want to lazy load some translations via a backend plugin, you may need to use the `partialBundledLanguages: true` option. This allows some resources (or no resources) to be set on initialization while others can be loaded using a backend connector.
+
+You may also want to set the `ns` option. To an empty array if you do not want to load any namespaces (also not the default namespace) or to an array containing the namespaces to load.
+
+```javascript
+import i18next from 'i18next';
+
+i18next.init({
+  partialBundledLanguages: true,
+  ns: [],
+  resources: {}
+});
+i18next.addResourceBundle('en', 'namespace1', {
+  key: 'hello from namespace 1'
+});
+// or via backend
+// i18next.loadNamespaces(['myNamespace1', 'myNamespace2'])
+// i18next.loadLanguages(['de', 'fr'])
+// etc.
+```
+
 ## Lazy load in memory translations
 
 [i18next-resources-to-backend](https://github.com/i18next/i18next-resources-to-backend) helps to transform resources to an i18next backend. This means, you can also lazy load translations, for example when using webpack:
@@ -93,8 +116,8 @@ i18next
 ```
 
 {% hint style="danger" %}
-Having a combination of [defining resources](add-or-load-translations.md#add-on-init) + [having a backend](add-or-load-translations.md#load-using-a-backend-plugin) will not implicitly take one or the other source as fallback resources.  
-If you need some fallback behaviour you may use the [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend). A short example can be found [here](https://github.com/i18next/i18next-http-backend/blob/master/example/fallback/app.js).  
+Having a combination of [defining resources](add-or-load-translations.md#add-on-init) + [having a backend](add-or-load-translations.md#load-using-a-backend-plugin) will not implicitly take one or the other source as fallback resources.\
+If you need some fallback behaviour you may use the [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend). A short example can be found [here](https://github.com/i18next/i18next-http-backend/blob/master/example/fallback/app.js).\
 With [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend) you can also create some [caching behaviour](caching.md).
 {% endhint %}
 
@@ -121,9 +144,9 @@ i18next
   });
 ```
 
-[Here](https://github.com/locize/react-tutorial) you can find a step by step guide with a React.js app, which will unleash the full power of i18next in combination with locize.  
-See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).  
-There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation \(like [Google Translate](https://cloud.google.com/translate)\).
+[Here](https://github.com/locize/react-tutorial) you can find a step by step guide with a React.js app, which will unleash the full power of i18next in combination with locize.\
+See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).\
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}
 
@@ -131,5 +154,4 @@ There's also the possibility to have an [even more focused developer experience]
 
 #### [**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
-#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
-
+#### ➡️ [i18next](https://www.i18next.com) + [locize](https://locize.com) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
