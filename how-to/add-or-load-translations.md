@@ -55,7 +55,7 @@ Please make sure to at least pass in an empty resources object on init. Else i18
 
 If you want to lazy load some translations via a backend plugin, you may need to use the `partialBundledLanguages: true` option. This allows some resources (or no resources) to be set on initialization while others can be loaded using a backend connector.
 
-You may also want to set the `ns` option. To an empty array if you do not want to load any namespaces (also not the default namespace) or to an array containing the namespaces to load.
+You may also want to set the `ns` option. To an empty array if you do not want to load any namespaces (also not the [default namespace](../overview/configuration-options.md#languages-namespaces-resources): `'translation'`) or to an array containing the namespaces to load.
 
 ```javascript
 import i18next from 'i18next';
