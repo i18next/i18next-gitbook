@@ -298,11 +298,11 @@ i18next.dir('ar'); // -> "rtl";
 
 `i18next.format(data, format, lng)`
 
-_introduced in v8.4.0_
+_introduced in v8.4.0 and legacy since v21.3.0_
 
 Exposes `interpolation.format`t function added on init.
 
-For formatting used in translation files checkout the [formatting doc](../translation-function/formatting.md).
+For formatting used in translation files checkout the [formatting doc](../translation-function/formatting.md#legacy-format-function-i18next-less-than-21.3.0).
 
 ```javascript
 // key = 'hello {{what}}'
