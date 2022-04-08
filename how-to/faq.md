@@ -26,7 +26,26 @@ _Or you use a smart translation management system, like_ [_locize_](https://loci
 
 ![](../.gitbook/assets/locize\_plurals.png)
 
-__
+### **Why are my plural keys not working?**
+
+_Are you seeing this warning in the development console?_
+
+> i18next::pluralResolver: Your environment seems not to be Intl API compatible, use an Intl.PluralRules polyfill. Will fallback to the compatibilityJSON v3 format handling.
+
+_With v21 we_ streamlined the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/PluralRules/PluralRules).
+
+_In environments where the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) _API  is not available (like older Android devices), you may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) _API._\
+_In case it is not available it will fallback to the_ [_i18next JSON format v3_](../misc/json-format.md#i-18-next-json-v3) _plural handling. And if your json is already using the new suffixes, your plural keys will probably not be shown._
+
+_tldr;_
+
+```shell
+npm install intl-pluralrules
+```
+
+```javascript
+import 'intl-pluralrules'
+```
 
 ### How should the language codes be formatted?
 
