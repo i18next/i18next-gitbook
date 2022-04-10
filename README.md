@@ -6,7 +6,7 @@ i18next goes beyond just providing the standard i18n features such as (plurals, 
 
 ## learn once - translate everywhere
 
-![](.gitbook/assets/ecosys.jpg)
+![](.gitbook/assets/i18next\_eco.jpg)
 
 The i18next-community created integrations for frontend-frameworks such as React, AngularJS, Vue.js and many more.
 
