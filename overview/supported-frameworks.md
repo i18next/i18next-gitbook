@@ -1,6 +1,6 @@
 # Supported Frameworks
 
-![](../.gitbook/assets/ecosys.jpg)
+![](../.gitbook/assets/i18next\_eco.jpg)
 
 This list is not officially maintained; information here is contributed by the library maintainers themselves. Consult their GitHub page for details on issues and implementation. Lastly, some of those libraries might stop being updated without further notice, while others warn it in their pages. In the latter scenario, they're tagged as _deprecated_ below.
 
