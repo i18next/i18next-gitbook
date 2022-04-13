@@ -2,6 +2,17 @@
 
 Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl).
 
+_You may need to_ [_polyfill_](https://formatjs.io/docs/polyfills/) _the Intl API:_
+
+* __[_Intl.PluralRules_](https://formatjs.io/docs/polyfills/intl-pluralrules)__
+* __[_Intl.RelativeTimeFormat_](https://formatjs.io/docs/polyfills/intl-relativetimeformat)__
+* __[_Intl.ListFormat_](https://formatjs.io/docs/polyfills/intl-listformat)__
+* __[_Intl.DisplayNames_](https://formatjs.io/docs/polyfills/intl-displaynames)__
+* __[_Intl.NumberFormat_](https://formatjs.io/docs/polyfills/intl-numberformat) _(ES2020)_
+* __[_Intl.Locale_](https://formatjs.io/docs/polyfills/intl-locale)__
+* __[_Intl.getCanonicalLocales_](https://formatjs.io/docs/polyfills/intl-getcanonicallocales)__
+* __[_Intl.DateTimeFormat_](https://formatjs.io/docs/polyfills/intl-datetimeformat) _(ES2020)_
+
 ## Basic usage
 
 The translation string has the following signature:
