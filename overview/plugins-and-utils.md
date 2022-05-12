@@ -213,6 +213,11 @@ Services that are known to fully support the i18next format \(plural handling, .
       </td>
       <td style="text-align:left">Use webpack code splitting to load files as a javascript bundle</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://github.com/transifex/transifex-javascript/tree/master/packages/i18next">Transifex backend</a>
+      </td>
+      <td style="text-align:left">i18next backend for <a href="https://www.transifex.com/native/">Transifex Native</a>  </td>
+    </tr>
   </tbody>
 </table>
 
