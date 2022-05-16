@@ -16,7 +16,7 @@ The default export is UMD compatible (commonjs, requirejs, global).
 
 In the `/dist` folder you may find additional builds for commonjs, es6 modules. Optimized to load i18next in webpack, rollup, ... or node.js. The correct entry points are already configured in the package.json so there should be no extra setup to get the best build option.
 
-## Load in [Deno](https://deno.land)
+## Load in [Deno](https://deno.land/)
 
 i18next can be imported like this:
 

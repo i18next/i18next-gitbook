@@ -195,7 +195,7 @@ For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ## Legacy format function i18next<21.3.0
 
-You can add formatting using [moment.js](http://momentjs.com) and [numeral.js](http://numeraljs.com) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global\_Objects/Intl).
+You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](http://numeraljs.com/) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global\_Objects/Intl).
 
 As a sample using momentjs to format dates.
 

@@ -154,4 +154,4 @@ There's also the possibility to have an [even more focused developer experience]
 
 #### [**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
-#### ➡️ [i18next](https://www.i18next.com) + [locize](https://locize.com) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)

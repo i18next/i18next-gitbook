@@ -18,7 +18,7 @@ With v2 of i18next, released in 2015, we completely rebuild i18next to be as ext
 Since v1 all newer releases can be dropped in as a replacement for v1 by just adding a minimal compatibility layer. The v1 API is still actively tested, [here](https://github.com/i18next/i18next/blob/master/test/backward/v1.11.1.compat.js).
 {% endhint %}
 
-Shortly after the i18next v2 release in 2015, another big community driven i18next extension was released: [react-i18next](https://react.i18next.com).
+Shortly after the i18next v2 release in 2015, another big community driven i18next extension was released: [react-i18next](https://react.i18next.com/).
 
 ![https://www.npmtrends.com/react-i18next-vs-i18next](../.gitbook/assets/image.png)
 

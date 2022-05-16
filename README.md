@@ -23,9 +23,15 @@ make a tweet... write it on your website...  create a blog post... etc...
 [Learn more about supported frameworks](overview/supported-frameworks.md)
 
 {% hint style="success" %}
-[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com).\
+[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
 ![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+{% endhint %}
+
+{% hint style="success" %}
+Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-vue-example)? Check out [this tutorial blog post](https://dev.to/adrai/how-to-properly-internationalize-a-vue-application-using-i18next-1doj).
+
+[![](.gitbook/assets/i18next-vue.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-vue-application-using-i18next-1doj)
 {% endhint %}
 
 {% hint style="success" %}
@@ -79,7 +85,7 @@ There are tons of modules built for and around i18next: from extracting translat
 
 ## [Localization as a service](https://locize.com)
 
-Through [locize.com](http://locize.com), i18next even provides its own translation management tool: localization as a service.
+Through [locize.com](http://locize.com/?utm\_source=i18next\_com\&utm\_medium=gitbook), i18next even provides its own translation management tool: localization as a service.
 
 {% embed url="https://youtu.be/ds-yEEYP1Ks" %}
 
