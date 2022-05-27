@@ -187,7 +187,7 @@ For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
   "intlList": "A list of {{val, list}}"
 }
 
-i18next.t(['intlList', { val: ['locize', 'i18next', 'awesomeness'] });
+i18next.t('intlList', { val: ['locize', 'i18next', 'awesomeness'] });
 // --> A list of locize, i18next, and awesomeness
 ```
 
