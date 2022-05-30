@@ -74,6 +74,10 @@ i18next.services.formatter.add('underscore', (value, lng, options) => {
 });
 ```
 
+{% hint style="warning" %}
+Make sure you add your custom format function **AFTER** the `i18next.init()` call.
+{% endhint %}
+
 #### Using multiple formatters
 
 ```json
