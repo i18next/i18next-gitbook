@@ -48,6 +48,7 @@ While the i18next format (JSON based) is the preferred solution and widely suppo
 | [translation-check](https://github.com/locize/translation-check)                                | util / DX         | Nicely shows an overview of your translations in a UI. Check which keys are not yet translated.                                                                                                                     |
 | [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter)           | converter         | Convert old i18next translation resources to the new [i18next v4 json format](../misc/json-format.md#i-18-next-json-v4). Via CLI or programmatically.                                                               |
 | [i18next-v4-format-converter-web](https://i18next.github.io/i18next-v4-format-converter-web/)   | online-converter  | Convert old i18next translation resources to the new [i18next v4 json format](../misc/json-format.md#i-18-next-json-v4) directly in your browser.                                                                   |
+| [Intellij idea i18next support plugin](https://github.com/nyavro/i18nPlugin)                    |                   | Intellij idea i18next support plugin.                                                                                                                                                                               |
 
 ## services
 
