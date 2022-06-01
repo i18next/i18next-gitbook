@@ -52,7 +52,7 @@ i18next.t('key', { author });
 
 ## Unescape
 
-Per default, the values get escaped to mitigate XSS attacks. You can toggle escaping off, by either putting `-` before the key, or set the `escapeValue` option to `false` when requesting a translation.
+By default, the values get escaped to mitigate XSS attacks. You can toggle escaping off, by either putting `-` before the key, or set the `escapeValue` option to `false` when requesting a translation.
 
 Keys
 
@@ -92,148 +92,36 @@ i18next.t('key', {
 });
 ```
 
-| option | default | description |
-| :--- | :--- | :--- |
-| escape | function | escape function `function escape(str) { return str; }` |
-| escapeValue | true | escapes passed in values to avoid XSS injection |
-| useRawValueToEscape | false | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type-checking |
-| prefix | "{{" | prefix for interpolation |
-| suffix | "}}" | suffix for interpolation |
+| option              | default  | description                                                                                                                              |
+| ------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| escape              | function | escape function `function escape(str) { return str; }`                                                                                   |
+| escapeValue         | true     | escapes passed in values to avoid XSS injection                                                                                          |
+| useRawValueToEscape | false    | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type-checking |
+| prefix              | "\{{"    | prefix for interpolation                                                                                                                 |
+| suffix              | "\}}"    | suffix for interpolation                                                                                                                 |
 
 While there are a lot of options going with the defaults should get you covered.
 
 ## All interpolation options
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">option</th>
-      <th style="text-align:left">default</th>
-      <th style="text-align:left">description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">format</td>
-      <td style="text-align:left">noop function</td>
-      <td style="text-align:left">format function, read <a href="formatting.md">formatting</a> for details</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">formatSeparator</td>
-      <td style="text-align:left">&quot;,&quot;</td>
-      <td style="text-align:left">used to separate format from interpolation value</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">escape</td>
-      <td style="text-align:left">function</td>
-      <td style="text-align:left">escape function <code>function escape(str) { return str; }</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">escapeValue</td>
-      <td style="text-align:left">true</td>
-      <td style="text-align:left">escape passed in values to avoid XSS injection</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">useRawValueToEscape</td>
-      <td style="text-align:left">false</td>
-      <td style="text-align:left">If true, then value passed into escape function is not casted to string,
-        use with custom escape function that does its own type-checking</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">prefix</td>
-      <td style="text-align:left">&quot;{{&quot;</td>
-      <td style="text-align:left">prefix for interpolation</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">suffix</td>
-      <td style="text-align:left">&quot;}}&quot;</td>
-      <td style="text-align:left">suffix for interpolation</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">prefixEscaped</td>
-      <td style="text-align:left">undefined</td>
-      <td style="text-align:left">escaped prefix for interpolation (regexSafe)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">suffixEscaped</td>
-      <td style="text-align:left">undefined</td>
-      <td style="text-align:left">escaped suffix for interpolation (regexSafe)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">unescapeSuffix</td>
-      <td style="text-align:left">undefined</td>
-      <td style="text-align:left">suffix to unescaped mode</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">unescapePrefix</td>
-      <td style="text-align:left">&quot;-&quot;</td>
-      <td style="text-align:left">prefix to unescaped mode</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">nestingPrefix</td>
-      <td style="text-align:left">&quot;$t(&quot;</td>
-      <td style="text-align:left">prefix for <a href="nesting.md">nesting</a>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">nestingSuffix</td>
-      <td style="text-align:left">&quot;)&quot;</td>
-      <td style="text-align:left">suffix for <a href="nesting.md">nesting</a>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">nestingPrefixEscaped</td>
-      <td style="text-align:left">undefined</td>
-      <td style="text-align:left">escaped prefix for nesting (regexSafe)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">nestingSuffixEscaped</td>
-      <td style="text-align:left">undefined</td>
-      <td style="text-align:left">escaped suffix for nesting (regexSafe)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">nestingOptionsSeparator</td>
-      <td style="text-align:left">&quot;,&quot;</td>
-      <td style="text-align:left">separates the options from nesting key</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">defaultVariables</td>
-      <td style="text-align:left">undefined</td>
-      <td style="text-align:left">global variables to use in interpolation replacements <code>defaultVariables: { key: &quot;value&quot; }</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">maxReplaces</td>
-      <td style="text-align:left">1000</td>
-      <td style="text-align:left">after how many interpolation runs to break out before throwing a stack
-        overflow</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">skipOnVariables</td>
-      <td style="text-align:left">
-        <p>true</p>
-        <p></p>
-        <p><em>(was false for  &lt;v21.0.0)</em>
-        </p>
-      </td>
-      <td style="text-align:left">
-        <p>Will skip to interpolate the variables, example:</p>
-        <p><code>t(&apos;key&apos;, { a: &apos;$t(nested)&apos; })</code>
-        </p>
-        <p>this will not resolve the nested key and will use<code>$t(nested)</code> as
-          the variable value.
-          <br />Another example:</p>
-        <p><code>t(&apos;key&apos;, { a: &apos;{{otherVar}}&apos;: otherVar: &apos;another value&apos; })</code>
-        </p>
-        <p>this will not resolve the otherVar variable and will use<code>{{otherVar}}</code>as
-          the variable value.</p>
-        <p><b>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to keep this option to true.</b>
-        </p>
-        <p><em>If you know what you&apos;re doing, you can also set this to false.</em>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+| option                  | default                                                          | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| format                  | noop function                                                    | format function, read [formatting](formatting.md) for details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| formatSeparator         | ","                                                              | used to separate format from interpolation value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| escape                  | function                                                         | escape function `function escape(str) { return str; }`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| escapeValue             | true                                                             | escape passed in values to avoid XSS injection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| useRawValueToEscape     | false                                                            | If true, then value passed into escape function is not casted to string, use with custom escape function that does its own type-checking                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| prefix                  | "\{{"                                                            | prefix for interpolation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| suffix                  | "\}}"                                                            | suffix for interpolation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| prefixEscaped           | undefined                                                        | escaped prefix for interpolation (regexSafe)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| suffixEscaped           | undefined                                                        | escaped suffix for interpolation (regexSafe)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| unescapeSuffix          | undefined                                                        | suffix to unescaped mode                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| unescapePrefix          | "-"                                                              | prefix to unescaped mode                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| nestingPrefix           | "$t("                                                            | prefix for [nesting](nesting.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| nestingSuffix           | ")"                                                              | suffix for [nesting](nesting.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| nestingPrefixEscaped    | undefined                                                        | escaped prefix for nesting (regexSafe)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| nestingSuffixEscaped    | undefined                                                        | escaped suffix for nesting (regexSafe)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| nestingOptionsSeparator | ","                                                              | separates the options from nesting key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| defaultVariables        | undefined                                                        | global variables to use in interpolation replacements `defaultVariables: { key: "value" }`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| maxReplaces             | 1000                                                             | after how many interpolation runs to break out before throwing a stack overflow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| skipOnVariables         | <p>true</p><p></p><p><em>(was false for  &#x3C;v21.0.0)</em></p> | <p>Will skip to interpolate the variables, example:</p><p><code>t('key', { a: '$t(nested)' })</code></p><p>this will not resolve the nested key and will use<code>$t(nested)</code> as the variable value.<br>Another example:</p><p><code>t('key', { a: '{{otherVar}}': otherVar: 'another value' })</code></p><p>this will not resolve the otherVar variable and will use<code>{{otherVar}}</code>as the variable value.</p><p><strong>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to keep this option to true.</strong></p><p><em>If you know what you're doing, you can also set this to false.</em></p> |
