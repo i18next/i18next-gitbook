@@ -2,7 +2,7 @@
 
 Plural can be combined with interpolation, context, ...
 
-These plurals are streamlines with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/PluralRules/PluralRules).\
+These plurals are streamlined with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/PluralRules/PluralRules).\
 _You may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) _API, in case it is not available it will fallback to the_ [_i18next JSON format v3_](../misc/json-format.md#i18next-json-v3) _plural handling._
 
 {% hint style="danger" %}
