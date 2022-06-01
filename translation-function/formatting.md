@@ -1,6 +1,6 @@
 # Formatting
 
-Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl).
+Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl).
 
 _You may need to_ [_polyfill_](https://formatjs.io/docs/polyfills/) _the Intl API:_
 
