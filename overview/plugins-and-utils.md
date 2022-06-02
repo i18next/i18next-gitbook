@@ -1,6 +1,6 @@
 # Plugins and Utils
 
-![](../.gitbook/assets/ecosys.jpg)
+![](../.gitbook/assets/i18next\_eco.jpg)
 
 ## i18n formats
 
