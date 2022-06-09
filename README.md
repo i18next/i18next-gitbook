@@ -10,7 +10,7 @@ i18next goes beyond just providing the standard i18n features such as (plurals, 
 
 ![](.gitbook/assets/i18next\_eco.jpg)
 
-The i18next-community created integrations for frontend-frameworks such as React, AngularJS, Vue.js and many more.
+The i18next-community created integrations for frontend-frameworks such as [React](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb), [Angular](https://dev.to/adrai/unleash-the-full-power-of-angular-i18next-4b7o), [Vue.js](https://dev.to/adrai/how-to-properly-internationalize-a-vue-application-using-i18next-1doj) and many more.
 
 But this is not where it ends. You can also use i18next with [Node.js](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c), [Deno](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l), PHP, iOS, Android and other platforms.
 
