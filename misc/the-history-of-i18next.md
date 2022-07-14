@@ -55,3 +55,12 @@ Having created the foundation with i18next it was a long journey to [**localizat
 {% hint style="success" %}
 🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://locize.com)**.** 💙
 {% endhint %}
+
+### And finally a fair marketplace...
+
+Recently also a new go-to [marketplace](https://www.localistars.com/) for clients and translators to get translation jobs done has been launched.
+
+As client you'll find translators and as translator you'll find translation jobs.\
+**Direct contact, no middleman** – just [localistars](https://www.localistars.com/) working together!
+
+![localistars](../.gitbook/assets/logo\_big.png)
