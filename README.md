@@ -10,9 +10,9 @@ i18next goes beyond just providing the standard i18n features such as (plurals, 
 
 ![](.gitbook/assets/i18next\_eco.jpg)
 
-The i18next-community created integrations for frontend-frameworks such as [React](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb), [Angular](https://dev.to/adrai/unleash-the-full-power-of-angular-i18next-4b7o), [Vue.js](https://dev.to/adrai/how-to-properly-internationalize-a-vue-application-using-i18next-1doj) and many more.
+The i18next-community created integrations for frontend-frameworks such as [React](https://locize.com/blog/react-i18next/), [Angular](https://locize.com/blog/unleash-the-full-power-of-angular-i18next/), [Vue.js](https://locize.com/blog/i18next-vue/) and many more.
 
-But this is not where it ends. You can also use i18next with [Node.js](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c), [Deno](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l), PHP, iOS, Android and other platforms.
+But this is not where it ends. You can also use i18next with [Node.js](https://locize.com/blog/how-does-server-side-internationalization-look-like/), [Deno](https://locize.com/blog/i18n-for-deno-with-i18next/), PHP, iOS, Android and other platforms.
 
 {% hint style="info" %}
 **Your software is using i18next? **_**-** Spread the word and let the world know!_
@@ -25,26 +25,26 @@ make a tweet... write it on your website...  create a blog post... etc...
 [Learn more about supported frameworks](overview/supported-frameworks.md)
 
 {% hint style="success" %}
-[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
+[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+![](.gitbook/assets/title-width.jpg)](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 {% hint style="success" %}
-Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-vue-example)? Check out [this tutorial blog post](https://dev.to/adrai/how-to-properly-internationalize-a-vue-application-using-i18next-1doj).
+Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-vue-example)? Check out [this tutorial blog post](https://locize.com/blog/i18next-vue/).
 
-[![](.gitbook/assets/i18next-vue.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-vue-application-using-i18next-1doj)
+[![](.gitbook/assets/i18next-vue.jpg)](https://locize.com/blog/i18next-vue/)
 {% endhint %}
 
 {% hint style="success" %}
-Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c) you can check out how this works.[  \
-](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)[![](.gitbook/assets/server\_side\_backend.jpg) ](https://dev.to/adrai/how-does-server-side-internationalization-i18n-look-like-5f4c)
+Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://locize.com/blog/how-does-server-side-internationalization-look-like/) you can check out how this works.[  \
+](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server\_side\_backend.jpg) ](https://locize.com/blog/how-does-server-side-internationalization-look-like/jq)
 {% endhint %}
 
 {% hint style="success" %}
-Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://dev.to/adrai/the-progressive-guide-to-jquery-internationalization-i18n-using-i18next-3dc3).
+Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://locize.com/blog/how-to-jquery-i18next/).
 
-[![](.gitbook/assets/jquery-localization.jpg)](https://dev.to/adrai/the-progressive-guide-to-jquery-internationalization-i18n-using-i18next-3dc3)
+[![](.gitbook/assets/jquery-localization.jpg)](https://locize.com/blog/how-to-jquery-i18next/)
 {% endhint %}
 
 ## Complete solution

@@ -27,8 +27,8 @@ import i18next from 'https://deno.land/x/i18next/index.js'
 ```
 
 {% hint style="success" %}
-In [this tutorial blog post](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l) you can check out how this works.[  \
-](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)[![](../.gitbook/assets/deno\_i18next.jpg) ](https://dev.to/adrai/internationalization-i18n-for-deno-with-i18next-3e0l)
+In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[  \
+](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno\_i18next.jpg) ](https://locize.com/blog/i18n-for-deno-with-i18next/)
 {% endhint %}
 
 ## Load from CDN
