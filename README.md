@@ -15,11 +15,13 @@ The i18next-community created integrations for frontend-frameworks such as [Reac
 But this is not where it ends. You can also use i18next with [Node.js](https://locize.com/blog/how-does-server-side-internationalization-look-like/), [Deno](https://locize.com/blog/i18n-for-deno-with-i18next/), PHP, iOS, Android and other platforms.
 
 {% hint style="info" %}
-**Your software is using i18next? **_**-** Spread the word and let the world know!_
+**Your software is using i18next? -** _Spread the word and let the world know!_
 
-make a tweet... write it on your website...  create a blog post... etc...
+make a tweet... write it on your website... create a blog post... etc...
 
-![](.gitbook/assets/speaker.jpg)
+<img src=".gitbook/assets/speaker.jpg" alt="" data-size="original">\
+\
+_Are you working on an open source project and are looking for a way to manage your translations? - locize loves the open-source philosophy and may be able to_ [_support_](https://locize.com/open-source.html) _you._
 {% endhint %}
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
@@ -37,8 +39,8 @@ Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-
 {% endhint %}
 
 {% hint style="success" %}
-Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://locize.com/blog/how-does-server-side-internationalization-look-like/) you can check out how this works.[  \
-](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server\_side\_backend.jpg) ](https://locize.com/blog/how-does-server-side-internationalization-look-like/jq)
+Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://locize.com/blog/how-does-server-side-internationalization-look-like/) you can check out how this works.[\
+](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server\_side\_backend.jpg)](https://locize.com/blog/how-does-server-side-internationalization-look-like/jq)
 {% endhint %}
 
 {% hint style="success" %}
