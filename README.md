@@ -21,7 +21,7 @@ make a tweet... write it on your website... create a blog post... etc...
 
 <img src=".gitbook/assets/speaker.jpg" alt="" data-size="original">\
 \
-_Are you working on an open source project and are looking for a way to manage your translations? - locize loves the open-source philosophy and may be able to_ [_support_](https://locize.com/open-source.html) _you._
+_Are you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://locize.com) _loves the open-source philosophy and may be able to_ [_support_](https://locize.com/open-source.html) _you._
 {% endhint %}
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
@@ -44,7 +44,7 @@ Did you know internationalization is also important on your app's backend? In [t
 {% endhint %}
 
 {% hint style="success" %}
-Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://locize.com/blog/how-to-jquery-i18next/).
+Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://locize.com/blog/jquery-i18next/).
 
 [![](.gitbook/assets/jquery-localization.jpg)](https://locize.com/blog/how-to-jquery-i18next/)
 {% endhint %}
