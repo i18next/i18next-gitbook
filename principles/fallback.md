@@ -80,7 +80,7 @@ i18next.init({
     if (langPart !== code) fallbacks.push(langPart);
 
     // finally, developer language
-    fallbacks.push('en-AU');
+    fallbacks.push('dev');
     return fallbacks;
   }
 });
