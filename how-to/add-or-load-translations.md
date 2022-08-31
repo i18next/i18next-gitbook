@@ -1,6 +1,6 @@
 # Add or Load Translations
 
-There are a few options to load translations to your application instrumented by i18next. The most common approach to this adding a so called [**backend plugin**](https://www.i18next.com/overview/plugins-and-utils#backends) to i18next. The range of backends is large from loading translations in the browser using [xhr/fetch](https://github.com/i18next/i18next-http-backend) request to loading translations from databases or [filesystem](https://github.com/i18next/i18next-fs-backend) in Node.js.
+There are a few options to load translations to your application instrumented by i18next. The most common approach to this adding a so called [**backend plugin**](https://www.i18next.com/overview/plugins-and-utils#backends) to i18next. The range of backends is large from loading translations in the browser using [xhr/fetch](https://github.com/i18next/i18next-http-backend) request to loading translations from databases or [filesystem](https://github.com/i18next/i18next-fs-backend) in [Node.js](https://nodejs.org/).
 
 ## Add on init
 
