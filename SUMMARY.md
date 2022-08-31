@@ -45,8 +45,8 @@
 * [Migration Guide](misc/migration-guide.md)
 * [The history of i18next](misc/the-history-of-i18next.md)
 
----
+***
 
 * [localization as a service](https://locize.com)
 * [Find your translator](https://localistars.com)
-
+* [i18next crash course](https://youtu.be/SA\_9i4TtxLQ)
