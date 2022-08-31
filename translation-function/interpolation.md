@@ -4,6 +4,10 @@ Interpolation is one of the most used functionalities in I18N. It allows integra
 
 Per default, interpolation values get escaped to mitigate XSS attacks.
 
+{% hint style="info" %}
+Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=433).
+{% endhint %}
+
 If the interpolation functionality provided doesn't suit you, you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
 
 ## Basic

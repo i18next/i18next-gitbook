@@ -13,6 +13,10 @@ _You may need to_ [_polyfill_](https://formatjs.io/docs/polyfills/) _the Intl AP
 * __[_Intl.getCanonicalLocales_](https://formatjs.io/docs/polyfills/intl-getcanonicallocales)__
 * __[_Intl.DateTimeFormat_](https://formatjs.io/docs/polyfills/intl-datetimeformat) _(ES2020)_
 
+{% hint style="info" %}
+Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=557).
+{% endhint %}
+
 ## Basic usage
 
 The translation string has the following signature:

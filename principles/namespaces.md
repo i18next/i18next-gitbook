@@ -7,6 +7,10 @@ While in a smaller project it might be reasonable to just put everything in one 
 * You start losing the overview having more than 300 segments in a file
 * Not every translation needs to be loaded on the first page, speed up load time
 
+{% hint style="info" %}
+Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=314).
+{% endhint %}
+
 ## semantic reasons
 
 Often you wish to separate some segments out because they belong together. We do this in most of our projects, eg.:

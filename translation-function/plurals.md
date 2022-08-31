@@ -19,6 +19,10 @@ If you need multiple counts, take a look at [nesting](nesting.md#passing-options
 We provide the ability to have special translation for `{count: 0}`, so that a more natural language can be used. If the count is 0, and a `_zero` entry is present, then it will be used instead of the language plural suffix.
 {% endhint %}
 
+{% hint style="info" %}
+Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=485).
+{% endhint %}
+
 ## Singular / Plural
 
 keys
@@ -95,8 +99,7 @@ _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it
 
 ## Ordinal plurals
 
-There is also support for ordinal numbers _(referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English)_. The `ordinal` option tells the helper to use the ordinal digit
-to determine the plurality key used. E.g., for "32" the ordinal digit is "2" so `key_two` is used.
+There is also support for ordinal numbers _(referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English)_. The `ordinal` option tells the helper to use the ordinal digit to determine the plurality key used. E.g., for "32" the ordinal digit is "2" so `key_two` is used.
 
 keys
 
