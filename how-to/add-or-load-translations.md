@@ -126,7 +126,7 @@ With [i18next-chained-backend](https://github.com/i18next/i18next-chained-backen
 {% endhint %}
 
 {% hint style="info" %}
-Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=953).
+🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=953).
 {% endhint %}
 
 ## Load using a [smart backend plugin](https://github.com/locize/i18next-locize-backend) serving directly from a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)

@@ -14,7 +14,7 @@ _You may need to_ [_polyfill_](https://formatjs.io/docs/polyfills/) _the Intl AP
 * __[_Intl.DateTimeFormat_](https://formatjs.io/docs/polyfills/intl-datetimeformat) _(ES2020)_
 
 {% hint style="info" %}
-Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=557).
+🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=557).
 {% endhint %}
 
 ## Basic usage

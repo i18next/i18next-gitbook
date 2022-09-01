@@ -1,6 +1,6 @@
 # Introduction
 
-I18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!
+i18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!
 
 i18next goes beyond just providing the standard i18n features such as ([plurals](translation-function/plurals.md), [context](translation-function/context.md), [interpolation](translation-function/interpolation.md), [format](translation-function/formatting.md)). It provides you with a complete solution to localize your product from web to mobile and desktop.
 

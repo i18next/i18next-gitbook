@@ -20,7 +20,7 @@ We provide the ability to have special translation for `{count: 0}`, so that a m
 {% endhint %}
 
 {% hint style="info" %}
-Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=485).
+🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=485).
 {% endhint %}
 
 ## Singular / Plural
