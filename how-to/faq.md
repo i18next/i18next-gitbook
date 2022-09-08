@@ -16,6 +16,15 @@ _Try setting_ `debug: true` _on init and check the console log. There is rather 
 
 ## Translation
 
+### **How to translate the resource files?**
+
+<figure><img src="../.gitbook/assets/translate.i18next.jpg" alt=""><figcaption><p><a href="https://translate.i18next.com/">https://translate.i18next.com</a></p></figcaption></figure>
+
+For a quick and dirty machine translation you may have a look at [this free translator](https://translate.i18next.com).\
+But in general we suggest to use a smart Translation Management Service like [locize](https://locize.com) to translate your i18next resources.
+
+For professional translations we advice you to work with [human translators](https://docs.locize.com/guides-tips-and-tricks/working-with-translators). Or at least proofread the results coming from machine translations.
+
 ### **How do i know which plural suffix i have to use?**
 
 _On the_ [_plural page_](../translation-function/plurals.md) _there is a tool to get them._
