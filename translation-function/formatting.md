@@ -82,6 +82,15 @@ i18next.services.formatter.add('underscore', (value, lng, options) => {
 Make sure you add your custom format function **AFTER** the `i18next.init()` call.
 {% endhint %}
 
+There's also an addCached version for optimized performance:
+
+```javascript
+i18next.services.formatter.addCached('specialformat', (lng, options) => {
+  const formatter = new Intl.NumberFormat(lng, options);
+  return (val) => formatter.format(val);
+});
+```
+
 #### Using multiple formatters
 
 ```json
