@@ -1,5 +1,10 @@
 # Migration Guide
 
+### v21.x.x to v22.0.0
+
+Since this is a major rewrite for [TypeScript usage](../overview/typescript.md) we decided to create a major version.\
+For JavaScript users v22.0.0 is equivalent to 21.10.0
+
 ### v20.x.x to v21.0.0
 
 #### [json format v4](json-format.md#i-18-next-json-v4) - [pluralization](../translation-function/plurals.md)
