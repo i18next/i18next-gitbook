@@ -2,7 +2,9 @@
 
 i18next has embedded type definitions. If you want to enhance IDE Experience and prevent errors (such as type coercion), you should follow the instructions below in order to get the t function fully-type safe (keys and return type).
 
-{% hint style="info" %} This is an optional feature and may affect the **compilation time** depending on your project's size. If you opt not to leverage the type enhancements suggested here, you can ignore this section. {% endhint %}
+{% hint style="info" %}
+This is an optional feature and may affect the **compilation time** depending on your project's size. If you opt not to leverage the type enhancements suggested here, you can ignore this section.
+{% endhint %}
 
 ## Create a declaration file
 
@@ -125,6 +127,7 @@ t(`${expression}.title` as const);
 For now, this is the only possible workaround. This is a TypeScript limitation that will be address at some point in the future.
 
 ### Type error - excessively deep and possibly infinite
+
 If you face this issue whenever calling the `t` function:
 
 > TS2589: Type instantiation is excessively deep and possibly infinite.
