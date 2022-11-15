@@ -143,3 +143,28 @@ t`key1.key2`;
 ```
 
 The `keys` and `return` type inference will not work, because [TemplateStringsArray](https://github.com/microsoft/TypeScript/issues/33304) does not accept generic types yet. You can use Tagged Template Literal syntax, but it will accept any string as argument.
+
+### Argument of type 'DefaultTFuncReturn' is not assignable to parameter of type xyz
+
+`t` function can return `null`, this behaviour is [set by default](configuration-options.md#translation-defaults), if you want to change it, set `returnNull` type to `false`.
+
+```typescript
+// i18next.d.ts
+import 'i18next';
+
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    returnNull: false;
+    ...
+  }
+}
+```
+
+I also recommend updating your [i18next configuration](configuration-options.md) to behave accordantly:
+
+```javascript
+i18next.init({
+  returnNull: false,
+  // ...
+});
+```
