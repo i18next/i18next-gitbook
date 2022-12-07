@@ -2,14 +2,14 @@
 
 i18next comes with a lot of modules to enhance the features available. There are modules to:
 
-* load resources, eg. via xhr or from filesystem \(node.js\)
+* load resources, eg. via xhr or from filesystem (node.js)
 * cache resources on client, eg. localStorage
 * detect user language by querystring, navigator, cookie, ...
 * post processors to further manipulate values, eg. to add sprintf support
 
 The plugins need to support following APIs:
 
-**HINT:** You can provide a singleton or a prototype constructor \(prefered for supporting multiple instances of i18next\).
+**HINT:** You can provide a singleton or a prototype constructor (prefered for supporting multiple instances of i18next).
 
 ## backend
 
@@ -30,6 +30,14 @@ Backend plugins are used to load data for i18next.
     /* if method fails/returns an error, call this: */
     /* callback(truthyValue, null); */
   },
+  // or new since i18next v22.1.0
+  // read: function(language, namespace) {
+  //   return new Promise((resolve) => {
+  //     resolve({
+  //       key: 'value'
+  //     })
+  //   })
+  // },
 
   // optional
   readMulti: function(languages, namespaces, callback) {
@@ -50,6 +58,23 @@ Backend plugins are used to load data for i18next.
     /* if method fails/returns an error, call this: */
     /* callback(truthyValue, null); */
   },
+  // or new since i18next-multiload-backend-adapter v2.1.0
+  // readMulti: function(languages, namespaces) {
+  //   return new Promise((resolve) => {
+  //     resolve({
+  //       en: {
+  //         translations: {
+  //           key: 'value'
+  //         }
+  //       },
+  //       de: {
+  //         translations: {
+  //           key: 'value'
+  //         }
+  //       }
+  //     })
+  //   })
+  // },
 
   // only used in backends acting as cache layer
   save: function(language, namespace, data) {
@@ -92,7 +117,7 @@ Language Detector plugins are used to detect language in user land.
 
 Post Processors are used to extend or manipulate the translated values before returning them in `t` function.
 
-\(Post Processors do not need to be prototype functions\)
+(Post Processors do not need to be prototype functions)
 
 ```javascript
 {
@@ -109,7 +134,7 @@ Post Processors are used to extend or manipulate the translated values before re
 
 Override the built in console logger.
 
-\(loggers do not need to be prototype functions\)
+(loggers do not need to be prototype functions)
 
 ```javascript
 {
@@ -129,7 +154,7 @@ If you do not set the plugin type, you may get an error like this.
 
 `... No [plugin type] was added via i18next.use. Will not load resources.`
 
-If you are creating a class for your plugin, you may set the type like in the following example \(the following is an example if you are making a backend plugin\):
+If you are creating a class for your plugin, you may set the type like in the following example (the following is an example if you are making a backend plugin):
 
 ```javascript
 class Backend {
@@ -147,7 +172,7 @@ export default Backend;
 
 ### Create a private method to initialize your plugin
 
-The constructor of your plugin \(if the plugin is of type `backend` or `languageDetector`\) will be [called without arguments](https://github.com/i18next/i18next/issues/1379#issuecomment-571913660) if you use the plugin as a class. Using the plugin as a class looks like this:
+The constructor of your plugin (if the plugin is of type `backend` or `languageDetector`) will be [called without arguments](https://github.com/i18next/i18next/issues/1379#issuecomment-571913660) if you use the plugin as a class. Using the plugin as a class looks like this:
 
 ```javascript
 import i18n from "i18next";
@@ -186,4 +211,3 @@ Backend.type = "backend";
 
 export default Backend;
 ```
-
