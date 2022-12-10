@@ -99,7 +99,7 @@ Language Detector plugins are used to detect language in user land.
 {
   type: 'languageDetector',
   async: true, // If this is set to true, your detect function receives a callback function that you should call with your language, useful to retrieve your language stored in AsyncStorage for example
-  init: function(services, detectorOptions, i18nextOptions) {
+  init: function(services, detectorOptions, i18nextOptions) { // optional since v22.3.0
     /* use services and options */
   },
   detect: function(callback) { // You'll receive a callback if you passed async true
@@ -107,7 +107,14 @@ Language Detector plugins are used to detect language in user land.
     // callback('de'); if you used the async flag
     return 'de';
   },
-  cacheUserLanguage: function(lng) {
+  // or new since v22.3.0
+  // detect: async function () { // you can also return a normal Promise
+  //   /* return detected language */
+  //   return 'de';
+  //   // or
+  //   // return Promise.resolve('de')
+  // },
+  cacheUserLanguage: function(lng) { // optional since v22.3.0
     /* cache language */
   }
 }
