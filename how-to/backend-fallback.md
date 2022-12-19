@@ -6,7 +6,7 @@ description: Do you want to define a fallback which uses local translations?
 
 ## Browser fallback with local / bundled translations
 
-With i18next you can configure a fallback backend to be used in the browser. It will try to load from your primary backend \(in this case from your [http backend](https://github.com/i18next/i18next-http-backend)\) and if the primary backend is not reachable or does not serve translations, your second backend \(in this case [local or bundled](https://github.com/i18next/i18next-resources-to-backend) translations\) will be used. This is all possible thanks to the [chained backend](https://github.com/i18next/i18next-chained-backend).
+With i18next you can configure a fallback backend to be used in the browser. It will try to load from your primary backend (in this case from your [http backend](https://github.com/i18next/i18next-http-backend)) and if the primary backend is not reachable or does not serve translations, your second backend (in this case [local or bundled](https://github.com/i18next/i18next-resources-to-backend) translations) will be used. This is all possible thanks to the [chained backend](https://github.com/i18next/i18next-chained-backend).
 
 ```javascript
 import i18next from "i18next";
@@ -55,11 +55,7 @@ i18next
     backend: {
       backends: [
         HttpBackend,
-        resourcesToBackend((lng, ns, clb) => {
-          import(`./locales/${lng}/${ns}.json`)
-                .then((resources) => clb(null, resources))
-                .catch(clb)
-        })
+        resourcesToBackend((lng, ns) => import(`./locales/${lng}/${ns}.json`))
       ],
       backendOptions: [{
         loadPath: '/locales/{{lng}}/{{ns}}.json'
@@ -69,9 +65,9 @@ i18next
 ```
 
 {% hint style="info" %}
-More information can be found here:  
-[i18next-chained-backend](https://github.com/i18next/i18next-chained-backend)  
-[i18next-resources-to-backend](https://github.com/i18next/i18next-resources-to-backend)  
+More information can be found here:\
+[i18next-chained-backend](https://github.com/i18next/i18next-chained-backend)\
+[i18next-resources-to-backend](https://github.com/i18next/i18next-resources-to-backend)\
 [i18next-http-backend](https://github.com/i18next/i18next-http-backend)
 {% endhint %}
 
@@ -105,13 +101,12 @@ i18next
 ```
 
 {% hint style="info" %}
-More information can be found here:  
-[i18next-chained-backend](https://github.com/i18next/i18next-chained-backend)  
-[i18next-fs-backend](https://github.com/i18next/i18next-fs-backend)  
+More information can be found here:\
+[i18next-chained-backend](https://github.com/i18next/i18next-chained-backend)\
+[i18next-fs-backend](https://github.com/i18next/i18next-fs-backend)\
 [i18next-http-backend](https://github.com/i18next/i18next-http-backend)
 {% endhint %}
 
 {% hint style="danger" %}
 We suggest not to use multiple backends with the [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend) in combination with saveMissing or updateMissing, because it may happen, that the trigger for this is based on stale data.
 {% endhint %}
-
