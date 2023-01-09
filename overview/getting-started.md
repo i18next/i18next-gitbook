@@ -27,8 +27,8 @@ import i18next from 'https://deno.land/x/i18next/index.js'
 ```
 
 {% hint style="success" %}
-In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[  \
-](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno\_i18next.jpg) ](https://locize.com/blog/i18n-for-deno-with-i18next/)
+In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[\
+](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno\_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
 {% endhint %}
 
 ## Load from CDN
@@ -49,7 +49,7 @@ Make sure to use a fixed version in production like [https://unpkg.com/i18next@1
 
 **cdnjs.com**
 
-* [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)****
+* [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)\*\*\*\*
 
 **jsdelivr.com**
 
@@ -151,6 +151,11 @@ if you are [lazy loading the translation resources](../how-to/add-or-load-transl
 As you might see, this basic sample provides only one language directly added on init… let's extend this to have buttons to change language from English to German:
 
 [source code](https://jsfiddle.net/jamuhl/dvk0e8a9/#tabs=js,result,html)
+
+{% hint style="info" %}
+Do you quickly want to translate your resources to other languages?\
+Try: [https://translate.i18next.com](https://translate.i18next.com/)
+{% endhint %}
 
 This is a working sample showing translated text. To learn more, have a look at the following extended sample:
 
