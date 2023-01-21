@@ -45,6 +45,7 @@
 * [Creating own Plugins](misc/creating-own-plugins.md)
 * [Migration Guide](misc/migration-guide.md)
 * [The history of i18next](misc/the-history-of-i18next.md)
+* [Testimonials](misc/testimonials.md)
 
 ***
 
