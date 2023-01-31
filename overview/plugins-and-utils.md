@@ -18,7 +18,7 @@ While the i18next format (JSON based) is the preferred solution and widely suppo
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | [i18next-scanner](http://i18next.github.io/i18next-scanner)                                | Scan your code, extract translation keys/values, and merge them into i18n resource files.                    |
 | [i18next-parser](https://github.com/i18next/i18next-parser)                                | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
-| [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) | A babel plugin that can extract keys in JSONv3 format.                                                       |
+| [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) | A babel plugin that can extract keys in JSONv4 format.                                                       |
 | [translation-check](https://github.com/locize/translation-check)                           | Nicely shows an overview of your translations in a UI. Check which keys are not yet translated.              |
 
 ## utils
