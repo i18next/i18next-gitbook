@@ -31,15 +31,17 @@ These are the defaults. Nesting and Interpolation formats are configurable.
 
 To learn more about the features check the documentation:
 
-* [Interpolation](../translation-function/interpolation.md)  
-* [Formatting](../translation-function/formatting.md)  
-* [Plurals](../translation-function/plurals.md)  
-* [Nesting](../translation-function/nesting.md)  
+* [Interpolation](../translation-function/interpolation.md) &#x20;
+* [Formatting](../translation-function/formatting.md) &#x20;
+* [Plurals](../translation-function/plurals.md) &#x20;
+* [Nesting](../translation-function/nesting.md) &#x20;
 * [Objects and Arrays](../translation-function/objects-and-arrays.md)
 
 The only difference to _v3_ is the plural suffixes.
 
-You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API, in case it is not available it will fallback to the [i18next JSON format v3](json-format.md#i-18-next-json-v3) plural handling.
+You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) API, in case it is not available it will fallback to the [i18next JSON format v3](json-format.md#i-18-next-json-v3) plural handling.
+
+To convert your existing translations to the new v4 format, have a look at [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter) or [this web tool](https://i18next.github.io/i18next-v4-format-converter-web/).
 
 ## i18next JSON v3
 
@@ -151,4 +153,3 @@ formats:
 ```
 
 These are the defaults. Nesting and Interpolation formats are configurable.
-
