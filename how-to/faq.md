@@ -82,3 +82,11 @@ _If you need more, it might be time to use a_ [_translation management tool_](ht
 ### **How to handle with changes in e2e tests?**
 
 _For e2e tests a good tactic is to set language to_ `cimode` _on init. This will set i18next to always return the key on calling_ `i18next.t`_. Want to add the namespace to returned value change_ `appendNamespaceToCIMode: true` _on init._
+
+### **How to use i18next in serverless environments?**
+
+Due to how serverless functions work, you cannot guarantee that a cached version of your data is available. Serverless functions are short-lived, and can shut down at any time, purging any in-memory or filesystem cache. This may be an acceptable trade-off, but sometimes it isn't acceptable.
+
+Because of this we suggest to not use a remote backend and to download the translations and package them with your serverless function.
+
+Read more about this topic, [here](https://locize.com/blog/i18n-serverless/).
