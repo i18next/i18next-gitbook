@@ -89,4 +89,7 @@ Due to how serverless functions work, you cannot guarantee that a cached version
 
 Because of this we suggest to not use a remote backend and to download the translations and package them with your serverless function.
 
-Read more about this topic, [here](https://locize.com/blog/i18n-serverless/).
+{% hint style="success" %}
+Read more about this topic, [here](https://locize.com/blog/i18n-serverless/).[\
+](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](../.gitbook/assets/title.jpg)](https://locize.com/blog/i18n-serverless/)
+{% endhint %}
