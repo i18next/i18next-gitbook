@@ -109,22 +109,22 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 
 `i18next.t(key, options)`
 
-| option              | description                                                                                                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| defaultValue        | defaultValue to return if a translation was not found, you also can define defaults for plurals by adding defaultValue\_plural / defaultValue\_2 -> \_suffix depends on same [pluralrules](plurals.md). |
-| count               | count value used for [plurals](plurals.md)                                                                                                                                                              |
-| context             | used for [contexts](context.md) (eg. male / female)                                                                                                                                                     |
-| replace             | object with vars for [interpolation](interpolation.md) - or put them directly in options                                                                                                                |
-| lng                 | override language to use                                                                                                                                                                                |
-| lngs                | override languages to use                                                                                                                                                                               |
-| fallbackLng         | override language to lookup key if not found see [fallbacks](../principles/fallback.md) for details                                                                                                     |
-| ns                  | override namespaces (string or array)                                                                                                                                                                   |
-| keySeparator        | override char to separate keys                                                                                                                                                                          |
-| nsSeparator         | override char to split namespace from key                                                                                                                                                               |
-| returnObjects       | accessing an object not a translation string (can be set globally too)                                                                                                                                  |
-| returnDetails       | returns an object that includes information about the used language, namespace, key and value                                                                                                           |
-| joinArrays          | char, eg. '\n' that arrays will be joined by (can be set globally too)                                                                                                                                  |
-| postProcess         | string or array of postProcessors to apply see  [interval plurals](plurals.md) as a sample                                                                                                              |
-| interpolation       | override [interpolation options](interpolation.md)                                                                                                                                                      |
-| skipInterpolation   | skip interpolation and nesting for this call to t function                                                                                                                                              |
-| ignoreJSONStructure | if a key is not found as nested key, it will try to lookup as flat key                                                                                                                                  |
+| option              | description                                                                                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| defaultValue        | defaultValue to return if a translation was not found, you also can define defaults for plurals by adding defaultValue\_other -> \_suffix depends on same [pluralrules](plurals.md). |
+| count               | count value used for [plurals](plurals.md)                                                                                                                                           |
+| context             | used for [contexts](context.md) (eg. male / female)                                                                                                                                  |
+| replace             | object with vars for [interpolation](interpolation.md) - or put them directly in options                                                                                             |
+| lng                 | override language to use                                                                                                                                                             |
+| lngs                | override languages to use                                                                                                                                                            |
+| fallbackLng         | override language to lookup key if not found see [fallbacks](../principles/fallback.md) for details                                                                                  |
+| ns                  | override namespaces (string or array)                                                                                                                                                |
+| keySeparator        | override char to separate keys                                                                                                                                                       |
+| nsSeparator         | override char to split namespace from key                                                                                                                                            |
+| returnObjects       | accessing an object not a translation string (can be set globally too)                                                                                                               |
+| returnDetails       | returns an object that includes information about the used language, namespace, key and value                                                                                        |
+| joinArrays          | char, eg. '\n' that arrays will be joined by (can be set globally too)                                                                                                               |
+| postProcess         | string or array of postProcessors to apply see  [interval plurals](plurals.md) as a sample                                                                                           |
+| interpolation       | override [interpolation options](interpolation.md)                                                                                                                                   |
+| skipInterpolation   | skip interpolation and nesting for this call to t function                                                                                                                           |
+| ignoreJSONStructure | if a key is not found as nested key, it will try to lookup as flat key                                                                                                               |
