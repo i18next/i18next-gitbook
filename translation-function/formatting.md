@@ -4,14 +4,14 @@ Starting with **i18next>=21.3.0** you can use the built-in formatting functions 
 
 _You may need to_ [_polyfill_](https://formatjs.io/docs/polyfills/) _the Intl API:_
 
-* __[_Intl.PluralRules_](https://formatjs.io/docs/polyfills/intl-pluralrules)__
-* __[_Intl.RelativeTimeFormat_](https://formatjs.io/docs/polyfills/intl-relativetimeformat)__
-* __[_Intl.ListFormat_](https://formatjs.io/docs/polyfills/intl-listformat)__
-* __[_Intl.DisplayNames_](https://formatjs.io/docs/polyfills/intl-displaynames)__
-* __[_Intl.NumberFormat_](https://formatjs.io/docs/polyfills/intl-numberformat) _(ES2020)_
-* __[_Intl.Locale_](https://formatjs.io/docs/polyfills/intl-locale)__
-* __[_Intl.getCanonicalLocales_](https://formatjs.io/docs/polyfills/intl-getcanonicallocales)__
-* __[_Intl.DateTimeFormat_](https://formatjs.io/docs/polyfills/intl-datetimeformat) _(ES2020)_
+* [_Intl.PluralRules_](https://formatjs.io/docs/polyfills/intl-pluralrules)
+* [_Intl.RelativeTimeFormat_](https://formatjs.io/docs/polyfills/intl-relativetimeformat)
+* [_Intl.ListFormat_](https://formatjs.io/docs/polyfills/intl-listformat)
+* [_Intl.DisplayNames_](https://formatjs.io/docs/polyfills/intl-displaynames)
+* [_Intl.NumberFormat_](https://formatjs.io/docs/polyfills/intl-numberformat) _(ES2020)_
+* [_Intl.Locale_](https://formatjs.io/docs/polyfills/intl-locale)
+* [_Intl.getCanonicalLocales_](https://formatjs.io/docs/polyfills/intl-getcanonicallocales)
+* [_Intl.DateTimeFormat_](https://formatjs.io/docs/polyfills/intl-datetimeformat) _(ES2020)_
 
 {% hint style="info" %}
 🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=557).

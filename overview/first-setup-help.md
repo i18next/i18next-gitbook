@@ -4,8 +4,8 @@ description: Let's try to figure out what you need.
 
 # First setup help
 
-* \*\*\*\*[For which environment are you looking for an i18n solution?](first-setup-help.md#for-which-environment-are-you-looking-for-an-i-18-n-solution)
-  * [Special handling for serverless environments \(AWS lambda, Google Cloud Functions, Azure Functions, etc...\)](first-setup-help.md#special-handling-for-serverless-environments-aws-lambda-google-cloud-functions-azure-functions-etc)
+* [For which environment are you looking for an i18n solution?](first-setup-help.md#for-which-environment-are-you-looking-for-an-i-18-n-solution)
+  * [Special handling for serverless environments (AWS lambda, Google Cloud Functions, Azure Functions, etc...)](first-setup-help.md#special-handling-for-serverless-environments-aws-lambda-google-cloud-functions-azure-functions-etc)
 * [Do you need a language detector for your environment?](first-setup-help.md#do-you-need-a-language-detector-for-your-environment)
 * [Do you want to bundle the translations with your app?](first-setup-help.md#do-you-want-to-bundle-the-translations-with-your-app)
 * [Do you want to load the translations separate from your app via http?](first-setup-help.md#do-you-want-to-load-the-translations-separate-from-your-app-via-http)
@@ -13,11 +13,11 @@ description: Let's try to figure out what you need.
 
 ## For which environment are you looking for an i18n solution?
 
-[Client](https://react.i18next.com/), [server](https://github.com/i18next/i18next-http-middleware), [browser](https://github.com/i18next/jquery-i18next), [React](https://react.i18next.com), [mobile](https://github.com/i18next/react-i18next/tree/master/example/react-native), [desktop](https://github.com/i18next/react-i18next/tree/master/example/react_native_windows), [Node.js](https://github.com/i18next/i18next-fs-backend/blob/master/example/node/index.js), [Deno](https://github.com/i18next/i18next-fs-backend/blob/master/example/deno/index.js)...
+[Client](https://react.i18next.com/), [server](https://github.com/i18next/i18next-http-middleware), [browser](https://github.com/i18next/jquery-i18next), [React](https://react.i18next.com), [mobile](https://github.com/i18next/react-i18next/tree/master/example/react-native), [desktop](https://github.com/i18next/react-i18next/tree/master/example/react\_native\_windows), [Node.js](https://github.com/i18next/i18next-fs-backend/blob/master/example/node/index.js), [Deno](https://github.com/i18next/i18next-fs-backend/blob/master/example/deno/index.js)...
 
 There are a lot of appropriate libraries. [Have a look at this list.](supported-frameworks.md)
 
-### Special handling for serverless environments \(AWS lambda, Google Cloud Functions, Azure Functions, etc...\)
+### Special handling for serverless environments (AWS lambda, Google Cloud Functions, Azure Functions, etc...)
 
 Make use of [i18next-fs-backend](https://github.com/i18next/i18next-fs-backend)
 
@@ -60,7 +60,7 @@ i18next
 ## Do you need a language detector for your environment?
 
 * for example for the browser: [i18next-browser-languageDetector](https://github.com/i18next/i18next-browser-languageDetector)
-* for example for http server \(express, Fastify, etc...\): [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware#language-detection)
+* for example for http server (express, Fastify, etc...): [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware#language-detection)
 * [there are other plugins here](https://www.i18next.com/overview/plugins-and-utils#language-detector)
 
 ## Do you want to bundle the translations with your app?
@@ -78,4 +78,3 @@ i18next
 ## Do you want to manage your translations with an awesome translation management system?
 
 ### [Ready to take i18next to the next level?](for-enterprises.md)
-

@@ -8,7 +8,7 @@ i18next goes beyond just providing the standard i18n features such as ([plurals]
 
 ## learn once - translate everywhere
 
-![](.gitbook/assets/i18next\_eco.jpg)
+![](.gitbook/assets/i18next-ecosystem.jpg)
 
 The i18next-community created integrations for frontend-frameworks such as [React](https://locize.com/blog/react-i18next/), [Angular](https://locize.com/blog/unleash-the-full-power-of-angular-i18next/), [Vue.js](https://locize.com/blog/i18next-vue/) and many more.
 
