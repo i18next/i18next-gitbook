@@ -129,3 +129,21 @@ While there are a lot of options going with the defaults should get you covered.
 | defaultVariables        | undefined                                                        | global variables to use in interpolation replacements `defaultVariables: { key: "value" }`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | maxReplaces             | 1000                                                             | after how many interpolation runs to break out before throwing a stack overflow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | skipOnVariables         | <p>true</p><p></p><p><em>(was false for  &#x3C;v21.0.0)</em></p> | <p>Will skip to interpolate the variables, example:</p><p><code>t('key', { a: '$t(nested)' })</code></p><p>this will not resolve the nested key and will use<code>$t(nested)</code> as the variable value.<br>Another example:</p><p><code>t('key', { a: '{{otherVar}}': otherVar: 'another value' })</code></p><p>this will not resolve the otherVar variable and will use<code>{{otherVar}}</code>as the variable value.</p><p><strong>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to keep this option to true.</strong></p><p><em>If you know what you're doing, you can also set this to false.</em></p> |
+
+## Cautionary note regarding interpolation
+
+To improve translatability and reduce linguistic bug churn, use interpolation sparingly. Use interpolation for values that can only be known at runtime, such as 
+* Time stamps
+* User-inputted data
+
+Fundamentally what interpolation does is concatonate pieces of text. When translating into other languages concatonation can cause real problems. Use multiple independent self-contained strings instead. English grammatical sentence structure cannot be programmatically forced on other languages. Only use interpolation for substrings if you are using a multilingual grammar engine.
+
+A simple example here shows how an infinitive "to rejoin" is split between two strings. In German the preposition "to" is embedded in the middle of a separable verb "teilnehmen" when used in this particular sentence. In other words, "to rejoin" needs to translate to "erneut teilzunehmen" and so the preposition "to" cannot exist in a string separate from "rejoin" in this case. 
+
+|---------| Source English                                          | Target German                                                                        | 
+|---------| --------------------------------------------------------| -------------------------------------------------------------------------------------|
+|String1  | Please wait while we resolve the issue or try to        | Warten Sie, während wir das Problem beheben oder versuchen Sie zu                    |
+|String2  | Rejoin                                                  | Erneut teilnehmen                                                                    |
+|Corrected| Please wait while we resolve the issue or try to Rejoin | Warten Sie, während wir das Problem beheben oder versuchen Sie, erneut teilzunehmen. |
+
+If a German linguist "fixes" these strings so they appear translated correctly at runtime the linguist will undoubtably also be breaking another version of this string when a different value is passed.
