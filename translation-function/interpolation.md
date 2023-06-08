@@ -156,7 +156,7 @@ In German the spelling of the word "the" preceding {credit card type name} will 
     "key": "Alle Beträge werden dem {{credit card type name}} für dieses Konto in Rechnung gestellt."
 }
 ```
-// -> "Alle Beträge werden dem Kreditkarte für dieses Konto in Rechnung gestellt." ,- 'dem Kreditkarte' is incorrect. It should be 'der Kreditkarte'
+// -> "Alle Beträge werden dem Kreditkarte für dieses Konto in Rechnung gestellt." <- 'dem Kreditkarte' is incorrect. It should be 'der Kreditkarte'
 // -> "Alle Beträge werden dem PayPal-Konto für dieses Konto in Rechnung gestellt." <- 'dem PayPal-Konto' is correct
 
 The German issue above is just one simple example of a very complex localization challenge.
