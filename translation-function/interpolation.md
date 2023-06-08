@@ -140,7 +140,7 @@ Sentences split into sentence fragments across multiple keys are difficult and s
 
 Example
 
-Suppose you want ot use interpolation to replace the value for {credit card type name} in the following key
+Suppose you want to use interpolation to replace the value for {credit card type name} in the following key
 
 ```javascript
 {
@@ -160,4 +160,4 @@ In German the spelling of the word "the" preceding {credit card type name} will 
 
 // -> "Alle Beträge werden dem PayPal-Konto für dieses Konto in Rechnung gestellt." <- 'dem PayPal-Konto' is correct
 
-The German issue above is just one simple example of a very complex localization challenge.
+The German issue above is a simple example of a very complex localization challenge.
