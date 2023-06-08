@@ -136,7 +136,7 @@ To improve translatability and minimize linguistic bug churn, use interpolation 
 * Time stamps
 * User-inputted data
 
-Sentences split into sentence fragments across multiple keys are difficult and sometimes impossible to translated due to gender, plurals and declination of nouns in other languages. Fundamentally what interpolation does is concatonate pieces of text. When translating into other languages concatonation can cause real problems. 
+Sentences split into sentence fragments across multiple keys are difficult and sometimes impossible to translated due to gender, plurals and declination of nouns in other languages. Fundamentally what interpolation does is concatenate pieces of text. When translating into other languages concatenation can cause real problems. 
 
 Example
 
