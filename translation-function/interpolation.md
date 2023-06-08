@@ -132,18 +132,31 @@ While there are a lot of options going with the defaults should get you covered.
 
 ## Cautionary note regarding interpolation
 
-To improve translatability and reduce linguistic bug churn, use interpolation sparingly. Use interpolation for values that can only be known at runtime, such as 
+To improve translatability and minimize linguistic bug churn, use interpolation sparingly. Use interpolation for values that can only be known at runtime, such as 
 * Time stamps
 * User-inputted data
 
-Fundamentally what interpolation does is concatonate pieces of text. When translating into other languages concatonation can cause real problems. Use multiple independent self-contained strings instead. English grammatical sentence structure cannot be programmatically forced on other languages. Only use interpolation for substrings if you are using a multilingual grammar engine.
+Sentences split into sentence fragments across multiple keys are difficult and sometimes impossible to translated due to gender, plurals and declination of nouns in other languages. Fundamentally what interpolation does is concatonate pieces of text. When translating into other languages concatonation can cause real problems. 
 
-A simple example here shows how an infinitive "to rejoin" is split between two strings. In German the preposition "to" is embedded in the middle of a separable verb "teilnehmen" when used in this particular sentence. In other words, "to rejoin" needs to translate to "erneut teilzunehmen" and so the preposition "to" cannot exist in a string separate from "rejoin" in this case. 
+Example
 
-|---------| Source English                                          | Target German                                                                        | 
-|---------| --------------------------------------------------------| -------------------------------------------------------------------------------------|
-|String1  | Please wait while we resolve the issue or try to        | Warten Sie, während wir das Problem beheben oder versuchen Sie zu                    |
-|String2  | Rejoin                                                  | Erneut teilnehmen                                                                    |
-|Corrected| Please wait while we resolve the issue or try to Rejoin | Warten Sie, während wir das Problem beheben oder versuchen Sie, erneut teilzunehmen. |
+Suppose you want ot use interpolation to replace the value for {credit card type name} in the following key
 
-If a German linguist "fixes" these strings so they appear translated correctly at runtime the linguist will undoubtably also be breaking another version of this string when a different value is passed.
+```javascript
+{
+    "key": "All fees will be charged to the {{credit card type name}} on file for this account."
+}
+```
+wherein {credit card name type} could be 'credit card' or 'PayPal account'.
+
+In German the spelling of the word "the" preceding {credit card type name} will change, depending on which word is used.
+
+```javascript
+{
+    "key": "Alle Beträge werden dem {{credit card type name}} für dieses Konto in Rechnung gestellt."
+}
+```
+// -> "Alle Beträge werden dem Kreditkarte für dieses Konto in Rechnung gestellt." ,- 'dem Kreditkarte' is incorrect. It should be 'der Kreditkarte'
+// -> "Alle Beträge werden dem PayPal-Konto für dieses Konto in Rechnung gestellt." <- 'dem PayPal-Konto' is correct
+
+The German issue above is just one simple example of a very complex localization challenge.
