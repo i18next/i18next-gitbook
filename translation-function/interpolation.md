@@ -149,7 +149,7 @@ Suppose you want to use interpolation to replace the value for {credit card type
 ```
 wherein {credit card name type} could be 'credit card' or 'PayPal account'.
 
-In German the spelling of the word "the" preceding {credit card type name} will change, depending on which word is used.
+In German the spelling of the word "the" preceding {credit card type name} must change to "der", "die", "das", "den", "dem", "den" or "des", depending on which {credit card type name} is used.
 
 ```javascript
 {
@@ -160,4 +160,4 @@ In German the spelling of the word "the" preceding {credit card type name} will 
 
 // -> "Alle Beträge werden dem PayPal-Konto für dieses Konto in Rechnung gestellt." <- 'dem PayPal-Konto' is correct
 
-The German translation for the English word "the" changes to "der", "die", "das", "den", "dem", "den" or "des", depending on gender of the word and placement in the sentence.
+This is just one simple example of a very complex localization problem.
