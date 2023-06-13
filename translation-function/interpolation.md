@@ -130,13 +130,13 @@ While there are a lot of options going with the defaults should get you covered.
 | maxReplaces             | 1000                                                             | after how many interpolation runs to break out before throwing a stack overflow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | skipOnVariables         | <p>true</p><p></p><p><em>(was false for  &#x3C;v21.0.0)</em></p> | <p>Will skip to interpolate the variables, example:</p><p><code>t('key', { a: '$t(nested)' })</code></p><p>this will not resolve the nested key and will use<code>$t(nested)</code> as the variable value.<br>Another example:</p><p><code>t('key', { a: '{{otherVar}}': otherVar: 'another value' })</code></p><p>this will not resolve the otherVar variable and will use<code>{{otherVar}}</code>as the variable value.</p><p><strong>If your interpolation variables are user provided or loaded from an external source, we strongly suggest to keep this option to true.</strong></p><p><em>If you know what you're doing, you can also set this to false.</em></p> |
 
-## Cautionary note regarding interpolation
+## Impact on localization
 
-To improve translatability and minimize linguistic bug churn, use interpolation sparingly. Use interpolation for values that can only be known at runtime, such as 
+Use interpolation sparingly to minimize impact on localization. Interpolation must be used for values that can only be known at runtime, such as 
 * Time stamps
 * User-inputted data
 
-Sentences split into sentence fragments across multiple keys are difficult and sometimes impossible to translated due to gender, plurals and declination of nouns in other languages. Fundamentally what interpolation does is concatenate pieces of text. When translating into other languages concatenation can cause real problems. 
+Fundamentally what interpolation does is concatenate pieces of text. When translating into other languages concatenation can cause real problems, unless you are using a multilingual grammar engine, which is rare. Sentences split into sentence fragments and programmatcially constructed based soley on English grammar rules are difficult and sometimes impossible to translate. 
 
 Example
 
@@ -160,4 +160,4 @@ In German the spelling of the word "the" preceding {credit card type name} will 
 
 // -> "Alle Beträge werden dem PayPal-Konto für dieses Konto in Rechnung gestellt." <- 'dem PayPal-Konto' is correct
 
-The German issue above is a simple example of a very complex localization challenge.
+The German translation for the English word "the" changes to "der", "die", "das", "den", "dem", "den" or "des", depending on gender of the word and placement in the sentence.
