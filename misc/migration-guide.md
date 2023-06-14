@@ -196,11 +196,11 @@ Typescript use `export default` for esm-first approach [1352](https://github.com
 
 brings pt, pt-PT, pt-BR plurals in line with, new pt reflects pt-BR and pt-PT gets a special case for plural handling [http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html)
 
-| code   | locale               | rule                         |
-| ------ | -------------------- | ---------------------------- |
-| pt-PT  | Portugal Portuguese  | nplurals=2; plural=(n != 1); |
-| pt\_BR | Brazilian Portuguese | plurals=2; plural=(n > 1);   |
-| pt     | Portuguese           | plurals=2; plural=(n > 1);   |
+| code   | locale               | rule                        |
+| ------ | -------------------- | --------------------------- |
+| pt-PT  | Portugal Portuguese  | plurals=2; plural=(n != 1); |
+| pt\_BR | Brazilian Portuguese | plurals=2; plural=(n > 1);  |
+| pt     | Portuguese           | plurals=2; plural=(n > 1);  |
 
 ### v8.x.x to v9.0.0
 
