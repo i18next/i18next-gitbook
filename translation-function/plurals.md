@@ -99,17 +99,17 @@ _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it
 
 ## Ordinal plurals
 
-There is also support for ordinal numbers _(referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English)_. The `ordinal` option tells the helper to use the ordinal digit to determine the plurality key used. E.g., for "32" the ordinal digit is "2" so `key_two` is used.
+There is also support for ordinal numbers _(referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English)_. The `ordinal` option (and the \_ordinal suffix) tells the helper to use the ordinal digit to determine the plurality key used. E.g., for "32" the ordinal digit is "2" so `key_two` is used.
 
 keys
 
 ```javascript
 // i.e. english
 {
-  "key_one": "{{count}}st place", // 1st, 21st, 31st
-  "key_two": "{{count}}nd place", // 2nd, 22nd, 32nd
-  "key_few": "{{count}}rd place", // 3rd, 23rd, 33rd
-  "key_other": "{{count}}th place" // 4th, 5th, 24th, 11th
+  "key_ordinal_one": "{{count}}st place", // 1st, 21st, 31st
+  "key_ordinal_two": "{{count}}nd place", // 2nd, 22nd, 32nd
+  "key_ordinal_few": "{{count}}rd place", // 3rd, 23rd, 33rd
+  "key_ordinal_other": "{{count}}th place" // 4th, 5th, 24th, 11th
 }
 ```
 
