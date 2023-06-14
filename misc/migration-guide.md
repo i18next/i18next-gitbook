@@ -7,6 +7,8 @@
 [This PR](https://github.com/i18next/i18next/pull/1911) redesigned the types to be less complex, faster and easier to maintain.\
 The redesign endeavors to enhance the approach to parsing and inferring keys for the `t` function. Instead of performing a recursive examination of each key-value pair in `resources` associated with specific namespace(s) each time the `t` function is invoked, we generate a comprehensive set of keys from all namespaces just once.
 
+Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
+
 <details>
 
 <summary>More information: Features and Breaking changes</summary>
