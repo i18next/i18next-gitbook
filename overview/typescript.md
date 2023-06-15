@@ -72,6 +72,13 @@ declare module "i18next" {
 
 **We recommend creating a `@types` directory under `src` or above it and placing all your type declarations there. E.g.: `@types/i18next.d.ts`**
 
+### Some examples
+
+* [simple](https://github.com/i18next/i18next/tree/master/examples/typescript)
+* [next-i18next](https://github.com/i18next/next-i18next/tree/master/examples/simple)
+* [next-13-app-dir-i18next-example-ts](https://github.com/i18next/next-13-app-dir-i18next-example-ts)
+* [react-i18next-example-app-ts](https://github.com/locize/react-i18next-example-app-ts)
+
 ### Custom Type Options
 
 We provide a few options that can improve TypeScript for `i18next`. All options come with default values, and if you want to change them, you just need to add them under `CustomTypeOptions` interface in your i18next type declaration file (`i18next.d.ts`).
