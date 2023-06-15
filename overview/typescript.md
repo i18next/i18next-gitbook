@@ -75,6 +75,7 @@ declare module "i18next" {
 ### Some examples
 
 * [simple](https://github.com/i18next/i18next/tree/master/examples/typescript)
+* [react-i18next](https://github.com/i18next/react-i18next/tree/master/example/react-typescript)
 * [next-i18next](https://github.com/i18next/next-i18next/tree/master/examples/simple)
 * [next-13-app-dir-i18next-example-ts](https://github.com/i18next/next-13-app-dir-i18next-example-ts)
 * [react-i18next-example-app-ts](https://github.com/locize/react-i18next-example-app-ts)
