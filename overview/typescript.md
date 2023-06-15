@@ -6,6 +6,10 @@ i18next has embedded type definitions. If you want to enhance IDE Experience and
 This is an optional feature and may affect the **compilation time** depending on your project's size. If you opt not to leverage the type enhancements suggested here, you can ignore this section.
 {% endhint %}
 
+{% hint style="info" %}
+Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
+{% endhint %}
+
 ## Create a declaration file
 
 TypeScript definitions for i18next can be extended by using [Type Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) and [Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces). So the first step is creating a declaration file (`i18next.d.ts`), for example:
@@ -78,13 +82,13 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 | resources                 | object        | Resources to initialize with. This is the most important option that is used to infer the appropriate keys and return types.                                                                                                         |
 | keySeparator              | '.'           | Char to separate keys.                                                                                                                                                                                                               |
 | nsSeparator               | ':'           | Char to split namespace from key                                                                                                                                                                                                     |
-| pluralSeparator           | '_'          | Char to split namespace from key                                                                                                                                                                                                     |
+| pluralSeparator           | '\_'          | Char to split namespace from key                                                                                                                                                                                                     |
 | returnNull                | true          | Allows null values as valid translation.                                                                                                                                                                                             |
 | returnObjects             | false         | Allows objects as valid translation result                                                                                                                                                                                           |
 | jsonFormat                | 'v4'          | Json Format Version - V4 allows plural suffixes. See [here](../translation-function/plurals.md) for more information about Plurals.                                                                                                  |
 | allowObjectInHTMLChildren | false         | Flag that allows HTML elements to receive objects. This is only useful for React applications where you pass objects to HTML elements so they can be replaced to their respective interpolation values (mostly with Trans component) |
-| interpolationPrefix       | '{{'          | Prefix for interpolation                                                                                                                                                                                                             |
-| interpolationSuffix       | '}}'          | Suffix for interpolation                                                                                                                                                                                                             |
+| interpolationPrefix       | '\{{'         | Prefix for interpolation                                                                                                                                                                                                             |
+| interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                             |
 
 ## Troubleshooting
 
