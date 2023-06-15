@@ -53,7 +53,7 @@ All breaking changes described below are minor ones:
 2. Renaming `StringMap` to `$Dictionary`, and we'll no longer export it. `$Dictionary` is an internal helper, and there is no reason to expose it. If needed, you can create a copy and reuse it in your project.
 3. `ns` property from `InterpolationOptions` type will be constrained to `Namespace` rather than `string` or `readonly string[]`.
 4. Renaming `KeysWithSeparator` type to `JoinKeys`, and it will no longer be exposed.
-5. Renaming `TFuncKey` type to `ParseKeys`, and it will no longer be exposed.
+5. Renaming `TFuncKey` type to `ParseKeys`.
 6. Removing `NormalizeByTypeOptions` type.
 7. Renaming `DefaultTFuncReturnWithObject` type to `DefaultTReturn`. It will accept `TOptions` as generic constraint and will no longer be exposed.
 8. Removing `DefaultTFuncReturn` type in favor of `DefaultTReturn`.
