@@ -132,32 +132,46 @@ While there are a lot of options going with the defaults should get you covered.
 
 ## Impact on localization
 
-Use interpolation sparingly to minimize impact on localization. Interpolation must be used for values that can only be known at runtime, such as 
+When translating into other languages interpolation causes real problems. Fundamentally what interpolation does is concatenate pieces of text. English sentences split into sentence fragments and programmatcially constructed at runtime are difficult and sometimes impossible to translate, unless you have implemented multilingual grammar rules, which is rare.
+
+Use interpolation sparingly to minimize impact on localization. Interpolation cannot be avoided for values that can only be known at runtime, such as 
 * Time stamps
 * User-inputted data
 
-Fundamentally what interpolation does is concatenate pieces of text. When translating into other languages concatenation can cause real problems, unless you are using a multilingual grammar engine, which is rare. Sentences split into sentence fragments and programmatcially constructed based soley on English grammar rules are difficult and sometimes impossible to translate. 
+When values are known and available for translation in a resource file, interpolation shouild be avoided. Use multiple self-contained string values instead.
 
 Example
 
-Suppose you want to use interpolation to replace the value for {credit card type name} in the following key
+Suppose you want to use interpolation to replace the value for {paymentType} in the following key
 
 ```javascript
 {
-    "key": "All fees will be charged to the {{credit card type name}} on file for this account."
+    "key": "All fees will be charged to the {{paymentType}} on file for this account."
 }
 ```
-wherein {credit card name type} could be 'credit card' or 'PayPal account'.
+wherein {paymentType} could be 'credit card' or 'PayPal account'.
 
-In German the spelling of the word "the" preceding {credit card type name} must change to "der", "die", "das", "den", "dem", "den" or "des", depending on which {credit card type name} is used.
+In German the spelling of the word "the" preceding {paymentType} must change depending on which value is passed.
 
 ```javascript
 {
-    "key": "Alle Beträge werden dem {{credit card type name}} für dieses Konto in Rechnung gestellt."
+    "key": "Alle Beträge werden dem {{paymentType}} für dieses Konto in Rechnung gestellt."
 }
 ```
+
+The result is some runtime strings will be broken
+
 // -> "Alle Beträge werden dem Kreditkarte für dieses Konto in Rechnung gestellt." <- 'dem Kreditkarte' should be 'der Kreditkarte'
 
 // -> "Alle Beträge werden dem PayPal-Konto für dieses Konto in Rechnung gestellt." <- 'dem PayPal-Konto' is correct
 
 This is just one simple example of a very complex localization problem.
+
+Use two separate fully self-contained strings instead:
+```javascript
+{
+    "key1": "All fees will be charged to the credit card on file for this account."
+    "key2": "All fees will be charged to the PayPal account on file for this account."
+
+}
+```
