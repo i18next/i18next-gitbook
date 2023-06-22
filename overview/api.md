@@ -360,6 +360,17 @@ const newInstance = i18next.cloneInstance({
 });
 ```
 
+#### forkResourceStore
+
+By setting the forkResourceStore option to true, it will not shares the store.
+
+```javascript
+const newInstance = i18next.cloneInstance({
+  forkResourceStore: true,
+  keySeparator: '[[my-new-separator]]'
+});
+```
+
 ## events
 
 {% hint style="info" %}

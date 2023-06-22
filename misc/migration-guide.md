@@ -1,5 +1,84 @@
 # Migration Guide
 
+### v22.x.x to v23.0.0
+
+#### Redesigned [TypeScript types](../overview/typescript.md)
+
+[This PR](https://github.com/i18next/i18next/pull/1911) redesigned the types to be less complex, faster and easier to maintain.\
+The redesign endeavors to enhance the approach to parsing and inferring keys for the `t` function. Instead of performing a recursive examination of each key-value pair in `resources` associated with specific namespace(s) each time the `t` function is invoked, we generate a comprehensive set of keys from all namespaces just once.
+
+Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
+
+<details>
+
+<summary>More information: Features and Breaking changes</summary>
+
+
+
+**Features**
+
+* When loading multiple namespaces ([react-i18next](https://react.i18next.com)), `t` function will infer and accept the keys for the first namespace. So this pattern will be accepted now:
+
+[![Screenshot 2023-02-12 at 9 40 06 PM](https://user-images.githubusercontent.com/12190482/218372236-c7dcc9c5-6c7c-434f-8259-cbba17a03ac6.png)](https://user-images.githubusercontent.com/12190482/218372236-c7dcc9c5-6c7c-434f-8259-cbba17a03ac6.png)
+
+* `t` function will now infer and accept the keys for the main namespace (i18next):
+
+[![Screenshot 2023-02-12 at 9 48 31 PM](https://user-images.githubusercontent.com/12190482/218373106-ca291bfa-4df0-48bf-b4be-1ca07282373c.png)](https://user-images.githubusercontent.com/12190482/218373106-ca291bfa-4df0-48bf-b4be-1ca07282373c.png)
+
+* We're introducing a new type (`returnObjects`) that will infer fewer keys if set to `false`, and all keys and sub-keys if set to `true`. If the option `returnObjects` from `t` function is set to `true`, it'll work the same way:
+
+[![Screenshot 2023-02-12 at 9 52 07 PM](https://user-images.githubusercontent.com/12190482/218373749-bba70379-23b3-483d-8cee-241736be43ad.png)](https://user-images.githubusercontent.com/12190482/218373749-bba70379-23b3-483d-8cee-241736be43ad.png)
+
+[![Screenshot 2023-02-12 at 9 57 43 PM](https://user-images.githubusercontent.com/12190482/218374305-219b2c51-783a-4753-9df8-450b45f92132.png)](https://user-images.githubusercontent.com/12190482/218374305-219b2c51-783a-4753-9df8-450b45f92132.png)
+
+[![Screenshot 2023-02-12 at 10 03 12 PM](https://user-images.githubusercontent.com/12190482/218374963-b1fcbda2-35f5-452a-b4c4-d847d1456a11.png)](https://user-images.githubusercontent.com/12190482/218374963-b1fcbda2-35f5-452a-b4c4-d847d1456a11.png)
+
+* `t` function will now infer interpolation values, but it'll only work if the translation files (resources) are placed in a ts file and using `as const` _(like_ [_this_](https://github.com/i18next/i18next/blob/master/examples/typescript/i18n/en/ns1.ts)_)_ or an [interface in a d.ts file](https://github.com/locize/react-i18next-example-app-ts/blob/main/src/%40types/resources.d.ts) _(can be generated like_ [_this_](https://github.com/locize/react-i18next-example-app-ts/blob/751f704984c206076d08638442ae34b3507aa7ad/package.json#L35)_)_, JSON files don't support `as const` to convert objects to be type literals (yet).
+
+**Breaking changes**
+
+All breaking changes described below are minor ones:
+
+1. Projects with the option `returnObjects` set as `true` by default will also have to set the same option in the `CustomTypeOptions` type. Otherwise, only complete keys will be allowed (`key1.key2.key3...`).
+
+```
+ // i18next.d.ts
+ import 'i18next';
+ declare module 'i18next' {
+    interface CustomTypeOptions {
+     returnObjects: true
+      ...
+```
+
+2. Renaming `StringMap` to `$Dictionary`, and we'll no longer export it. `$Dictionary` is an internal helper, and there is no reason to expose it. If needed, you can create a copy and reuse it in your project.
+3. `ns` property from `InterpolationOptions` type will be constrained to `Namespace` rather than `string` or `readonly string[]`.
+4. Renaming `KeysWithSeparator` type to `JoinKeys`, and it will no longer be exposed.
+5. Renaming `TFuncKey` type to `ParseKeys`.
+6. Removing `NormalizeByTypeOptions` type.
+7. Renaming `DefaultTFuncReturnWithObject` type to `DefaultTReturn`. It will accept `TOptions` as generic constraint and will no longer be exposed.
+8. Removing `DefaultTFuncReturn` type in favor of `DefaultTReturn`.
+9. Removing `NormalizeReturn` type.
+
+</details>
+
+#### Removed `setDebug` function in internal logger
+
+Based on [this discussion](https://github.com/i18next/i18next/issues/1954#issuecomment-1537117407) we decided to remove the setDebug function.
+
+#### Changed default value for `returnNull` option to `false`
+
+To improve the usage for TypeScript users (in combination with React.js) we decided to set the `returnNull` value to `false` by default.\
+More information can be found [here](https://github.com/i18next/i18next/issues/1884).
+
+#### Dropped support for old browsers and Node.js < v12
+
+To have smaller builds and faster loads, we now transpile only for modern browsers and runtimes.\
+More information can be found [here](https://github.com/i18next/i18next/issues/1948).
+
+#### Prefixed ordinal plural keys
+
+To help translators, [ordinal plural](migration-guide.md#prefixed-ordinal-plural-keys) keys are now prefixed with `_ordinal`.
+
 ### v21.x.x to v22.0.0
 
 Since this is a major rewrite for [TypeScript usage](../overview/typescript.md) we decided to create a major version.\
@@ -117,11 +196,11 @@ Typescript use `export default` for esm-first approach [1352](https://github.com
 
 brings pt, pt-PT, pt-BR plurals in line with, new pt reflects pt-BR and pt-PT gets a special case for plural handling [http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html)
 
-| code   | locale               | rule                         |
-| ------ | -------------------- | ---------------------------- |
-| pt-PT  | Portugal Portuguese  | nplurals=2; plural=(n != 1); |
-| pt\_BR | Brazilian Portuguese | plurals=2; plural=(n > 1);   |
-| pt     | Portuguese           | plurals=2; plural=(n > 1);   |
+| code   | locale               | rule                        |
+| ------ | -------------------- | --------------------------- |
+| pt-PT  | Portugal Portuguese  | plurals=2; plural=(n != 1); |
+| pt\_BR | Brazilian Portuguese | plurals=2; plural=(n > 1);  |
+| pt     | Portuguese           | plurals=2; plural=(n > 1);  |
 
 ### v8.x.x to v9.0.0
 

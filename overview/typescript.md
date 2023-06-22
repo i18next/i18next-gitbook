@@ -6,6 +6,20 @@ i18next has embedded type definitions. If you want to enhance IDE Experience and
 This is an optional feature and may affect the **compilation time** depending on your project's size. If you opt not to leverage the type enhancements suggested here, you can ignore this section.
 {% endhint %}
 
+{% hint style="info" %}
+Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
+{% endhint %}
+
+{% hint style="warning" %}
+If your project spans multiple i18next instances with different translation resources, you probably can't use type-safe translations.
+{% endhint %}
+
+{% hint style="success" %}
+[Here](https://locize.com/blog/i18next-typescript/) you'll find a simple guide on how to best use TypeScript for i18next.\
+Discover how to unleash the full potential of i18next in your TypeScript applications by mastering type-safe translations, ensuring accurate localization and eliminating runtime errors.\
+[![](../.gitbook/assets/title.jpg)](https://locize.com/blog/i18next-typescript/)
+{% endhint %}
+
 ## Create a declaration file
 
 TypeScript definitions for i18next can be extended by using [Type Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) and [Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces). So the first step is creating a declaration file (`i18next.d.ts`), for example:
@@ -68,24 +82,42 @@ declare module "i18next" {
 
 **We recommend creating a `@types` directory under `src` or above it and placing all your type declarations there. E.g.: `@types/i18next.d.ts`**
 
+### Some examples
+
+* [various examples](https://github.com/locize/i18next-typescript-examples) _(from simple i18next only to react-i18next prod ready)_
+* [react-i18next](https://github.com/i18next/react-i18next/tree/master/example/react-typescript)
+* [next-i18next](https://github.com/i18next/next-i18next/tree/master/examples/simple)
+* [next-13-app-dir-i18next-example-ts](https://github.com/i18next/next-13-app-dir-i18next-example-ts)
+* [react-i18next-example-app-ts](https://github.com/locize/react-i18next-example-app-ts)
+
 ### Custom Type Options
 
 We provide a few options that can improve TypeScript for `i18next`. All options come with default values, and if you want to change them, you just need to add them under `CustomTypeOptions` interface in your i18next type declaration file (`i18next.d.ts`).
 
-| option                    | default       | description                                                                                                                                                                                                                           |
-| ------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| defaultNS                 | 'translation' | Default namespace. This is more practical in React applications, so when you call `useTranslation()` hooks without passing the namespace, it will infer the types for the `translation` namespace.                                    |
-| resources                 | object        | Resources to initialize with. This is the most important option that is used to infer the appropriate keys and return types.                                                                                                          |
-| keySeparator              | '.'           | Char to separate keys.                                                                                                                                                                                                                |
-| nsSeparator               | ':'           | Char to split namespace from key.                                                                                                                                                                                                     |
-| returnNull                | true          | Allows null values as valid translation.                                                                                                                                                                                              |
-| returnEmptyString         | true          | Allows empty string as valid translation.                                                                                                                                                                                             |
-| jsonFormat                | 'v4'          | Json Format Version - V4 allows plural suffixes. See [here](../translation-function/plurals.md) for more information about Plurals.                                                                                                   |
-| allowObjectInHTMLChildren | false         | Flag that allows HTML elements to receive objects. This is only useful for React applications where you pass objects to HTML elements so they can be replaced to their respective interpolation values (mostly with Trans component). |
+| option                    | default       | description                                                                                                                                                                                                                          |
+| ------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| defaultNS                 | 'translation' | Default namespace. This is more practical in React applications, so when you call `useTranslation()` hooks without passing the namespace, it will infer the types for the `translation` namespace.                                   |
+| resources                 | object        | Resources to initialize with. This is the most important option that is used to infer the appropriate keys and return types.                                                                                                         |
+| fallbackNS                | false         | Fallback namespace. string or array of namespaces to lookup key if not found in given namespace. [See NS fallback docs](../principles/fallback.md#namespace-fallback).                                                               |
+| keySeparator              | '.'           | Char to separate keys.                                                                                                                                                                                                               |
+| nsSeparator               | ':'           | Char to split namespace from key                                                                                                                                                                                                     |
+| pluralSeparator           | '\_'          | Char to split namespace from key                                                                                                                                                                                                     |
+| returnNull                | true          | Allows null values as valid translation.                                                                                                                                                                                             |
+| returnObjects             | false         | Allows objects as valid translation result                                                                                                                                                                                           |
+| jsonFormat                | 'v4'          | Json Format Version - V4 allows plural suffixes. See [here](../translation-function/plurals.md) for more information about Plurals.                                                                                                  |
+| allowObjectInHTMLChildren | false         | Flag that allows HTML elements to receive objects. This is only useful for React applications where you pass objects to HTML elements so they can be replaced to their respective interpolation values (mostly with Trans component) |
+| interpolationPrefix       | '\{{'         | Prefix for interpolation                                                                                                                                                                                                             |
+| interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                             |
 
 ## Troubleshooting
 
+### Not working interpolation values
+
+`t` function infers interpolation values, but it'll only work if the translation files (resources) are placed in a ts file and using `as const` _(like_ [_this_](https://github.com/i18next/i18next/blob/master/examples/typescript/i18n/en/ns1.ts)_)_ or an [interface in a d.ts file](https://github.com/locize/react-i18next-example-app-ts/blob/main/src/%40types/resources.d.ts) _(can be generated like_ [_this_](https://github.com/locize/react-i18next-example-app-ts/blob/751f704984c206076d08638442ae34b3507aa7ad/package.json#L35)_)_, JSON files don't support `as const` to convert objects to be type literals (yet).
+
 ### Slow compilation time
+
+**This should not habben anymore since v23.0.0**
 
 In order to fully type the `t` function, we recursively map all nested keys from your primary locale files or objects. Depending on the number of keys your project have, the compilation time could be noticeably affected. If this is negatively influencing your productivity, this feature might not be the best choice for you. If needed, you can always open an issue on Github to get some help from us.
 
@@ -145,6 +177,8 @@ t`key1.key2`;
 The `keys` and `return` type inference will not work, because [TemplateStringsArray](https://github.com/microsoft/TypeScript/issues/33304) does not accept generic types yet. You can use Tagged Template Literal syntax, but it will accept any string as argument.
 
 ### Argument of type 'DefaultTFuncReturn' is not assignable to parameter of type xyz
+
+**This should not be necessary anymore since v23.0.0**
 
 `t` function can return `null`, this behaviour is [set by default](configuration-options.md#translation-defaults), if you want to change it, set `returnNull` type to `false`.
 

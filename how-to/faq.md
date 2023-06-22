@@ -91,5 +91,5 @@ Because of this we suggest to not use a remote backend and to download the trans
 
 {% hint style="success" %}
 Read more about this topic, [here](https://locize.com/blog/i18n-serverless/).[\
-](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](../.gitbook/assets/title.jpg)](https://locize.com/blog/i18n-serverless/)
+](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](<../.gitbook/assets/title (1).jpg>)](https://locize.com/blog/i18n-serverless/)
 {% endhint %}
