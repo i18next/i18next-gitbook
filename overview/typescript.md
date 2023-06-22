@@ -2,12 +2,16 @@
 
 i18next has embedded type definitions. If you want to enhance IDE Experience and prevent errors (such as type coercion), you should follow the instructions below in order to get the t function fully-type safe (keys and return type).
 
-{% hint style="info" %}
+{% hint style="success" %}
 This is an optional feature and may affect the **compilation time** depending on your project's size. If you opt not to leverage the type enhancements suggested here, you can ignore this section.
 {% endhint %}
 
 {% hint style="info" %}
 Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
+{% endhint %}
+
+{% hint style="warning" %}
+If your project spans multiple i18next instances with different translation resources, you probably can't use type-safe translations.
 {% endhint %}
 
 ## Create a declaration file
