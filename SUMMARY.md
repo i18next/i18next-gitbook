@@ -26,6 +26,7 @@
 
 ## Principles
 
+* [Best Practices](principles/best-practices.md)
 * [Translation Resolution](principles/translation-resolution.md)
 * [Namespaces](principles/namespaces.md)
 * [Fallback](principles/fallback.md)
