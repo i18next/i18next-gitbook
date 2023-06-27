@@ -1,8 +1,6 @@
 # Best Practices
 
-> This content is available to you thanks to the contribution of following people:\
-> \
->
+> This content is available to you thanks to the contribution of following people:
 >
 > * [Jenny Reid](https://github.com/jennylreid)
 
