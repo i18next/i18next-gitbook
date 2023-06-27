@@ -1,5 +1,9 @@
 # Best Practices
 
+> This content is available to you thanks to the contribution of following people:\
+> \
+> [- Jenny Reid](http://localhost:5000/s/-L9pm8yQi-Jkj6yuulDv/more/general-questions/how-to-delete-or-rename-a-namespace)
+
 ### Impact of Interpolation on localization
 
 When translating into other languages interpolation causes real problems. Fundamentally what interpolation does is concatenate pieces of text. English sentences split into sentence fragments and programmatcially constructed at runtime are difficult and sometimes impossible to translate, unless you have implemented multilingual grammar rules, which is rare.
