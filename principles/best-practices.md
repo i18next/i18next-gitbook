@@ -2,7 +2,9 @@
 
 > This content is available to you thanks to the contribution of following people:\
 > \
-> [- Jenny Reid](http://localhost:5000/s/-L9pm8yQi-Jkj6yuulDv/more/general-questions/how-to-delete-or-rename-a-namespace)
+>
+>
+> * [Jenny Reid](https://github.com/jennylreid)
 
 ### Impact of Interpolation on localization
 
