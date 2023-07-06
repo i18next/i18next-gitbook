@@ -210,6 +210,12 @@ It can be used as primary used language, for example in a language switcher.
 
 _(introduced in v21.0.0)_
 
+### hasLoadedNamespace
+
+`i18next.hasLoadedNamespace(ns, options) // -> returns true or false`
+
+Checks if namespace has loaded yet. i.e. used by [react-i18next](https://react.i18next.com/)
+
 ### loadNamespaces
 
 `i18next.loadNamespaces(ns, callback) // -> returns a Promise`
