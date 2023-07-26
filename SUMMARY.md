@@ -51,5 +51,4 @@
 ***
 
 * [🌐 localization as a service](https://locize.com)
-* [🔎 Find your translator](https://localistars.com)
 * [🎓 i18next crash course](https://youtu.be/SA\_9i4TtxLQ)
