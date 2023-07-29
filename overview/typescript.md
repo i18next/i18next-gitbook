@@ -117,7 +117,7 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 
 ### Slow compilation time
 
-**This should not habben anymore since v23.0.0**
+**This should not happen anymore since v23.0.0**
 
 In order to fully type the `t` function, we recursively map all nested keys from your primary locale files or objects. Depending on the number of keys your project have, the compilation time could be noticeably affected. If this is negatively influencing your productivity, this feature might not be the best choice for you. If needed, you can always open an issue on Github to get some help from us.
 
