@@ -20,6 +20,8 @@ Discover how to unleash the full potential of i18next in your TypeScript applica
 [![](../.gitbook/assets/title.jpg)](https://locize.com/blog/i18next-typescript/)
 {% endhint %}
 
+{% embed url="https://youtu.be/GLIas4DH3Ww" %}
+
 ## Create a declaration file
 
 TypeScript definitions for i18next can be extended by using [Type Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) and [Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces). So the first step is creating a declaration file (`i18next.d.ts`), for example:
