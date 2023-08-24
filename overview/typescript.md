@@ -7,7 +7,8 @@ This is an optional feature and may affect the **compilation time** depending on
 {% endhint %}
 
 {% hint style="info" %}
-Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
+Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.\
+It's recommended to use TypeScript v5.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -112,6 +113,10 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 | interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                             |
 
 ## Troubleshooting
+
+### Intellisense not working
+
+Try to update the used TypeScript version.
 
 ### Not working interpolation values
 
