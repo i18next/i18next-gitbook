@@ -30,7 +30,7 @@ keys
 
 ```javascript
 {
-    "girlsAndBoys": "They have $t(girls, {\"count\": \"{{girls}}\" }) and $t(boys, {\"count\": \"{{boys}}\" })",
+    "girlsAndBoys": "They have $t(girls, {\"count\": {{girls}} }) and $t(boys, {\"count\": {{boys}} })",
     "boys": "{{count}} boy",
     "boys_other": "{{count}} boys",
     "girls": "{{count}} girl",
