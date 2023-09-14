@@ -8,7 +8,7 @@ This is an optional feature and may affect the **compilation time** depending on
 
 {% hint style="info" %}
 Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.\
-It's recommended to use TypeScript v5.
+It's recommended to use **TypeScript v5**, especially if you want a proper [intellisense support](typescript.md#intellisense-not-working).
 {% endhint %}
 
 {% hint style="warning" %}
@@ -116,7 +116,7 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 
 ### Intellisense not working
 
-Try to update the used TypeScript version.
+Try to update the used TypeScript version _(>= v5 is recommended)_.
 
 ### Not working interpolation values
 
