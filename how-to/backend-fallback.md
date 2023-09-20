@@ -16,7 +16,7 @@ import resourcesToBackend from "i18next-resources-to-backend";
 
 const bundledResources = {
   en: {
-    translations: {
+    translation: {
       key: 'value'
     }
   }
