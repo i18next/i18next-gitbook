@@ -122,6 +122,10 @@ Try to update the used TypeScript version _(>= v5 is recommended)_.
 
 `t` function infers interpolation values, but it'll only work if the translation files (resources) are placed in a ts file and using `as const` _(like_ [_this_](https://github.com/i18next/i18next/blob/master/examples/typescript/i18n/en/ns1.ts)_)_ or an [interface in a d.ts file](https://github.com/locize/react-i18next-example-app-ts/blob/main/src/%40types/resources.d.ts) _(can be generated like_ [_this_](https://github.com/locize/react-i18next-example-app-ts/blob/751f704984c206076d08638442ae34b3507aa7ad/package.json#L35)_)_, JSON files don't support `as const` to convert objects to be type literals (yet).
 
+## `Type 'HTMLAttributes<T>' is not assignable to type...`
+
+This happens when [`skipLibCheck`](https://www.typescriptlang.org/tsconfig#skipLibCheck) is disabled. Setting `skipLibCheck` in tsconfig to `true` will remove this issue.
+
 ### Slow compilation time
 
 **This should not happen anymore since v23.0.0**
