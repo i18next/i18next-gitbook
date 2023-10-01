@@ -29,7 +29,7 @@ Locize brings you:
 
 * A beautiful editor to edit your translations
 * Enables a continuous localization process
-* An incontext editor to edit on your own website
+* An in-context editor to edit on your own website
 * Progress reporting
 * Usage reporting
 * Plural conversion between languages
@@ -38,3 +38,5 @@ Locize brings you:
 * Hosts translation on its CDN and allows for automatic or manual publishing (You still have the option to host translations yourself)
 
 Check out how it works => [https://youtu.be/ds-yEEYP1Ks](https://youtu.be/ds-yEEYP1Ks)
+
+_Together, 'i18next' and '_[_locize_](https://locize.com)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._
