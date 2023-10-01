@@ -94,3 +94,10 @@ Through [locize.com](http://locize.com/?utm\_source=i18next\_com\&utm\_medium=gi
 {% embed url="https://youtu.be/ds-yEEYP1Ks" %}
 
 [Learn more about the enterprise offering](overview/for-enterprises.md)
+
+Imagine you run a successful online business, and you want to expand it to reach customers in different countries. You know that to succeed in those markets, your website or app needs to speak the language and understand the culture of each place.
+
+1. **i18next**: Think of 'i18next' as a sophisticated language expert for your website or app. It's like hiring a team of translators and cultural experts who ensure that your online business is fluent in multiple languages. It helps adapt your content, menus, and messages to fit perfectly in each target market, making your business more appealing and user-friendly.
+2. **locize**: Now, 'locize' is your efficient manager in charge of organizing and streamlining the translation process. It keeps all your language versions organized and ensures they're always accurate and up-to-date. So, if you want to introduce a new product or promotion, locize helps you do it seamlessly in all the languages you operate in, saving you time and resources.
+
+Together, 'i18next' and '[locize](https://locize.com)' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets.
