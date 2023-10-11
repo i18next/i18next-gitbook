@@ -29,7 +29,7 @@ _Are you working on an open source project and are looking for a way to manage y
 {% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-![](.gitbook/assets/title-width.jpg)](https://locize.com/blog/react-i18next/)
+![](<.gitbook/assets/title width.jpg>)](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 {% hint style="success" %}

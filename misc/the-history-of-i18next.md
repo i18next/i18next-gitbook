@@ -4,7 +4,7 @@
 
 All started back in 2011 when we were in search for an internationalization library that meets our demand - allowing to run both on server side [Node.js](https://nodejs.org) and on our client side single page applications.
 
-![The first i18next landing page in 2011: http://i18next.github.io/i18next/](../.gitbook/assets/i18next-first-website.jpg)
+![The first i18next landing page in 2011: http://i18next.github.io/i18next/](<../.gitbook/assets/i18next first website.jpg>)
 
 I18next was born and fastly grown to one of the most used frameworks for translating web applications and in [Node.js](https://nodejs.org). The response of the community was amazing and a fast growing [ecosystem](../overview/supported-frameworks.md) established itself around i18next.
 
@@ -50,7 +50,7 @@ Having created the foundation with i18next it was a long journey to [**localizat
 * [Transparent and fair pricing](https://locize.com/pricing.html)
 * and a lot more...
 
-![](../.gitbook/assets/transform-your-localization-process-small.png)
+![](<../.gitbook/assets/transform your localization process small.png>)
 
 {% hint style="success" %}
 🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://locize.com)**.** 💙
