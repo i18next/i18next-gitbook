@@ -55,3 +55,5 @@ Having created the foundation with i18next it was a long journey to [**localizat
 {% hint style="success" %}
 🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://locize.com)**.** 💙
 {% endhint %}
+
+> _<\<We aim to simplify localization, making it an efficient process that aligns with the ever-evolving demands of the modern business landscape.>>_ [read the full interview](https://www.websiteplanet.com/blog/interview-locize/).
