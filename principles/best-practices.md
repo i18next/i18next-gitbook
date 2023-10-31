@@ -4,11 +4,11 @@
 >
 > * [Jenny Reid](https://github.com/jennylreid)
 
-### Impact of Interpolation on localization
+### Implications of interpolation for localization
 
-When translating into other languages interpolation causes real problems. Fundamentally what interpolation does is concatenate pieces of text. English sentences split into sentence fragments and programmatcially constructed at runtime are difficult and sometimes impossible to translate, unless you have implemented multilingual grammar rules, which is rare.
+When translating into other languages, interpolation causes real problems. Fundamentally, what interpolation does is concatenate pieces of text. English sentences split into sentence fragments and programmatically constructed at runtime are difficult and sometimes impossible to translate, unless you have implemented multilingual grammar rules, which is rare.
 
-Use interpolation sparingly to minimize impact on localization. Interpolation cannot be avoided for values that can only be known at runtime, such as
+Use interpolation sparingly to minimize issues with localization. Interpolation cannot be avoided for values that can only be known at runtime, such as:
 
 * Time stamps
 * User-inputted data
