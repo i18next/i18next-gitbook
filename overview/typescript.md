@@ -8,7 +8,7 @@ This is an optional feature and may affect the **compilation time** depending on
 
 {% hint style="info" %}
 Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.\
-It's recommended to use **TypeScript v5**, especially if you want a proper [intellisense support](typescript.md#intellisense-not-working).
+It's strongly recommended to use **TypeScript v5**, especially if you want a proper [intellisense support](typescript.md#intellisense-not-working). Older TypeScript versions may work, but are not supported any longer.
 {% endhint %}
 
 {% hint style="warning" %}
