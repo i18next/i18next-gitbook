@@ -9,6 +9,8 @@ The redesign endeavors to enhance the approach to parsing and inferring keys for
 
 Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
 
+Also use TypeScript v5.
+
 <details>
 
 <summary>More information: Features and Breaking changes</summary>
