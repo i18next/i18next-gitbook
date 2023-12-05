@@ -23,7 +23,7 @@ Translation Management Systems are a great help. But most tools out there are bu
 
 [Locize](http://locize.com/?utm\_source=i18next\_com\&utm\_medium=gitbook) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
 
-![](../.gitbook/assets/locize-teaser\_small.gif)
+{% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
 
 Locize brings you:
 
@@ -37,6 +37,6 @@ Locize brings you:
 * Gets your missing keys passed directly to the project
 * Hosts translation on its CDN and allows for automatic or manual publishing (You still have the option to host translations yourself)
 
-Check out how it works => [https://youtu.be/ds-yEEYP1Ks](https://youtu.be/ds-yEEYP1Ks)
+Check out how it works => [https://www.youtube.com/watch?v=TFV\_vhJs5DY](https://www.youtube.com/watch?v=TFV\_vhJs5DY)
 
 _Together, 'i18next' and '_[_locize_](https://locize.com)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._
