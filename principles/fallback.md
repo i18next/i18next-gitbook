@@ -90,7 +90,7 @@ The default is set to `dev` which means developer language. At first this might 
 
 ## Namespace fallback
 
-i18next by default loads its translations from one file named `translation`. However, you can configure it to load from multiple files, called _namespaces_.
+i18next by default loads its translations from one file named `translation`. However, you can configure it to load from multiple files, called [_namespaces_](namespaces.md).
 
 Besides defining multiple namespaces to load from, you also can set fallback namespaces. Thus, if a key to translate isn't found in the given namespace, it will look it up in the indicated fallbacks.
 
