@@ -188,6 +188,39 @@ t`key1.key2`;
 
 The `keys` and `return` type inference will not work, because [TemplateStringsArray](https://github.com/microsoft/TypeScript/issues/33304) does not accept generic types yet. You can use Tagged Template Literal syntax, but it will accept any string as argument.
 
+### Customize `t` function return when `returnObjects` is set to `true` but `CustomTypeOptions.resources` is not used (>= v23)
+
+When no `resources` are defined inside `CustomTypeOptions` and `returnObject` options is set to `true`
+`t` function returns a `$SpecialObject` type:
+
+```typescript
+type $SpecialObject = object | Array<string | object>; 
+```
+
+Due to his anatomy it can be easily casted to a better defined type as you can see from the following examples:
+
+#### Example with object
+
+```typescript
+const tResult = t('myTypeKey', { returnObjects: true }) as { title: string, text: string };
+expectTypeOf(tResult).toEqualTypeOf<{ title: string; text: string }>();
+```
+
+#### Example with array
+
+```typescript
+const tResult = t('myTypeKey', { returnObjects: true }) as Array<string>;
+expectTypeOf(tResult).toEqualTypeOf<Array<string>>();
+```
+
+#### Example without casting using type parameters
+
+```typescript
+type MyCustomReturn = { title:string; text: string };
+const tResult = t<string, { returnObjects: true }, MyCustomReturn>('myKey', { returnObjects: true });
+expectTypeOf(tResult).toEqualTypeOf<MyCustomReturn>();
+```
+
 ### Argument of type 'DefaultTFuncReturn' is not assignable to parameter of type xyz
 
 **This should not be necessary anymore since v23.0.0**
