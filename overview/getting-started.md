@@ -49,7 +49,7 @@ Make sure to use a fixed version in production like [https://unpkg.com/i18next@1
 
 **cdnjs.com**
 
-* [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)\*\*\*\*
+* [https://cdnjs.com/libraries/i18next](https://cdnjs.com/libraries/i18next)
 
 **jsdelivr.com**
 
