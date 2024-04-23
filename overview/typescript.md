@@ -106,6 +106,7 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 | keySeparator              | '.'           | Char to separate keys.                                                                                                                                                                                                               |
 | nsSeparator               | ':'           | Char to split namespace from key                                                                                                                                                                                                     |
 | pluralSeparator           | '\_'          | Char to split namespace from key                                                                                                                                                                                                     |
+| contextSeparator          | '\_'          | Char to split context from key                                                                                                                                                                                                       |
 | returnNull                | true          | Allows null values as valid translation.                                                                                                                                                                                             |
 | returnObjects             | false         | Allows objects as valid translation result                                                                                                                                                                                           |
 | jsonFormat                | 'v4'          | Json Format Version - V4 allows plural suffixes. See [here](../translation-function/plurals.md) for more information about Plurals.                                                                                                  |
@@ -190,8 +191,7 @@ The `keys` and `return` type inference will not work, because [TemplateStringsAr
 
 ### Customize `t` function return when `returnObjects` is set to `true` but `CustomTypeOptions.resources` is not used (>= v23)
 
-When no `resources` are defined inside `CustomTypeOptions` and `returnObject` options is set to `true`
-`t` function returns a `$SpecialObject` type:
+When no `resources` are defined inside `CustomTypeOptions` and `returnObject` options is set to `true` `t` function returns a `$SpecialObject` type:
 
 ```typescript
 type $SpecialObject = object | Array<string | object>; 
