@@ -5,11 +5,28 @@
 #### Redesigned [TypeScript types](../overview/typescript.md)
 
 [This PR](https://github.com/i18next/i18next/pull/1911) redesigned the types to be less complex, faster and easier to maintain.\
+
 The redesign endeavors to enhance the approach to parsing and inferring keys for the `t` function. Instead of performing a recursive examination of each key-value pair in `resources` associated with specific namespace(s) each time the `t` function is invoked, we generate a comprehensive set of keys from all namespaces just once.
 
 Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.
 
+
 Also use TypeScript v5.
+
+
+#### Codemods
+
+To assist with the upgrade from i18n  v22.x.x to v23.0.0, we have added features that utilize codemods to automatically update your code to many of the new APIs and patterns. Run the following command to automatically update your code for i18n v23.0.0 migration:
+
+```bash
+npx codemod i18n/v23.0.0/migration-recipe
+```
+This will run the following codemods from the i18n Codemod repository:
+
+- **add-namespace-type-annotation**
+- **i18n-remove-options**
+- **i18next-replace-keyswithseparator-with-joinkeys**
+
 
 <details>
 
@@ -54,10 +71,28 @@ All breaking changes described below are minor ones:
 
 2. Renaming `StringMap` to `$Dictionary`, and we'll no longer export it. `$Dictionary` is an internal helper, and there is no reason to expose it. If needed, you can create a copy and reuse it in your project.
 3. `ns` property from `InterpolationOptions` type will be constrained to `Namespace` rather than `string` or `readonly string[]`.
+  > **Note**: Codemod for this Change:
+  >
+  > ```bash
+  > npx codemod add-namespace-type-annotation
+  > ```
+
 4. Renaming `KeysWithSeparator` type to `JoinKeys`, and it will no longer be exposed.
+
+  > **Note**: Codemod for this Change:
+  >
+  > ```bash
+  > npx codemod i18next-replace-keyswithseparator-with-joinkeys
+  > ```
+
 5. Renaming `TFuncKey` type to `ParseKeys`.
 6. Removing `NormalizeByTypeOptions` type.
 7. Renaming `DefaultTFuncReturnWithObject` type to `DefaultTReturn`. It will accept `TOptions` as generic constraint and will no longer be exposed.
+ > **Note**: Codemod for this Change:
+  >
+  > ```bash
+  > npx codemod i18n-remove-options
+  > ```
 8. Removing `DefaultTFuncReturn` type in favor of `DefaultTReturn`.
 9. Removing `NormalizeReturn` type.
 
