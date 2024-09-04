@@ -18,9 +18,9 @@ To assist with the upgrade from i18n `v22.x.x` to `v23.0.0`, [Codemod](https://g
 
 These following codemods are available (see the notes in the "More information" section below):
 
-* [`i18next/add-namespace-type-annotation`](https://go.codemod.com/i18n-namespace-type-annotation)
-* [`i18next/remove-options`](https://go.codemod.com/i18n-remove-options)
-* [`i18next/replace-keys`](https://go.codemod.com/i18n-replace-keys)
+* [`i18next/23/add-namespace-type-annotation`](https://go.codemod.com/i18n-namespace-type-annotation)
+* [`i18next/23/remove-options`](https://go.codemod.com/i18n-remove-options)
+* [`i18next/23/replace-keys`](https://go.codemod.com/i18n-replace-keys)
 
 <details>
 
@@ -68,7 +68,7 @@ All breaking changes described below are minor ones:
 Codemod for this Change:
 
 ```bash
-npx codemod i18next/add-namespace-type-annotation
+npx codemod i18next/23/add-namespace-type-annotation
 ```
 {% endhint %}
 
@@ -78,7 +78,7 @@ npx codemod i18next/add-namespace-type-annotation
 Codemod for this Change:
 
 ```bash
-npx codemod i18next/replace-keys
+npx codemod i18next/23/replace-keys
 ```
 {% endhint %}
 
@@ -90,7 +90,7 @@ npx codemod i18next/replace-keys
 Codemod for this Change:
 
 ```bash
-npx codemod i18next/remove-options
+npx codemod i18next/23/remove-options
 ```
 {% endhint %}
 
