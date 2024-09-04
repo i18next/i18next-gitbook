@@ -14,13 +14,13 @@ Also use TypeScript v5.
 
 #### Codemods
 
-To assist with the upgrade from i18n v22.x.x to v23.0.0, we have added features that utilize codemods to automatically update your code to many of the new APIs and patterns.
+To assist with the upgrade from i18n `v22.x.x` to `v23.0.0`, [Codemod](https://github.com/codemod-com/codemod) provides open-source codemods that automatically transform your code to many of the new APIs and patterns.
 
 These following codemods are available (see the notes in the "More information" section below):
 
-* **add-namespace-type-annotation**
-* **i18n-remove-options**
-* **i18next-replace-keyswithseparator-with-joinkeys**
+* [`i18next/23/add-namespace-type-annotation`](https://go.codemod.com/i18n-namespace-type-annotation)
+* [`i18next/23/remove-options`](https://go.codemod.com/i18n-remove-options)
+* [`i18next/23/replace-keys`](https://go.codemod.com/i18n-replace-keys)
 
 <details>
 
@@ -64,34 +64,44 @@ All breaking changes described below are minor ones:
 2. Renaming `StringMap` to `$Dictionary`, and we'll no longer export it. `$Dictionary` is an internal helper, and there is no reason to expose it. If needed, you can create a copy and reuse it in your project.
 3. `ns` property from `InterpolationOptions` type will be constrained to `Namespace` rather than `string` or `readonly string[]`.
 
-**Note**: Codemod for this Change:
+{% hint style="success" %}
+Codemod for this Change:
 
 ```bash
-npx codemod add-namespace-type-annotation
+npx codemod i18next/23/add-namespace-type-annotation
 ```
+{% endhint %}
 
 4. Renaming `KeysWithSeparator` type to `JoinKeys`, and it will no longer be exposed.
 
-**Note**: Codemod for this Change:
+{% hint style="success" %}
+Codemod for this Change:
 
 ```bash
-npx codemod i18next-replace-keyswithseparator-with-joinkeys
+npx codemod i18next/23/replace-keys
 ```
+{% endhint %}
 
 5. Renaming `TFuncKey` type to `ParseKeys`.
 6. Removing `NormalizeByTypeOptions` type.
 7. Renaming `DefaultTFuncReturnWithObject` type to `DefaultTReturn`. It will accept `TOptions` as generic constraint and will no longer be exposed.
 
-**Note**: Codemod for this Change:
+{% hint style="success" %}
+Codemod for this Change:
 
 ```bash
-npx codemod i18n-remove-options
+npx codemod i18next/23/remove-options
 ```
+{% endhint %}
 
 8. Removing `DefaultTFuncReturn` type in favor of `DefaultTReturn`.
 9. Removing `NormalizeReturn` type.
 
 </details>
+
+{% hint style="info" %}
+If you encounter any issues, please report them to the Codemod team with `npx codemod feedback`
+{% endhint %}
 
 #### Removed `setDebug` function in internal logger
 
