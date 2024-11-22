@@ -2,11 +2,19 @@
 
 ### v23.x.x to v24.0.0
 
+* remove support for older environments
+* remove old i18next [JSON formats](json-format.md)
+  * to convert your existing [v3](json-format.md#i18next-json-v3) translations to the [v4](json-format.md#i18next-json-v4) format, have a look at [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter) or this [web tool](https://i18next.github.io/i18next-v4-format-converter-web/).
+* remove support for compatibility to the very first [v1 API](https://www.i18next.com/misc/the-history-of-i18next) ([old docs](https://i18next.github.io/i18next/))
+* [`Intl` API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) is mandatory now and will not fallback anymore, use a polyfill ([`Intl.PluralRules`](https://github.com/eemeli/intl-pluralrules) and [`Intl.getCanonicalLocales`](https://formatjs.github.io/docs/polyfills/intl-getcanonicallocales/)) if your environment does not support it.
+  * for those who really need the old behaviour, needs to create a compatibility layer similar to [this](https://github.com/i18next/i18next/blob/6b3b06057a3c5aee8e4900ef0731a3cf9254a4fa/test/compatibility/v4/v4Compatibility.js).
+* renamed `initImmediate` to `initAsync`
+* fallback to `dev` language if plural rule not found
+
 #### TypeScript
 
-- Now only `typescript >5` versions are supported. `v4` types are now removed from the codebase.
-- `jsonFormat` option has been removed. 
-  When a new json version will be released you can can use `compatibilityJSON` option. which now only accepts `v4` as value. 
+* Now only `typescript >5` versions are supported. `v4` types are now removed from the codebase.
+* `jsonFormat` option has been removed. When a new json version will be released you can can use `compatibilityJSON` option. which now only accepts `v4` as value.
 
 ### v22.x.x to v23.0.0
 
@@ -72,35 +80,29 @@ All breaking changes described below are minor ones:
 2. Renaming `StringMap` to `$Dictionary`, and we'll no longer export it. `$Dictionary` is an internal helper, and there is no reason to expose it. If needed, you can create a copy and reuse it in your project.
 3. `ns` property from `InterpolationOptions` type will be constrained to `Namespace` rather than `string` or `readonly string[]`.
 
-{% hint style="success" %}
 Codemod for this Change:
 
 ```bash
 npx codemod i18next/23/add-namespace-type-annotation
 ```
-{% endhint %}
 
 4. Renaming `KeysWithSeparator` type to `JoinKeys`, and it will no longer be exposed.
 
-{% hint style="success" %}
 Codemod for this Change:
 
 ```bash
 npx codemod i18next/23/replace-keys
 ```
-{% endhint %}
 
 5. Renaming `TFuncKey` type to `ParseKeys`.
 6. Removing `NormalizeByTypeOptions` type.
 7. Renaming `DefaultTFuncReturnWithObject` type to `DefaultTReturn`. It will accept `TOptions` as generic constraint and will no longer be exposed.
 
-{% hint style="success" %}
 Codemod for this Change:
 
 ```bash
 npx codemod i18next/23/remove-options
 ```
-{% endhint %}
 
 8. Removing `DefaultTFuncReturn` type in favor of `DefaultTReturn`.
 9. Removing `NormalizeReturn` type.
@@ -139,8 +141,8 @@ For JavaScript users v22.0.0 is equivalent to 21.10.0
 #### [json format v4](json-format.md#i-18-next-json-v4) - [pluralization](../translation-function/plurals.md)
 
 One of the biggest breaking changes is regarding suffixing plurals.\
-This change streamlines the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/PluralRules/PluralRules).\
-You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) API, in case it is not available it will fallback to the [i18next JSON format v3](json-format.md#i-18-next-json-v3) plural handling.\
+This change streamlines the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).\
+You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API, in case it is not available it will fallback to the [i18next JSON format v3](json-format.md#i-18-next-json-v3) plural handling.\
 To enforce old behaviour you can enable `compatibilityJSON = 'v3'` on i18next init call.
 
 ```javascript
@@ -175,7 +177,7 @@ i18next.init({
 
 i18next now automatically tries to detect natural language keys.\
 This way there is no need to set `nsSeparator` or `keySeparator` [option](../overview/configuration-options.md#others) to `false`.\
-_In case you want to skip this natural language detection, provide a `keySeparator` and/or a `nsSeparator` option._
+&#xNAN;_&#x49;n case you want to skip this natural language detection, provide a `keySeparator` and/or a `nsSeparator` option._
 
 #### removed deprecated
 
@@ -233,7 +235,7 @@ Typescript use `export default` for esm-first approach [1352](https://github.com
 
 ### v11.x.x to v12.0.0
 
-* plural form for hebrew was updated to latest [CLDR](http://www.unicode.org/cldr/charts/33/supplemental/language\_plural\_rules.html#he). Before it had one plural form. You will have to update your JSON files containing hebrew plurals. Or patch back the plural form to: [https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L43](https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L43) using the [addRule function](https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L90).\
+* plural form for hebrew was updated to latest [CLDR](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html#he). Before it had one plural form. You will have to update your JSON files containing hebrew plurals. Or patch back the plural form to: [https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L43](https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L43) using the [addRule function](https://github.com/i18next/i18next/blob/master/src/PluralResolver.js#L90).\
   \
   Learn more about plurals: [https://www.i18next.com/translation-function/plurals](https://www.i18next.com/translation-function/plurals)
 
@@ -244,7 +246,7 @@ Typescript use `export default` for esm-first approach [1352](https://github.com
 
 ### v9.x.x to v10.0.0
 
-brings pt, pt-PT, pt-BR plurals in line with, new pt reflects pt-BR and pt-PT gets a special case for plural handling [http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html)
+brings pt, pt-PT, pt-BR plurals in line with, new pt reflects pt-BR and pt-PT gets a special case for plural handling [http://www.unicode.org/cldr/charts/26/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/26/supplemental/language_plural_rules.html)
 
 | code   | locale               | rule                        |
 | ------ | -------------------- | --------------------------- |
