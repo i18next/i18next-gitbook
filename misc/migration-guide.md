@@ -1,5 +1,13 @@
 # Migration Guide
 
+### v23.x.x to v24.0.0
+
+#### TypeScript
+
+- Now only `typescript >5` versions are supported. `v4` types are now removed from the codebase.
+- `jsonFormat` option has been removed. 
+  When a new json version will be released you can can use `compatibilityJSON` option. which now only accepts `v4` as value. 
+
 ### v22.x.x to v23.0.0
 
 #### Redesigned [TypeScript types](../overview/typescript.md)
