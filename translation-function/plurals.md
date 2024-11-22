@@ -2,8 +2,8 @@
 
 Plural can be combined with interpolation, context, ...
 
-These plurals are streamlined with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/PluralRules/PluralRules).\
-_You may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) _API, in case it is not available it will fallback to the_ [_i18next JSON format v3_](../misc/json-format.md#i18next-json-v3) _plural handling._
+These plurals are streamlined with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).\
+&#xNAN;_&#x59;ou need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API._
 
 {% hint style="danger" %}
 Note: The variable name must be `count`.\
@@ -20,7 +20,7 @@ We provide the ability to have special translation for `{count: 0}`, so that a m
 {% endhint %}
 
 {% hint style="info" %}
-🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=485).
+🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA_9i4TtxLQ?t=485).
 {% endhint %}
 
 ## Singular / Plural
@@ -95,7 +95,7 @@ _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it
 
 #### Or you use a smart translation management system, like [locize](https://locize.com)
 
-![](../.gitbook/assets/locize\_plurals.png)
+![](../.gitbook/assets/locize_plurals.png)
 
 ## Ordinal plurals
 
