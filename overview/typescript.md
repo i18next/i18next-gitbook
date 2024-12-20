@@ -9,7 +9,7 @@ This is an optional feature and may affect the **compilation time** depending on
 {% hint style="info" %}
 Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.\
 The newest i18next versions only support **TypeScript v5**. Older TypeScript versions are not supported any longer with `i18next > v23`.\
-_To use it with TypeScript v4, use `i18next@22.5.1`._
+&#xNAN;_&#x54;o use it with TypeScript v4, use `i18next@22.5.1`._
 {% endhint %}
 
 {% hint style="warning" %}
@@ -113,6 +113,7 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 | allowObjectInHTMLChildren | false         | Flag that allows HTML elements to receive objects. This is only useful for React applications where you pass objects to HTML elements so they can be replaced to their respective interpolation values (mostly with Trans component) |
 | interpolationPrefix       | '\{{'         | Prefix for interpolation                                                                                                                                                                                                             |
 | interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                             |
+| strictKeyChecks           | false         | Flag that enables strict key checking even if a `defaultValue` has been provided. This ensures all calls of `t` function don't accidentally use implicitly missing keys.                                                             |
 
 ## Troubleshooting
 
@@ -122,8 +123,7 @@ Try to update the used TypeScript version _(>= v5 is recommended)_.
 
 ### Out of memory (OOM) errors
 
-Running typechecking with key validation might result in OOM errors.
-This can be facilitated by additional factors like:
+Running typechecking with key validation might result in OOM errors. This can be facilitated by additional factors like:
 
 * large codebase with a lot of namespace with hundreds of keys
 * running typechecking alongside other tools like `ESLint` combined with `typescript-eslint`
@@ -133,14 +133,13 @@ When having this kind of error consider to:
 
 * If you are on a large codebase consider split the typecheck / lint process in separate tasks
 * Split the code in multiple packages (monorepo)
-* Use Node `--max-old-space-size` option to increase Node memory
+*   Use Node `--max-old-space-size` option to increase Node memory
 
-  E.g.:
+    E.g.:
 
-  ```shell
-  export NODE_OPTIONS=\"--max_old_space_size=10240\" && tsc
-  ```
-
+    ```shell
+    export NODE_OPTIONS=\"--max_old_space_size=10240\" && tsc
+    ```
 {% endhint %}
 
 {% hint style="warning" %}
