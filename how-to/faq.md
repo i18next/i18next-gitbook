@@ -33,7 +33,7 @@ _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it
 
 _Or you use a smart translation management system, like_ [_locize_](https://locize.com)_._
 
-![](../.gitbook/assets/locize\_plurals.png)
+![](../.gitbook/assets/locize_plurals.png)
 
 ### **Why are my plural keys not working?**
 
@@ -41,9 +41,9 @@ _Are you seeing this warning in the development console?_
 
 > i18next::pluralResolver: Your environment seems not to be Intl API compatible, use an Intl.PluralRules polyfill. Will fallback to the compatibilityJSON v3 format handling.
 
-_With v21 we_ streamlined the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/PluralRules/PluralRules).
+_With v21 we_ streamlined the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).
 
-_In environments where the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) _API  is not available (like older Android devices), you may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/PluralRules) _API._\
+_In environments where the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API  is not available (like older Android devices), you may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API._\
 _In case it is not available it will fallback to the_ [_i18next JSON format v3_](../misc/json-format.md#i-18-next-json-v3) _plural handling. And if your json is already using the new suffixes, your plural keys will probably not be shown._
 
 _tldr;_
@@ -62,7 +62,7 @@ _Theoretically, you're not bound to any specific language code format, but if yo
 
 `lng-(script)-REGION-(extensions)`\
 \
-_i.e._
+&#xNAN;_&#x69;.e._
 
 * _en, en-US or en-GB_
 * _zh, zh-HK or zh-Hant-HK_
@@ -70,6 +70,10 @@ _i.e._
 _Other examples are listed here:_ [_https://www.iana.org/assignments/language-tags/language-tags.xhtml_](https://www.iana.org/assignments/language-tags/language-tags.xhtml)
 
 _And more information about the format can be found here:_ [_https://www.w3.org/International/articles/language-tags/_](https://www.w3.org/International/articles/language-tags/)
+
+{% hint style="info" %}
+As soon as you use the dash character `-` the language codes are tried to be formatted with `Intl.getCanonicalLocales`.
+{% endhint %}
 
 ## Process
 
