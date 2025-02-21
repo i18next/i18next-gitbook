@@ -21,7 +21,7 @@ make a tweet... write it on your website... create a blog post... etc...
 
 <img src=".gitbook/assets/speaker.jpg" alt="" data-size="original">\
 \
-_Are you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://locize.com) _loves the open-source philosophy and may be able to_ [_support_](https://locize.com/open-source.html) _you._
+&#xNAN;_&#x41;re you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://locize.com) _loves the open-source philosophy and may be able to support you._
 {% endhint %}
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
@@ -40,13 +40,13 @@ Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-
 
 {% hint style="success" %}
 Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://locize.com/blog/how-does-server-side-internationalization-look-like/) you can check out how this works.[\
-](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server\_side\_backend.jpg)](https://locize.com/blog/how-does-server-side-internationalization-look-like/)
+](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server_side_backend.jpg)](https://locize.com/blog/how-does-server-side-internationalization-look-like/)
 {% endhint %}
 
 {% hint style="success" %}
-Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://locize.com/blog/jquery-i18next/).
+Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://www.locize.com/blog/jquery-i18next).
 
-[![](.gitbook/assets/jquery-localization.jpg)](https://locize.com/blog/how-to-jquery-i18next/)
+[![](.gitbook/assets/jquery-localization.jpg)](https://www.locize.com/blog/jquery-i18next)
 {% endhint %}
 
 ## Complete solution
@@ -89,7 +89,7 @@ There are tons of modules built for and around i18next: from extracting translat
 
 ## [Localization as a service](https://locize.com)
 
-Through [locize.com](http://locize.com/?utm\_source=i18next\_com\&utm\_medium=gitbook), i18next even provides its own translation management tool: localization as a service.
+Through [locize.com](http://locize.com/?utm_source=i18next_com\&utm_medium=gitbook), i18next even provides its own translation management tool: localization as a service.
 
 {% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
 
