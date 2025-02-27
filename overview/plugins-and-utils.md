@@ -1,6 +1,6 @@
 # Plugins and Utils
 
-![](../.gitbook/assets/i18next\_eco.jpg)
+![](../.gitbook/assets/i18next_eco.jpg)
 
 ## i18n formats
 
@@ -102,17 +102,18 @@ Services that are known to fully support the i18next format (plural handling, ..
 
 ## language detector
 
-| **language** **detector**                                                                          | **description**                                                                                                            |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [universal (browser + nodejs)](https://github.com/UnlyEd/universal-language-detector)              | Language detector that works universally (browser + server) - Meant to be used with a universal framework, such as Next.js |
-| [browser](https://github.com/i18next/i18next-browser-languageDetector)                             | language detector used in browser environment for i18next                                                                  |
-| [http](https://github.com/i18next/i18next-http-middleware)                                         | language detector for "any" http backend, also for Deno                                                                    |
-| [nodejs koa](https://github.com/lxzxl/koa-i18next-detector)                                        | A i18next language detecting plugin for Koa framework.                                                                     |
-| [react native localization settings](https://github.com/jakex7/react-native-localization-settings) | language detector for React Native that uses native per-app language API to enable language change in system preferences.  |
-| [react native](https://github.com/DylanVann/i18next-react-native-language-detector)                | language detector for React Native.                                                                                        |
-| [react native Async Storage](https://github.com/0xClpz/i18next-react-native-async-storage)         | language detector for React Native that saves the user's choice in Async Storage, used for persistence.                    |
-| [electron](https://github.com/neruchev/i18next-electron-language-detector)                         | language detector for electron apps.                                                                                       |
-| [CLI](https://github.com/neet/i18next-cli-language-detector)                                       | language detector for CLI.                                                                                                 |
+| **language** **detector**                                                                                                                            | **description**                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [universal (browser + nodejs)](https://github.com/UnlyEd/universal-language-detector)                                                                | Language detector that works universally (browser + server) - Meant to be used with a universal framework, such as Next.js |
+| [browser](https://github.com/i18next/i18next-browser-languageDetector)                                                                               | language detector used in browser environment for i18next                                                                  |
+| [http](https://github.com/i18next/i18next-http-middleware)                                                                                           | language detector for "any" http backend, also for Deno                                                                    |
+| [nodejs koa](https://github.com/lxzxl/koa-i18next-detector)                                                                                          | A i18next language detecting plugin for Koa framework.                                                                     |
+| [@os-team/i18next-react-native-language-detector](https://gitlab.com/os-team/libs/utils/-/tree/main/packages/i18next-react-native-language-detector) | The i18next language detector, which is used to detect the user's language in React Native.                                |
+| [react native localization settings](https://github.com/jakex7/react-native-localization-settings)                                                   | language detector for React Native that uses native per-app language API to enable language change in system preferences.  |
+| [react native](https://github.com/DylanVann/i18next-react-native-language-detector)                                                                  | language detector for React Native.                                                                                        |
+| [react native Async Storage](https://github.com/0xClpz/i18next-react-native-async-storage)                                                           | language detector for React Native that saves the user's choice in Async Storage, used for persistence.                    |
+| [electron](https://github.com/neruchev/i18next-electron-language-detector)                                                                           | language detector for electron apps.                                                                                       |
+| [CLI](https://github.com/neet/i18next-cli-language-detector)                                                                                         | language detector for CLI.                                                                                                 |
 
 ## post processors
 
