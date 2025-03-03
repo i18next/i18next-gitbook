@@ -2,6 +2,9 @@
 
 i18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!
 
+> Want to know how to easily add internationalization to your software project?\
+> &#xNAN;_⇒ Check out_ [_this article_](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software)_._
+
 i18next goes beyond just providing the standard i18n features such as ([plurals](translation-function/plurals.md), [context](translation-function/context.md), [interpolation](translation-function/interpolation.md), [format](translation-function/formatting.md)). It provides you with a complete solution to localize your product from web to mobile and desktop.
 
 {% embed url="https://youtu.be/SA_9i4TtxLQ" %}
@@ -25,6 +28,12 @@ make a tweet... write it on your website... create a blog post... etc...
 {% endhint %}
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
+
+{% hint style="success" %}
+Check out [this video](https://youtu.be/37rcHVcQ6t0) and the corresponding [blog post](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software) about "Vite + React + TypeScript" with i18next.
+
+[<img src=".gitbook/assets/title1.png" alt="" data-size="original">](https://youtu.be/37rcHVcQ6t0)
+{% endhint %}
 
 {% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
