@@ -10,7 +10,7 @@
   * for those who really need the old behaviour, needs to create a compatibility layer similar to [this](https://github.com/i18next/i18next/blob/6b3b06057a3c5aee8e4900ef0731a3cf9254a4fa/test/compatibility/v4/v4Compatibility.js).
 * renamed `initImmediate` to `initAsync`
 * fallback to `dev` language if plural rule not found
-* #### Dropped support for Node.js < v14
+* Dropped support for Node.js < v14
 
 #### TypeScript
 
