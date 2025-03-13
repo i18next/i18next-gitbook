@@ -13,7 +13,7 @@ description: Let's try to figure out what you need.
 
 ## For which environment are you looking for an i18n solution?
 
-[Client](https://react.i18next.com/), [server](https://github.com/i18next/i18next-http-middleware), [browser](https://github.com/i18next/jquery-i18next), [React](https://react.i18next.com), [mobile](https://github.com/i18next/react-i18next/tree/master/example/ReactNativeProject), [desktop](https://github.com/i18next/react-i18next/tree/master/example/react\_native\_windows), [Node.js](https://github.com/i18next/i18next-fs-backend/blob/master/example/node/index.js), [Deno](https://github.com/i18next/i18next-fs-backend/blob/master/example/deno/index.js)...
+[Client](https://react.i18next.com/), [server](https://github.com/i18next/i18next-http-middleware), [browser](https://github.com/i18next/jquery-i18next), [React](https://react.i18next.com), [mobile](https://github.com/i18next/react-i18next/tree/master/example/ReactNativeProject), [desktop](https://github.com/i18next/react-i18next/tree/master/example/react_native_windows), [Node.js](https://github.com/i18next/i18next-fs-backend/blob/master/example/node/index.js), [Deno](https://github.com/i18next/i18next-fs-backend/blob/master/example/deno/index.js)...
 
 There are a lot of appropriate libraries. [Have a look at this list.](supported-frameworks.md)
 
@@ -67,6 +67,7 @@ i18next
 
 * [you can add translations on init](../how-to/add-or-load-translations.md#add-on-init)
 * [you can add translations after init](../how-to/add-or-load-translations.md#add-after-init)
+* [you can lazy load translations via dynamic import](../how-to/add-or-load-translations.md#lazy-load-in-memory-translations)
 * on server side: [you can load translations from filesystem](https://github.com/i18next/i18next-fs-backend)
 
 ## Do you want to load the translations separate from your app via http?
