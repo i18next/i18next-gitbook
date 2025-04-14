@@ -118,7 +118,7 @@ With [i18next-chained-backend](https://github.com/i18next/i18next-chained-backen
 {% endhint %}
 
 {% hint style="info" %}
-🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=953).
+🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA_9i4TtxLQ?t=953).
 {% endhint %}
 
 ## Load using a [smart backend plugin](https://github.com/locize/i18next-locize-backend) serving directly from a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
@@ -142,11 +142,17 @@ i18next
 
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide with a React.js app, which will unleash the full power of i18next in combination with locize.\
 See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).\
-There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [autoutomatic translation workflow](https://www.locize.com/docs/automatic-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}
 
 {% embed url="https://youtu.be/VfxBpSXarlU" %}
+
+{% hint style="success" %}
+Check out [this blog post](https://www.locize.com/blog/i18next-locize-ai-human) to learn more about how you can use generative AI together with i18next.
+
+[<img src="../.gitbook/assets/i18next-locize-ai-human.jpg" alt="" data-size="original">](https://www.locize.com/blog/i18next-locize-ai-human)
+{% endhint %}
 
 #### [**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
