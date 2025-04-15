@@ -1,5 +1,13 @@
 # Migration Guide
 
+### v24.x.x to v25.0.0
+
+**This is a potentially breaking release:**
+
+* fix multiple `changeLanguage` call that may have result in wrong order in previous versions [1605](https://github.com/i18next/i18next/issues/1605) [2298](https://github.com/i18next/i18next/pull/2298)
+* adapt `changeLanguage` to always (string or array) use `getBestMatchFromCodes` [2299](https://github.com/i18next/i18next/issues/2299)
+* `getBestMatchFromCodes` now tries to fallback to language code with same script [2299](https://github.com/i18next/i18next/issues/2299)
+
 ### v23.x.x to v24.0.0
 
 * remove support for older environments
