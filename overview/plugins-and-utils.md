@@ -23,6 +23,7 @@ _In general, using an i18n format plugin, will remove the i18next specific forma
 | [i18next-parser](https://github.com/i18next/i18next-parser)                                | A simple command line and gulp plugin that lets you parse your code and extract the translations keys in it. |
 | [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) | A babel plugin that can extract keys in JSONv4 format.                                                       |
 | [translation-check](https://github.com/locize/translation-check)                           | Nicely shows an overview of your translations in a UI. Check which keys are not yet translated.              |
+| [i18next-typescript-parser](https://github.com/emersion/i18next-typescript-parser)         | Extract i18next keys from a TypeScript codebase.                                                             |
 
 ## utils
 
