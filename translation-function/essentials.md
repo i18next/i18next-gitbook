@@ -117,7 +117,7 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 | replace             | object with vars for [interpolation](interpolation.md) - or put them directly in options                                                                                             |
 | lng                 | override language to use                                                                                                                                                             |
 | lngs                | override languages to use                                                                                                                                                            |
-| fallbackLng         | override language to lookup key if not found see [fallbacks](../principles/fallback.md) for details                                                                                  |
+| fallbackLng         | override language to lookup key if not found see [fallbacks](../principles/fallback.md) for details, passing `false` will not do a fallback to any language                          |
 | ns                  | override namespaces (string or array)                                                                                                                                                |
 | keySeparator        | override char to separate keys                                                                                                                                                       |
 | nsSeparator         | override char to split namespace from key                                                                                                                                            |
