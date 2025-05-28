@@ -22,7 +22,7 @@
   "keyPluralMultipleEgArabic_few": "the plural form 3",
   "keyPluralMultipleEgArabic_many": "the plural form 4",
   "keyPluralMultipleEgArabic_other": "the plural form 5",
-  "keyWithArrayValue": ["multipe", "things"],
+  "keyWithArrayValue": ["multiple", "things"],
   "keyWithObjectValue": { "valueA": "return this with valueB", "valueB": "more text" }
 }
 ```
@@ -75,7 +75,7 @@ formats:
   "keyPluralMultipleEgArabic_3": "the plural form 3",
   "keyPluralMultipleEgArabic_4": "the plural form 4",
   "keyPluralMultipleEgArabic_5": "the plural form 5",
-  "keyWithArrayValue": ["multipe", "things"],
+  "keyWithArrayValue": ["multiple", "things"],
   "keyWithObjectValue": { "valueA": "return this with valueB", "valueB": "more text" }
 }
 ```
