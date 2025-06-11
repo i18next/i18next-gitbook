@@ -113,13 +113,14 @@ const title = t('title'); // same as i18next.t('user.accountSettings.changePassw
 ```
 
 {% hint style="warning" %}
-Do **not** use the `keyPrefix` option if you want to use keys with prefixed namespace notation:
+If you want to use keys with a prefixed namespace and the `keyPrefix` argument was provided, you'll need to override it in the `t` function options:
 
 i.e.
 
 ```javascript
 const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
 const title = t('ns:title'); // this will not work
+const title = t('ns:title', { keyPrefix: '' }); // this will work
 ```
 {% endhint %}
 
