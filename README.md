@@ -9,7 +9,7 @@ i18next goes beyond just providing the standard i18n features such as ([plurals]
 
 {% hint style="warning" %}
 Managing JSON files manually?\
-When your project grows, streamline your workflow with [locize](https://locize.com), the official TMS built by the creators of i18next. **Try it for free!**
+When your project grows, streamline your workflow with [locize](https://locize.com), the official TMS built by the creators of i18next. [**Try it for free!**](https://www.locize.com/i18next)
 {% endhint %}
 
 {% embed url="https://youtu.be/SA_9i4TtxLQ" %}
