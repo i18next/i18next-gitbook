@@ -157,6 +157,24 @@ Override the built in console logger.
 }
 ```
 
+## formatter
+
+Override the built in [Formatter](../translation-function/formatting.md).
+
+```javascript
+{
+  type: 'formatter',
+  init: function(services, detectorOptions, i18nextOptions) {},
+  add: function(name, fc) {},
+  addCached: function(name, fc) {},
+  format: function(value, format, lng, options) {
+    if (!format && value instanceof Date) {
+      return value.toUTCString()
+    }
+  }
+}
+```
+
 ## Helpful tips
 
 ### Make sure to set the plugin type
