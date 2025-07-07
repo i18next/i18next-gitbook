@@ -280,3 +280,48 @@ i18next.init({
 | formatSeparator | ','           | used to separate format from interpolation value                                                                                                            |
 
 While there are a lot of options going with the defaults should get you covered.
+
+## Custom formatter
+
+{% hint style="info" %}
+Do you want to create some sort of default formatter, that does not need a specific format to be passed via i18n resources? i18next gets you covered also with that...
+{% endhint %}
+
+Create a custom formatter plugin, and pass it to i18next:
+
+<pre class="language-javascript"><code class="lang-javascript">const myFormatter = {
+  type: 'formatter',
+  init(services, backendOptions, i18nextOptions) {}, // of you need some init stuff to be done...
+  format(value, format, lng, options) {
+    // do whatever you like here... and return the formatted string
+    if (!format &#x26;&#x26; value instanceof Date) {
+      return value.toUTCString()
+    }
+  },
+  add(name, fc) {
+    // handle adding a new format, if you need it
+  },
+  addCached(name, fc) {
+    // handle adding a new cached format, if you need it
+  }
+}
+
+i18next
+<strong>  .use(myFormatter)
+</strong>  .init({
+    fallbackLng: "en",
+    interpolation: {
+      alwaysFormat: true // set alwaysFormat to true
+    },
+    resources: {
+      en: {
+        translation: {
+          testKeyWithoutFormat: 'On the "{val}"',
+        }
+      }
+    }
+  });
+  
+i18next.t("testKeyWithoutFormat", { val: new Date() }) // On the "Mon, 07 Jul 2025 11:44:50 GMT"
+</code></pre>
+
