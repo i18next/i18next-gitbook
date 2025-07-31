@@ -15,6 +15,8 @@ resources with 2 keys:
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('key');
 // -> "value of key"
@@ -22,14 +24,36 @@ i18next.t('key');
 i18next.t('look.deep');
 // -> "value of look deep"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key);
+// -> "value of key"
+
+i18next.t($ => $.look.deep);
+// -> "value of look deep"
+```
+{% endtab %}
+{% endtabs %}
 
 ## Passing a default value
 
 You can pass in a default value for cases the key could not be found in translations like:
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```
 i18next.t('key', 'default value to show');
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key, { defaultValue: 'default value to show' });
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 In case you're using the [saveMissing functionality](../overview/configuration-options.md#missing-keys), it will also pass the defaultValue to your chosen backend, like shown in [this React.js example](https://github.com/locize/react-tutorial).
@@ -68,6 +92,8 @@ common.json
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('name');
 // -> "Module A"
@@ -77,6 +103,20 @@ i18next.t('common:button.save') // -> "save"
 // better use the ns option:
 i18next.t('button.save', { ns: 'common' }) // -> "save"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.name);
+// -> "Module A"
+
+// from different namespace (not recommended with namespace prefix when used in combination with natural language keys)
+i18next.t($ => $.common.button.save) // -> "save"
+// better use the ns option:
+i18next.t($ => $.button.save, { ns: 'common' }) // -> "save"
+```
+{% endtab %}
+{% endtabs %}
 
 ## Multiple fallback keys
 
@@ -97,6 +137,8 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 // const error = '404';
 i18next.t([`error.${error}`, 'error.unspecific']); // -> "The page was not found"
@@ -104,6 +146,20 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "The page was not found
 // const error = '502';
 i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+// const error = '404';
+i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }); 
+// -> "The page was not found"
+
+// const error = '502';
+i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) });
+// -> "Something went wrong"
+```
+{% endtab %}
+{% endtabs %}
 
 ## Overview options
 
@@ -124,7 +180,7 @@ i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
 | returnObjects       | accessing an object not a translation string (can be set globally too)                                                                                                               |
 | returnDetails       | returns an object that includes information about the used language, namespace, key and value                                                                                        |
 | joinArrays          | char, eg. '\n' that arrays will be joined by (can be set globally too)                                                                                                               |
-| postProcess         | string or array of postProcessors to apply see  [interval plurals](plurals.md) as a sample                                                                                           |
+| postProcess         | string or array of postProcessors to apply see [interval plurals](plurals.md) as a sample                                                                                            |
 | interpolation       | override [interpolation options](interpolation.md)                                                                                                                                   |
 | skipInterpolation   | skip interpolation and nesting for this call to t function                                                                                                                           |
 | ignoreJSONStructure | if a key is not found as nested key, it will try to lookup as flat key                                                                                                               |
