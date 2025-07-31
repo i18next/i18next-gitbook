@@ -111,7 +111,7 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false 
 
 {% tab title="TypeScript" %}
 ```typescript
-i18next.t('keyEscaped', { myVar: '<img />' });
+i18next.t($ => $.keyEscaped, { myVar: '<img />' });
 // -> "no danger &lt;img &#x2F;&gt;"
 
 i18next.t($ => $.keyUnescaped, { myVar: '<img />' });
