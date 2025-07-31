@@ -65,6 +65,44 @@ i18next.init({
 i18next.t('hello world'); // hallo Welt
 ```
 
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+import i18next from 'i18next';​
+
+i18next.init({
+    lng: 'de',
+    resources: {
+        de: {
+            translation: {
+                "hello world": "hallo Welt"
+            }
+        }
+    }
+});​
+i18next.t('hello world'); // hallo Welt
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+```typescript
+import i18next from 'i18next';​
+
+i18next.init({
+    lng: 'de',
+    resources: {
+        de: {
+            translation: {
+                "hello world": "hallo Welt"
+            }
+        }
+    }
+});​
+i18next.t($ => $['hello world']); // hallo Welt
+```
+{% endtab %}
+{% endtabs %}
+
 ### i18next is bloated <a href="#i-18-next-is-bloated" id="i-18-next-is-bloated"></a>
 
 Hm... ask this in one year again. When your i18n framework needs to catch up with the needs of production systems.
@@ -98,6 +136,8 @@ translation.json
 
 Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const error = '404';
 i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"​
@@ -105,6 +145,18 @@ i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"
 const error = '502';
 i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+const error = '404';
+i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }) // -> "The page was not found"​
+
+const error = '502';
+i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }) // -> "Something went wrong"
+```
+{% endtab %}
+{% endtabs %}
 
 #### b) Or like to say something like **interval plurals**: <a href="#b-or-like-to-say-something-like-interval-plurals" id="b-or-like-to-say-something-like-interval-plurals"></a>
 
@@ -126,7 +178,7 @@ While some other i18n frameworks run on serverside too there are not many optimi
 
 ### Learn once - translate everywhere <a href="#learn-once-translate-everywhere" id="learn-once-translate-everywhere"></a>
 
-![Overview of what technologies i18next will integrate with. Some listed are: Electron, Phaser, iOS, Android, Aurelia, Meteor, React Native, Knockout, React, Next.js, Remix, Angular, Ember, jQuery, Vue, Grunt, IntelliJ IDEA, Webpack, NodeJS, Express, Django, Koa, Microsoft .NET, PHP, Ruby Rails, Couchbase, MongoDB, Redis, Firebase, Locize.](../.gitbook/assets/i18next\_eco.jpg)
+![Overview of what technologies i18next will integrate with. Some listed are: Electron, Phaser, iOS, Android, Aurelia, Meteor, React Native, Knockout, React, Next.js, Remix, Angular, Ember, jQuery, Vue, Grunt, IntelliJ IDEA, Webpack, NodeJS, Express, Django, Koa, Microsoft .NET, PHP, Ruby Rails, Couchbase, MongoDB, Redis, Firebase, Locize.](../.gitbook/assets/i18next_eco.jpg)
 
 Should speak for itself.
 

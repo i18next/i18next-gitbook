@@ -48,6 +48,58 @@ i18next
   .then(function(t) { t('key'); });
 ```
 
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+i18next.init({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
+});
+
+// with only callback
+i18next.init((err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t('key'); // -> same as i18next.t
+});
+
+// using Promises
+i18next
+  .init({ /* options */ })
+  .then(function(t) { t('key'); });
+```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.init({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t($ => $.key); // -> same as i18next.t
+});
+
+// with only callback
+i18next.init((err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t($ => $.key); // -> same as i18next.t
+});
+
+// using Promises
+i18next
+  .init({ /* options */ })
+  .then(function(t) { t($ => $.key); });
+```
+{% endtab %}
+{% endtabs %}
+
 ### use
 
 `i18next.use(module)`
@@ -79,11 +131,25 @@ Please have a look at the translation functions like [interpolation](../translat
 
 You can specify either one key as a `String` or multiple keys as an `Array` of `String`. The first one that resolves will be returned.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('my.key'); // -> will return value in set language
 
 i18next.t(['unknown.key', 'my.key']); // -> will return value for 'my.key' in set language
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.my.key); 
+// -> will return value in set language
+
+i18next.t($ => $.unknown.key, { defaultValue: t($ => $.my.key) }); 
+// -> will return value for 'my.key' in set language
+```
+{% endtab %}
+{% endtabs %}
 
 ### exists
 
@@ -112,17 +178,46 @@ const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
 const title = t('title'); // same as i18next.t('user.accountSettings.changePassword.title');
 ```
 
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
+const title = t('title'); // same as i18next.t('user.accountSettings.changePassword.title');
+```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
+const title = t($ => $.title); 
+// same as i18next.t($ => $.user.accountSettings.changePassword.title);
+```
+{% endtab %}
+{% endtabs %}
+
 {% hint style="warning" %}
-If you want to use keys with a prefixed namespace and the `keyPrefix` argument was provided, you'll need to override it in the `t` function options:
+If you want to use keys with a prefixed namespace and the `keyPrefix` argument was provided, you'll need to override it in the `t` function options.
 
-i.e.
+See below for an example.
+{% endhint %}
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
 const title = t('ns:title'); // this will not work
 const title = t('ns:title', { keyPrefix: '' }); // this will work
 ```
-{% endhint %}
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
+const title = t($ => $.title, { ns: 'ns' }); // this will not work
+const title = t($ => $.title, { ns: 'ns', keyPrefix: '' }); // this will work
+```
+{% endtab %}
+{% endtabs %}
 
 On the returned function you can like in the `t` function override the languages or namespaces by passing them in options or by prepending namespace.
 
@@ -135,6 +230,33 @@ de('myKey');
 const anotherNamespace = i18next.getFixedT(null, 'anotherNamespace');
 anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('anotherNamespace:anotherNamespaceKey');
 ```
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+// fix language to german
+const de = i18next.getFixedT('de');
+de('myKey');
+
+// or fix the namespace to anotherNamespace
+const anotherNamespace = i18next.getFixedT(null, 'anotherNamespace');
+anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('anotherNamespace:anotherNamespaceKey');
+```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+// fix language to german
+const de = i18next.getFixedT('de');
+de($ => $.myKey);
+
+// or fix the namespace to anotherNamespace
+const anotherNamespace = i18next.getFixedT(null, 'anotherNamespace');
+anotherNamespace($ => $.anotherNamespaceKey); 
+// no need to prefix ns i18n.t($ => $.anotherNamespace.anotherNamespaceKey);
+```
+{% endtab %}
+{% endtabs %}
 
 ### changeLanguage
 

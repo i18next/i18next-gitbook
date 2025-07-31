@@ -28,7 +28,7 @@ import i18next from 'https://deno.land/x/i18next/index.js'
 
 {% hint style="success" %}
 In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[\
-](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno\_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
+](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
 {% endhint %}
 
 ## Load from CDN
@@ -109,6 +109,8 @@ i18next.init({
 
 Or using Promises:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option
@@ -125,9 +127,32 @@ i18next.init({
   document.getElementById('output').innerHTML = i18next.t('key');
 });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```javascript
+i18next.init({
+  lng: 'en', // if you're using a language detector, do not define the lng option
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+}).then(function(t) {
+  // initialized and ready to go!
+  document.getElementById('output').innerHTML = i18next.t($ => $.key);
+});
+```
+{% endtab %}
+{% endtabs %}
 
 Or using async/await:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 await i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option
@@ -143,6 +168,26 @@ await i18next.init({
 // initialized and ready to go!
 document.getElementById('output').innerHTML = i18next.t('key');
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+await i18next.init({
+  lng: 'en', // if you're using a language detector, do not define the lng option
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+});
+// initialized and ready to go!
+document.getElementById('output').innerHTML = i18next.t($ => $.key);
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 if you are [lazy loading the translation resources](../how-to/add-or-load-translations.md), you may need to wait for i18next to have finished to initialize.
