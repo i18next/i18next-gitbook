@@ -49,22 +49,6 @@ True, i18next's documentation is bigger than that of other i18n frameworks - but
 
 If you do not need that i18next is as simple as any other i18n framework:
 
-```javascript
-import i18next from 'i18next';​
-
-i18next.init({
-    lng: 'de',
-    resources: {
-        de: {
-            translation: {
-                "hello world": "hallo Welt"
-            }
-        }
-    }
-});​
-i18next.t('hello world'); // hallo Welt
-```
-
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
@@ -84,7 +68,7 @@ i18next.t('hello world'); // hallo Welt
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="TypeScript" %}
 ```typescript
 import i18next from 'i18next';​
 
@@ -150,10 +134,12 @@ i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 {% tab title="TypeScript" %}
 ```typescript
 const error = '404';
-i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }) // -> "The page was not found"​
+i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }) 
+// -> "The page was not found"​
 
 const error = '502';
-i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }) // -> "Something went wrong"
+i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }) 
+// -> "Something went wrong"
 ```
 {% endtab %}
 {% endtabs %}

@@ -25,29 +25,6 @@ To change language use [changeLanguage](api.md#changelanguage). If you need comp
 An error can occur if for example there was a loading issue when using a [backend](plugins-and-utils.md#backends) plugin.
 {% endhint %}
 
-```javascript
-i18next.init({
-  fallbackLng: 'en',
-  ns: ['file1', 'file2'],
-  defaultNS: 'file1',
-  debug: true
-}, (err, t) => {
-  if (err) return console.log('something went wrong loading', err);
-  t('key'); // -> same as i18next.t
-});
-
-// with only callback
-i18next.init((err, t) => {
-  if (err) return console.log('something went wrong loading', err);
-  t('key'); // -> same as i18next.t
-});
-
-// using Promises
-i18next
-  .init({ /* options */ })
-  .then(function(t) { t('key'); });
-```
-
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
@@ -129,10 +106,10 @@ i18next
 
 Please have a look at the translation functions like [interpolation](../translation-function/interpolation.md), [formatting](../translation-function/formatting.md) and [plurals](../translation-function/plurals.md) for more details on using it.
 
-You can specify either one key as a `String` or multiple keys as an `Array` of `String`. The first one that resolves will be returned.
-
 {% tabs %}
 {% tab title="JavaScript" %}
+You can specify either one key as a `String` or multiple keys as an `Array` of `String`. The first one that resolves will be returned.
+
 ```javascript
 i18next.t('my.key'); // -> will return value in set language
 
@@ -141,6 +118,10 @@ i18next.t(['unknown.key', 'my.key']); // -> will return value for 'my.key' in se
 {% endtab %}
 
 {% tab title="TypeScript" %}
+You can select the key you want using a selector function (`$ => $.my.key`). Keys will auto-complete automatically.&#x20;
+
+If you want to set a default value, use the `defaultValue` option:
+
 ```typescript
 i18next.t($ => $.my.key); 
 // -> will return value in set language
@@ -150,6 +131,8 @@ i18next.t($ => $.unknown.key, { defaultValue: t($ => $.my.key) });
 ```
 {% endtab %}
 {% endtabs %}
+
+
 
 ### exists
 
@@ -172,11 +155,6 @@ All arguments can be optional/null.
 `lng` and `ns` params could be arrays of languages or namespaces and will be treated as fallbacks in that case.
 
 The optional `keyPrefix` will be automatically applied to the returned t function. i.e.
-
-```javascript
-const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
-const title = t('title'); // same as i18next.t('user.accountSettings.changePassword.title');
-```
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -213,23 +191,13 @@ const title = t('ns:title', { keyPrefix: '' }); // this will work
 {% tab title="TypeScript" %}
 ```typescript
 const t = i18next.getFixedT(null, null, 'user.accountSettings.changePassword')
-const title = t($ => $.title, { ns: 'ns' }); // this will not work
+const title = t($ => $.title, { ns: 'ns' });                // this won't work
 const title = t($ => $.title, { ns: 'ns', keyPrefix: '' }); // this will work
 ```
 {% endtab %}
 {% endtabs %}
 
 On the returned function you can like in the `t` function override the languages or namespaces by passing them in options or by prepending namespace.
-
-```javascript
-// fix language to german
-const de = i18next.getFixedT('de');
-de('myKey');
-
-// or fix the namespace to anotherNamespace
-const anotherNamespace = i18next.getFixedT(null, 'anotherNamespace');
-anotherNamespace('anotherNamespaceKey'); // no need to prefix ns i18n.t('anotherNamespace:anotherNamespaceKey');
-```
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -268,6 +236,8 @@ Calling `changeLanguage` without `lng` uses the [language detector](../misc/crea
 
 **HINT:** For easy testing—setting `lng` to 'cimode' will cause the `t` function to always return the key.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.changeLanguage('en', (err, t) => {
   if (err) return console.log('something went wrong loading', err);
@@ -284,6 +254,27 @@ i18next
 // manually re-detecting language
 i18next.changeLanguage().then(...)
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.changeLanguage('en', (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t($ => $.key); // -> same as i18next.t
+});
+
+// using Promises
+i18next
+  .changeLanguage('en')
+  .then((t) => {
+    t($ => $.key); // -> same as i18next.t
+  });
+
+// manually re-detecting language
+i18next.changeLanguage().then(...)
+```
+{% endtab %}
+{% endtabs %}
 
 ### language
 
@@ -433,10 +424,21 @@ Exposes `interpolation.format`t function added on init.
 
 For formatting used in translation files checkout the [formatting doc](../translation-function/formatting.md#legacy-format-function-i18next-less-than-21.3.0).
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 // key = 'hello {{what}}'
 i18next.t('key', { what: i18next.format('world', 'uppercase') }); // -> hello WORLD
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+// key = 'hello {{what}}'
+i18next.t($ => $.key, { what: i18next.format('world', 'uppercase') }); // -> hello WORLD
+```
+{% endtab %}
+{% endtabs %}
 
 ## instance creation
 
@@ -452,6 +454,8 @@ Providing a callback will automatically call init.
 
 The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const newInstance = i18next.createInstance({
   fallbackLng: 'en',
@@ -475,6 +479,34 @@ newInstance.init({
   t('key'); // -> same as i18next.t
 });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+const newInstance = i18next.createInstance({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t($ => $.key); // -> same as i18next.t
+});
+
+// is the same as
+const newInstance = i18next.createInstance();
+newInstance.init({
+  fallbackLng: 'en',
+  ns: ['file1', 'file2'],
+  defaultNS: 'file1',
+  debug: true
+}, (err, t) => {
+  if (err) return console.log('something went wrong loading', err);
+  t($ => $.key); // -> same as i18next.t
+});
+```
+{% endtab %}
+{% endtabs %}
 
 ### cloneInstance
 

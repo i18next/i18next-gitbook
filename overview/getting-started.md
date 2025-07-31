@@ -67,6 +67,8 @@ If you prefer using natural language in keys, please read the [fallback guide](.
 
 Please be aware these samples are just showing basic usage of the core functionality. For production usage please consider using one of our [framework integrations](supported-frameworks.md) to get better and simpler integrations (Setting innerHTML is just done to show how it works).
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 import i18next from 'i18next';
 
@@ -85,9 +87,34 @@ i18next.init({
 // i18next is already initialized, because the translation resources where passed via init function
 document.getElementById('output').innerHTML = i18next.t('key');
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+import i18next from 'i18next';
+
+i18next.init({
+  lng: 'en', // if you're using a language detector, do not define the lng option
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+});
+// initialized and ready to go!
+// i18next is already initialized, because the translation resources where passed via init function
+document.getElementById('output').innerHTML = i18next.t($ => $.key);
+```
+{% endtab %}
+{% endtabs %}
 
 Or using callback init signature:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 import i18next from 'i18next';
 
@@ -106,6 +133,29 @@ i18next.init({
   document.getElementById('output').innerHTML = i18next.t('key');
 });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+import i18next from 'i18next';
+
+i18next.init({
+  lng: 'en', // if you're using a language detector, do not define the lng option
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+}, function(err, t) {
+  // initialized and ready to go!
+  document.getElementById('output').innerHTML = i18next.t($ => $.key);
+});
+```
+{% endtab %}
+{% endtabs %}
 
 Or using Promises:
 
