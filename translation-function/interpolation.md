@@ -5,7 +5,7 @@ Interpolation is one of the most used functionalities in I18N. It allows integra
 Per default, interpolation values get escaped to mitigate XSS attacks.
 
 {% hint style="info" %}
-🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=433).
+🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA_9i4TtxLQ?t=433).
 {% endhint %}
 
 If the interpolation functionality provided doesn't suit you, you can use [i18next-sprintf-postProcessor](https://github.com/i18next/i18next-sprintf-postProcessor) for sprintf supported interpolation.
@@ -26,10 +26,21 @@ Keys, by default, are strings surrounded by curly brackets:
 
 Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('key', { what: 'i18next', how: 'great' });
 // -> "i18next is great"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key, { what: 'i18next', how: 'great' });
+// -> "i18next is great"
+```
+{% endtab %}
+{% endtabs %}
 
 ## Working with data models
 
@@ -45,6 +56,8 @@ Keys
 
 Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const author = { 
     name: 'Jan',
@@ -53,6 +66,19 @@ const author = {
 i18next.t('key', { author });
 // -> "I am Jan"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+const author = { 
+    name: 'Jan',
+    github: 'jamuhl'
+};
+i18next.t($ => $.key, { author });
+// -> "I am Jan"
+```
+{% endtab %}
+{% endtabs %}
 
 ## Unescape
 
@@ -69,6 +95,8 @@ Keys
 
 Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('keyEscaped', { myVar: '<img />' });
 // -> "no danger &lt;img &#x2F;&gt;"
@@ -79,6 +107,21 @@ i18next.t('keyUnescaped', { myVar: '<img />' });
 i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false } });
 // -> "no danger <img />" (obviously could be dangerous)
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t('keyEscaped', { myVar: '<img />' });
+// -> "no danger &lt;img &#x2F;&gt;"
+
+i18next.t($ => $.keyUnescaped, { myVar: '<img />' });
+// -> "dangerous <img />"
+
+i18next.t($ => $.keyEscaped, { myVar: '<img />', interpolation: { escapeValue: false } });
+// -> "no danger <img />" (obviously could be dangerous)
+```
+{% endtab %}
+{% endtabs %}
 
 _Warning:_ If you toggle escaping off, escape any user input yourself!
 
@@ -86,6 +129,8 @@ _Warning:_ If you toggle escaping off, escape any user input yourself!
 
 Prefix/Suffix for interpolation and other options can be overridden in the init options or by passing additional options to the `t` function:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.init({
     interpolation: { ... }
@@ -95,6 +140,20 @@ i18next.t('key', {
     interpolation: { ... }
 });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.init({
+    interpolation: { ... }
+});
+
+i18next.t($ => $.key, {
+    interpolation: { ... }
+});
+```
+{% endtab %}
+{% endtabs %}
 
 | option              | default  | description                                                                                                                              |
 | ------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
