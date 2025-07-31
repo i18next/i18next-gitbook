@@ -90,6 +90,8 @@ Sample using `initImmediate` when using a backend plugin allowing sync (blocking
 
 **This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend#if-set-i18next-initimmediate-option-to-false-it-will-load-the-files-synchronously)**!**
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 import i18next from 'i18next';
 import Backend from 'i18next-fs-backend';
@@ -122,3 +124,40 @@ execution order of function calls
 - t
 */
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+import i18next from 'i18next';
+import Backend from 'i18next-fs-backend';
+
+// not working
+i18next
+  .use(Backend)
+  .init();
+
+i18next.t($ => $.key); // -> will not return value as init was run async
+
+/*
+execution order of function calls
+- init
+- t
+- loadResources (as called inside timeout)
+*/
+
+// working
+i18next
+  .use(Backend)
+  .init({ initImmediate: false });
+
+i18next.t($ => $.key); // -> will return value
+
+/*
+execution order of function calls
+- init
+- loadResources (as called without timeout)
+- t
+*/
+```
+{% endtab %}
+{% endtabs %}
