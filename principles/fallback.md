@@ -10,6 +10,8 @@ By default, if a variant (containing region, script, etc) is not found, i18next 
 
 Example:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 // fallback to one language
 i18next.init({
@@ -35,6 +37,36 @@ i18next.init({
   i18next.t('i18n', { lng: 'en' }); // -> "Internationalization"
 });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+// fallback to one language
+i18next.init({
+  lng: "en-GB",
+  resources: {
+    "en-GB": {
+      "translation": {
+        "i18n": "Internationalisation"
+      }
+    },
+    "en": {
+      "translation": {
+        "i18n": "Internationalization",
+        "i18n_short": "i18n"
+      }
+    }
+  }
+}, () => {
+  i18next.t($ => $.i18n); // -> finds "Internationalisation"
+  i18next.t($ => $.i18n_short); // -> falls back to "en": "i18n"
+
+  // force using en
+  i18next.t($ => $.i18n, { lng: 'en' }); // -> "Internationalization"
+});
+```
+{% endtab %}
+{% endtabs %}
 
 ### Fallback to different languages
 
@@ -114,6 +146,8 @@ common.json
 
 Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.init({
     // files to load
@@ -137,19 +171,55 @@ i18next.init({
     i18next.t('button.save', { ns: 'common' }) // -> "save"
 });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.init({
+    // files to load
+    ns: ['app', 'common'],
+
+    // default namespace (needs no prefix on calling t)
+    defaultNS: 'app',
+
+    // fallback, can be a string or an array of namespaces
+    fallbackNS: 'common'
+}, () => {
+    i18next.t($ => $.title) // -> "i18next"
+    i18next.t($ => $.button.save) // -> "save" (fallback from common)
+    // switch namespaces with the `ns` option:
+    i18next.t($ => $.button.save, { ns: 'common' }) // -> "save"
+});
+```
+{% endtab %}
+{% endtabs %}
 
 ## Key fallback
 
 ### Key not found
 
+{% tabs %}
+{% tab title="JavaScript" %}
 If a key does not return a value the key acts as fallback:
 
 ```javascript
 i18next.t('notExistingKey'); // -> "notExistingKey"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+If a key does not return a value the selected path acts as fallback:
+
+```typescript
+i18next.t($ => $.notExistingKey); // -> "notExistingKey"
+```
+{% endtab %}
+{% endtabs %}
 
 So you could configure i18next to have the key being the fallback instead of loading a fallback language:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 de.json
 
 ```javascript
@@ -177,6 +247,38 @@ i18next.t('No one says a key can not be the fallback.')
 i18next.t('This will be shown if the current loaded translations do not have this.');
 // -> "This will be shown if the current loaded translations do not have this."
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+de.json
+
+```typescript
+{
+  "No one says a path can not be the fallback.": "Niemand sagt, dass ein Pfad nicht der Fallback sein kann."
+}
+```
+
+```typescript
+i18next.init({
+  lng: 'de',
+
+  // allow keys to be phrases having `:`, `.`
+  nsSeparator: false,
+  keySeparator: false,
+
+  // do not load a fallback
+  fallbackLng: false
+});
+
+i18next.t($ => $['No one says a key can not be the fallback.'])
+// -> "Niemand sagt, dass ein Pfad nicht der Fallback sein kann"
+
+
+i18next.t($ => $['This will be shown if the current loaded translations do not have this.']);
+// -> "This will be shown if the current loaded translations do not have this."
+```
+{% endtab %}
+{% endtabs %}
 
 While this works and might reduce files to load it makes the management of translations a lot harder as you will need to update changes to fallback values in code and JSON files.
 
@@ -210,10 +312,28 @@ translation.json
 
 Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 // const error = '404';
-i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"
+i18next.t([`error.${error}`, 'error.unspecific'])
+// -> "The page was not found"
 
 // const error = '502';
-i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
+i18next.t([`error.${error}`, 'error.unspecific'])
+// -> "Something went wrong"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+// const error = '404';
+i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }) 
+// -> "The page was not found"
+
+// const error = '502';
+i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }) 
+// -> "Something went wrong"
+```
+{% endtab %}
+{% endtabs %}
