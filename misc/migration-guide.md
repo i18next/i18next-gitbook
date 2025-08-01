@@ -1,5 +1,13 @@
 # Migration Guide
 
+### v25.3.x to v25.4.0
+
+* adds new selector API [2322](https://github.com/i18next/i18next/pull/2322) to improve TypeScript IDE performance
+  * To enable it, set `enableSelector: true` in your configuration options
+  * To assist with the migration, we've published the following packages:
+    * [@i18next-selector/codemod](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/codemod)
+    * [@i18next-selector/vite-plugin](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin)
+
 ### v24.x.x to v25.0.0
 
 **This is a potentially breaking release:**
@@ -186,7 +194,7 @@ i18next.init({
 
 i18next now automatically tries to detect natural language keys.\
 This way there is no need to set `nsSeparator` or `keySeparator` [option](../overview/configuration-options.md#others) to `false`.\
-&#xNAN;_&#x49;n case you want to skip this natural language detection, provide a `keySeparator` and/or a `nsSeparator` option._
+\&#xNAN;_In case you want to skip this natural language detection, provide a `keySeparator` and/or a `nsSeparator` option._
 
 #### removed deprecated
 
