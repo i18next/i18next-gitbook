@@ -141,21 +141,23 @@ sample
 {% tab title="JavaScript" %}
 ```javascript
 // const error = '404';
-i18next.t([`error.${error}`, 'error.unspecific']); // -> "The page was not found"
+i18next.t([`error.${error}`, 'error.unspecific']); 
+// -> "The page was not found"
 
 // const error = '502';
-i18next.t([`error.${error}`, 'error.unspecific']); // -> "Something went wrong"
+i18next.t([`error.${error}`, 'error.unspecific']); 
+// -> "Something went wrong"
 ```
 {% endtab %}
 
 {% tab title="TypeScript" %}
 ```typescript
 // const error = '404';
-i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) }); 
+i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }); 
 // -> "The page was not found"
 
 // const error = '502';
-i18next.t($ => $[error], { defaultValue: t($ => $.unspecific) });
+i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) });
 // -> "Something went wrong"
 ```
 {% endtab %}
