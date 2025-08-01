@@ -2,8 +2,9 @@
 
 ### v25.3.x to v25.4.0
 
-* adds new selector API [2322](https://github.com/i18next/i18next/pull/2322) to improve TypeScript IDE performance
+* add new selector API to improve TypeScript IDE performance [2322](https://github.com/i18next/i18next/pull/2322)
   * To enable it, set `enableSelector: true` in your configuration options
+  * With `enableSelector: "optimize"`, i18next can now handle translation dictionaries of any size, without affecting IDE performance or build times
   * To assist with the migration, we've published the following packages:
     * [@i18next-selector/codemod](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/codemod)
     * [@i18next-selector/vite-plugin](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin)
