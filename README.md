@@ -41,6 +41,12 @@ Check out [this video](https://youtu.be/37rcHVcQ6t0) and the corresponding [blog
 {% endhint %}
 
 {% hint style="success" %}
+Are you looking for a way to supercharge your i18next workflow with a real-time, persistent cache?\
+Then check [this](https://www.vaultrice.com/blog/i18next-plugin) out.[\
+![](.gitbook/assets/i18next-vaultrice-backend.jpg)](https://www.vaultrice.com/blog/i18next-plugin)
+{% endhint %}
+
+{% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
 ![](<.gitbook/assets/title width.jpg>)](https://locize.com/blog/react-i18next/)
