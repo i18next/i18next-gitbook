@@ -73,16 +73,17 @@ The missing keys functionality of i18next is very useful during development. If 
 
 ## Others
 
-| option              | default | description                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| initAsync           | true    | triggers resource loading in `init()` inside a `setTimeout` (default async behaviour). Set it to `false` if your backend loads resources synchronously - that way, calling `i18next.t()` after `init()` is possible without relying on the initialization callback. **This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend)**!** |
-| keySeparator        | `'.'`   | char to separate keys. _If working with a flat JSON, it's recommended to set this to `false`._                                                                                                                                                                                                                                                                                                                        |
-| nsSeparator         | `':'`   | char to split namespace from key                                                                                                                                                                                                                                                                                                                                                                                      |
-| pluralSeparator     | `'_'`   | char to split plural from key                                                                                                                                                                                                                                                                                                                                                                                         |
-| contextSeparator    | `'_'`   | char to split context from key                                                                                                                                                                                                                                                                                                                                                                                        |
-| ignoreJSONStructure | true    | if a key is not found as nested key, it will try to lookup as flat key                                                                                                                                                                                                                                                                                                                                                |
-| maxParallelReads    | 10      | limits parallel reads to the backend to prevent opening up to thousands of sockets or file descriptors at the same time, leading to `EMFILE` errors if `ulimit -n` is exceeded (`debug: true` must be set to see them). limiting parallelism usually makes loading all items substantially faster than allowing all reads to start before any have finished.                                                          |
-| cacheInBuiltFormats | true    | Initializes the internal formatter for the [in-built formats](../translation-function/formatting.md#built-in-formats) as cached version. Can be set to false for this type of [issues](https://github.com/i18next/i18next/issues/2227).                                                                                                                                                                               |
+| option                           | default | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| enableSelector (TypeScript only) | false   | <p>if set to <code>true</code>,  pass a selector function as the first argument to <code>t</code> to make a translation query.<br><br>if set to <code>"optimize"</code>,  i18next is capable of handling arbitrarily large translation sets without slowing down IDE performance. Keeping in mind with this setting, translation keys will not be modified, so you'll need to specify the correct key for pluralization or use a tool like <a href="https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin">@i18next-selector/vite-plugin</a>.</p> |
+| initAsync                        | true    | triggers resource loading in `init()` inside a `setTimeout` (default async behaviour). Set it to `false` if your backend loads resources synchronously - that way, calling `i18next.t()` after `init()` is possible without relying on the initialization callback. **This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend)**!**                                                                                                                                                     |
+| keySeparator                     | `'.'`   | char to separate keys. _If working with a flat JSON, it's recommended to set this to `false`._                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| nsSeparator                      | `':'`   | char to split namespace from key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| pluralSeparator                  | `'_'`   | char to split plural from key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| contextSeparator                 | `'_'`   | char to split context from key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ignoreJSONStructure              | true    | if a key is not found as nested key, it will try to lookup as flat key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| maxParallelReads                 | 10      | limits parallel reads to the backend to prevent opening up to thousands of sockets or file descriptors at the same time, leading to `EMFILE` errors if `ulimit -n` is exceeded (`debug: true` must be set to see them). limiting parallelism usually makes loading all items substantially faster than allowing all reads to start before any have finished.                                                                                                                                                                                                              |
+| cacheInBuiltFormats              | true    | Initializes the internal formatter for the [in-built formats](../translation-function/formatting.md#built-in-formats) as cached version. Can be set to false for this type of [issues](https://github.com/i18next/i18next/issues/2227).                                                                                                                                                                                                                                                                                                                                   |
 
 ## initImmediate
 
@@ -90,6 +91,8 @@ Sample using `initImmediate` when using a backend plugin allowing sync (blocking
 
 **This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend#if-set-i18next-initimmediate-option-to-false-it-will-load-the-files-synchronously)**!**
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 import i18next from 'i18next';
 import Backend from 'i18next-fs-backend';
@@ -122,3 +125,40 @@ execution order of function calls
 - t
 */
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+import i18next from 'i18next';
+import Backend from 'i18next-fs-backend';
+
+// not working
+i18next
+  .use(Backend)
+  .init();
+
+i18next.t($ => $.key); // -> will not return value as init was run async
+
+/*
+execution order of function calls
+- init
+- t
+- loadResources (as called inside timeout)
+*/
+
+// working
+i18next
+  .use(Backend)
+  .init({ initImmediate: false });
+
+i18next.t($ => $.key); // -> will return value
+
+/*
+execution order of function calls
+- init
+- loadResources (as called without timeout)
+- t
+*/
+```
+{% endtab %}
+{% endtabs %}

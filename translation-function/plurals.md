@@ -3,13 +3,25 @@
 Plural can be combined with interpolation, context, ...
 
 These plurals are streamlined with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).\
-&#xNAN;_&#x59;ou need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API._
+\&#xNAN;_You need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API._
 
+{% tabs %}
+{% tab title="JavaScript" %}
 {% hint style="danger" %}
 Note: The variable name must be `count`.\
 And it must be present: `i18next.t('key', {count: 1});`\
 There will be **no** fallback to the `'key'` value if count is not provided.
 {% endhint %}
+{% endtab %}
+
+{% tab title="TypeScript" %}
+{% hint style="danger" %}
+Note: The variable name must be `count`.\
+And it must be present: `i18next.t($ => $.key, {count: 1});`\
+There will be **no** fallback to the `'key'` property if count is not provided.
+{% endhint %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 If you need multiple counts, take a look at [nesting](nesting.md#passing-options-to-nestings)
@@ -38,6 +50,8 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('key', {count: 0}); // -> "items"
 i18next.t('key', {count: 1}); // -> "item"
@@ -48,6 +62,21 @@ i18next.t('keyWithCount', {count: 1}); // -> "1 item"
 i18next.t('keyWithCount', {count: 5}); // -> "5 items"
 i18next.t('keyWithCount', {count: 100}); // -> "100 items"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key, {count: 0}); // -> "items"
+i18next.t($ => $.key, {count: 1}); // -> "item"
+i18next.t($ => $.key, {count: 5}); // -> "items"
+i18next.t($ => $.key, {count: 100}); // -> "items"
+i18next.t($ => $.keyWithCount, {count: 0}); // -> "0 items"
+i18next.t($ => $.keyWithCount, {count: 1}); // -> "1 item"
+i18next.t($ => $.keyWithCount, {count: 5}); // -> "5 items"
+i18next.t($ => $.keyWithCount, {count: 100}); // -> "100 items"
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="warning" %}
 With [v21.0.0](../misc/migration-guide.md#json-format-v4-pluralization) a new [JSON format v4](../misc/json-format.md#i-18-next-json-v4) was introduced that changed the suffixes.\
@@ -73,6 +102,8 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('key', {count: 0}); // -> "zero"
 i18next.t('key', {count: 1}); // -> "singular"
@@ -84,6 +115,22 @@ i18next.t('key', {count: 11}); // -> "many"
 i18next.t('key', {count: 99}); // -> "many"
 i18next.t('key', {count: 100}); // -> "other"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key, {count: 0}); // -> "zero"
+i18next.t($ => $.key, {count: 1}); // -> "singular"
+i18next.t($ => $.key, {count: 2}); // -> "two"
+i18next.t($ => $.key, {count: 3}); // -> "few"
+i18next.t($ => $.key, {count: 4}); // -> "few"
+i18next.t($ => $.key, {count: 5}); // -> "few"
+i18next.t($ => $.key, {count: 11}); // -> "many"
+i18next.t($ => $.key, {count: 99}); // -> "many"
+i18next.t($ => $.key, {count: 100}); // -> "other"
+```
+{% endtab %}
+{% endtabs %}
 
 ## How to find the correct plural suffix?
 
@@ -115,6 +162,8 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('key', { count: 1, ordinal: true }); // -> "1st place"
 i18next.t('key', { count: 21, ordinal: true }); // -> "21st place"
@@ -122,6 +171,18 @@ i18next.t('key', { count: 2, ordinal: true }); // -> "2nd place"
 i18next.t('key', { count: 11, ordinal: true }); // -> "11th place"
 i18next.t('key', { count: 32, ordinal: true }); // -> "32nd place"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key, { count: 1, ordinal: true }); // -> "1st place"
+i18next.t($ => $.key, { count: 21, ordinal: true }); // -> "21st place"
+i18next.t($ => $.key, { count: 2, ordinal: true }); // -> "2nd place"
+i18next.t($ => $.key, { count: 11, ordinal: true }); // -> "11th place"
+i18next.t($ => $.key, { count: 32, ordinal: true }); // -> "32nd place"
+```
+{% endtab %}
+{% endtabs %}
 
 ## Interval plurals
 
@@ -153,6 +214,8 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('key1_interval', {postProcess: 'interval', count: 1}); // -> "one item"
 i18next.t('key1_interval', {postProcess: 'interval', count: 4}); // -> "a few items"
@@ -164,6 +227,22 @@ i18next.t('key2_interval', {postProcess: 'interval', count: 1}); // -> "one item
 i18next.t('key2_interval', {postProcess: 'interval', count: 4}); // -> "a few items"
 i18next.t('key2_interval', {postProcess: 'interval', count: 100}); // -> "100 items"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key1_interval, {postProcess: 'interval', count: 1}); // -> "one item"
+i18next.t($ => $.key1_interval, {postProcess: 'interval', count: 4}); // -> "a few items"
+i18next.t($ => $.key1_interval, {postProcess: 'interval', count: 100}); // -> "a lot of items"
+
+// not matching into a range it will fallback to
+// the regular plural form
+i18next.t($ => $.key2_interval, {postProcess: 'interval', count: 1}); // -> "one item"
+i18next.t($ => $.key2_interval, {postProcess: 'interval', count: 4}); // -> "a few items"
+i18next.t($ => $.key2_interval, {postProcess: 'interval', count: 100}); // -> "100 items"
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="danger" %}
 Note: The regex for the interval entry has changed in `v3.0.0` of `i18next-intervalPlural-postProcessor` so if you are using the older versions, you need to use the curly braces instead of the bracketes, e.g.:

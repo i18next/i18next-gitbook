@@ -1,5 +1,13 @@
 # TypeScript
 
+{% hint style="info" %}
+Note: TypeScript support has improved significantly in v25.4 with the `enableSelector` option.
+
+As of v25.4, this option is off by default, but will be set to `true` by default in v26, with tentative plans to deprecate type-level support for the "string-based" (non-selector) API in v27.
+{% endhint %}
+
+
+
 i18next has embedded type definitions. If you want to enhance IDE Experience and prevent errors (such as type coercion), you should follow the instructions below in order to get the t function fully-type safe (keys and return type).
 
 {% hint style="info" %}
@@ -9,7 +17,7 @@ This is an optional feature and may affect the **compilation time** depending on
 {% hint style="info" %}
 Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.\
 The newest i18next versions only support **TypeScript v5**. Older TypeScript versions are not supported any longer with `i18next > v23`.\
-&#xNAN;_&#x54;o use it with TypeScript v4, use `i18next@22.5.1`._
+\&#xNAN;_To use it with TypeScript v4, use `i18next@22.5.1`._
 {% endhint %}
 
 {% hint style="warning" %}
@@ -98,22 +106,23 @@ declare module "i18next" {
 
 We provide a few options that can improve TypeScript for `i18next`. All options come with default values, and if you want to change them, you just need to add them under `CustomTypeOptions` interface in your i18next type declaration file (`i18next.d.ts`).
 
-| option                    | default       | description                                                                                                                                                                                                                          |
-| ------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| defaultNS                 | 'translation' | Default namespace. This is more practical in React applications, so when you call `useTranslation()` hooks without passing the namespace, it will infer the types for the `translation` namespace.                                   |
-| resources                 | object        | Resources to initialize with. This is the most important option that is used to infer the appropriate keys and return types.                                                                                                         |
-| fallbackNS                | false         | Fallback namespace. string or array of namespaces to lookup key if not found in given namespace. [See NS fallback docs](../principles/fallback.md#namespace-fallback).                                                               |
-| keySeparator              | '.'           | Char to separate keys.                                                                                                                                                                                                               |
-| nsSeparator               | ':'           | Char to split namespace from key                                                                                                                                                                                                     |
-| pluralSeparator           | '\_'          | Char to split namespace from key                                                                                                                                                                                                     |
-| contextSeparator          | '\_'          | Char to split context from key                                                                                                                                                                                                       |
-| returnNull                | true          | Allows null values as valid translation.                                                                                                                                                                                             |
-| returnObjects             | false         | Allows objects as valid translation result                                                                                                                                                                                           |
-| compatibilityJSON         | 'v4'          | Only 'v4' is supported. Enable plurals keys support. See [Plurals docs](../translation-function/plurals.md).                                                                                                                         |
-| allowObjectInHTMLChildren | false         | Flag that allows HTML elements to receive objects. This is only useful for React applications where you pass objects to HTML elements so they can be replaced to their respective interpolation values (mostly with Trans component) |
-| interpolationPrefix       | '\{{'         | Prefix for interpolation                                                                                                                                                                                                             |
-| interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                             |
-| strictKeyChecks           | false         | Flag that enables strict key checking even if a `defaultValue` has been provided. This ensures all calls of `t` function don't accidentally use implicitly missing keys.                                                             |
+| option                    | default       | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| enableSelector            | false         | <p>if set to <code>true</code>,  pass a selector function as the first argument to <code>t</code> to make a translation query.<br><br>if set to <code>"optimize"</code>,  i18next is capable of handling arbitrarily large translation sets without slowing down IDE performance. Keeping in mind with this setting, translation keys will not be modified, so you'll need to specify the correct key for pluralization or use a tool like <a href="https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin">@i18next-selector/vite-plugin</a>.</p> |
+| defaultNS                 | 'translation' | Default namespace. This is more practical in React applications, so when you call `useTranslation()` hooks without passing the namespace, it will infer the types for the `translation` namespace.                                                                                                                                                                                                                                                                                                                                                                        |
+| resources                 | object        | Resources to initialize with. This is the most important option that is used to infer the appropriate keys and return types.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| fallbackNS                | false         | Fallback namespace. string or array of namespaces to lookup key if not found in given namespace. [See NS fallback docs](../principles/fallback.md#namespace-fallback).                                                                                                                                                                                                                                                                                                                                                                                                    |
+| keySeparator              | '.'           | Char to separate keys.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| nsSeparator               | ':'           | Char to split namespace from key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| pluralSeparator           | '\_'          | Char to split namespace from key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| contextSeparator          | '\_'          | Char to split context from key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| returnNull                | true          | Allows null values as valid translation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| returnObjects             | false         | Allows objects as valid translation result                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| compatibilityJSON         | 'v4'          | Only 'v4' is supported. Enable plurals keys support. See [Plurals docs](../translation-function/plurals.md).                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| allowObjectInHTMLChildren | false         | Flag that allows HTML elements to receive objects. This is only useful for React applications where you pass objects to HTML elements so they can be replaced to their respective interpolation values (mostly with Trans component)                                                                                                                                                                                                                                                                                                                                      |
+| interpolationPrefix       | '\{{'         | Prefix for interpolation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| strictKeyChecks           | false         | Flag that enables strict key checking even if a `defaultValue` has been provided. This ensures all calls of `t` function don't accidentally use implicitly missing keys.                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Troubleshooting
 
@@ -122,6 +131,15 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 Try to update the used TypeScript version _(>= v5 is recommended)_.
 
 ### Out of memory (OOM) errors
+
+{% hint style="warning" %}
+This problem does not occur when `enableSelector` is set to `"optimize"`. If possible, we recommend you first attempt to upgrade to the selector API and setting this option.
+
+To make the migration smoother, we've published the following packages:
+
+* [@i18next-selector/codemod](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/codemod)
+* [@i18next-selector/vite-plugin](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin)
+{% endhint %}
 
 Running typechecking with key validation might result in OOM errors. This can be facilitated by additional factors like:
 
@@ -158,6 +176,10 @@ If you report a OOM error, please provide an easy way to reproduce the issue usi
 This happens when [`skipLibCheck`](https://www.typescriptlang.org/tsconfig#skipLibCheck) is disabled. Setting `skipLibCheck` in tsconfig to `true` will remove this issue.
 
 ### Type error - template literal
+
+{% hint style="info" %}
+Note: this problem only occurs when `enableSelector` is set to `false`
+{% endhint %}
 
 If you face this issue:
 
@@ -196,6 +218,10 @@ For now, this is the only possible workaround. This is a TypeScript limitation t
 
 ### Type error - excessively deep and possibly infinite
 
+{% hint style="info" %}
+Note: this problem does not occur when `enableSelector` is set to `"optimize"`
+{% endhint %}
+
 If you face this issue whenever calling the `t` function:
 
 > TS2589: Type instantiation is excessively deep and possibly infinite.
@@ -203,6 +229,10 @@ If you face this issue whenever calling the `t` function:
 That probably means you did not set up your type declaration correctly, so review your configuration or check [here](https://github.com/i18next/react-i18next/issues?q=is%3Aissue+Type+instantiation+is+excessively+deep+and+possibly+infinite) for some similar cases that may help you. If needed, you can always open an issue on Github to get some help from us.
 
 ### Tagged Template Literal (`react-i18next` only)
+
+{% hint style="info" %}
+Note: this problem only applies when `enableSelector` is set to `false`
+{% endhint %}
 
 If you are using the tagged template literal syntax for the `t` function, like this:
 
@@ -224,25 +254,59 @@ Due to his anatomy it can be easily casted to a better defined type as you can s
 
 #### Example with object
 
+{% tabs %}
+{% tab title="v25.4+" %}
+```typescript
+const tResult = t($ => $.myTypeKey, { returnObjects: true }) as { title: string, text: string };
+expectTypeOf(tResult).toEqualTypeOf<{ title: string; text: string }>();
+```
+{% endtab %}
+
+{% tab title="v25.3 and before" %}
 ```typescript
 const tResult = t('myTypeKey', { returnObjects: true }) as { title: string, text: string };
 expectTypeOf(tResult).toEqualTypeOf<{ title: string; text: string }>();
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Example with array
 
+{% tabs %}
+{% tab title="v25.4+" %}
+```typescript
+const tResult = t($ => $.myTypeKey, { returnObjects: true }) as Array<string>;
+expectTypeOf(tResult).toEqualTypeOf<Array<string>>();
+```
+{% endtab %}
+
+{% tab title="v25.3 and before" %}
 ```typescript
 const tResult = t('myTypeKey', { returnObjects: true }) as Array<string>;
 expectTypeOf(tResult).toEqualTypeOf<Array<string>>();
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Example without casting using type parameters
 
+{% tabs %}
+{% tab title="v25.4+" %}
+```typescript
+type MyCustomReturn = { title:string; text: string };
+const tResult = t<string, { returnObjects: true }, MyCustomReturn>($ => $.myKey, { returnObjects: true });
+expectTypeOf(tResult).toEqualTypeOf<MyCustomReturn>();
+```
+{% endtab %}
+
+{% tab title="v25.3 and before" %}
 ```typescript
 type MyCustomReturn = { title:string; text: string };
 const tResult = t<string, { returnObjects: true }, MyCustomReturn>('myKey', { returnObjects: true });
 expectTypeOf(tResult).toEqualTypeOf<MyCustomReturn>();
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Troubleshooting (< 23)
 

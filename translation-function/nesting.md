@@ -16,9 +16,19 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('nesting1'); // -> "1 2 3"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.nesting1); // -> "1 2 3"
+```
+{% endtab %}
+{% endtabs %}
 
 You can reference keys from other namespaces by prepending the namespace: `"nesting1": "1 $t(common:nesting2)",`
 
@@ -40,10 +50,21 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('girlsAndBoys', {girls: 3, boys: 2});
 // -> "They have 3 girls and 2 boys"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.girlsAndBoys, {girls: 3, boys: 2});
+// -> "They have 3 girls and 2 boys"
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 Make sure the options string is valid JSON and can be parsed using JSON.parse
@@ -64,10 +85,21 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('key2', {val: '$t(key1)'});
 // -> "say: hello world"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.key2, {val: '$t(key1)'});
+// -> "say: hello world"
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 If you're using >= v21.0.0 you need to set [skipOnVariables](../misc/migration-guide.md#skiponvariables-true) to false:
@@ -85,6 +117,8 @@ Prefix/Suffix for nesting and other options can be overridden in init [interpola
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.init({
     interpolation: { ... }
@@ -94,6 +128,20 @@ i18next.t('key', {
     interpolation: { ... }
 });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.init({
+    interpolation: { ... }
+});
+
+i18next.t($ => $.key, {
+    interpolation: { ... }
+});
+```
+{% endtab %}
+{% endtabs %}
 
 | option               | default   | description                            |
 | -------------------- | --------- | -------------------------------------- |
