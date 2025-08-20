@@ -49,6 +49,8 @@ True, i18next's documentation is bigger than that of other i18n frameworks - but
 
 If you do not need that i18next is as simple as any other i18n framework:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 import i18next from 'i18next';​
 
@@ -64,6 +66,26 @@ i18next.init({
 });​
 i18next.t('hello world'); // hallo Welt
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+import i18next from 'i18next';​
+
+i18next.init({
+    lng: 'de',
+    resources: {
+        de: {
+            translation: {
+                "hello world": "hallo Welt"
+            }
+        }
+    }
+});​
+i18next.t($ => $['hello world']); // hallo Welt
+```
+{% endtab %}
+{% endtabs %}
 
 ### i18next is bloated <a href="#i-18-next-is-bloated" id="i-18-next-is-bloated"></a>
 
@@ -98,6 +120,8 @@ translation.json
 
 Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 const error = '404';
 i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"​
@@ -105,6 +129,20 @@ i18next.t([`error.${error}`, 'error.unspecific']) // -> "The page was not found"
 const error = '502';
 i18next.t([`error.${error}`, 'error.unspecific']) // -> "Something went wrong"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+const error = '404';
+i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }) 
+// -> "The page was not found"​
+
+const error = '502';
+i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }) 
+// -> "Something went wrong"
+```
+{% endtab %}
+{% endtabs %}
 
 #### b) Or like to say something like **interval plurals**: <a href="#b-or-like-to-say-something-like-interval-plurals" id="b-or-like-to-say-something-like-interval-plurals"></a>
 

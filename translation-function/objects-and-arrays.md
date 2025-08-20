@@ -17,6 +17,8 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('tree', { returnObjects: true, something: 'gold' });
 // -> { res: 'added gold' }
@@ -24,6 +26,18 @@ i18next.t('tree', { returnObjects: true, something: 'gold' });
 i18next.t('array', { returnObjects: true });
 // -> ['a', 'b', 'c']
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.tree, { returnObjects: true, something: 'gold' });
+// -> { res: 'added gold' }
+
+i18next.t($ => $.array, { returnObjects: true });
+// -> ['a', 'b', 'c']
+```
+{% endtab %}
+{% endtabs %}
 
 The returned value supports interpolation, plurals, nesting, ...
 
@@ -56,6 +70,8 @@ keys
 
 sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.t('arrayJoin', { joinArrays: '+' });
 // -> "line1+line2+line3"
@@ -66,8 +82,22 @@ i18next.t('arrayJoinWithInterpolation', { myVar: 'interpolate', joinArrays: ' ' 
 i18next.t('arrayOfObjects.0.name');
 // -> "tom"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.t($ => $.arrayJoin, { joinArrays: '+' });
+// -> "line1+line2+line3"
+
+i18next.t($ => $.arrayJoinWithInterpolation, { myVar: 'interpolate', joinArrays: ' ' });
+// -> "you can interpolate"
+
+i18next.t($ => $.arrayOfObjects[0].name);
+// -> "tom"
+```
+{% endtab %}
+{% endtabs %}
 
 The returned value supports interpolation, plurals, nesting, ...
 
 `joinArrays` can be set to a value on init.
-

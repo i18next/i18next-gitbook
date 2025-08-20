@@ -29,6 +29,8 @@ More often you don't want to load all the translations upfront or at least reduc
 
 ## Sample
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 i18next.init({
   ns: ['common', 'moduleA', 'moduleB'],
@@ -43,5 +45,23 @@ i18next.init({
 // load additional namespaces after initialization
 i18next.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```typescript
+i18next.init({
+  ns: ['common', 'moduleA', 'moduleB'],
+  defaultNS: 'moduleA'
+}, (err, t) => {
+  i18next.t($ => $.myKey); // key in moduleA namespace (defined default)
+  i18next.t($ => $.myKey, { ns: 'common' }); // key in common namespace 
+
+});
+
+// load additional namespaces after initialization
+i18next.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
+```
+{% endtab %}
+{% endtabs %}
 
 Check the extended sample on the [getting started](../overview/getting-started.md) page for a running sample.
