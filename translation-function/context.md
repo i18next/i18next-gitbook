@@ -3,7 +3,7 @@
 By providing a context you can differ translations. Eg. useful to provide gender specific translations.
 
 {% hint style="info" %}
-🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA_9i4TtxLQ?t=653).
+🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA\_9i4TtxLQ?t=653).
 {% endhint %}
 
 ## Basic
