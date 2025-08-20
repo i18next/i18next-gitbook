@@ -164,7 +164,7 @@ While some other i18n frameworks run on serverside too there are not many optimi
 
 ### Learn once - translate everywhere <a href="#learn-once-translate-everywhere" id="learn-once-translate-everywhere"></a>
 
-![Overview of what technologies i18next will integrate with. Some listed are: Electron, Phaser, iOS, Android, Aurelia, Meteor, React Native, Knockout, React, Next.js, Remix, Angular, Ember, jQuery, Vue, Grunt, IntelliJ IDEA, Webpack, NodeJS, Express, Django, Koa, Microsoft .NET, PHP, Ruby Rails, Couchbase, MongoDB, Redis, Firebase, Locize.](../.gitbook/assets/i18next_eco.jpg)
+![Overview of what technologies i18next will integrate with. Some listed are: Electron, Phaser, iOS, Android, Aurelia, Meteor, React Native, Knockout, React, Next.js, Remix, Angular, Ember, jQuery, Vue, Grunt, IntelliJ IDEA, Webpack, NodeJS, Express, Django, Koa, Microsoft .NET, PHP, Ruby Rails, Couchbase, MongoDB, Redis, Firebase, Locize.](../.gitbook/assets/i18next\_eco.jpg)
 
 Should speak for itself.
 
