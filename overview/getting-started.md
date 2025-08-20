@@ -28,7 +28,7 @@ import i18next from 'https://deno.land/x/i18next/index.js'
 
 {% hint style="success" %}
 In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[\
-](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
+](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno\_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
 {% endhint %}
 
 ## Load from CDN
