@@ -16,6 +16,22 @@
   {
     "id": "pluralization",
     "label": "Pluralization & formatting (ICU/messages)"
+  },
+  {
+    "id": "tooling",
+    "label": "Tooling & extraction (CLI, key extraction, CI)"
+  },
+  {
+    "id": "docs",
+    "label": "Documentation & examples"
+  },
+  {
+    "id": "performance",
+    "label": "Performance / bundle size"
+  },
+  {
+    "id": "community",
+    "label": "Community / support (GitHub, Stackoverflow)"
   }
 ]" voteLabel="Vote" enableUserTracking="true" showPercentages="true" showTotalVotes="true" ttl="2592000000" %}
 
