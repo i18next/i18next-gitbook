@@ -1,6 +1,6 @@
 # Testimonials
 
-{% @vaultrice-voting-widget/vote-block votingClass="someother" votingId="voting-xyz" title="Sample Voting Test" description="Choose your preferred option" choices="[
+{% @vaultrice-voting-widget/vote-block votingClass="_undefined_" votingId="voting-xyz" title="Sample Voting Test" description="Choose your preferred option" choices="[
   {
     "id": "option-a",
     "label": "Option A"
