@@ -14,8 +14,6 @@ When your project grows, streamline your workflow with [locize](https://locize.c
 
 {% embed url="https://youtu.be/SA_9i4TtxLQ" %}
 
-##
-
 ## learn once - translate everywhere
 
 ![](.gitbook/assets/i18next-ecosystem.jpg)
