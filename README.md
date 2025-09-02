@@ -29,7 +29,7 @@ When your project grows, streamline your workflow with [locize](https://locize.c
     "id": "unhappy",
     "label": "unhappy - forced to use it by others"
   }
-]" voteLabel="vote" enableUserTracking="false" showPercentages="true" showTotalVotes="false" ttl="3600000" %}
+]" voteLabel="vote" enableUserTracking="true" showPercentages="true" showTotalVotes="false" ttl="3600000" %}
 
 ## learn once - translate everywhere
 
