@@ -14,6 +14,23 @@ When your project grows, streamline your workflow with [locize](https://locize.c
 
 {% embed url="https://youtu.be/SA_9i4TtxLQ" %}
 
+##
+
+{% @vaultrice-voting-widget/vote-block votingId="voting-i18next-happy" votingClass="_undefined_" title="How happy are you with i18next?" description="Tell us how happy you are with i18next..." choices="[
+  {
+    "id": "super-happy",
+    "label": "super happy - best i18n solution I’m aware of"
+  },
+  {
+    "id": "happy",
+    "label": "happy - does what it should"
+  },
+  {
+    "id": "unhappy",
+    "label": "unhappy - forced to use it by others"
+  }
+]" voteLabel="vote" enableUserTracking="false" showPercentages="true" showTotalVotes="false" ttl="3600000" %}
+
 ## learn once - translate everywhere
 
 ![](.gitbook/assets/i18next-ecosystem.jpg)
