@@ -21,7 +21,7 @@ The newest i18next versions only support **TypeScript v5**. Older TypeScript ver
 {% hint style="warning" %}
 If your project spans multiple i18next instances with different translation resources, it might take a little extra work to set up type-safe translations.
 
-For each instance you'll need to create a separate `tsconfig.json` and `i18next.d.ts` file. See [i18next/i18next-monorepo](https://github.com/ahrjarrett/i18next-monorepo) for an example.
+For each instance you'll need to create a separate `tsconfig.json` and `i18next.d.ts` file. See [i18next/i18next-monorepo](https://github.com/i18next/i18next-monorepo) for an example.
 {% endhint %}
 
 {% hint style="success" %}
