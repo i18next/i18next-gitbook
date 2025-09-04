@@ -135,7 +135,7 @@ For testing purposes, you might find yourself wanting to mock the `t` function.
 ```typescript
 import { keyFromSelector } from "i18next";
 
-const mockT = (selector: ($: Record<string, any>) => any) => keyFromSelector($);
+const mockT = (selector: ($: Record<string, any>) => any) => keyFromSelector(selector);
   
 const mockTranslation = mockT($ => $.abc.def);
 
