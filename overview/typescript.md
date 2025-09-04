@@ -81,15 +81,16 @@ i18n.use(initReactI18next).init({
 
 **`i18next.d.ts`**
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>import { resources, defaultNS } from "./i18n";
-</strong><strong>
-</strong>declare module "i18next" {
+```typescript
+import { resources, defaultNS } from "./i18n";
+
+declare module "i18next" {
   interface CustomTypeOptions {
     defaultNS: typeof defaultNS;
     resources: typeof resources["en"];
   }
 }
-</code></pre>
+```
 
 **We recommend creating a `@types` directory under `src` or above it and placing all your type declarations there. E.g.: `@types/i18next.d.ts`**
 
