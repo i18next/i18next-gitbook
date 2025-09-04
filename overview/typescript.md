@@ -135,11 +135,11 @@ For testing purposes, you might find yourself wanting to mock the `t` function.
 ```typescript
 import { keyFromSelector } from "i18next";
 
-const mockT = (selector: ($: Record<string, any>) => string) => keyFromSelector($)
+const mockT = (selector: ($: Record<string, any>) => any) => keyFromSelector($);
   
-const mockTranslation = mockT($ => $.abc.def)
+const mockTranslation = mockT($ => $.abc.def);
 
-console.log(mockTranslation) // => "abc.def"
+console.log(mockTranslation); // => "abc.def"
 ```
 
 ## Troubleshooting
