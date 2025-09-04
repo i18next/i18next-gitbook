@@ -81,16 +81,15 @@ i18n.use(initReactI18next).init({
 
 **`i18next.d.ts`**
 
-```typescript
-import { resources, defaultNS } from "./i18n";
-
-declare module "i18next" {
+<pre class="language-typescript"><code class="lang-typescript"><strong>import { resources, defaultNS } from "./i18n";
+</strong><strong>
+</strong>declare module "i18next" {
   interface CustomTypeOptions {
     defaultNS: typeof defaultNS;
     resources: typeof resources["en"];
   }
 }
-```
+</code></pre>
 
 **We recommend creating a `@types` directory under `src` or above it and placing all your type declarations there. E.g.: `@types/i18next.d.ts`**
 
@@ -123,6 +122,24 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 | interpolationPrefix       | '\{{'         | Prefix for interpolation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | strictKeyChecks           | false         | Flag that enables strict key checking even if a `defaultValue` has been provided. This ensures all calls of `t` function don't accidentally use implicitly missing keys.                                                                                                                                                                                                                                                                                                                                                                                                |
+
+## Testing
+
+### Mocking the selector function
+
+For testing purposes, you might find yourself wanting to mock the `t` function.
+
+i18next exports a function called keyFromSelector to make this easier. Here's an example of how you can use it:
+
+```typescript
+import { keyFromSelector } from "i18next";
+
+const mockT = (selector: ($: Record<string, any>) => string) => keyFromSelector($)
+  
+const mockTranslation = mockT($ => $.abc.def)
+
+console.log(mockTranslation) // => "abc.def"
+```
 
 ## Troubleshooting
 
