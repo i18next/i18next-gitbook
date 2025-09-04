@@ -124,6 +124,24 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 | interpolationSuffix       | '\}}'         | Suffix for interpolation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | strictKeyChecks           | false         | Flag that enables strict key checking even if a `defaultValue` has been provided. This ensures all calls of `t` function don't accidentally use implicitly missing keys.                                                                                                                                                                                                                                                                                                                                                                                                |
 
+## Testing
+
+### Mocking the selector function
+
+For testing purposes, you might find yourself wanting to mock the `t` function.
+
+`i18next` exports a function called `keyFromSelector` to make this easier. Here's an example of how you can use it:
+
+```typescript
+import { keyFromSelector } from "i18next";
+
+const mockT = (selector: ($: Record<string, any>) => any) => keyFromSelector(selector);
+  
+const mockTranslation = mockT($ => $.abc.def);
+
+console.log(mockTranslation); // => "abc.def"
+```
+
 ## Troubleshooting
 
 ### Intellisense not working
