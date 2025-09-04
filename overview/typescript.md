@@ -130,7 +130,7 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 
 For testing purposes, you might find yourself wanting to mock the `t` function.
 
-i18next exports a function called keyFromSelector to make this easier. Here's an example of how you can use it:
+`i18next` exports a function called `keyFromSelector` to make this easier. Here's an example of how you can use it:
 
 ```typescript
 import { keyFromSelector } from "i18next";
