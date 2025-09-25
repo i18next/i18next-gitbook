@@ -1,20 +1,24 @@
 # Extracting translations
 
-At some point you will come to the question how to get new translation key/values into your namespace \(translation\) file.
+At some point you will come to the question how to get new translation key/values into your namespace (translation) file.
 
-## 1\) Adding new strings manually <a id="1-adding-new-strings-manually"></a>
+## 1) Adding new strings manually <a href="#id-1-adding-new-strings-manually" id="id-1-adding-new-strings-manually"></a>
 
 While for sure this is the least efficient method for adding new translations, we know a lot of projects are doing this. There is actually nothing wrong with it beside being some extra work developers could avoid.
 
-## 2\) Using an extraction tool <a id="2-using-an-extraction-tool"></a>
+## 2) Using an extraction tool <a href="#id-2-using-an-extraction-tool" id="id-2-using-an-extraction-tool"></a>
 
-Static extraction tools can read through your code files to automatically find and export translation keys. [i18next-scanner](http://i18next.github.io/i18next-scanner), [i18next-parser](https://github.com/i18next/i18next-parser) and [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) are sensible choices to achieve this goal.
+Static extraction tools can read through your code files to automatically find and export translation keys.
+
+Use the **official ⭐** [**i18next-cli**](https://github.com/i18next/i18next-cli) - a high-performance, all-in-one command-line tool for i18next. It handles key extraction, code linting, locale syncing, and type generation. It's built with modern technologies for maximum speed and accuracy. This is the recommended tool for all i18next projects.
+
+[i18next-scanner](http://i18next.github.io/i18next-scanner), [i18next-parser](https://github.com/i18next/i18next-parser) and [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) are alternative choices to achieve this goal.
 
 _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._
 
 For more information about extraction tools, see [plugin and utils](https://www.i18next.com/overview/plugins-and-utils#extraction-tools) documentation page.
 
-## 3\) Runtime extraction <a id="3-runtime-extraction"></a>
+## 3) Runtime extraction <a href="#id-3-runtime-extraction" id="id-3-runtime-extraction"></a>
 
 I18next has a setting to send all keys that it was unable to resolve during runtime using the attached backend.
 
@@ -40,7 +44,7 @@ export default i18n;
 
 Check the [options](https://github.com/i18next/i18next-http-backend#backend-options) for where missing translation gets sent.
 
-Using node.js and express? You can get that endpoint for free: [https://github.com/i18next/i18next-http-middleware\#add-routes](https://github.com/i18next/i18next-http-middleware#add-routes)​
+Using node.js and express? You can get that endpoint for free: [https://github.com/i18next/i18next-http-middleware#add-routes](https://github.com/i18next/i18next-http-middleware#add-routes)​
 
 This is the most convenient way of working with react-i18next: just develop and run your applications without worrying too much about adding translations to your catalog as those get added automatically.
 
@@ -49,4 +53,3 @@ Wanna have this process on steroids? Just hook up a [locize.com](https://locize.
 {% endhint %}
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}
-
