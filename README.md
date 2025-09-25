@@ -1,5 +1,11 @@
 # Introduction
 
+{% hint style="success" %}
+🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
+&#x20;       The New Official Toolkit for i18next.\
+⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
+{% endhint %}
+
 i18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!
 
 > Want to know how to easily add internationalization to your software project?\
