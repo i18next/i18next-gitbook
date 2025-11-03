@@ -1,8 +1,23 @@
 # Introduction
 
+{% @vaultrice-voting-widget/vote-block votingId="voting-i18next-happy" votingClass="_undefined_" title="How happy are you with i18next?" description="Tell us how happy you are with it...." choices="[
+  {
+    "id": "super-happy",
+    "label": "super happy - best i18n solution I'm aware of"
+  },
+  {
+    "id": "happy",
+    "label": "happy - does what it should"
+  },
+  {
+    "id": "unhappy",
+    "label": "unhappy - forced to use it by others"
+  }
+]" voteLabel="vote" showPercentages="true" showTotalVotes="false" ttl="3600000" %}
+
 {% hint style="success" %}
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
-&#x20;       The New Official Toolkit for i18next.\
+The New Official Toolkit for i18next.\
 ⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
 {% endhint %}
 
@@ -35,7 +50,7 @@ make a tweet... write it on your website... create a blog post... etc...
 
 <img src=".gitbook/assets/speaker.jpg" alt="" data-size="original">\
 \
-&#xNAN;_&#x41;re you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://locize.com) _loves the open-source philosophy and may be able to support you._
+\&#xNAN;_Are you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://locize.com) _loves the open-source philosophy and may be able to support you._
 {% endhint %}
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
