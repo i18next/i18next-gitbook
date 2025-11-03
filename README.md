@@ -13,7 +13,7 @@
     "id": "unhappy",
     "label": "unhappy - forced to use it by others"
   }
-]" voteLabel="vote" showPercentages="true" showTotalVotes="false" ttl="3600000" %}
+]" voteLabel="vote" showPercentages="true" showTotalVotes="false" ttl="32000000000" %}
 
 {% hint style="success" %}
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
