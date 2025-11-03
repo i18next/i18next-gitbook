@@ -12,6 +12,10 @@
   {
     "id": "unhappy",
     "label": "unhappy - forced to use it by others"
+  },
+  {
+    "id": "regained",
+    "label": "happy again - since you released i18next-cli"
   }
 ]" voteLabel="vote" showPercentages="true" showTotalVotes="false" ttl="32000000000" %}
 
