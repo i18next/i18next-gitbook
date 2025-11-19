@@ -21,14 +21,14 @@ In the `/dist` folder you may find additional builds for commonjs, es6 modules. 
 i18next can be imported like this:
 
 ```javascript
-import i18next from 'https://deno.land/x/i18next/index.js'
+import i18next from '@i18next/i18next' // when installed via JSR: deno add jsr:@i18next/i18next
 // or import i18next from 'https://raw.githubusercontent.com/i18next/i18next/master/src/index.js'
 // or import i18next from 'https://cdn.jsdelivr.net/gh/i18next/i18next/src/index.js'
 ```
 
 {% hint style="success" %}
 In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[\
-](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno\_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
+](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
 {% endhint %}
 
 ## Load from CDN
