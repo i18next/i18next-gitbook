@@ -1,21 +1,21 @@
 # Introduction
 
-{% @vaultrice-voting-widget/vote-block votingId="voting-i18next-happy" votingClass="_undefined_" title="How happy are you with i18next?" description="Tell us how happy you are with it...." choices="[
+{% @vaultrice-voting-widget/vote-block votingId="voting-i18next-improve" votingClass="_undefined_" title="Which i18n/i18next area would you like us to improve or extend?" description="We're honored that 90%+ of you enjoy using i18next! To keep improving, we need your input. Help us prioritize the next chapter of the ecosystem. Note: If you choose 'Frameworks' or 'Plugins', please leave a comment (GH issue or support@locize.com) specifying which ones you have in mind!" choices="[
   {
-    "id": "super-happy",
-    "label": "super happy - best i18n solution I'm aware of"
+    "id": "frameworks",
+    "label": "Better/Other tech-specific frameworks, like react-i18next, etc... (tell us which please)"
   },
   {
-    "id": "happy",
-    "label": "happy - does what it should"
+    "id": "plugins",
+    "label": "Better/Other i18next plugins (tell us which please)"
   },
   {
-    "id": "unhappy",
-    "label": "unhappy - forced to use it by others"
+    "id": "prosa",
+    "label": "Improved localization of bigger texts/assets/media"
   },
   {
-    "id": "regained",
-    "label": "happy again - since you released i18next-cli"
+    "id": "idea",
+    "label": "Have a specific idea? GH Issue or support@locize.com"
   }
 ]" voteLabel="vote" showPercentages="true" showTotalVotes="false" ttl="32000000000" %}
 
@@ -84,8 +84,7 @@ Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-
 {% endhint %}
 
 {% hint style="success" %}
-Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://locize.com/blog/how-does-server-side-internationalization-look-like/) you can check out how this works.[\
-](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server_side_backend.jpg)](https://locize.com/blog/how-does-server-side-internationalization-look-like/)
+Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://locize.com/blog/how-does-server-side-internationalization-look-like/) you can check out how this works.[<br>](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server_side_backend.jpg)](https://locize.com/blog/how-does-server-side-internationalization-look-like/)
 {% endhint %}
 
 {% hint style="success" %}
