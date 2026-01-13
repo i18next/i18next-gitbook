@@ -1,6 +1,6 @@
 # Introduction
 
-{% @vaultrice-voting-widget/vote-block votingId="voting-i18next-improve" votingClass="_undefined_" title="Which i18n/i18next area would you like us to improve or extend?" description="We're honored that 90%+ of you enjoy using i18next! Help us prioritize the next chapter of the ecosystem. Note: If you choose 'Frameworks' or 'Plugins', please leave a comment (GH issue or support@locize.com) specifying which ones you have in mind!" choices="[
+{% @vaultrice-voting-widget/vote-block votingId="voting-i18next-improve" votingClass="_undefined_" title="Which i18n/i18next area would you like us to improve or extend?" description="We're honored that 90%+ of you enjoy using i18next! Help us prioritize the next chapter of the ecosystem. Please tell us (GH issue or support@locize.com) specifying what you have in mind!" choices="[
   {
     "id": "frameworks",
     "label": "Better/Other tech-specific frameworks (tell us which please)"
