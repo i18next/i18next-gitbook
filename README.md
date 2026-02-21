@@ -1,25 +1,13 @@
 # Introduction
 
-{% @vaultrice-voting-widget/vote-block votingId="voting-i18next-improve" votingClass="_undefined_" title="Which i18n/i18next area would you like us to improve or extend?" description="We're honored that 90%+ of you enjoy using i18next! Help us prioritize the next chapter of the ecosystem. Please tell us (GH issue or support@locize.com) specifying what you have in mind!" choices="[
-  {
-    "id": "frameworks",
-    "label": "Better/Other tech-specific frameworks (tell us which please)"
-  },
-  {
-    "id": "plugins",
-    "label": "Better/Other i18next plugins (tell us which please)"
-  },
-  {
-    "id": "prosa",
-    "label": "Improved localization of bigger texts/assets/media"
-  },
-  {
-    "id": "idea",
-    "label": "Have a specific idea? GH Issue or support@locize.com"
-  }
-]" voteLabel="vote" showPercentages="true" showTotalVotes="false" ttl="32000000000" %}
-
 {% hint style="success" %}
+🚀 New: **Locize** is now **Free** for small projects!\
+We've replaced the trial-only model with a **Free plan**.\
+Manage up to 1,000 words and 10,000 downloads for $0/mo.\
+⇒ [Check it out!](https://www.locize.com/blog/i18next-cli)
+{% endhint %}
+
+{% hint style="info" %}
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
 The New Official Toolkit for i18next.\
 ⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
@@ -34,7 +22,7 @@ i18next goes beyond just providing the standard i18n features (such as [plurals]
 
 {% hint style="warning" %}
 Managing JSON files manually?\
-When your project grows, streamline your workflow with [locize](https://locize.com), the official TMS built by the creators of i18next. [**Try it for free!**](https://www.locize.com/i18next)
+When your project grows, streamline your workflow with [Locize](https://locize.com), the official TMS built by the creators of i18next. [**Get started**](https://www.locize.com/i18next) with the **Free plan** — perfect for hobbyists and small projects.
 {% endhint %}
 
 {% embed url="https://youtu.be/SA_9i4TtxLQ" %}

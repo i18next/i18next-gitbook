@@ -27,8 +27,7 @@ import i18next from '@i18next/i18next' // when installed via JSR: deno add jsr:@
 ```
 
 {% hint style="success" %}
-In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[\
-](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
+In [this tutorial blog post](https://locize.com/blog/i18n-for-deno-with-i18next/) you can check out how this works.[<br>](https://locize.com/blog/i18n-for-deno-with-i18next/)[![](../.gitbook/assets/deno_i18next.jpg)](https://locize.com/blog/i18n-for-deno-with-i18next/)
 {% endhint %}
 
 ## Load from CDN
@@ -268,3 +267,8 @@ You should now have an idea about how to achieve the basic setup. It's time to l
 * Add a [language detector](plugins-and-utils.md) to detect the preferred language of your user
 * Add a [backend plugin](plugins-and-utils.md) to load the translations from the server or filesystem
 * Connect i18next with a smart [Translation Management System](https://locize.com), like in [this React.js example](https://github.com/locize/react-tutorial)
+
+{% hint style="success" %}
+Don't have a [Locize](https://www.locize.com/) account yet?\
+You can now sign up for a **Free plan** to test the integration in your development environment indefinitely.
+{% endhint %}

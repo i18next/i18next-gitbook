@@ -37,6 +37,8 @@ Locize brings you:
 * Gets your missing keys passed directly to the project
 * Hosts translation on its CDN and allows for automatic or manual publishing (You still have the option to host translations yourself)
 
+While Locize provides the security and scale required by global enterprises, we believe professional localization should be accessible to everyone. That’s why we’ve introduced a **Free plan** alongside our new fixed and usage-based plans, allowing you to start small and scale predictably as you grow.
+
 Check out how it works => [https://www.youtube.com/watch?v=TFV\_vhJs5DY](https://www.youtube.com/watch?v=TFV_vhJs5DY)
 
-_Together, 'i18next' and '_[_locize_](https://locize.com)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._
+_Together, 'i18next' and '_[_Locize_](https://locize.com)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._

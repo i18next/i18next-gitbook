@@ -6,7 +6,7 @@
 
 _There are a lot of ways to support us. Make a PR for a feature requested. Improve the documentation. Help others to get started. Spread the word._
 
-_Further you could try_ [_locize.com_](http://locize.com) _- our localization as a service offering. It's like donating to i18next but with additional benefits for you - like saving hours of time translating your project._
+_You can support the future of i18next by using_ [_Locize_](https://www.locize.com/)_. It’s our 'Localization as a Service' offering that funds the development of this open-source ecosystem. With our **Free plan**, you can now support the project even on smaller hobby sites at no cost, while benefiting from a professional translation workflow._
 
 ## Loading issues
 
@@ -94,6 +94,5 @@ Due to how serverless functions work, you cannot guarantee that a cached version
 Because of this we suggest to not use a remote backend and to download the translations and package them with your serverless function.
 
 {% hint style="success" %}
-Read more about this topic, [here](https://locize.com/blog/i18n-serverless/).[\
-](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](<../.gitbook/assets/title (1).jpg>)](https://locize.com/blog/i18n-serverless/)
+Read more about this topic, [here](https://locize.com/blog/i18n-serverless/).[<br>](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](<../.gitbook/assets/title (1).jpg>)](https://locize.com/blog/i18n-serverless/)
 {% endhint %}
