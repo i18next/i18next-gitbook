@@ -4,7 +4,7 @@
 🚀 New: **Locize** is now **Free** for small projects!\
 We've replaced the trial-only model with a **Free plan**.\
 Manage up to 1,000 words and 10,000 downloads for $0/mo.\
-⇒ [Check it out!](https://www.locize.com/blog/i18next-cli)
+⇒ [Check it out!](https://www.locize.com/pricing)
 {% endhint %}
 
 {% hint style="info" %}
