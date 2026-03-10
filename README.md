@@ -11,6 +11,8 @@ Manage up to 1,000 words and 10,000 downloads for $0/mo.\
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
 The New Official Toolkit for i18next.\
 ⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
+
+{% embed url="https://www.youtube.com/watch?v=aWZnZXwGg34" %}
 {% endhint %}
 
 i18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!
