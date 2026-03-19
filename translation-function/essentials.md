@@ -110,9 +110,7 @@ i18next.t('button.save', { ns: 'common' }) // -> "save"
 i18next.t($ => $.name);
 // -> "Module A"
 
-// from different namespace (not recommended with namespace prefix when used in combination with natural language keys)
-i18next.t($ => $.common.button.save) // -> "save"
-// better use the ns option:
+// use the ns option, if ns is not defaultNS:
 i18next.t($ => $.button.save, { ns: 'common' }) // -> "save"
 ```
 {% endtab %}
