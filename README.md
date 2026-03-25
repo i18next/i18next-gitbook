@@ -132,6 +132,11 @@ Through [locize.com](http://locize.com/?utm_source=i18next_com\&utm_medium=gitbo
 Imagine you run a successful online business, and you want to expand it to reach customers in different countries. You know that to succeed in those markets, your website or app needs to speak the language and understand the culture of each place.
 
 1. **i18next**: Think of 'i18next' as a sophisticated language expert for your website or app. It's like hiring a team of translators and cultural experts who ensure that your online business is fluent in multiple languages. It helps adapt your content, menus, and messages to fit perfectly in each target market, making your business more appealing and user-friendly.
-2. **locize**: Now, 'locize' is your efficient manager in charge of organizing and streamlining the translation process. It keeps all your language versions organized and ensures they're always accurate and up-to-date. So, if you want to introduce a new product or promotion, locize helps you do it seamlessly in all the languages you operate in, saving you time and resources.
+2. **Locize**: Now, 'locize' is your efficient manager in charge of organizing and streamlining the translation process. It keeps all your language versions organized and ensures they're always accurate and up-to-date. So, if you want to introduce a new product or promotion, locize helps you do it seamlessly in all the languages you operate in, saving you time and resources.
 
-Together, 'i18next' and '[locize](https://locize.com)' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets.
+Together, 'i18next' and '[Locize](https://locize.com)' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets.
+
+#### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp)
+
+{% embed url="https://youtu.be/G7bfVfyseaQ" %}
+
