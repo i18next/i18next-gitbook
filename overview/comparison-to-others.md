@@ -6,7 +6,7 @@ You now might expect we compare eg. react-i18next to react-intl but that won't h
 
 i18next was created in late 2011. What does that mean? It's older than most of the libraries you will use nowadays, including your main frontend tech (react, vue, ...).
 
-Believe it or not but by the time of writing, the v11.x.x can be dropped in as a replacement for v1 by just adding a minimal compatibility layer. It's important to us not breaking things just for the sake of using new fancy stuff (which does not mean we do not keep up with latest possibilities of development).
+Through v23, i18next maintained backward compatibility with v1 via a compatibility layer. With v24, the v1 compatibility API was removed, but the commitment to stability remains — it's important to us not breaking things just for the sake of using new fancy stuff (which does not mean we do not keep up with latest possibilities of development).
 
 ## Maturity <a href="#maturity" id="maturity"></a>
 
@@ -95,7 +95,7 @@ We work hard on keeping the code base clean and readable. We add new features wh
 
 ### i18next is too big <a href="#i-18-next-is-to-big" id="i-18-next-is-to-big"></a>
 
-Yes, a size of 33kb minified and 9kb gzipped is huge. But like you saw before there is a lot more inside than just the basic i18n functionality.
+Yes, i18next is not the smallest i18n library out there. But like you saw before there is a lot more inside than just the basic i18n functionality.
 
 But you could make this smaller by precompiling the translations. We could bring down i18next to 4kb gzipped (good to advertise) but on the other hand your translation files would grow significantly.
 

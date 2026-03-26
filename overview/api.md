@@ -88,13 +88,13 @@ For available module see the [plugins page](plugins-and-utils.md) and don't forg
 ```javascript
 import i18next from 'i18next';
 import Backend from 'i18next-http-backend';
-import Cache from 'i18next-localstorage-cache';
+import LocalStorageBackend from 'i18next-localstorage-backend'; // used with i18next-chained-backend for caching
 import postProcessor from 'i18next-sprintf-postprocessor';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18next
   .use(Backend)
-  .use(Cache)
+  .use(LocalStorageBackend)
   .use(LanguageDetector)
   .use(postProcessor)
   .init(options, callback);

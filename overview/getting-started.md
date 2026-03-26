@@ -44,7 +44,7 @@ esm or cjs:
 * [https://unpkg.com/i18next/dist/esm/i18next.js](https://unpkg.com/i18next/dist/esm/i18next.js)
 * [https://unpkg.com/i18next/dist/cjs/i18next.js](https://unpkg.com/i18next/dist/cjs/i18next.js)
 
-Make sure to use a fixed version in production like [https://unpkg.com/i18next@17.0.0/dist/umd/i18next.js](https://unpkg.com/i18next/dist/umd/i18next.js) as passing no version will redirect to latest version which might contain breaking changes in future.
+Make sure to use a fixed version in production like [https://unpkg.com/i18next@26.0.0/dist/umd/i18next.js](https://unpkg.com/i18next@26.0.0/dist/umd/i18next.js) as passing no version will redirect to latest version which might contain breaking changes in future.
 
 **cdnjs.com**
 

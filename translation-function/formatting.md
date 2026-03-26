@@ -3,7 +3,7 @@
 Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl).
 
 {% hint style="warning" %}
-Since **i18next>=26.0.0** the legacy `interpolation.format` function has been removed. The built-in Formatter is now always used. For custom formatting, use `i18next.services.formatter.add()` or `.addCached()` as described below, or provide a custom Formatter module via `.use()`.
+Starting with **i18next v26.0.0**, the legacy `interpolation.format` function will be removed. The built-in Formatter is now always used. For custom formatting, use `i18next.services.formatter.add()` or `.addCached()` as described below, or provide a custom Formatter module via `.use()`.
 {% endhint %}
 
 _You may need to_ [_polyfill_](https://formatjs.io/docs/polyfills/) _the Intl API:_
