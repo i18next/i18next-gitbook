@@ -101,7 +101,7 @@ But you could make this smaller by precompiling the translations. We could bring
 
 ## We tell you <a href="#we-tell-you" id="we-tell-you"></a>
 
-### I18next can do more <a href="#i-18-next-can-do-more" id="i-18-next-can-do-more"></a>
+### i18next can do more <a href="#i-18-next-can-do-more" id="i-18-next-can-do-more"></a>
 
 Just two samples of extended functionality you can get:
 
