@@ -1,5 +1,39 @@
 # Migration Guide
 
+### v25.x.x to v26.0.0
+
+**This is a major breaking release:**
+
+* **Removed legacy `interpolation.format` function** — the old monolithic format function (`interpolation: { format: (value, format, lng) => ... }`) is no longer supported. The built-in Formatter is now always used. For custom formatting, use `i18next.services.formatter.add()` or `.addCached()`, or provide a custom Formatter module via `.use()`. See the [formatting docs](../translation-function/formatting.md).
+* **Removed deprecated `initImmediate` option** — use `initAsync` instead (renamed in v24).
+* **Removed console support notice** — the `showSupportNotice` option and all related internal suppression logic (`globalThis.__i18next_supportNoticeShown`, `I18NEXT_NO_SUPPORT_NOTICE` env var) have been removed. [Read this](https://www.locize.com/blog/i18next-support-notice) to know more about it.
+* **`i18next.format` now always uses the Formatter** — `i18next.format` still works, but it is backed by the built-in [Formatter](../translation-function/formatting.md) (or a custom Formatter module). It no longer accepts a user-supplied function via `interpolation.format`.
+
+#### Migration steps
+
+1. If you were using `interpolation: { format: function(value, format, lng) { ... } }`, migrate your custom logic to the Formatter API:
+
+```javascript
+// before (v25 and earlier)
+i18next.init({
+  interpolation: {
+    format: function(value, format, lng) {
+      if (format === 'uppercase') return value.toUpperCase();
+      return value;
+    }
+  }
+});
+
+// after (v26)
+i18next.init({ /* ... */ });
+i18next.services.formatter.add('uppercase', (value, lng, options) => {
+  return value.toUpperCase();
+});
+```
+
+2. Replace any usage of `initImmediate` with `initAsync`.
+3. Remove any usage of `showSupportNotice` from your init options.
+
 ### v25.3.x to v25.4.0
 
 * add new selector API to improve TypeScript IDE performance [2322](https://github.com/i18next/i18next/pull/2322)

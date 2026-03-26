@@ -2,6 +2,10 @@
 
 Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl).
 
+{% hint style="warning" %}
+Since **i18next>=26.0.0** the legacy `interpolation.format` function has been removed. The built-in Formatter is now always used. For custom formatting, use `i18next.services.formatter.add()` or `.addCached()` as described below, or provide a custom Formatter module via `.use()`.
+{% endhint %}
+
 _You may need to_ [_polyfill_](https://formatjs.io/docs/polyfills/) _the Intl API:_
 
 * [_Intl.PluralRules_](https://formatjs.io/docs/polyfills/intl-pluralrules)
@@ -381,67 +385,6 @@ i18next.t($ => $.intlList, { val: ['locize', 'i18next', 'awesomeness'] });
 
 For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Intl/ListFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat)
 
-## Legacy format function i18next<21.3.0
-
-You can add formatting using [moment.js](http://momentjs.com/) and [numeral.js](http://numeraljs.com/) or the [intl api](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl).
-
-As a sample using momentjs to format dates.
-
-keys
-
-```javascript
-{
-    "key": "The current date is {{date, MM/DD/YYYY}}",
-    "key2": "{{text, uppercase}} just uppercased"
-}
-```
-
-Init i18next with a format function:
-
-```javascript
-i18next.init({
-    interpolation: {
-        format: function(value, format, lng) {
-            if (format === 'uppercase') return value.toUpperCase();
-            if(value instanceof Date) return moment(value).format(format);
-            return value;
-        }
-    }
-});
-```
-
-sample
-
-{% tabs %}
-{% tab title="JavaScript" %}
-```javascript
-i18next.t('key', { date: new Date() });
-// -> "The current date is 07/13/2016"
-
-i18next.t('key2', { text: 'can you hear me' });
-// => "CAN YOU HEAR ME just uppercased"
-```
-{% endtab %}
-
-{% tab title="TypeScript" %}
-```typescript
-i18next.t($ => $.key, { date: new Date() });
-// -> "The current date is 07/13/2016"
-
-i18next.t($ => $.key2, { text: 'can you hear me' });
-// => "CAN YOU HEAR ME just uppercased"
-```
-{% endtab %}
-{% endtabs %}
-
-Keep the language on moment in sync with i18next by listening to the change language event:
-
-```javascript
-i18next.on('languageChanged', function(lng) {
-  moment.locale(lng);
-});
-```
-
 ## Additional options
 
 Prefix/Suffix for interpolation and other options can be overridden in init option:
@@ -457,7 +400,6 @@ i18next.init({
 | option          | default       | description                                                                                                                                          |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | alwaysFormat    | false         | used to always call the format function for all interpolated values                                                                                  |
-| format          | noop function | <p>Passing this function is considered LEGACY in i18next>=21.3.0</p><p>format function <code>function format(value, format, lng, edit) {}</code></p> |
 | formatSeparator | ','           | used to separate format from interpolation value                                                                                                     |
 
 While there are a lot of options going with the defaults should get you covered.

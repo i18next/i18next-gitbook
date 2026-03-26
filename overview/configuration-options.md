@@ -84,13 +84,12 @@ The missing keys functionality of i18next is very useful during development. If 
 | ignoreJSONStructure              | true    | if a key is not found as nested key, it will try to lookup as flat key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | maxParallelReads                 | 10      | limits parallel reads to the backend to prevent opening up to thousands of sockets or file descriptors at the same time, leading to `EMFILE` errors if `ulimit -n` is exceeded (`debug: true` must be set to see them). limiting parallelism usually makes loading all items substantially faster than allowing all reads to start before any have finished.                                                                                                                                                                                                            |
 | cacheInBuiltFormats              | true    | Initializes the internal formatter for the [in-built formats](../translation-function/formatting.md#built-in-formats) as cached version. Can be set to false for this type of [issues](https://github.com/i18next/i18next/issues/2227).                                                                                                                                                                                                                                                                                                                                 |
-| showSupportNotice                | true    | Read about it [here](https://www.locize.com/docs/general-questions/why-am-i-seeing-a-support-notice-for-i18next).                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-## initImmediate
+## initAsync
 
-Sample using `initImmediate` when using a backend plugin allowing sync (blocking) loads.
+Sample using `initAsync` when using a backend plugin allowing sync (blocking) loads.
 
-**This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend#if-set-i18next-initimmediate-option-to-false-it-will-load-the-files-synchronously)**!**
+**This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend)**!**
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -115,7 +114,7 @@ execution order of function calls
 // working
 i18next
   .use(Backend)
-  .init({ initImmediate: false });
+  .init({ initAsync: false });
 
 i18next.t('key'); // -> will return value
 
@@ -150,7 +149,7 @@ execution order of function calls
 // working
 i18next
   .use(Backend)
-  .init({ initImmediate: false });
+  .init({ initAsync: false });
 
 i18next.t($ => $.key); // -> will return value
 

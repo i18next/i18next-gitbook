@@ -33,7 +33,7 @@ const backend = new Backend({
 i18next
   .use(backend)
   .init({
-    // initImmediate: false, // setting initImediate to false, will load the resources synchronously
+    // initAsync: false, // setting initAsync to false, will load the resources synchronously
     ...opts,
     ...yourOptions
   }); // yourOptions should not include backendOptions!
