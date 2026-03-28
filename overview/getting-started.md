@@ -179,7 +179,7 @@ i18next.init({
 {% endtab %}
 
 {% tab title="TypeScript" %}
-```javascript
+```typescript
 i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option
   debug: true,
@@ -264,6 +264,7 @@ You should now have an idea about how to achieve the basic setup. It's time to l
 * The translation functions like [interpolation](../translation-function/interpolation.md), [formatting](../translation-function/formatting.md) and [plurals](../translation-function/plurals.md).
 * Find an [extension for your project](supported-frameworks.md), eg. **react-i18next**, **jquery-i18next** and **others**. Using those wrappers around i18next makes using i18next a lot simpler in your project. Most of such modules come with extended examples.
 * Find out more about the [configuration options](configuration-options.md).
+* Set up [type-safe translations with TypeScript](typescript.md).
 * Add a [language detector](plugins-and-utils.md) to detect the preferred language of your user
 * Add a [backend plugin](plugins-and-utils.md) to load the translations from the server or filesystem
 * Connect i18next with a smart [Translation Management System](https://locize.com), like in [this React.js example](https://github.com/locize/react-tutorial)

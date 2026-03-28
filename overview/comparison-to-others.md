@@ -52,7 +52,7 @@ If you do not need that i18next is as simple as any other i18n framework:
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import i18next from 'i18next';​
+import i18next from 'i18next';
 
 i18next.init({
     lng: 'de',
@@ -63,14 +63,14 @@ i18next.init({
             }
         }
     }
-});​
+});
 i18next.t('hello world'); // hallo Welt
 ```
 {% endtab %}
 
 {% tab title="TypeScript" %}
 ```typescript
-import i18next from 'i18next';​
+import i18next from 'i18next';
 
 i18next.init({
     lng: 'de',
@@ -81,7 +81,7 @@ i18next.init({
             }
         }
     }
-});​
+});
 i18next.t($ => $['hello world']); // hallo Welt
 ```
 {% endtab %}

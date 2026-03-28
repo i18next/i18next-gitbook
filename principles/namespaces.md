@@ -65,3 +65,7 @@ i18next.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
 {% endtabs %}
 
 Check the extended sample on the [getting started](../overview/getting-started.md) page for a running sample.
+
+{% hint style="info" %}
+For details on how to load namespaces from files or a backend, see [Add or Load Translations](../how-to/add-or-load-translations.md).
+{% endhint %}

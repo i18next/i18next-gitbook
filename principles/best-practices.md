@@ -54,3 +54,7 @@ Use two separate fully self-contained strings instead:
 
 }
 ```
+
+{% hint style="info" %}
+See also: [Context](../translation-function/context.md) for gender-specific translations, [Plurals](../translation-function/plurals.md) for count-based variations, and [Formatting](../translation-function/formatting.md) for locale-aware number/date formatting.
+{% endhint %}

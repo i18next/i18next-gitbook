@@ -420,7 +420,7 @@ i18next.dir('ar'); // -> "rtl";
 
 _introduced in v8.4.0 (not recommended anymore)_
 
-Exposes the Formatter's format function. Since v26.0.0, this is always backed by the built-in [Formatter](../translation-function/formatting.md) (or a custom Formatter module provided via `.use()`).
+Exposes the Formatter's format function. Starting with v26.0.0, this will always be backed by the built-in [Formatter](../translation-function/formatting.md) (or a custom Formatter module provided via `.use()`).
 
 For formatting used in translation files checkout the [formatting doc](../translation-function/formatting.md).
 

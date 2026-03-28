@@ -110,17 +110,59 @@ More information can be found here:
 [i18next-http-backend](https://github.com/i18next/i18next-http-backend)
 {% endhint %}
 
-## Server side Next.js caching with filesystem
+## Next.js caching with next-i18next
 
-Similar to the normal [server side caching with filesystem](caching.md#server-side-caching-with-filesystem), you can use the same approach in a Next.js app in combination with [next-i18next](https://github.com/isaachinman/next-i18next). It will load and cache resources from the [filesystem](https://github.com/i18next/i18next-fs-backend) and can be used in combination with the [chained backend](https://github.com/i18next/i18next-chained-backend).
+With [next-i18next](https://github.com/i18next/next-i18next) v16+, you can use client-side caching with [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend) and [i18next-localstorage-backend](https://github.com/i18next/i18next-localstorage-backend). Translations are bundled at build time (via `resourceLoader` for App Router or `serverSideTranslations` for Pages Router), and the client can fetch fresh translations from a backend with localStorage caching.
 
-The config file, will probably look similar to this, but for a more complete example have a look [at this example by locize](https://github.com/locize/next-i18next-locize/tree/local-caching#optional-server-side-caching-to-filesystem).
+For a complete example using both App Router and Pages Router with [Locize](https://locize.com), have a look at the [next-i18next-locize example](https://github.com/locize/next-i18next-locize).
+
+### App Router (client-side caching with Locize)
+
+```javascript
+// I18nProviderWithLocize.js
+'use client'
+
+import { I18nProvider } from 'next-i18next/client'
+import LocizeBackend from 'i18next-locize-backend'
+import ChainedBackend from 'i18next-chained-backend'
+import LocalStorageBackend from 'i18next-localstorage-backend'
+
+export function I18nProviderWithLocize({ children, language, resources, supportedLngs, defaultNS }) {
+  return (
+    <I18nProvider
+      language={language}
+      resources={resources}
+      supportedLngs={supportedLngs}
+      defaultNS={defaultNS}
+      use={[ChainedBackend]}
+      i18nextOptions={{
+        backend: {
+          backends: [LocalStorageBackend, LocizeBackend],
+          backendOptions: [
+            { expirationTime: 60 * 60 * 1000 }, // 1 hour
+            {
+              projectId: '[PROJECT_ID]',
+              version: 'latest',
+            },
+          ],
+        },
+      }}
+    >
+      {children}
+    </I18nProvider>
+  )
+}
+```
+
+### Pages Router (client-side caching with Locize)
 
 ```javascript
 // next-i18next.config.js
-const ChainedBackend = require('i18next-chained-backend')
-const FSBackend = require('i18next-fs-backend/cjs')
-const HttpBackend = require('i18next-http-backend/cjs')
+const LocizeBackend = require('i18next-locize-backend/cjs')
+const ChainedBackend = require('i18next-chained-backend').default
+const LocalStorageBackend = require('i18next-localstorage-backend').default
+
+const isBrowser = typeof window !== 'undefined'
 
 module.exports = {
   i18n: {
@@ -128,31 +170,26 @@ module.exports = {
     locales: ['en', 'de'],
   },
   backend: {
-    backends: [
-      FSBackend,
-      HttpBackend
-    ],
-    backendOptions: [{ // make sure public/locales_cache/en and public/locales_cache/de exists
-      loadPath: './public/locales_cache/{{lng}}/{{ns}}.json',
-      addPath: './public/locales_cache/{{lng}}/{{ns}}.json',
-      expirationTime: 7 * 24 * 60 * 60 * 1000 // 7 days
+    backendOptions: [{
+      expirationTime: 60 * 60 * 1000 // 1 hour
     }, {
-      loadPath: '/locales/{{lng}}/{{ns}}.json'
-    }]
+      projectId: '[PROJECT_ID]',
+      version: 'latest'
+    }],
+    backends: isBrowser ? [LocalStorageBackend, LocizeBackend] : [],
   },
-  use: [ChainedBackend],
-  ns: ['common', 'footer', 'second-page'], // the namespaces needs to be listed here, to make sure they got preloaded
-  serializeConfig: false, // because of the custom use i18next plugin
-  // debug: true,
+  partialBundledLanguages: isBrowser && true,
+  serializeConfig: false,
+  use: isBrowser ? [ChainedBackend] : [],
 }
 ```
 
 {% hint style="info" %}
-More information can be found here:  
-[next-i18next-locize example](https://github.com/locize/next-i18next-locize/tree/local-caching#optional-server-side-caching-to-filesystem)  
-[i18next-chained-backend](https://github.com/i18next/i18next-chained-backend)  
-[i18next-fs-backend](https://github.com/i18next/i18next-fs-backend)  
-[i18next-http-backend](https://github.com/i18next/i18next-http-backend)
+More information can be found here:
+[next-i18next-locize example](https://github.com/locize/next-i18next-locize)
+[i18next-chained-backend](https://github.com/i18next/i18next-chained-backend)
+[i18next-localstorage-backend](https://github.com/i18next/i18next-localstorage-backend)
+[i18next-locize-backend](https://github.com/locize/i18next-locize-backend)
 {% endhint %}
 
 {% hint style="danger" %}

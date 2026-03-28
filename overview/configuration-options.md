@@ -65,7 +65,6 @@ When `saveMissing` is enabled, missing keys are sent to the backend's `create` f
 | overloadTranslationOptionHandler                                                        | function(args) { return { defaultValue: args\[1] }; };                      | default: sets defaultValue                                                                                                |
 | interpolation                                                                           | [{...}](../translation-function/interpolation.md#all-interpolation-options) | see [interpolation](../translation-function/interpolation.md#all-interpolation-options)                                   |
 | skipInterpolation                                                                       | false                                                                       | Allow translate function to skip interpolation and return raw values instead                                              |
-| <p><del>simplifyPluralSuffix</del></p><p><em>(used in format &#x3C; format v4)</em></p> | ~~true~~                                                                    | ~~will use 'plural' as suffix for languages only having 1 plural form, setting it to false will suffix all with numbers~~ |
 
 ## Plugin options
 
