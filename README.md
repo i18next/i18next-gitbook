@@ -3,7 +3,7 @@
 {% hint style="success" %}
 🚀 New: **Locize** is now **Free** for small projects!\
 We've replaced the trial-only model with a **Free plan**.\
-Manage up to 1,000 words and 10,000 downloads for $0/mo.\
+Manage up to 2,000 words and 100,000 downloads for $0/mo.\
 ⇒ [Check it out!](https://www.locize.com/pricing)
 {% endhint %}
 
@@ -18,7 +18,7 @@ The New Official Toolkit for i18next.\
 i18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!
 
 > Want to know how to easily add internationalization to your software project?\
-> &#xNAN;_⇒ Check out_ [_this article_](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software)_._
+> \&#xNAN;_⇒ Check out_ [_this article_](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software)_._
 
 i18next goes beyond just providing the standard i18n features (such as [plurals](translation-function/plurals.md), [context](translation-function/context.md), [interpolation](translation-function/interpolation.md), [format](translation-function/formatting.md)). It provides you with a complete solution to localize your product from web to mobile and desktop.
 
@@ -139,4 +139,3 @@ Together, 'i18next' and '[Locize](https://locize.com)' empower your business to 
 #### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp)
 
 {% embed url="https://youtu.be/G7bfVfyseaQ" %}
-
