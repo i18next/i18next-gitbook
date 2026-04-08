@@ -192,3 +192,7 @@ While there are a lot of options going with the defaults should get you covered.
 ## Implications for localization
 
 Checkout the [best practices](../principles/best-practices.md#implications-of-interpolation-for-localization) on this topic.
+
+{% hint style="info" %}
+Managing translations with many interpolation variables? A translation management system like [locize](https://locize.com) helps translators see variable context and keeps terminology consistent across keys — with [AI-assisted translation](https://locize.com/ai) that understands your interpolation syntax. [Learn more →](https://locize.com/blog/react-i18next)
+{% endhint %}

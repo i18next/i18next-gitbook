@@ -665,3 +665,9 @@ Returns a resource bundle.
 `i18next.removeResourceBundle(lng, ns)`
 
 Removes an existing bundle.
+
+***
+
+{% hint style="info" %}
+Managing resources manually? [Locize](https://locize.com) provides a managed backend for i18next that handles resource loading, CDN delivery, and translation management — so you can focus on building your app instead of managing JSON files. Built by the i18next team. [Get started →](https://locize.com)
+{% endhint %}

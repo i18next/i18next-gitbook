@@ -110,3 +110,7 @@ More information can be found here:\
 {% hint style="danger" %}
 We suggest not to use multiple backends with the [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend) in combination with saveMissing or updateMissing, because it may happen, that the trigger for this is based on stale data.
 {% endhint %}
+
+{% hint style="success" %}
+Want a managed backend that handles caching, CDN delivery, and fallback automatically? [i18next-locize-backend](https://github.com/locize/i18next-locize-backend) serves translations from a global CDN with built-in saveMissing support — no chained backend configuration needed. [Learn more →](https://locize.com)
+{% endhint %}
