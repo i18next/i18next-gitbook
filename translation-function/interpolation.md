@@ -123,7 +123,7 @@ i18next.t($ => $.keyEscaped, { myVar: '<img />', interpolation: { escapeValue: f
 {% endtab %}
 {% endtabs %}
 
-_Warning:_ If you toggle escaping off, escape any user input yourself!
+_Warning:_ If you toggle escaping off, escape any user input yourself! In particular, beware of combining `escapeValue: false` with interpolated values inside a `$t()` nesting-options block — see the [security note in the Nesting chapter](nesting.md#security-note-interpolated-values-inside-a-nesting-options-block) for the full pattern, attack shape, and mitigations.
 
 ## Additional options
 
