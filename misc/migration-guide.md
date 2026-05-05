@@ -6,7 +6,7 @@
 
 * **Removed legacy `interpolation.format` function** — the old monolithic format function (`interpolation: { format: (value, format, lng) => ... }`) is no longer supported. The built-in Formatter is now always used. For custom formatting, use `i18next.services.formatter.add()` or `.addCached()`, or provide a custom Formatter module via `.use()`. See the [formatting docs](../translation-function/formatting.md).
 * **Removed deprecated `initImmediate` option** — use `initAsync` instead (renamed in v24).
-* **Removed console support notice** — the `showSupportNotice` option and all related internal suppression logic (`globalThis.__i18next_supportNoticeShown`, `I18NEXT_NO_SUPPORT_NOTICE` env var) have been removed. [Read this](https://www.locize.com/blog/i18next-support-notice) to know more about it.
+* **Removed console support notice** — the `showSupportNotice` option and all related internal suppression logic (`globalThis.__i18next_supportNoticeShown`, `I18NEXT_NO_SUPPORT_NOTICE` env var) have been removed. [Read this](https://www.locize.com/blog/i18next-support-notice?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_migration_guide) to know more about it.
 * **`i18next.format` now always uses the Formatter** — `i18next.format` still works, but it is backed by the built-in [Formatter](../translation-function/formatting.md) (or a custom Formatter module). It no longer accepts a user-supplied function via `interpolation.format`.
 
 #### Migration steps

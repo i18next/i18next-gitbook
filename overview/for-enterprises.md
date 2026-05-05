@@ -15,13 +15,13 @@ There are more points to address:
 
 Translation Management Systems are a great help. But most tools out there are built for one-time translation of your documents. Not for continuously translating your application. So there is still a gap between the development and the translation process.
 
-> So is there a smart localization management platform? An [i18n(ext) platform](https://www.locize.com/i18next)?
+> So is there a smart localization management platform? An [i18n(ext) platform](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises)?
 
 ## Locize
 
 ![](../.gitbook/assets/locize.png)
 
-[Locize](https://locize.com/?utm_source=i18next_com\&utm_medium=gitbook) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
+[Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
 
 {% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
 
@@ -41,4 +41,4 @@ While Locize provides the security and scale required by global enterprises, we 
 
 Check out how it works => [https://www.youtube.com/watch?v=TFV\_vhJs5DY](https://www.youtube.com/watch?v=TFV_vhJs5DY)
 
-_Together, 'i18next' and '_[_Locize_](https://locize.com)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._
+_Together, 'i18next' and '_[_Locize_](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._

@@ -4,13 +4,13 @@
 🚀 New: **Locize** is now **Free** for small projects!\
 We've replaced the trial-only model with a **Free plan**.\
 Manage up to 2,000 words and 100,000 downloads for $0/mo.\
-⇒ [Check it out!](https://www.locize.com/pricing)
+⇒ [Check it out!](https://www.locize.com/pricing?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="info" %}
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
 The New Official Toolkit for i18next.\
-⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
+⇒ [Learn More](https://www.locize.com/blog/i18next-cli?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
 {% embed url="https://www.youtube.com/watch?v=aWZnZXwGg34" %}
 {% endhint %}
@@ -18,13 +18,13 @@ The New Official Toolkit for i18next.\
 i18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!
 
 > Want to know how to easily add internationalization to your software project?\
-> &#x20; _⇒ Check out_ [_this article_](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software)_._
+> &#x20; _⇒ Check out_ [_this article_](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)_._
 
 i18next goes beyond just providing the standard i18n features (such as [plurals](translation-function/plurals.md), [context](translation-function/context.md), [interpolation](translation-function/interpolation.md), [format](translation-function/formatting.md)). It provides you with a complete solution to localize your product from web to mobile and desktop.
 
 {% hint style="warning" %}
 Managing JSON files manually?\
-When your project grows, streamline your workflow with [Locize](https://locize.com), the official TMS built by the creators of i18next. [**Get started**](https://www.locize.com/i18next) with the **Free plan** — perfect for hobbyists and small projects.
+When your project grows, streamline your workflow with [Locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), the official TMS built by the creators of i18next. [**Get started**](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) with the **Free plan** — perfect for hobbyists and small projects.
 {% endhint %}
 
 {% embed url="https://youtu.be/SA_9i4TtxLQ" %}
@@ -33,9 +33,9 @@ When your project grows, streamline your workflow with [Locize](https://locize.c
 
 ![](.gitbook/assets/i18next-ecosystem.jpg)
 
-The i18next-community created integrations for frontend-frameworks such as [React](https://locize.com/blog/react-i18next/), [Angular](https://locize.com/blog/unleash-the-full-power-of-angular-i18next/), [Vue.js](https://locize.com/blog/i18next-vue/) and many more.
+The i18next-community created integrations for frontend-frameworks such as [React](https://www.locize.com/blog/react-i18next/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), [Angular](https://www.locize.com/blog/angular-i18next/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), [Vue.js](https://www.locize.com/blog/i18next-vue/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) and many more.
 
-But this is not where it ends. You can also use i18next with [Node.js](https://locize.com/blog/how-does-server-side-internationalization-look-like/), [Deno](https://locize.com/blog/i18n-for-deno-with-i18next/), PHP, iOS, Android and [other platforms](overview/supported-frameworks.md).
+But this is not where it ends. You can also use i18next with [Node.js](https://www.locize.com/blog/how-does-server-side-internationalization-look-like/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), [Deno](https://www.locize.com/blog/i18n-for-deno-with-i18next/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), PHP, iOS, Android and [other platforms](overview/supported-frameworks.md).
 
 {% hint style="info" %}
 **Your software is using i18next? -** _Spread the word and let the world know!_
@@ -44,13 +44,13 @@ make a tweet... write it on your website... create a blog post... etc...
 
 <img src=".gitbook/assets/speaker.jpg" alt="" data-size="original">\
 \
-\&#xNAN;_Are you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://locize.com) _loves the open-source philosophy and may be able to support you._
+_Are you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) _loves the open-source philosophy and may be able to support you._
 {% endhint %}
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
 
 {% hint style="success" %}
-Check out [this video](https://youtu.be/37rcHVcQ6t0) and the corresponding [blog post](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software) about "Vite + React + TypeScript" with i18next.
+Check out [this video](https://youtu.be/37rcHVcQ6t0) and the corresponding [blog post](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) about "Vite + React + TypeScript" with i18next.
 
 [<img src=".gitbook/assets/title1.png" alt="" data-size="original">](https://youtu.be/37rcHVcQ6t0)
 {% endhint %}
@@ -62,25 +62,25 @@ Then check [this](https://www.vaultrice.com/blog/i18next-plugin) out.[\
 {% endhint %}
 
 {% hint style="success" %}
-[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
+[Here](https://www.locize.com/blog/react-i18next/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) you'll find a simple tutorial on how to best use [react-i18next](https://react.i18next.com/).\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-![](<.gitbook/assets/title width.jpg>)](https://locize.com/blog/react-i18next/)
+![](<.gitbook/assets/title width.jpg>)](https://www.locize.com/blog/react-i18next/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="success" %}
-Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-vue-example)? Check out [this tutorial blog post](https://locize.com/blog/i18next-vue/).
+Do you want to use i18next in [Vue.js](https://github.com/locize/locize-i18next-vue-example)? Check out [this tutorial blog post](https://www.locize.com/blog/i18next-vue/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme).
 
-[![](.gitbook/assets/i18next-vue.jpg)](https://locize.com/blog/i18next-vue/)
+[![](.gitbook/assets/i18next-vue.jpg)](https://www.locize.com/blog/i18next-vue/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="success" %}
-Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://locize.com/blog/how-does-server-side-internationalization-look-like/) you can check out how this works.[<br>](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](.gitbook/assets/server_side_backend.jpg)](https://locize.com/blog/how-does-server-side-internationalization-look-like/)
+Did you know internationalization is also important on your app's backend? In [this tutorial blog post](https://www.locize.com/blog/how-does-server-side-internationalization-look-like/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) you can check out how this works.[<br>](https://www.locize.com/blog/how-does-server-side-internationalization-look-like/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)[![](.gitbook/assets/server_side_backend.jpg)](https://www.locize.com/blog/how-does-server-side-internationalization-look-like/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="success" %}
-Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://www.locize.com/blog/jquery-i18next).
+Are you still using i18next in [jQuery](https://github.com/i18next/jquery-i18next)? Check out [this tutorial blog post](https://www.locize.com/blog/jquery-i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme).
 
-[![](.gitbook/assets/jquery-localization.jpg)](https://www.locize.com/blog/jquery-i18next)
+[![](.gitbook/assets/jquery-localization.jpg)](https://www.locize.com/blog/jquery-i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 ## Complete solution
@@ -121,9 +121,9 @@ There are tons of modules built for and around i18next: from extracting translat
 * [Learn more about plugins and utils](overview/plugins-and-utils.md)
 * [Learn more about frameworks supported](overview/supported-frameworks.md)
 
-## [Localization as a service](https://locize.com)
+## [Localization as a service](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
-Through [Locize](https://locize.com/?utm_source=i18next_com\&utm_medium=gitbook), i18next even provides its own translation management tool: localization as a service.
+Through [Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), i18next even provides its own translation management tool: localization as a service.
 
 {% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
 
@@ -134,8 +134,8 @@ Imagine you run a successful online business, and you want to expand it to reach
 1. **i18next**: Think of 'i18next' as a sophisticated language expert for your website or app. It's like hiring a team of translators and cultural experts who ensure that your online business is fluent in multiple languages. It helps adapt your content, menus, and messages to fit perfectly in each target market, making your business more appealing and user-friendly.
 2. **Locize**: Now, 'locize' is your efficient manager in charge of organizing and streamlining the translation process. It keeps all your language versions organized and ensures they're always accurate and up-to-date. So, if you want to introduce a new product or promotion, locize helps you do it seamlessly in all the languages you operate in, saving you time and resources.
 
-Together, 'i18next' and '[Locize](https://locize.com)' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets.
+Together, 'i18next' and '[Locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets.
 
-#### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp)
+#### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
 {% embed url="https://youtu.be/G7bfVfyseaQ" %}

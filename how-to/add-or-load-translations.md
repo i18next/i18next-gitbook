@@ -121,9 +121,9 @@ With [i18next-chained-backend](https://github.com/i18next/i18next-chained-backen
 🎓 Check out this topic in the [i18next crash course video](https://youtu.be/SA_9i4TtxLQ?t=953).
 {% endhint %}
 
-## Load using a [smart backend plugin](https://github.com/locize/i18next-locize-backend) serving directly from a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
+## Load using a [smart backend plugin](https://github.com/locize/i18next-locize-backend) serving directly from a [CDN](https://www.locize.com/docs/cdn?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations)
 
-Just use the [i18next-locize-backend](https://github.com/locize/i18next-locize-backend) to load resources from the [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network).
+Just use the [i18next-locize-backend](https://github.com/locize/i18next-locize-backend) to load resources from the [CDN](https://www.locize.com/docs/cdn?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations).
 
 ```javascript
 import i18next from 'i18next';
@@ -142,18 +142,18 @@ i18next
 
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide with a React.js app, which will unleash the full power of i18next in combination with locize.\
 See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).\
-There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [autoutomatic translation workflow](https://www.locize.com/docs/automatic-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [autoutomatic translation workflow](https://www.locize.com/docs/automatic-translation?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}
 
 {% embed url="https://youtu.be/VfxBpSXarlU" %}
 
 {% hint style="success" %}
-Check out [this blog post](https://www.locize.com/blog/i18next-locize-ai-human) to learn more about how you can use generative AI together with i18next.
+Check out [this blog post](https://www.locize.com/blog/i18next-locize-ai-human?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) to learn more about how you can use generative AI together with i18next.
 
-[<img src="../.gitbook/assets/i18next-locize-ai-human.jpg" alt="" data-size="original">](https://www.locize.com/blog/i18next-locize-ai-human)
+[<img src="../.gitbook/assets/i18next-locize-ai-human.jpg" alt="" data-size="original">](https://www.locize.com/blog/i18next-locize-ai-human?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations)
 {% endhint %}
 
-#### [**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
+#### [**locize**](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
-#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) = [true continuous localization](https://www.locize.com/how-it-works?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations#continuouslocalization)

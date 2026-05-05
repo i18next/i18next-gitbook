@@ -50,6 +50,6 @@
 
 ***
 
-* [🌐 localization as a service](https://locize.com)
+* [🌐 localization as a service](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=summary)
 * [🎓 i18next crash course](https://youtu.be/SA\_9i4TtxLQ)
 * [💾 GitHub Repository](https://github.com/i18next/i18next)

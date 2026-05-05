@@ -12,7 +12,7 @@ Through v23, i18next maintained backward compatibility with v1 via a compatibili
 
 Based on how long i18next already is available open source, there is no real i18n case that could not be solved with i18next.
 
-i18next and its localization service [https://locize.com](https://locize.com/) are used by companies small to very large.
+i18next and its localization service [locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_comparison_to_others) are used by companies small to very large.
 
 ## Extensibility <a href="#extensibility" id="extensibility"></a>
 
@@ -172,6 +172,6 @@ Should speak for itself.
 
 Being honest, internationalization is the smaller pain in getting a site translated. Localization and the translation process are where the real hard work starts.
 
-With [https://locize.com](https://locize.com/) we fill this gap and enable a localization workflow as never seen before:
+With [locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_comparison_to_others) we fill this gap and enable a localization workflow as never seen before:
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}

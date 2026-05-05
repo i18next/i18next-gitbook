@@ -34,26 +34,26 @@ Helping developers to get their applications translated is great - but there is 
 * How do you deploy translation changes without deploying your complete application?
 * and a lot more...
 
-### [locize](https://locize.com) to the rescue
+### [locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next) to the rescue
 
-Having created the foundation with i18next it was a long journey to [**localization as a service**](https://locize.com).
+Having created the foundation with i18next it was a long journey to [**localization as a service**](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next).
 
-* [Easy to integrate](https://docs.locize.com/integration/instrumenting-your-code#i-18-next)
-* Continuous deployment? [Continuous localization](https://locize.com/how-it-works.html#continouslocalization) with a [CDN](https://docs.locize.com/whats-inside/cdn-content-delivery-network)!
+* [Easy to integrate](https://www.locize.com/docs/integration/instrumenting-your-code?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next#i18next-full-featured-integration)
+* Continuous deployment? [Continuous localization](https://www.locize.com/how-it-works?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next#continuouslocalization) with a [CDN](https://www.locize.com/docs/cdn?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)!
 * Manage the translation files with ease
-* [Order professional translations](https://docs.locize.com/guides-tips-and-tricks/working-with-translators/localistars)
+* [Order professional translations](https://www.locize.com/customers?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)
 * Analytics & Statistics
-* [Profit from a content delivery network](https://docs.locize.com/whats-inside/cdn-content-delivery-network)
-* [Versioning of your translations](https://docs.locize.com/more/versioning)
-* [Automatic and On-Demand Machine Translation](https://docs.locize.com/whats-inside/auto-machine-translation)
-* [Risk free: Take your data with you](https://docs.locize.com/more/general-questions/how-is-locize-different-from-the-alternatives#service-lock-in)
-* [Transparent and fair pricing](https://locize.com/pricing.html)
+* [Profit from a content delivery network](https://www.locize.com/docs/cdn?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)
+* [Versioning of your translations](https://www.locize.com/docs/versioning?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)
+* [Automatic and On-Demand Machine Translation](https://www.locize.com/docs/automatic-translation?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)
+* [Risk free: Take your data with you](https://www.locize.com/docs/general-questions/how-is-locize-different-from-the-alternatives?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next#no-service-lock-in)
+* [Transparent and fair pricing](https://www.locize.com/pricing?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)
 * and a lot more...
 
 ![](<../.gitbook/assets/transform your localization process small.png>)
 
 {% hint style="success" %}
-🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://locize.com)**.** 💙
+🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)**.** 💙
 {% endhint %}
 
 > _<\<We aim to simplify localization, making it an efficient process that aligns with the ever-evolving demands of the modern business landscape.>>_ [read the full interview](https://www.websiteplanet.com/blog/interview-locize/).

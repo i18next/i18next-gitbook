@@ -6,7 +6,7 @@
 
 _There are a lot of ways to support us. Make a PR for a feature requested. Improve the documentation. Help others to get started. Spread the word._
 
-_You can support the future of i18next by using_ [_Locize_](https://www.locize.com/)_. It’s our 'Localization as a Service' offering that funds the development of this open-source ecosystem. With our **Free plan**, you can now support the project even on smaller hobby sites at no cost, while benefiting from a professional translation workflow._
+_You can support the future of i18next by using_ [_Locize_](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq)_. It’s our 'Localization as a Service' offering that funds the development of this open-source ecosystem. With our **Free plan**, you can now support the project even on smaller hobby sites at no cost, while benefiting from a professional translation workflow._
 
 ## Loading issues
 
@@ -21,9 +21,9 @@ _Try setting_ `debug: true` _on init and check the console log. There is rather 
 <figure><img src="../.gitbook/assets/translate.i18next.jpg" alt=""><figcaption><p><a href="https://translate.i18next.com/">https://translate.i18next.com</a></p></figcaption></figure>
 
 For a quick and dirty machine translation you may have a look at [this free translator](https://translate.i18next.com).\
-But in general we suggest to use a smart Translation Management Service like [locize](https://locize.com) to translate your i18next resources.
+But in general we suggest to use a smart Translation Management Service like [locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq) to translate your i18next resources.
 
-For professional translations we advice you to work with [human translators](https://docs.locize.com/guides-tips-and-tricks/working-with-translators). Or at least proofread the results coming from machine translations.
+For professional translations we advice you to work with [human translators](https://www.locize.com/docs/guides/working-with-translators?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq). Or at least proofread the results coming from machine translations.
 
 ### **How do i know which plural suffix i have to use?**
 
@@ -31,7 +31,7 @@ _On the_ [_plural page_](../translation-function/plurals.md) _there is a tool to
 
 _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. It shows also the appropriate plural forms._
 
-_Or you use a smart translation management system, like_ [_locize_](https://locize.com)_._
+_Or you use a smart translation management system, like_ [_locize_](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq)_._
 
 ![](../.gitbook/assets/locize_plurals.png)
 
@@ -81,7 +81,7 @@ As soon as you use the dash character `-` the language codes are tried to be for
 
 _Try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._
 
-_If you need more, it might be time to use a_ [_translation management tool_](https://locize.com)_._
+_If you need more, it might be time to use a_ [_translation management tool_](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq)_._
 
 ### **How to handle with changes in e2e tests?**
 
@@ -94,5 +94,5 @@ Due to how serverless functions work, you cannot guarantee that a cached version
 Because of this we suggest to not use a remote backend and to download the translations and package them with your serverless function.
 
 {% hint style="success" %}
-Read more about this topic, [here](https://locize.com/blog/i18n-serverless/).[<br>](https://locize.com/blog/how-does-server-side-internationalization-look-like/)[![](<../.gitbook/assets/title (1).jpg>)](https://locize.com/blog/i18n-serverless/)
+Read more about this topic, [here](https://www.locize.com/blog/i18n-serverless/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq).[<br>](https://www.locize.com/blog/how-does-server-side-internationalization-look-like/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq)[![](<../.gitbook/assets/title (1).jpg>)](https://www.locize.com/blog/i18n-serverless/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq)
 {% endhint %}

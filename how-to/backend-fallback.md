@@ -112,5 +112,5 @@ We suggest not to use multiple backends with the [i18next-chained-backend](https
 {% endhint %}
 
 {% hint style="success" %}
-Want a managed backend that handles caching, CDN delivery, and fallback automatically? [i18next-locize-backend](https://github.com/locize/i18next-locize-backend) serves translations from a global CDN with built-in saveMissing support — no chained backend configuration needed. [Learn more →](https://locize.com)
+Want a managed backend that handles caching, CDN delivery, and fallback automatically? [i18next-locize-backend](https://github.com/locize/i18next-locize-backend) serves translations from a global CDN with built-in saveMissing support — no chained backend configuration needed. [Learn more →](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_backend_fallback)
 {% endhint %}

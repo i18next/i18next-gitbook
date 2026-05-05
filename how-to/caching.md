@@ -114,7 +114,7 @@ More information can be found here:
 
 With [next-i18next](https://github.com/i18next/next-i18next) v16+, you can use client-side caching with [i18next-chained-backend](https://github.com/i18next/i18next-chained-backend) and [i18next-localstorage-backend](https://github.com/i18next/i18next-localstorage-backend). Translations are bundled at build time (via `resourceLoader` for App Router or `serverSideTranslations` for Pages Router), and the client can fetch fresh translations from a backend with localStorage caching.
 
-For a complete example using both App Router and Pages Router with [Locize](https://locize.com), have a look at the [next-i18next-locize example](https://github.com/locize/next-i18next-locize).
+For a complete example using both App Router and Pages Router with [Locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_caching), have a look at the [next-i18next-locize example](https://github.com/locize/next-i18next-locize).
 
 ### App Router (client-side caching with Locize)
 
