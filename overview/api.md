@@ -146,7 +146,7 @@ i18next.exists('my.key'); // -> true if exists, false if not
 
 ### getFixedT
 
-`i18next.getFixedT(lng, ns, keyPrefix)`
+`i18next.getFixedT(lng, ns, keyPrefix, fixedOpts?)`
 
 Returns a `t` function that defaults to given language or namespace.
 
@@ -155,6 +155,8 @@ All arguments can be optional/null.
 `lng` and `ns` params could be arrays of languages or namespaces and will be treated as fallbacks in that case.
 
 The optional `keyPrefix` will be automatically applied to the returned t function. i.e.
+
+The optional `fixedOpts.scopeNs` (added in v26.0.10) carries a namespace list that the **selector API** uses to detect when a path's first segment is a namespace prefix — without affecting resolution scope. This is what `react-i18next`'s `useTranslation([nsA, nsB])` passes through so that `t($ => $.nsB.foo)` correctly routes to `nsB`, while plain `t('foo')` lookups stay isolated to the primary `ns`. Set it to the same array you would pass to `useTranslation`.
 
 {% tabs %}
 {% tab title="JavaScript" %}

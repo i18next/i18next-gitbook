@@ -116,6 +116,12 @@ i18next.t($ => $.button.save, { ns: 'common' }) // -> "save"
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+**Selector API and namespace prefixes.** When you call `i18next.t(...)` directly with `ns: ['nsA', 'nsB']`, you can also use a namespace-prefixed selector path: `t($ => $.nsB.foo, { ns: ['nsA', 'nsB'] })`. The runtime detects that the first segment matches one of the secondary namespaces and routes the key accordingly.
+
+The same convention is supported under react-i18next's `useTranslation(['nsA', 'nsB'])` (since `i18next` v26.0.10 / `react-i18next` v17.0.7). Plain `t('foo')` lookups still stay isolated to the primary namespace by default — only the **selector** path[0] is checked against the hook's namespace list. The first entry of the array is the primary and is never rewritten: `$.primary.foo` means a literal sub-key inside the primary namespace.
+{% endhint %}
+
 ## Multiple fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
