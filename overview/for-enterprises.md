@@ -23,7 +23,7 @@ Translation Management Systems are a great help. But most tools out there are bu
 
 [Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
 
-{% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
+{% embed url="https://www.youtube.com/watch?v=lCuHSZvSiVg" %}
 
 Locize brings you:
 
@@ -39,6 +39,6 @@ Locize brings you:
 
 While Locize provides the security and scale required by global enterprises, we believe professional localization should be accessible to everyone. That’s why we’ve introduced a **Free plan** alongside our new fixed and usage-based plans, allowing you to start small and scale predictably as you grow.
 
-Check out how it works => [https://www.youtube.com/watch?v=TFV\_vhJs5DY](https://www.youtube.com/watch?v=TFV_vhJs5DY)
+Check out how it works => [https://www.youtube.com/watch?v=lCuHSZvSiVg](https://www.youtube.com/watch?v=lCuHSZvSiVg)
 
 _Together, 'i18next' and '_[_Locize_](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._

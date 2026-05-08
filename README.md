@@ -119,7 +119,7 @@ There are tons of modules built for and around i18next: from extracting translat
 
 Through [Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), i18next even provides its own translation management tool: localization as a service.
 
-{% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
+{% embed url="https://www.youtube.com/watch?v=lCuHSZvSiVg" %}
 
 [Learn more about the enterprise offering](overview/for-enterprises.md)
 
