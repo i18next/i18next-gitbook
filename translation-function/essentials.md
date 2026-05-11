@@ -122,6 +122,10 @@ i18next.t($ => $.button.save, { ns: 'common' }) // -> "save"
 The same convention is supported under react-i18next's `useTranslation(['nsA', 'nsB'])` (since `i18next` v26.0.10 / `react-i18next` v17.0.7). Plain `t('foo')` lookups still stay isolated to the primary namespace by default — only the **selector** path[0] is checked against the hook's namespace list. The first entry of the array is the primary and is never rewritten: `$.primary.foo` means a literal sub-key inside the primary namespace.
 {% endhint %}
 
+{% hint style="info" %}
+**Strict selector mode.** If the asymmetry above bites you — `$.primary.foo` typechecks but doesn't resolve under multi-ns hooks — enable `enableSelector: 'strict'` (since v26.1.0). In strict mode, the proxy stops exposing the primary's keys flat on `$`; every namespace (including the primary, and including single-ns hooks) is reached only through `$.<ns>.key`. The runtime rewrites the leading segment as a namespace prefix uniformly. The trade-off: keys whose names match a sibling namespace stop resolving (see [#2405](https://github.com/i18next/i18next/issues/2405)), so don't enable strict mode if your translations have that shape.
+{% endhint %}
+
 ## Multiple fallback keys
 
 Calling the t function with an array of keys enables you to translate dynamic keys providing a non specific fallback value.
