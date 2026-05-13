@@ -10,6 +10,7 @@
 * [Configuration Options](overview/configuration-options.md)
 * [Supported Frameworks](overview/supported-frameworks.md)
 * [Plugins and Utils](overview/plugins-and-utils.md)
+* [Translation Management Systems](overview/translation-management-systems.md)
 * [For Enterprises](overview/for-enterprises.md)
 * [First setup help](overview/first-setup-help.md)
 * [TypeScript](overview/typescript.md)

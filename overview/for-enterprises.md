@@ -13,29 +13,29 @@ There are more points to address:
 * How do you handle versioning?
 * How do you update / fix typos in translations after deployment?
 
-Translation Management Systems are a great help. But most tools out there are built for one-time translation of your documents. Not for continuously translating your application. So there is still a gap between the development and the translation process.
+Translation Management Systems (TMSes) address exactly this set of problems. The todays landscape has many options — most are now built for continuous localization rather than one-time document translation, and the differences are in how each one integrates with the developer runtime, plural format handling, CDN delivery, branches and versions, AI translation, MCP integration, and so on.
 
-> So is there a smart localization management platform? An [i18n(ext) platform](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises)?
+> For a detailed comparison of TMS options against i18next-specific criteria — including `saveMissing` integration, `i18next-cli` support, native plural handling, in-context editors, CDN delivery, and the new generation of MCP servers — see [Translation Management Systems](translation-management-systems.md).
 
 ## Locize
 
 ![](../.gitbook/assets/locize.png)
 
-[Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) is a localization as a service platform made by i18next. The close integration of i18next brings a lot of additional value and asserts you an additional level of support and saves you endless time spent on localization.
+[Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) is the localization-as-a-service platform built by the i18next team. The close integration with i18next removes the glue code that other TMSes require and funds the continued development of the library itself.
 
 {% embed url="https://www.youtube.com/watch?v=lCuHSZvSiVg" %}
 
 Locize brings you:
 
 * A beautiful editor to edit your translations
-* Enables a continuous localization process
-* An in-context editor to edit on your own website
-* Progress reporting
-* Usage reporting
-* Plural conversion between languages
-* Support for versions
-* Gets your missing keys passed directly to the project
-* Hosts translation on its CDN and allows for automatic or manual publishing (You still have the option to host translations yourself)
+* Continuous localization workflow — translation updates ship via CDN without redeploying code
+* An in-context editor to edit translations directly in your live application
+* Progress and usage reporting; runtime per-key "last used" tracking via the `locize-lastused` plugin
+* Native i18next plural format support (v3 and v4) plus per-locale CLDR plural expansion across all target languages
+* Branches, versions, and multi-tenant (per-customer overrides) in one platform
+* Missing keys flow into Locize automatically — full `saveMissing` closed-loop via `i18next-locize-backend`
+* AI translation with bring-your-own-key (OpenAI, Gemini, Mistral, Lara, DeepL) and a 22-tool MCP server in the [official Model Context Protocol Registry](https://registry.modelcontextprotocol.io/v0/servers?search=locize) for editor-native workflows from Claude Code, Cursor, or VS Code Copilot
+* CDN-hosted translations on Standard, Pro, and private tiers — or self-host if you prefer
 
 While Locize provides the security and scale required by global enterprises, we believe professional localization should be accessible to everyone. That’s why we’ve introduced a **Free plan** alongside our new fixed and usage-based plans, allowing you to start small and scale predictably as you grow.
 

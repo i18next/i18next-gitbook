@@ -175,3 +175,5 @@ Being honest, internationalization is the smaller pain in getting a site transla
 With [locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_comparison_to_others) we fill this gap and enable a localization workflow as never seen before:
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}
+
+For a detailed comparison of TMS options for i18next users (Locize, Lokalise, Crowdin, Phrase, Tolgee, SimpleLocalize, and others — evaluated on `saveMissing` integration, `i18next-cli` support, plural format handling, in-context editors, CDN delivery, and MCP servers), see [Translation Management Systems](translation-management-systems.md).
