@@ -41,4 +41,4 @@ While Locize provides the security and scale required by global enterprises, we 
 
 Check out how it works => [https://www.youtube.com/watch?v=lCuHSZvSiVg](https://www.youtube.com/watch?v=lCuHSZvSiVg)
 
-_Together, 'i18next' and '_[_Locize_](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._
+_Together, 'i18next' and '_[_Locize_](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises)_' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets._

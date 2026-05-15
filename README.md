@@ -24,7 +24,7 @@ i18next goes beyond just providing the standard i18n features (such as [plurals]
 
 {% hint style="warning" %}
 Managing JSON files manually?\
-When your project grows, streamline your workflow with [Locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), the official TMS built by the creators of i18next. [**Get started**](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) with the **Free plan** — perfect for hobbyists and small projects.
+When your project grows, streamline your workflow with [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), the official TMS built by the creators of i18next. [**Get started**](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) with the **Free plan** — perfect for hobbyists and small projects.
 {% endhint %}
 
 {% embed url="https://youtu.be/SA_9i4TtxLQ" %}
@@ -44,7 +44,7 @@ make a tweet... write it on your website... create a blog post... etc...
 
 <img src=".gitbook/assets/speaker.jpg" alt="" data-size="original">\
 \
-_Are you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) _loves the open-source philosophy and may be able to support you._
+_Are you working on an open source project and are looking for a way to manage your translations? -_ [_locize_](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme) _loves the open-source philosophy and may be able to support you._
 {% endhint %}
 
 [Learn more about supported frameworks](overview/supported-frameworks.md)
@@ -117,7 +117,7 @@ There are tons of modules built for and around i18next: from extracting translat
 
 ## [Localization as a service](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
-Through [Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), i18next even provides its own translation management tool: localization as a service.
+Through [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), i18next even provides its own translation management tool: localization as a service.
 
 {% embed url="https://www.youtube.com/watch?v=lCuHSZvSiVg" %}
 
@@ -128,7 +128,7 @@ Imagine you run a successful online business, and you want to expand it to reach
 1. **i18next**: Think of 'i18next' as a sophisticated language expert for your website or app. It's like hiring a team of translators and cultural experts who ensure that your online business is fluent in multiple languages. It helps adapt your content, menus, and messages to fit perfectly in each target market, making your business more appealing and user-friendly.
 2. **Locize**: Now, 'locize' is your efficient manager in charge of organizing and streamlining the translation process. It keeps all your language versions organized and ensures they're always accurate and up-to-date. So, if you want to introduce a new product or promotion, locize helps you do it seamlessly in all the languages you operate in, saving you time and resources.
 
-Together, 'i18next' and '[Locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets.
+Together, 'i18next' and '[Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)' empower your business to effortlessly reach international audiences. They help you speak the language of your customers, making your business more accessible, relatable, and successful in global markets.
 
 #### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 

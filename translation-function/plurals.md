@@ -140,7 +140,7 @@ You can use this small utility to get the correct plural suffixes.
 
 _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. It shows also the appropriate plural forms._
 
-#### Or you use a smart translation management system, like [locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=translation_function_plurals)
+#### Or you use a smart translation management system, like [locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=translation_function_plurals)
 
 ![](../.gitbook/assets/locize_plurals.png)
 

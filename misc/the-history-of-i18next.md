@@ -34,9 +34,9 @@ Helping developers to get their applications translated is great - but there is 
 * How do you deploy translation changes without deploying your complete application?
 * and a lot more...
 
-### [locize](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next) to the rescue
+### [locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next) to the rescue
 
-Having created the foundation with i18next it was a long journey to [**localization as a service**](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next).
+Having created the foundation with i18next it was a long journey to [**localization as a service**](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next).
 
 * [Easy to integrate](https://www.locize.com/docs/integration/instrumenting-your-code?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next#i18next-full-featured-integration)
 * Continuous deployment? [Continuous localization](https://www.locize.com/how-it-works?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next#continuouslocalization) with a [CDN](https://www.locize.com/docs/cdn?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)!
@@ -53,7 +53,7 @@ Having created the foundation with i18next it was a long journey to [**localizat
 ![](<../.gitbook/assets/transform your localization process small.png>)
 
 {% hint style="success" %}
-🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)**.** 💙
+🙏 **The best way to directly support the future of i18next is to use** [**locize**](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_the_history_of_i18next)**.** 💙
 {% endhint %}
 
 > _<\<We aim to simplify localization, making it an efficient process that aligns with the ever-evolving demands of the modern business landscape.>>_ [read the full interview](https://www.websiteplanet.com/blog/interview-locize/).

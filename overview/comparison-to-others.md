@@ -172,7 +172,7 @@ Should speak for itself.
 
 Being honest, internationalization is the smaller pain in getting a site translated. Localization and the translation process are where the real hard work starts.
 
-With [locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_comparison_to_others) we fill this gap and enable a localization workflow as never seen before:
+With [locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_comparison_to_others) we fill this gap and enable a localization workflow as never seen before:
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}
 

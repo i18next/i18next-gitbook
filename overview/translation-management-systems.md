@@ -1,6 +1,6 @@
 # Translation Management Systems
 
-> **Written by the i18next team.** We also build [Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems), the TMS that funds i18next's continued development. [Full disclosure at the bottom](#about-this-guide).
+> **Written by the i18next team.** We also build [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems), the TMS that funds i18next's continued development. [Full disclosure at the bottom](#about-this-guide).
 
 This page compares Translation Management Systems (TMSes) on **i18next-specific developer criteria**: how each TMS integrates with the i18next runtime, what its `saveMissing` and CLI story looks like, how it handles plurals, namespaces, and CDN delivery for live updates.
 
@@ -17,6 +17,10 @@ It is **not** a pricing comparison, an enterprise procurement guide, or a genera
 - **Branches + Versions + Multi-tenant together are unique to Locize** in this comparison.
 - **MCP (Model Context Protocol) servers are now broadly available** across the i18next-relevant TMSes — Locize, Crowdin, Lokalise, Phrase, Tolgee, and SimpleLocalize all ship official MCP servers as of mid-2026. The differentiation has shifted from "does the vendor have one" to "how many tools, which clients, and whether it is in the official MCP Registry."
 - **Bring-your-own-key (BYOK) for LLMs** is supported by Locize (OpenAI / Gemini / Mistral / Lara / DeepL), Crowdin (OpenAI / Gemini / Azure OpenAI), Tolgee (OpenAI / Azure / Anthropic / Google AI), and SimpleLocalize (OpenAI). Lokalise, Phrase, Transifex, Localazy, i18nexus, POEditor, and Smartcat do not clearly surface LLM BYOK on their docs.
+
+{% hint style="success" %}
+**Just want to try the i18next-native stack?** [Start a Free Locize project →](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems_top_cta) — the `i18next-locize-backend` plugin works in three lines of config, no credit card, no trial timer.
+{% endhint %}
 
 ## Do you actually need a TMS?
 
@@ -387,6 +391,10 @@ We built Locize for i18next users. The criteria above are the criteria we optimi
 - You have a strict open-source-only mandate (Tolgee, self-hosted).
 - You are solo and your project has fewer than ~100 strings — file-based JSON in Git is genuinely fine; no TMS needed.
 
+{% hint style="success" %}
+**Decided Locize is the right fit?** [Create your i18next project on Locize →](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems_decision_cta) — Free plan is permanent for small projects, no credit card required. Already have an i18next codebase? The [`i18next-cli`](https://github.com/i18next/i18next-cli) `locize-migrate` command imports your existing JSON in one shot.
+{% endhint %}
+
 ## Frequently Asked Questions
 
 ### What is a Translation Management System (TMS)?
@@ -423,7 +431,7 @@ Look at free-tier generosity first. Localazy is free for open-source and nonprof
 
 ## About this guide
 
-This page is written and maintained by the **i18next team**. We also build **[Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems)**, the translation management system you have been reading about in this comparison.
+This page is written and maintained by the **i18next team**. We also build **[Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems)**, the translation management system you have been reading about in this comparison.
 
 The relationship is the important part: **without Locize, i18next would not exist in its current form.** Locize funds the continued maintenance of the i18next library. Every security fix, every new feature, every plugin update is made possible because Locize pays for the engineering time. This is documented elsewhere — see [Why we added a console notice to i18next, and why we removed it](https://www.locize.com/blog/i18next-support-notice?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) for the full story.
 

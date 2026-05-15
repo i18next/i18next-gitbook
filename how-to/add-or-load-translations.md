@@ -154,6 +154,6 @@ Check out [this blog post](https://www.locize.com/blog/i18next-locize-ai-human?u
 [<img src="../.gitbook/assets/i18next-locize-ai-human.jpg" alt="" data-size="original">](https://www.locize.com/blog/i18next-locize-ai-human?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations)
 {% endhint %}
 
-#### [**locize**](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
+#### [**locize**](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
-#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) = [true continuous localization](https://www.locize.com/how-it-works?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations#continuouslocalization)
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations) = [true continuous localization](https://www.locize.com/how-it-works?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_add_or_load_translations#continuouslocalization)
