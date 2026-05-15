@@ -21,7 +21,7 @@ Translation Management Systems (TMSes) address exactly this set of problems. The
 
 ![](../.gitbook/assets/locize.png)
 
-[Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) is the localization-as-a-service platform built by the i18next team. The close integration with i18next removes the glue code that other TMSes require and funds the continued development of the library itself.
+[Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) is the localization-as-a-service platform built by the i18next team. The close integration with i18next removes the glue code that other TMSes require and funds the continued development of the library itself.
 
 {% embed url="https://www.youtube.com/watch?v=lCuHSZvSiVg" %}
 
@@ -37,7 +37,7 @@ Locize brings you:
 * AI translation with bring-your-own-key (OpenAI, Gemini, Mistral, Lara, DeepL) and a 22-tool MCP server in the [official Model Context Protocol Registry](https://registry.modelcontextprotocol.io/v0/servers?search=locize) for editor-native workflows from Claude Code, Cursor, or VS Code Copilot
 * CDN-hosted translations on Standard, Pro, and private tiers — or self-host if you prefer
 
-While Locize provides the security and scale required by global enterprises, we believe professional localization should be accessible to everyone. That’s why we’ve introduced a **Free plan** alongside our new fixed and usage-based plans, allowing you to start small and scale predictably as you grow.
+While Locize provides the security and scale required by global enterprises, we believe professional localization should be accessible to everyone. That’s why we’ve introduced a **Free plan** alongside our new fixed and usage-based plans — [see pricing](https://www.locize.com/pricing?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) — allowing you to start small and scale predictably as you grow.
 
 Check out how it works => [https://www.youtube.com/watch?v=lCuHSZvSiVg](https://www.youtube.com/watch?v=lCuHSZvSiVg)
 

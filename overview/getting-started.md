@@ -270,6 +270,6 @@ You should now have an idea about how to achieve the basic setup. It's time to l
 * Connect i18next with a smart [Translation Management System](https://www.locize.com?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_getting_started), like in [this React.js example](https://github.com/locize/react-tutorial)
 
 {% hint style="success" %}
-Don't have a [Locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_getting_started) account yet?\
+Don't have a [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_getting_started) account yet?\
 You can now sign up for a **Free plan** to test the integration in your development environment indefinitely.
 {% endhint %}

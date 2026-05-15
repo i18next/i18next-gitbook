@@ -12,7 +12,7 @@ Through v23, i18next maintained backward compatibility with v1 via a compatibili
 
 Based on how long i18next already is available open source, there is no real i18n case that could not be solved with i18next.
 
-i18next and its localization service [locize](https://www.locize.com/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_comparison_to_others) are used by companies small to very large.
+i18next and its localization service [locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_comparison_to_others) are used by companies small to very large.
 
 ## Extensibility <a href="#extensibility" id="extensibility"></a>
 
