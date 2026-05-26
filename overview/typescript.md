@@ -125,6 +125,57 @@ We provide a few options that can improve TypeScript for `i18next`. All options 
 | parseInterpolation        | true          | <p>Whether to extract <code>{{variable}}</code> interpolation patterns from translation strings at the type level (since v26.2.0). When <code>true</code> (default), <code>t()</code> requires the matching variables in its options. Set to <code>false</code> when your strings use a different interpolation syntax that the i18next extractor cannot understand — e.g. ICU MessageFormat (<code>i18next-icu</code>) plurals like <code>{count, plural, one {{count} row} other {{count} rows}}</code> would otherwise produce phantom variable names. Type-only; runtime is unaffected.</p>                                                                                                                                                                                                                                                                                                                                                  |
 | strictKeyChecks           | false         | Flag that enables strict key checking even if a `defaultValue` has been provided. This ensures all calls of `t` function don't accidentally use implicitly missing keys.                                                                                                                                                                                                                                                                                                                                                                                                |
 
+### Per-package namespace types in a monorepo (`ResourceNamespaceMap`)
+
+{% hint style="info" %}
+Available since v26.3.0. Use this when you have a single i18next instance shared across multiple packages in a monorepo — for example, a shared UI library (`@repo/ui`) consumed as source by an app — and each package wants to declare its own namespace types independently.
+{% endhint %}
+
+`CustomTypeOptions.resources` is a single property of an interface, so TypeScript requires every contribution to come from a single `declare module 'i18next'` block. Two declarations of `resources` from different packages collide with [TS2717](https://typescript.tv/errors/#ts2717). The common workaround was to declare every dependency's namespace in the leaf app's augmentation file (often falling back to `any` for namespaces the app doesn't use directly).
+
+`ResourceNamespaceMap` is a separate interface designed so each package can declare its own namespace types independently. TypeScript merges members across multiple `declare module 'i18next'` blocks automatically.
+
+**`packages/ui/i18next.d.ts`** — declares only the UI package's namespace:
+
+```typescript
+import "i18next";
+import type uiTranslations from "./translations/en/ui.json";
+
+declare module "i18next" {
+  interface ResourceNamespaceMap {
+    "@repo/ui": typeof uiTranslations;
+  }
+}
+```
+
+**`apps/frontend/i18next.d.ts`** — declares only the app's own namespaces:
+
+```typescript
+import "i18next";
+import type common from "./translations/en/common.json";
+import type pageHome from "./translations/en/page-home.json";
+
+declare module "i18next" {
+  interface ResourceNamespaceMap {
+    common: typeof common;
+    "page-home": typeof pageHome;
+  }
+
+  // Scalar options stay on CustomTypeOptions
+  interface CustomTypeOptions {
+    defaultNS: "common";
+  }
+}
+```
+
+When both files are in the same compile unit (the typical case for source-consumed monorepo packages), TypeScript merges the registry — `useTranslation("@repo/ui")` typechecks inside the UI package, `useTranslation("common")` works inside the app, and neither side has to know about the other's namespaces.
+
+**Scalar options stay on `CustomTypeOptions`.** `ResourceNamespaceMap` only handles namespace resource types. Settings like `defaultNS`, `returnNull`, `enableSelector`, `parseInterpolation`, etc. continue to live on `CustomTypeOptions` and follow the existing single-declaration rules — but those are scalar and rarely conflict across packages.
+
+**Coexists with `CustomTypeOptions.resources`.** If you already use the legacy `resources` field, it continues to work, and new packages can opt into `ResourceNamespaceMap` without forcing you to migrate. Both surfaces feed `TypeOptions['resources']`.
+
+**Same-key conflicts.** If two declarations contribute the same namespace with the same key but different literal types (e.g. `'A'` in one package, `'B'` in another), that key is silently dropped from the merged namespace — calling `t()` with it errors as an unknown key. Other keys in the namespace are preserved.
+
 ## Testing
 
 ### Mocking the selector function
