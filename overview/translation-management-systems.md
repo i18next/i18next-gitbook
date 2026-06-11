@@ -15,8 +15,8 @@ It is **not** a pricing comparison, an enterprise procurement guide, or a genera
 - **In-context editor approaches differ structurally.** Locize, Lokalise, Crowdin, and Tolgee use SDK overlays. Phrase uses a proxy that rewrites your app's URLs. POEditor offers screenshot-based context only (no live overlay).
 - **CDN delivery is now table-stakes for serious TMSes.** Locize, Lokalise (OTA), Crowdin (OTA), Phrase (OTA), Transifex (Native), and SimpleLocalize all have it. Tolgee gates it behind Enterprise. POEditor and Smartcat don't have it natively.
 - **Branches + Versions + Multi-tenant together are unique to Locize** in this comparison.
-- **MCP (Model Context Protocol) servers are now broadly available** across the i18next-relevant TMSes — Locize, Crowdin, Lokalise, Phrase, Tolgee, and SimpleLocalize all ship official MCP servers as of mid-2026. The differentiation has shifted from "does the vendor have one" to "how many tools, which clients, and whether it is in the official MCP Registry."
-- **Bring-your-own-key (BYOK) for LLMs** is supported by Locize (OpenAI / Gemini / Mistral / Lara / DeepL), Crowdin (OpenAI / Gemini / Azure OpenAI), POEditor (OpenAI / Gemini / Anthropic), Tolgee (OpenAI / Azure / Anthropic / Google AI), and SimpleLocalize (OpenAI). Lokalise, Phrase, Transifex, Localazy, i18nexus and Smartcat do not clearly surface LLM BYOK on their docs.
+- **MCP (Model Context Protocol) servers are now broadly available** across the i18next-relevant TMSes — Locize, Crowdin, Lokalise, Phrase, POEditor, Tolgee, and SimpleLocalize all ship official MCP servers as of mid-2026. The differentiation has shifted from "does the vendor have one" to "how many tools, which clients, and whether it is in the official MCP Registry."
+- **Bring-your-own-key (BYOK) for LLMs** is supported by Locize (OpenAI / Gemini / Mistral / Lara / DeepL), Crowdin (OpenAI / Gemini / Azure OpenAI), POEditor (OpenAI / Gemini / Anthropic), Tolgee (OpenAI / Azure / Anthropic / Google AI), and SimpleLocalize (OpenAI). Lokalise, Phrase, Transifex, Localazy, i18nexus, and Smartcat do not clearly surface LLM BYOK on their docs.
 
 {% hint style="success" %}
 **Just want to try the i18next-native stack?** [Start a Free Locize project →](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems_top_cta) — the `i18next-locize-backend` plugin works in three lines of config, no credit card, no trial timer.
@@ -93,7 +93,7 @@ Real i18next projects have either, or both during migration. A TMS that round-tr
 - **i18nexus** — i18next-style JSON natively (the platform is built around the i18next workflow).
 - **Lokalise** — maps via the "i18next v4" preset in Advanced settings on download. Internal storage is ICU-aligned; the suffix representation is a download-format mapping.
 - **Phrase** — documented import preset (`.JSON - i18next / i18nextV4 (Strings)`).
-- **POEditor** - native for v4 (`_zero`, `_one`, `_two`, `_few`, `_many`, `_other`).
+- **POEditor** — native for v4 (`_zero`, `_one`, `_two`, `_few`, `_many`, `_other`).
 - **Tolgee** — uses ICU MessageFormat internally; i18next v4 suffix keys map to ICU on import.
 - **Transifex Native** — ICU MessageFormat internally; same situation as Tolgee.
 - **Localazy** — supports legacy `_plural`, numeric `_0`–`_5`, or ICU — but **not** the i18next v4 `_one` / `_few` / `_many` suffix set as a native representation. v4 keys need pre-mapping.
@@ -171,9 +171,9 @@ By vendor:
 
 - **Locize** — Built-in [Locize AI](https://www.locize.com/ai?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) + BYOK for OpenAI, Google Gemini, Mistral, Lara, and DeepL. Glossary, style guide, and per-key descriptions automatically injected into every AI prompt. Configurable [review workflow](https://www.locize.com/docs/review-workflow?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) per language. **22-tool MCP server** published in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=locize) — see [the MCP server announcement](https://www.locize.com/blog/mcp-server?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) or the [Locize MCP Server Docs](https://www.locize.com/docs/integration/mcp?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) for setup.
 - **Crowdin** — Crowdin AI with BYOK across OpenAI, Google Gemini, Microsoft Azure OpenAI, and more (BYOK is documented as supported for data-security reasons). Glossaries and TM context feed AI prompts. Official **Crowdin MCP Server**.
-- **Lokalise** — Lokalise AI (Multi-LLM Smart Routing on higher tiers) + MT providers. LLM BYOK not clearly documented on their pricing/AI pages. Official **Lokalise MCP Server** at `mcp.lokalise.com` with separate Project Management and Software Development toolkits.
+- **Lokalise** — Lokalise AI (Multi-LLM Smart Routing on higher tiers) + MT providers. LLM BYOK not clearly documented on their pricing/AI pages. Official **Lokalise MCP Server** with separate Project Management and Software Development toolkits.
 - **Phrase** — built-in "Phrase Language AI" with custom AI profiles. LLM BYOK not clearly documented (BYOK exists for translation agencies like Gengo and Textmaster but not surfaced for LLMs). Official **Phrase MCP Server** (`@phrase/phrase-mcp-server`) covering both Phrase Strings and Phrase TMS.
-- **POEditor** — MT providers (Google Translate / DeepL / Azure) with purchased credits or BYOK. LLM BYOK (OpenAI / Google Gemini / Anthropic). Official **POEditor MCP Server** at `mcp.poeditor.com/mcp`.
+- **POEditor** — MT providers (Google Translate / DeepL / Azure) with purchased credits or BYOK. LLM BYOK (OpenAI / Google Gemini / Anthropic). Official **POEditor MCP Server**.
 - **Tolgee** — MT credits across multiple providers + LLM providers (OpenAI, OpenAI Azure, Anthropic, Google AI). BYOK supported on both Cloud (organization-level config) and Self-hosted (server config). Official **Tolgee MCP Server**.
 - **SimpleLocalize** — MT options across Google, DeepL, OpenAI. BYOK for OpenAI is supported. Official **SimpleLocalize MCP Server** (`@simplelocalize/simplelocalize-mcp`).
 - **Transifex** — "AI Words" capacity built into tiers; Transifex AI is built on OpenAI underneath. LLM BYOK not surfaced. No MCP server surfaced.
@@ -201,8 +201,8 @@ Legend: ✅ = yes, native or first-class · ⚠️ = supported but via custom in
 | Versions | ✅ | ❌ | ⚠️ history | ❌ | ❌ | ❌ | ❌ | ⚠️ promotion | ❌ | ❌ | ❌ |
 | Multi-tenant | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Built-in AI / MT | ✅ Locize AI + 4 MT | ✅ MT add-ons | ✅ OpenAI / DeepL / Google | ✅ Localazy AI + MT | ✅ Lokalise AI + MT | ✅ Language AI | ✅ Google / DeepL / Azure | ✅ Google / DeepL / OpenAI | ✅ Smartcat AI | ✅ MT + Ent. LLM | ✅ AI Words |
-| BYOK for LLMs | ✅ OpenAI / Gemini / Mistral / Lara / DeepL | ✅ OpenAI / Gemini / Azure OpenAI | ❌ surfaced | ❌ surfaced | ❌ surfaced | ❌ surfaced |  ✅ OpenAI / Gemini / Anthropic  | ✅ OpenAI | ❌ surfaced | ✅ OpenAI / Azure / Anthropic / Google AI | ❌ surfaced |
-| Official MCP server | ✅ 22 tools, official Registry | ✅ official | ❌ | ❌ | ✅ official (mcp.lokalise.com) | ✅ official (Strings + TMS) | ✅ official (mcp.poeditor.com/mcp) | ✅ official | ❌ | ✅ official | ❌ |
+| BYOK for LLMs | ✅ OpenAI / Gemini / Mistral / Lara / DeepL | ✅ OpenAI / Gemini / Azure OpenAI | ❌ surfaced | ❌ surfaced | ❌ surfaced | ❌ surfaced | ✅ OpenAI / Gemini / Anthropic | ✅ OpenAI | ❌ surfaced | ✅ OpenAI / Azure / Anthropic / Google AI | ❌ surfaced |
+| Official MCP server | ✅ 22 tools, official Registry | ✅ official | ❌ | ❌ | ✅ official | ✅ official (Strings + TMS) | ✅ official | ✅ official | ❌ | ✅ official | ❌ |
 
 ## Vendor profiles
 
@@ -264,7 +264,7 @@ Legend: ✅ = yes, native or first-class · ⚠️ = supported but via custom in
 
 **i18next angle.** No dedicated i18next backend. Supports i18next v4 plural format via the Advanced settings on download — internal storage is ICU-aligned, the suffix representation is an export-format mapping. OTA SDK is one-way download; `saveMissing` requires writing a custom handler against the Lokalise REST API.
 
-**Key strength.** Polished editor and review workflows. LiveJS — an SDK-overlay in-context editor for the web. OTA delivery (recently migrated from MAU pricing to per-GB-of-data pricing). Official **Lokalise MCP Server** at `mcp.lokalise.com` with separate Project Management and Software Development toolkits.
+**Key strength.** Polished editor and review workflows. LiveJS — an SDK-overlay in-context editor for the web. OTA delivery (recently migrated from MAU pricing to per-GB-of-data pricing). Official **Lokalise MCP Server** with separate Project Management and Software Development toolkits.
 
 **Pricing model.** Free perpetual plan. Paid tiers (Explorer, Growth, Advanced, Enterprise) charged per seats + word capacity. Transparent through Advanced; Enterprise requires sales contact.
 
@@ -288,7 +288,7 @@ Legend: ✅ = yes, native or first-class · ⚠️ = supported but via custom in
 
 **i18next angle.** No dedicated i18next backend, no native CDN — POEditor is file-export oriented. You pull JSON via API and deploy to your own CDN provider (Cloudflare, AWS S3, etc.). Plural support is per-locale CLDR aware.
 
-**Key strength.** Generous free tier; long history; broad integrations; no seat capping on paid plans. Automated workflows (templates and custom). POEditor AI supports BYOK across OpenAI, Gemini, and Anthropic. Official **POEditor MCP Server** (mcp.poeditor.com/mcp).
+**Key strength.** Generous free tier; long history; broad integrations; no seat capping on paid plans. Automated workflows (templates and custom). POEditor AI supports BYOK across OpenAI, Gemini, and Anthropic. Official **POEditor MCP Server**.
 
 **Pricing model.** 10-day trial; free tier (1,000 strings, up to 5 contributors). Paid tiers charged per strings (terms + translations) and feature set. Transparent.
 
@@ -367,7 +367,7 @@ Different teams need different things. A few common paths:
 → Locize is the only option in this set.
 
 **You want broad LLM bring-your-own-key support combined with an MCP server for editor-native AI workflows.**
-→ Locize (OpenAI / Gemini / Mistral / Lara / DeepL; 22-tool MCP in the official Registry). POEditor (OpenAI / Gemini / Anthropic / DeepL; official MCP). Tolgee (OpenAI / OpenAI Azure / Anthropic / Google AI; official MCP). Crowdin (OpenAI / Gemini / Azure OpenAI; official MCP). SimpleLocalize (OpenAI BYOK; official MCP). All four have BYOK plus an MCP server, with different LLM provider breadths.
+→ Locize (OpenAI / Gemini / Mistral / Lara / DeepL; 22-tool MCP in the official Registry). POEditor (OpenAI / Gemini / Anthropic; official MCP). Tolgee (OpenAI / OpenAI Azure / Anthropic / Google AI; official MCP). Crowdin (OpenAI / Gemini / Azure OpenAI; official MCP). SimpleLocalize (OpenAI BYOK; official MCP). All five have BYOK plus an MCP server, with different LLM provider breadths.
 
 ## Where Locize is uniquely strong — and where the marginal advantage narrows
 
@@ -414,7 +414,7 @@ Locize. Locize is built and maintained by the i18next team, with native integrat
 
 `saveMissing` is an i18next feature: set `saveMissing: true` and the runtime will report any translation key that does not exist. The TMS-side question is what happens to that report. Locize implements i18next's backend `create()` and `update()` methods, so missing keys POST automatically to the TMS — no custom handler needed. Other TMSes have REST APIs for adding keys, but using them with `saveMissing` requires writing your own `missingKeyHandler`.
 
-### Can I use Lokalise, Crowdin, Phrase or POEditor with i18next?
+### Can I use Lokalise, Crowdin, Phrase, or POEditor with i18next?
 
 Yes — all four integrate with i18next, but with caveats. Crowdin and POEditor have native i18next plural format support but no dedicated i18next backend. Lokalise has an i18next v4 export preset but no dedicated backend either; integration is file-sync via the Lokalise CLI. Phrase ships `@phrase/i18next-backend`, but it implements `read` only (no `create`) — Phrase's own React tutorial actually recommends using generic `i18next-http-backend` rather than their backend. All four work; none match Locize's depth of i18next integration.
 
@@ -424,7 +424,7 @@ Locize is the only TMS with native commands in `i18next-cli` — `locize-sync`, 
 
 ### Does any TMS have a Model Context Protocol (MCP) server?
 
-As of mid-2026, MCP servers are widely available across the i18next-relevant TMSes — Locize, Crowdin, Lokalise, Phrase, POEditor, Tolgee, and SimpleLocalize all ship official MCP servers. Among the enterprise honorable mentions, Smartling also has one (launched August 2025). The vendors that have not yet shipped an MCP server as of mid-2026 are Transifex, Localazy, i18nexus and Smartcat. The differentiation between vendors has shifted from "does the TMS have an MCP server" to how many tools it exposes, which AI clients it has been tested with, and whether it is registered in the [official MCP Registry](https://registry.modelcontextprotocol.io/).
+As of mid-2026, MCP servers are widely available across the i18next-relevant TMSes — Locize, Crowdin, Lokalise, Phrase, POEditor, Tolgee, and SimpleLocalize all ship official MCP servers. Among the enterprise honorable mentions, Smartling also has one (launched August 2025). The vendors that have not yet shipped an MCP server as of mid-2026 are Transifex, Localazy, i18nexus, and Smartcat. The differentiation between vendors has shifted from "does the TMS have an MCP server" to how many tools it exposes, which AI clients it has been tested with, and whether it is registered in the [official MCP Registry](https://registry.modelcontextprotocol.io/).
 
 ### How do I choose a TMS for an open-source project?
 
