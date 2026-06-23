@@ -25,9 +25,9 @@ For each instance you'll need to create a separate `tsconfig.json` and `i18next.
 {% endhint %}
 
 {% hint style="success" %}
-[Here](https://www.locize.com/blog/i18next-typescript/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_typescript) you'll find a simple guide on how to best use TypeScript for i18next.\
+[Here](https://www.locize.com/blog/i18next-typescript/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_typescript\&from=i18next_overview-typescript__hint) you'll find a simple guide on how to best use TypeScript for i18next.\
 Discover how to unleash the full potential of i18next in your TypeScript applications by mastering type-safe translations, ensuring accurate localization and eliminating runtime errors.\
-[![](../.gitbook/assets/title.jpg)](https://www.locize.com/blog/i18next-typescript/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_typescript)
+[![](../.gitbook/assets/title.jpg)](https://www.locize.com/blog/i18next-typescript/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_typescript\&from=i18next_overview-typescript__hint)
 {% endhint %}
 
 {% embed url="https://youtu.be/GLIas4DH3Ww" %}

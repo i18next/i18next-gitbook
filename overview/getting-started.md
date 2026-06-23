@@ -267,9 +267,9 @@ You should now have an idea about how to achieve the basic setup. It's time to l
 * Set up [type-safe translations with TypeScript](typescript.md).
 * Add a [language detector](plugins-and-utils.md) to detect the preferred language of your user
 * Add a [backend plugin](plugins-and-utils.md) to load the translations from the server or filesystem
-* Connect i18next with a smart [Translation Management System](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_getting_started), like in [this React.js example](https://github.com/locize/react-tutorial)
+* Connect i18next with a smart [Translation Management System](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_getting_started\&from=i18next_overview-getting-started__nextsteps), like in [this React.js example](https://github.com/locize/react-tutorial)
 
 {% hint style="success" %}
-Don't have a [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_getting_started) account yet?\
+Don't have a [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_getting_started\&from=i18next_overview-getting-started__hint) account yet?\
 You can now sign up for a **Free plan** to test the integration in your development environment indefinitely.
 {% endhint %}

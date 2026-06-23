@@ -671,5 +671,5 @@ Removes an existing bundle.
 ***
 
 {% hint style="info" %}
-Managing resources manually? [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_api) provides a managed backend for i18next that handles resource loading, CDN delivery, and translation management — so you can focus on building your app instead of managing JSON files. Built by the i18next team. [Get started →](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_api)
+Managing resources manually? [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_api\&from=i18next_overview-api__hint) provides a managed backend for i18next that handles resource loading, CDN delivery, and translation management — so you can focus on building your app instead of managing JSON files. Built by the i18next team. [Get started →](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_api\&from=i18next_overview-api__hint)
 {% endhint %}
