@@ -37,6 +37,13 @@ The i18next-community created integrations for frontend-frameworks such as [Reac
 
 But this is not where it ends. You can also use i18next with [Node.js](https://www.locize.com/blog/how-does-server-side-internationalization-look-like/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), [Deno](https://www.locize.com/blog/i18n-for-deno-with-i18next/?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme), PHP, iOS, Android and [other platforms](overview/supported-frameworks.md).
 
+{% hint style="success" %}
+**Who's using i18next?** At least **1,500+ of the world's top 100,000 websites** run on i18next — from X and GitLab to Deezer, DeepL and Microsoft Power BI.\
+⇒ [See who uses i18next](https://www.locize.com/blog/who-uses-i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=who_uses_i18next)
+
+[![](.gitbook/assets/who-uses-i18next.jpg)](https://www.locize.com/blog/who-uses-i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=who_uses_i18next)
+{% endhint %}
+
 {% hint style="info" %}
 **Your software is using i18next? -** _Spread the word and let the world know!_
 
