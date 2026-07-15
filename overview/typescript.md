@@ -200,6 +200,17 @@ console.log(mockTranslation); // => "abc.def"
 
 Try to update the used TypeScript version _(>= v5 is recommended)_.
 
+### `Expected 0 arguments, but got 1.` when calling `t`
+
+This error means TypeScript resolved your key type to `never`, so `t` accepts no key at all. The two usual causes:
+
+1. **Your IDE uses an old bundled TypeScript version.** The type definitions require a recent TypeScript; point your editor at the workspace version (VS Code: "TypeScript: Select TypeScript Version" → "Use Workspace Version"; WebStorm: Settings → Languages & Frameworks → TypeScript → point to `node_modules/typescript`). If `tsc` on the command line typechecks fine but the IDE complains, this is almost always it.
+2. **The `CustomTypeOptions` augmentation collapsed your resources type.** If the `resources` interface in your declaration file resolves to `never`/`unknown` (wrong import path to your resource file, JSON module resolution not enabled via `resolveJsonModule`, or the declaration file not being included by `tsconfig.json`), every key becomes invalid. Verify the declaration file from [Create a declaration file](typescript.md#create-a-declaration-file) is picked up and that hovering `CustomTypeOptions['resources']` in your editor shows your actual keys.
+
+### Typechecking got slow with large resource files
+
+The legacy key-validation types enumerate every possible key, which gets expensive with thousands of keys. Set [`enableSelector: "optimize"`](typescript.md#custom-type-options) to switch to the selector API's lazy resolution; see the OOM entry below for migration helpers.
+
 ### Out of memory (OOM) errors
 
 {% hint style="warning" %}

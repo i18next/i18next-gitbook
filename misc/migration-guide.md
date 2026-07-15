@@ -195,7 +195,7 @@ For JavaScript users v22.0.0 is equivalent to 21.10.0
 One of the biggest breaking changes is regarding suffixing plurals.\
 This change streamlines the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).\
 You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API, in case it is not available it will fallback to the [i18next JSON format v3](json-format.md#i-18-next-json-v3) plural handling.\
-To enforce old behaviour you can enable `compatibilityJSON = 'v3'` on i18next init call.
+To enforce old behaviour you can enable `compatibilityJSON = 'v3'` on i18next init call. _(Note: this escape hatch existed up to v23; since v24 the old JSON formats and the fallback are removed, the Intl API is mandatory, and the polyfill is the only fix.)_
 
 ```javascript
 import i18next from 'i18next';

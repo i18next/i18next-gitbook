@@ -3,7 +3,7 @@
 Plural can be combined with interpolation, context, ...
 
 These plurals are streamlined with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).\
-\=>_You need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API._
+\=>_In environments without_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _support you need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _it (notably React Native: the Hermes engine still does not implement `Intl.PluralRules`). Since i18next v24 there is no fallback: without Intl only English-style `_one`/`_other` forms resolve._
 
 {% tabs %}
 {% tab title="JavaScript" %}

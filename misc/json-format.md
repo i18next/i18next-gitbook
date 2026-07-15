@@ -43,13 +43,13 @@ To learn more about the features check the documentation:
 
 The only difference to _v3_ is the plural suffixes.
 
-You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API, in case it is not available it will fallback to the [i18next JSON format v3](json-format.md#i-18-next-json-v3) plural handling.
+You may need to [polyfill](https://github.com/eemeli/intl-pluralrules) the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API (e.g. React Native on Hermes). Since i18next v24 there is no fallback to the v3 plural handling anymore: without Intl support an error is logged and only English-style `_one`/`_other` suffixes are resolved.
 
 To convert your existing translations to the new v4 format, have a look at [i18next-v4-format-converter](https://github.com/i18next/i18next-v4-format-converter) or [this web tool](https://i18next.github.io/i18next-v4-format-converter-web/). _(It will only handle keys with the default pluralSeparator `_`)_
 
 ## i18next JSON v3
 
-enabled by:
+enabled by _(i18next v21-v23 only; the `compatibilityJSON` escape hatch for old formats was removed in v24)_:
 
 ```javascript
 i18next.init({

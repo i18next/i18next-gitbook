@@ -37,16 +37,13 @@ _Or you use a smart translation management system, like_ [_locize_](https://www.
 
 ### **Why are my plural keys not working?**
 
-_Are you seeing this warning in the development console?_
+_Are you seeing this error in the development console?_
 
-> i18next::pluralResolver: Your environment seems not to be Intl API compatible, use an Intl.PluralRules polyfill. Will fallback to the compatibilityJSON v3 format handling.
+> No Intl support, please use an Intl polyfill!
 
-_With v21 we_ streamlined the suffix with the one used in the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules).
+i18next uses the [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) API to resolve plural forms. Since **v24** the Intl API is mandatory: there is no fallback to the old JSON v3 plural handling anymore. In an environment without `Intl.PluralRules`, i18next logs the error above and degrades to a minimal English-style rule (`_one`/`_other` only), so languages with more plural forms (e.g. Russian, Arabic, Polish) will show wrong or missing plurals.
 
-_In environments where the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API  is not available (like older Android devices), you may need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _the_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _API._\
-_In case it is not available it will fallback to the_ [_i18next JSON format v3_](../misc/json-format.md#i-18-next-json-v3) _plural handling. And if your json is already using the new suffixes, your plural keys will probably not be shown._
-
-_tldr;_
+The fix is a 2-line [polyfill](https://github.com/eemeli/intl-pluralrules):
 
 ```shell
 npm install intl-pluralrules
@@ -55,6 +52,12 @@ npm install intl-pluralrules
 ```javascript
 import 'intl-pluralrules'
 ```
+
+{% hint style="warning" %}
+**React Native:** the Hermes engine still does not implement `Intl.PluralRules`, so the polyfill above is required in every React Native app that uses plurals.
+{% endhint %}
+
+_Historical note: on i18next v21-v23 the same situation produced the warning "Your environment seems not to be Intl API compatible ... Will fallback to the compatibilityJSON v3 format handling", and `compatibilityJSON: 'v3'` could be used as an escape hatch. That option was removed in v24; the polyfill is the only fix on current versions._
 
 ### How should the language codes be formatted?
 
@@ -74,6 +77,74 @@ _And more information about the format can be found here:_ [_https://www.w3.org/
 {% hint style="info" %}
 As soon as you use the dash character `-` the language codes are tried to be formatted with `Intl.getCanonicalLocales`.
 {% endhint %}
+
+### How do I get the current language?
+
+Use `i18next.resolvedLanguage`:
+
+```javascript
+i18next.resolvedLanguage // 'en'
+```
+
+The three related properties differ:
+
+* `i18next.language`: the language as set/detected, e.g. `de-CH`
+* `i18next.resolvedLanguage`: the language actually used for the loaded translations after fallback resolution, e.g. `de` — this is usually what you want for UI (language switchers, `lang` attributes)
+* `i18next.languages`: the full fallback chain, e.g. `['de-CH', 'de', 'en']`
+
+In react-i18next you get the instance from the hook: `const { i18n } = useTranslation()`.
+
+### Why does my app keep switching back to a previously detected language?
+
+[i18next-browser-languageDetector](https://github.com/i18next/i18next-browser-languageDetector) **caches** the detected language in `localStorage` (and optionally cookies) by default. A language detected or chosen once will win over a changed `fallbackLng` or a different browser setting on the next visit.
+
+To change this, configure the detector's `caches` option:
+
+```javascript
+i18next.init({
+  detection: {
+    caches: [] // disable caching entirely, always re-detect
+    // or: caches: ['cookie']
+  }
+});
+```
+
+During development you can simply clear the `i18nextLng` entry from `localStorage`. Calling `i18next.changeLanguage(lng)` updates the cache; `i18next.changeLanguage(undefined)` re-runs detection.
+
+### Is i18next overkill for a small site?
+
+i18next can start as small as a naive "fetch a JSON file" approach, without any plugins:
+
+```javascript
+import i18next from 'i18next';
+
+await i18next.init({
+  lng: 'en',
+  resources: {
+    en: { translation: { welcome: 'Welcome' } },
+    de: { translation: { welcome: 'Willkommen' } }
+  }
+});
+
+i18next.t('welcome'); // -> 'Welcome'
+```
+
+That is the whole setup: no backend, no detector, no framework binding. What you get over a hand-rolled `fetch`-JSON helper, without writing it yourself: correct [plural rules](../translation-function/plurals.md) for every language (not just `count === 1`), a [fallback chain](../principles/fallback.md) so missing keys never render blank, [interpolation with escaping](../translation-function/interpolation.md), and [Intl-based formatting](../translation-function/formatting.md). When the project grows, the plugin ecosystem (lazy loading, detection, framework bindings) attaches to the same setup instead of a rewrite.
+
+### Can I use my source text as the key (gettext style)?
+
+Yes. Nothing forces abstract keys like `header.title`; natural-language keys work:
+
+```javascript
+i18next.init({
+  nsSeparator: false, // if your texts contain ':'
+  keySeparator: false // if your texts contain '.'
+});
+
+i18next.t('Welcome to our application'); // key === English source text
+```
+
+Combined with `saveMissing` (or [i18next-cli extract](https://github.com/i18next/i18next-cli) with `defaultValue`), the English text fills the source catalog automatically, and translators translate from the key itself. Trade-off: changing the source wording changes the key (invalidating existing translations), and very long texts make unwieldy keys — which is why abstract keys remain the default recommendation for larger apps.
 
 ## Process
 
