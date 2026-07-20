@@ -249,6 +249,9 @@ As you might see, this basic sample provides only one language directly added on
 {% hint style="info" %}
 Do you quickly want to translate your resources to other languages?\
 Try: [https://translate.i18next.com](https://translate.i18next.com/)
+
+Want to check your files for missing translations or interpolation errors?\
+Try the free [i18n health check](https://translate.i18next.com/health-check).
 {% endhint %}
 
 This is a working sample showing translated text. To learn more, have a look at the following extended sample:

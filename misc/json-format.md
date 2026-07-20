@@ -157,3 +157,7 @@ formats:
 ```
 
 These are the defaults. Nesting and Interpolation formats are configurable.
+
+{% hint style="info" %}
+You can check your i18next JSON files for missing translations, duplicate source values and interpolation placeholder mismatches with the free [i18n health check](https://translate.i18next.com/health-check).
+{% endhint %}

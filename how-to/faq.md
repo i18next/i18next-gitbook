@@ -25,6 +25,10 @@ But in general we suggest to use a smart Translation Management Service like [lo
 
 For professional translations we advice you to work with [human translators](https://www.locize.com/docs/guides/working-with-translators?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_faq). Or at least proofread the results coming from machine translations.
 
+### **How to check the translation files for missing or broken translations?**
+
+Use the free [i18n health check](https://translate.i18next.com/health-check): drop in your JSON locale files and it instantly reports missing translations, duplicate source values and interpolation placeholder mismatches. Everything runs in your browser, nothing is uploaded.
+
 ### **How do i know which plural suffix i have to use?**
 
 _On the_ [_plural page_](../translation-function/plurals.md) _there is a tool to get them._
