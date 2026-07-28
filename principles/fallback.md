@@ -216,6 +216,10 @@ i18next.t($ => $.notExistingKey); // -> "notExistingKey"
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+Seeing raw keys in your UI usually means a translation is missing, not that the fallback is misconfigured. With [`saveMissing`](../overview/configuration-options.md) enabled and a backend that implements the [create function](../misc/creating-own-plugins.md#backend), those keys are collected while you develop instead of being spotted in production. Using [i18next-locize-backend](https://github.com/locize/i18next-locize-backend), they appear in your [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=principles_fallback\&from=i18next_principles-fallback__hint) project ready to translate, no manual JSON edits. Built by the i18next team.
+{% endhint %}
+
 So you could configure i18next to have the key being the fallback instead of loading a fallback language:
 
 {% tabs %}
