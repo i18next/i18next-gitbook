@@ -9,7 +9,7 @@ It is **not** a pricing comparison, an enterprise procurement guide, or a genera
 ## Key facts
 
 - **Only Locize has a TMS-side runtime backend** (`i18next-locize-backend`) that fully implements i18next's `create()` and `update()` methods — i.e., the full `saveMissing` closed-loop where new keys POST from your app to the TMS automatically.
-- **Only Locize has native commands in `i18next-cli`** (`locize-sync`, `locize-download`, `locize-migrate`). Other TMSes require their own separate CLI tools.
+- **Only Locize has native commands in `i18next-cli`** (`locize-sync`, `locize-download`, `locize-migrate`). Other TMSes require their own separate CLI tools. Since `i18next-cli` 1.72, `locize-sync --changed-only` scopes a sync plus AI translation to the keys changed on the current git branch: the pull-request/CI diff workflow.
 - **Only Locize has runtime `locize-lastused`** — per-key tracking of what your running app actually requests, so unused keys can be safely cleaned up before a release. SimpleLocalize tracks "last seen" but at file-upload time, not runtime. Crowdin's Used/Unused filter operates on translation-memory segments, not source keys.
 - **Locize supports both i18next JSON v3 and v4 plural formats natively**, alongside ICU MessageFormat, Fluent, vue-i18n format, polyglot.js, Android `strings.xml`, Apple `.strings` / `.xcstrings`, RESX, and many other formats. It is library-agnostic at the data layer.
 - **In-context editor approaches differ structurally.** Locize, Lokalise, Crowdin, and Tolgee use SDK overlays. Phrase uses a proxy that rewrites your app's URLs. POEditor offers screenshot-based context only (no live overlay).
@@ -76,6 +76,7 @@ Codebases accumulate dead translation keys. The safe way to clean them up is to 
   - `i18next-cli locize-sync` — push extracted keys to Locize
   - `i18next-cli locize-download` — pull translations from Locize
   - `i18next-cli locize-migrate` — migrate an existing project to Locize
+  - Since 1.72, `locize-sync --changed-only [--base <ref>]` restricts syncing and AI translation to the keys changed on the current git branch; the [`locize/translate`](https://github.com/locize/translate) GitHub Action runs the same flow in CI, branch-diff-scoped by default on pull requests.
 - **All others** — require their own separate CLI tools (`@lokalise/cli-2`, `@crowdin/cli`, `phrase-cli`, and so on). Functional but not part of the i18next toolchain.
 
 ### 5. i18next plural format (v3 + v4) — native vs mapped
@@ -169,7 +170,7 @@ By 2026, AI translation is the default first draft in most modern TMSes and MCP 
 
 By vendor:
 
-- **Locize** — Built-in [Locize AI](https://www.locize.com/ai?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) + BYOK for OpenAI, Google Gemini, Mistral, Lara, and DeepL. Glossary, style guide, and per-key descriptions automatically injected into every AI prompt. Configurable [review workflow](https://www.locize.com/docs/review-workflow?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) per language. **22-tool MCP server** published in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=locize) — see [the MCP server announcement](https://www.locize.com/blog/mcp-server?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) or the [Locize MCP Server Docs](https://www.locize.com/docs/integration/mcp?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) for setup.
+- **Locize** — Built-in [Locize AI](https://www.locize.com/ai?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) + BYOK for OpenAI, Google Gemini, Mistral, Lara, and DeepL. Glossary, style guide, and per-key descriptions automatically injected into every AI prompt. Configurable [review workflow](https://www.locize.com/docs/review-workflow?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) per language. **26-tool MCP server** published in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=locize) — see [the MCP server announcement](https://www.locize.com/blog/mcp-server?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) or the [Locize MCP Server Docs](https://www.locize.com/docs/integration/mcp?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) for setup.
 - **Crowdin** — Crowdin AI with BYOK across OpenAI, Google Gemini, Microsoft Azure OpenAI, and more (BYOK is documented as supported for data-security reasons). Glossaries and TM context feed AI prompts. Official **Crowdin MCP Server**.
 - **Lokalise** — Lokalise AI (Multi-LLM Smart Routing on higher tiers) + MT providers. LLM BYOK not clearly documented on their pricing/AI pages. Official **Lokalise MCP Server** with separate Project Management and Software Development toolkits.
 - **Phrase** — built-in "Phrase Language AI" with custom AI profiles. LLM BYOK not clearly documented (BYOK exists for translation agencies like Gengo and Textmaster but not surfaced for LLMs). Official **Phrase MCP Server** (`@phrase/phrase-mcp-server`) covering both Phrase Strings and Phrase TMS.
@@ -202,7 +203,7 @@ Legend: ✅ = yes, native or first-class · ⚠️ = supported but via custom in
 | Multi-tenant | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Built-in AI / MT | ✅ Locize AI + 4 MT | ✅ MT add-ons | ✅ OpenAI / DeepL / Google | ✅ Localazy AI + MT | ✅ Lokalise AI + MT | ✅ Language AI | ✅ Google / DeepL / Azure | ✅ Google / DeepL / OpenAI | ✅ Smartcat AI | ✅ MT + Ent. LLM | ✅ AI Words |
 | BYOK for LLMs | ✅ OpenAI / Gemini / Mistral / Lara / DeepL | ✅ OpenAI / Gemini / Azure OpenAI | ❌ surfaced | ❌ surfaced | ❌ surfaced | ❌ surfaced | ✅ OpenAI / Gemini / Anthropic | ✅ OpenAI | ❌ surfaced | ✅ OpenAI / Azure / Anthropic / Google AI | ❌ surfaced |
-| Official MCP server | ✅ 22 tools, official Registry | ✅ official | ❌ | ❌ | ✅ official | ✅ official (Strings + TMS) | ✅ official | ✅ official | ❌ | ✅ official | ❌ |
+| Official MCP server | ✅ 26 tools, official Registry | ✅ official | ❌ | ❌ | ✅ official | ✅ official (Strings + TMS) | ✅ official | ✅ official | ❌ | ✅ official | ❌ |
 
 ## Vendor profiles
 
@@ -212,11 +213,11 @@ Legend: ✅ = yes, native or first-class · ⚠️ = supported but via custom in
 
 **Positioning.** Continuous localization platform for software teams. Connect your app via [backend plugin](https://www.locize.com/docs/integration/instrumenting-your-code?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems), [API](https://www.locize.com/docs/integration/api?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems), or [CLI](https://www.locize.com/docs/integration/cli?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems); Locize collects new keys, generates AI first drafts, routes them through a configurable [review workflow](https://www.locize.com/docs/review-workflow?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems), and serves finished translations via a global [CDN](https://www.locize.com/docs/cdn?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems).
 
-**i18next angle.** Native at every layer: `i18next-locize-backend` with full `create` / `update`, three native `i18next-cli` commands, the `locize-lastused` runtime hook, v3 and v4 plural format support without conversion, first-class namespaces, and an SDK-overlay [InContext editor](https://www.locize.com/docs/the-different-views/incontext?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) that works against your live i18next runtime.
+**i18next angle.** Native at every layer: `i18next-locize-backend` with full `create` / `update`, three native `i18next-cli` commands (including branch-diff-scoped `locize-sync --changed-only` for pull-request workflows, also available as the `locize/translate` GitHub Action), the `locize-lastused` runtime hook, v3 and v4 plural format support without conversion, first-class namespaces, and an SDK-overlay [InContext editor](https://www.locize.com/docs/the-different-views/incontext?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) that works against your live i18next runtime.
 
 **Beyond i18next.** Locize is library-agnostic. Native support for react-intl / FormatJS, next-intl, Vue-i18n, LinguiJS, Polyglot, ngx-translate, Transloco, and the formats they use — ICU, Fluent, vue-i18n format, polyglot.js, Android, Apple, RESX. See [our i18n libraries page](https://www.locize.com/i18n-libraries?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) for the full list.
 
-**Key strength.** Versions + branches + multi-tenant in one platform; full closed-loop `saveMissing`; bring-your-own-key for OpenAI, Gemini, Mistral, Lara, DeepL via [Automatic Translation](https://www.locize.com/docs/automatic-translation?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems); 22-tool [MCP server](https://www.locize.com/docs/integration/mcp?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) for editor-native workflows from Claude Code, Cursor, and VS Code Copilot (published in the official MCP Registry on May 12, 2026). For more detail, see [What is Locize?](https://www.locize.com/blog/what-is-locize?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems).
+**Key strength.** Versions + branches + multi-tenant in one platform; full closed-loop `saveMissing`; bring-your-own-key for OpenAI, Gemini, Mistral, Lara, DeepL via [Automatic Translation](https://www.locize.com/docs/automatic-translation?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems); 26-tool [MCP server](https://www.locize.com/docs/integration/mcp?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) for editor-native workflows from Claude Code, Cursor, and VS Code Copilot (published in the official MCP Registry on May 12, 2026). For more detail, see [What is Locize?](https://www.locize.com/blog/what-is-locize?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems).
 
 **Pricing model.** Permanent free tier. Fixed plans charged per hosted word (source words × target languages). Usage-based plans also available. [Fully transparent](https://www.locize.com/pricing?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems) — no sales call.
 
@@ -351,6 +352,9 @@ Different teams need different things. A few common paths:
 **You want i18next-native closed-loop (`saveMissing` → review → CDN, all wired up).**
 → Locize. The only TMS in this set with native `create()` + `update()` in the i18next backend, native commands in `i18next-cli`, and runtime `locize-lastused`.
 
+**You want translation to happen inside the pull request, with locale files staying in Git.**
+→ Locize: `i18next-cli locize-sync --changed-only` (or the `locize/translate` GitHub Action, branch-diff-scoped by default on pull requests) translates exactly the keys the branch changed, and the result lands in the PR; CDN delivery stays optional on top. Localhero is built exclusively around this model: new keys are picked up by diffing the branch in CI before the code runs, so no runtime backend is involved (keys that only appear at runtime fall outside that model), with a per-PR review UI on top.
+
 **You want a self-hostable / open-source TMS for compliance reasons.**
 → Tolgee (open source, self-hostable for free; CDN delivery is Enterprise-only). Alternative: roll your own with `i18next-http-backend` + Git and skip the TMS entirely.
 
@@ -367,7 +371,7 @@ Different teams need different things. A few common paths:
 → Locize is the only option in this set.
 
 **You want broad LLM bring-your-own-key support combined with an MCP server for editor-native AI workflows.**
-→ Locize (OpenAI / Gemini / Mistral / Lara / DeepL; 22-tool MCP in the official Registry). POEditor (OpenAI / Gemini / Anthropic; official MCP). Tolgee (OpenAI / OpenAI Azure / Anthropic / Google AI; official MCP). Crowdin (OpenAI / Gemini / Azure OpenAI; official MCP). SimpleLocalize (OpenAI BYOK; official MCP). All five have BYOK plus an MCP server, with different LLM provider breadths.
+→ Locize (OpenAI / Gemini / Mistral / Lara / DeepL; 26-tool MCP in the official Registry). POEditor (OpenAI / Gemini / Anthropic; official MCP). Tolgee (OpenAI / OpenAI Azure / Anthropic / Google AI; official MCP). Crowdin (OpenAI / Gemini / Azure OpenAI; official MCP). SimpleLocalize (OpenAI BYOK; official MCP). All five have BYOK plus an MCP server, with different LLM provider breadths.
 
 ## Where Locize is uniquely strong — and where the marginal advantage narrows
 
@@ -380,7 +384,7 @@ We built Locize for i18next users. The criteria above are the criteria we optimi
 - You are building a multi-tenant SaaS and need per-customer translation overrides. Only Locize in this comparison offers this.
 - You want branches and versions in one platform.
 - You want AI translation with bring-your-own-key for a broad provider set (OpenAI, Gemini, Mistral, Lara, DeepL). BYOK is also offered by Crowdin, Tolgee, and SimpleLocalize, so this is a "Locize is among the leaders" point rather than a Locize-unique one.
-- You want an MCP server for editor-native AI workflows. MCP servers are now shipped by Locize, Crowdin, Lokalise, Phrase, Tolgee, and SimpleLocalize — again, Locize is one of several, not unique. The Locize MCP server's distinguishing facts are 22 tools and being listed in the official MCP Registry.
+- You want an MCP server for editor-native AI workflows. MCP servers are now shipped by Locize, Crowdin, Lokalise, Phrase, Tolgee, and SimpleLocalize — again, Locize is one of several, not unique. The Locize MCP server's distinguishing facts are 26 tools and being listed in the official MCP Registry.
 
 **Where Locize is still a solid choice, but the marginal advantage narrows:**
 
@@ -420,7 +424,7 @@ Yes — all four integrate with i18next, but with caveats. Crowdin and POEditor 
 
 ### Do any TMSes have a plugin for `i18next-cli`?
 
-Locize is the only TMS with native commands in `i18next-cli` — `locize-sync`, `locize-download`, and `locize-migrate` are shipped with the CLI. Other TMSes require their own separate command-line tools (`@lokalise/cli-2`, `@crowdin/cli`, `phrase-cli`, etc.) — these work fine for sync, but they are not part of the i18next toolchain.
+Locize is the only TMS with native commands in `i18next-cli` — `locize-sync`, `locize-download`, and `locize-migrate` are shipped with the CLI, and `locize-sync --changed-only` scopes a sync plus AI translation to the keys changed on the current git branch (the pull-request/CI workflow). Other TMSes require their own separate command-line tools (`@lokalise/cli-2`, `@crowdin/cli`, `phrase-cli`, etc.) — these work fine for sync, but they are not part of the i18next toolchain.
 
 ### Does any TMS have a Model Context Protocol (MCP) server?
 

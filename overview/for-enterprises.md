@@ -34,7 +34,7 @@ Locize brings you:
 * Native i18next plural format support (v3 and v4) plus per-locale CLDR plural expansion across all target languages
 * Branches, versions, and multi-tenant (per-customer overrides) in one platform
 * Missing keys flow into Locize automatically — full `saveMissing` closed-loop via `i18next-locize-backend`
-* AI translation with bring-your-own-key (OpenAI, Gemini, Mistral, Lara, DeepL) and a 22-tool MCP server in the [official Model Context Protocol Registry](https://registry.modelcontextprotocol.io/v0/servers?search=locize) for editor-native workflows from Claude Code, Cursor, or VS Code Copilot
+* AI translation with bring-your-own-key (OpenAI, Gemini, Mistral, Lara, DeepL) and a 26-tool MCP server in the [official Model Context Protocol Registry](https://registry.modelcontextprotocol.io/v0/servers?search=locize) for editor-native workflows from Claude Code, Cursor, or VS Code Copilot
 * CDN-hosted translations on Standard, Pro, and private tiers — or self-host if you prefer
 
 While Locize provides the security and scale required by global enterprises, we believe professional localization should be accessible to everyone. That’s why we’ve introduced a **Free plan** alongside our new fixed and usage-based plans — [see pricing](https://www.locize.com/pricing?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_for_enterprises) — allowing you to start small and scale predictably as you grow.
