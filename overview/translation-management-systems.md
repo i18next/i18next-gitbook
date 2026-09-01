@@ -345,6 +345,8 @@ Legend: ✅ = yes, native or first-class · ⚠️ = supported but via custom in
 
 Several other TMSes are commonly mentioned in localization discussions but are not typically the first choice for an i18next-anchored developer team. **Smartling**, **XTM Cloud**, and **Lilt** are enterprise-localization platforms with strong managed-services and translator-marketplace components, but they do not offer i18next-specific runtime integration. Among these, **Smartling does ship a Model Context Protocol (MCP) server** — worth knowing if MCP is a hard requirement and the enterprise-localization-services scope is otherwise the right fit. **Memsource** is now Phrase — the company rebranded after a multi-step acquisition (Carlyle bought Memsource in July 2020; Memsource acquired Phrase in January 2021; the combined entity took the Phrase name). Anything labeled "Memsource" in older documentation now refers to Phrase.
 
+At the other end of the scale sits a newer generation of deliberately lighter, CI-native translation tools. **Localhero** is the clearest i18next-relevant example: a GitHub Action and CLI diff the branch against its base in CI, AI-translate only the new and changed keys (JSON, YAML, and gettext `.po` files, plural-suffix aware), and commit the result back into the pull request, with a per-PR web UI for review, glossary terms, and tone settings. Locale files stay in Git, and there is no runtime backend or CDN because new keys are picked up from the branch diff before the code runs — keys that only appear at runtime fall outside that model. It is deliberately not a full TMS, but for a small team whose whole localization process is "translate what this pull request changed", it is a credible, purpose-built option. See the decision paths below for where it fits.
+
 ## Decision paths
 
 Different teams need different things. A few common paths:
@@ -451,4 +453,4 @@ What we did to keep this guide honest:
 
 **Found something wrong?** Open an issue on the [i18next-gitbook repository](https://github.com/i18next/i18next-gitbook). We update this page when the TMS landscape shifts materially — acquisitions, major feature changes, pricing-model shifts. No fixed cadence.
 
-**Vendors covered (11):** Locize, Crowdin, i18nexus, Localazy, Lokalise, Phrase, POEditor, SimpleLocalize, Smartcat, Tolgee, Transifex. **Honorable mentions:** Smartling, XTM Cloud, Lilt, Memsource (now Phrase).
+**Vendors covered (11):** Locize, Crowdin, i18nexus, Localazy, Lokalise, Phrase, POEditor, SimpleLocalize, Smartcat, Tolgee, Transifex. **Honorable mentions:** Smartling, XTM Cloud, Lilt, Memsource (now Phrase), Localhero (CI-native, lighter scope).
