@@ -12,6 +12,8 @@ Static extraction tools can read through your code files to automatically find a
 
 Use the **official ⭐** [**i18next-cli**](https://github.com/i18next/i18next-cli) - a high-performance, all-in-one command-line tool for i18next. It handles key extraction, code linting, locale syncing, and type generation. It's built with modern technologies for maximum speed and accuracy. This is the recommended tool for all i18next projects.
 
+Not sure how much is still hardcoded? The free [i18n readiness check](https://translate.i18next.com/repo-check) runs the same lint rules on a public GitHub repository, in your browser.
+
 [i18next-scanner](http://i18next.github.io/i18next-scanner), [i18next-parser](https://github.com/i18next/i18next-parser) and [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) are alternative choices to achieve this goal.
 
 _Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._

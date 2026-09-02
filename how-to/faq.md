@@ -29,6 +29,10 @@ For professional translations we advice you to work with [human translators](htt
 
 Use the free [i18n health check](https://translate.i18next.com/health-check): drop in your JSON locale files and it instantly reports missing translations, duplicate source values and interpolation placeholder mismatches. Everything runs in your browser, nothing is uploaded.
 
+### **How do I find the strings that are still hardcoded?**
+
+Paste your public GitHub repository into the free [i18n readiness check](https://translate.i18next.com/repo-check): it lists the user-facing strings that are not wrapped in `t()` yet (file and line, the same rules as `npx i18next-cli lint`), detects your framework and locale files, and shows untranslated keys per language. Everything runs in your browser; only github.com is contacted. Private repository? Run `npx i18next-cli lint` locally.
+
 ### **How do i know which plural suffix i have to use?**
 
 _On the_ [_plural page_](../translation-function/plurals.md) _there is a tool to get them._

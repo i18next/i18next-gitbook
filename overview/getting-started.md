@@ -252,6 +252,9 @@ Try: [https://translate.i18next.com](https://translate.i18next.com/)
 
 Want to check your files for missing translations or interpolation errors?\
 Try the free [i18n health check](https://translate.i18next.com/health-check).
+
+Starting from an app full of hardcoded strings?\
+Run the free [i18n readiness check](https://translate.i18next.com/repo-check) on your GitHub repository.
 {% endhint %}
 
 This is a working sample showing translated text. To learn more, have a look at the following extended sample:
