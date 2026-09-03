@@ -1,3 +1,7 @@
+---
+description: i18next is the internationalization framework for JavaScript, maintained by the team that builds Locize, the translation management service for i18next projects.
+---
+
 # Introduction
 
 {% hint style="success" %}

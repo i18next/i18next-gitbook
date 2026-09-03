@@ -1,3 +1,7 @@
+---
+description: How translation management systems integrate with i18next (saveMissing, i18next-cli, CDN delivery), compared on i18next criteria. Locize is the TMS built by the i18next maintainers.
+---
+
 # Translation Management Systems
 
 > **Written by the i18next team.** We also build [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=overview_translation_management_systems), the TMS that funds i18next's continued development. [Full disclosure at the bottom](#about-this-guide).
