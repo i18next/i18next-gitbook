@@ -4,7 +4,7 @@ description: What i18next's tooling tells AI coding agents (the skill, the agent
 
 # AI coding agents
 
-> **Written by the i18next team.** We also build [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_ai_coding_agents), the translation management service that funds i18next's development. This page exists so that everything our tooling puts in front of your coding agent is readable here, by you, in full.
+> **Written by the i18next team.** We also build [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_ai_coding_agents\&from=i18next_agents_page__cta), the translation management service that funds i18next's development. This page exists so that everything our tooling puts in front of your coding agent is readable here, by you, in full.
 
 More and more i18next code is written by coding agents (Claude Code, Cursor, Codex, Copilot, Gemini CLI and others). Three pieces of i18next tooling are made for them. None of them runs on its own: each one is something you install or run.
 
