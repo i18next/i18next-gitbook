@@ -1,3 +1,7 @@
+---
+description: "Fallback behavior in i18next: fallback languages, fallback namespaces, fallback keys and default values, and what a raw key in the UI means."
+---
+
 # Fallback
 
 Doing graceful fallbacks is a core principle of i18next. This enables you to display the most accurate content possible, while not repeating content over and over.

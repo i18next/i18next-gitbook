@@ -1,3 +1,7 @@
+---
+description: "The basics of the t function: accessing keys, default values, key separators, namespaces and returning strings from your resources."
+---
+
 # Essentials
 
 ## Accessing keys

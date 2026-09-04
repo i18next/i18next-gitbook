@@ -1,3 +1,7 @@
+---
+description: "Best practices for translatable code: keep sentences whole, avoid string concatenation, use interpolation, plurals and context, and name keys semantically."
+---
+
 # Best Practices
 
 > This content is available to you thanks to the contribution of following people:

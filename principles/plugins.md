@@ -1,3 +1,7 @@
+---
+description: "How i18next plugins work: backends, language detectors, post processors, i18n formats and third-party modules, and how they are registered with use()."
+---
+
 # Plugins
 
 i18next [comes with a lot of modules](../overview/plugins-and-utils.md) to enhance the features available. There are modules to:

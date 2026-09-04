@@ -1,3 +1,7 @@
+---
+description: "Vary a translation by context, for example gender, with the context option and the _context key suffix."
+---
+
 # Context
 
 By providing a context you can differ translations. Eg. useful to provide gender specific translations.

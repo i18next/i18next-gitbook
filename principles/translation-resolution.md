@@ -1,3 +1,7 @@
+---
+description: "How i18next resolves a key: the order of languages, namespaces, context, plurals and fallbacks it tries before returning a value or the key itself."
+---
+
 # Translation Resolution
 
 The process of translating keys is the heart of i18next, and as such this document should serve as a guide to the overall process by which i18next attempts to translate your keys into the appropriate content for a given location, be it on a specific page and/or for a user in a particular region of the world.

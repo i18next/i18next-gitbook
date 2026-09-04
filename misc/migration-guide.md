@@ -1,3 +1,7 @@
+---
+description: "Breaking changes and migration steps for every major i18next release, from v19 to v26."
+---
+
 # Migration Guide
 
 ### v25.x.x to v26.0.0

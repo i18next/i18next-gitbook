@@ -1,3 +1,7 @@
+---
+description: "Framework bindings and integrations for i18next: React, Vue, Angular, Svelte, Solid, Next.js, Express, Deno, jQuery and more, maintained by their authors."
+---
+
 # Supported Frameworks
 
 > #### Official CLI

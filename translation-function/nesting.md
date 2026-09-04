@@ -1,3 +1,7 @@
+---
+description: "Reference other keys inside a translation with $t(key), pass options to nested keys, and reuse glossary terms."
+---
+
 # Nesting
 
 Nesting allows you to reference other keys in a translation. Could be useful to build glossary terms.

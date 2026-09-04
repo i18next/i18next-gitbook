@@ -1,3 +1,7 @@
+---
+description: "Plural forms in i18next: the _one, _other and other CLDR suffixes per language, ordinal plurals, interval plurals and the count option."
+---
+
 # Plurals
 
 Plural can be combined with interpolation, context, ...

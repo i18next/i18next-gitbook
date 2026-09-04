@@ -1,3 +1,7 @@
+---
+description: "Reference for the i18next API: init, use, t, exists, changeLanguage, loadNamespaces, addResourceBundle, events and the other instance methods."
+---
+
 # API
 
 ### init

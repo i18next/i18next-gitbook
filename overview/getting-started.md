@@ -1,3 +1,7 @@
+---
+description: "Install i18next with npm or a CDN script, initialize it with resources, and call t() in Node.js, the browser or any framework."
+---
+
 # Getting started
 
 ## Installation

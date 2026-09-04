@@ -1,3 +1,7 @@
+---
+description: "The i18next JSON formats v1 to v4: plural and context suffixes, nesting and arrays, and how to convert between versions."
+---
+
 # JSON Format
 
 {% hint style="info" %}

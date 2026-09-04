@@ -1,3 +1,7 @@
+---
+description: "How new keys get into your translation files: by hand, with the i18next-cli extractor, or at runtime with saveMissing to a backend or a translation management system."
+---
+
 # Extracting translations
 
 At some point you will come to the question how to get new translation key/values into your namespace (translation) file.

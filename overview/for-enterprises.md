@@ -1,3 +1,7 @@
+---
+description: "Why the library alone is not a localization process: what a product team needs for translation, review and continuous delivery, and how Locize, built by the i18next team, covers it."
+---
+
 # For Enterprises
 
 ## Is i18n enough?

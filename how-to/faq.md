@@ -1,3 +1,7 @@
+---
+description: "Frequently asked questions: how to support the project, why translations do not show up, how to translate resource files, find missing or broken translations, and hardcoded strings."
+---
+
 # FAQ
 
 ## Misc

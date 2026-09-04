@@ -1,3 +1,7 @@
+---
+description: "Type-safe keys with i18next: the declaration file and CustomTypeOptions, the selector API, per-package namespace types in monorepos, testing and troubleshooting."
+---
+
 # TypeScript
 
 {% hint style="info" %}

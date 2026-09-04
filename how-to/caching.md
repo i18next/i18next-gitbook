@@ -1,3 +1,7 @@
+---
+description: "Cache translations in the browser with i18next-localstorage-backend and i18next-chained-backend, with expiration and versioning."
+---
+
 # Caching
 
 ## Browser caching with local storage

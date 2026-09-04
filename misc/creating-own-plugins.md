@@ -1,3 +1,7 @@
+---
+description: "Write your own i18next plugin: backend, language detector, post processor, i18n format, formatter or third-party module, with the required interface for each."
+---
+
 # Creating own Plugins
 
 i18next comes with a lot of modules to enhance the features available. There are modules to:

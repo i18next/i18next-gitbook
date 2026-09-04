@@ -1,3 +1,7 @@
+---
+description: "Why i18next: sustainability, maturity, extensibility and richness, and answers to the claims that it is complicated, bloated or too big."
+---
+
 # Comparison to others
 
 You now might expect we compare eg. react-i18next to react-intl but that won't happen ;). But we will list why you should trust i18next to be the best choice for internationalization.

@@ -1,3 +1,7 @@
+---
+description: "The i18next plugin ecosystem: i18n formats, extraction tools, utilities, services, backends and backend extenders, language detectors and post processors."
+---
+
 # Plugins and Utils
 
 > #### Official CLI

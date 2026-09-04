@@ -1,3 +1,7 @@
+---
+description: "Every option of i18next.init: languages and fallbacks, namespaces, resources, saveMissing, interpolation, plurals, detection and backend settings."
+---
+
 # Configuration Options
 
 `i18next.init(options, callback)`

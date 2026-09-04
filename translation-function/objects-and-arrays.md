@@ -1,3 +1,7 @@
+---
+description: "Return whole objects or arrays from t with returnObjects, and join array values with joinArrays."
+---
+
 # Objects and Arrays
 
 ## Objects

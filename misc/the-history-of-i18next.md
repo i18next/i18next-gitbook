@@ -1,3 +1,7 @@
+---
+description: "How i18next started in 2011, why version 2 became framework-independent, and why the maintainers built Locize when i18n alone was not enough."
+---
+
 # The history of i18next
 
 ## How all began - back in 2011

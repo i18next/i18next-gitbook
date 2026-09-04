@@ -1,3 +1,7 @@
+---
+description: "Interpolate dynamic values into translations with {{value}}, escape or format them, and change the interpolation prefix and suffix."
+---
+
 # Interpolation
 
 Interpolation is one of the most used functionalities in I18N. It allows integrating dynamic values into your translations.

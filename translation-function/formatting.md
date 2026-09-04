@@ -1,3 +1,7 @@
+---
+description: "Format numbers, currencies, dates, relative times and lists inside translations with the built-in Intl-based formatters, or add your own."
+---
+
 # Formatting
 
 Starting with **i18next>=21.3.0** you can use the built-in formatting functions based on the [Intl API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl).

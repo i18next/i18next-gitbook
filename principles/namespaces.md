@@ -1,3 +1,7 @@
+---
+description: "Split translations into namespaces (multiple files), load them on demand, and set the default and fallback namespace."
+---
+
 # Namespaces
 
 Namespaces are a feature in i18next internationalization framework which allows you to separate translations that get loaded into multiple files.
