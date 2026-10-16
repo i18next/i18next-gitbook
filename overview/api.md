@@ -520,6 +520,8 @@ newInstance.init({
 
 Creates a clone of the current instance. Shares store, plugins and initial configuration. Can be used to create an instance sharing storage but being independent on set language or default namespaces.
 
+Since v26.4.7 the clone does not inherit `preload`: the parent already loaded those languages into the shared store, so the clone only loads its own language (and fallbacks). Pass `preload` in the options if the clone should load them too.
+
 ```javascript
 const newInstance = i18next.cloneInstance({
   fallbackLng: 'en',
