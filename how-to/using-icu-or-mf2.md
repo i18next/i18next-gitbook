@@ -148,13 +148,28 @@ Keys are still checked. The values you pass to `t` are not: missing, misspelled 
 
 ## i18next-cli
 
-[i18next-cli](https://github.com/i18next/i18next-cli) does not know ICU or MF2. With the default configuration:
+Since [i18next-cli](https://github.com/i18next/i18next-cli) 1.76.0, set `extract.messageFormat` to `'icu'` or `'mf2'` in your `i18next.config.ts`. The default, `'i18next'`, keeps the i18next JSON format.
 
-* `extract` writes the default value of `t('photos', '...', { count })` into `photos_one` and `photos_other` (plus `_few` and `_many` for languages like Polish), keys the plugins never read. Set `extract.disablePlurals: true` to get a single `photos` key.
-* `extract` writes the children of a `Trans` component with `{{name}}`, which ICU and MF2 render as text. `IcuTrans` and the components of `icu.macro` are not extracted.
-* `lint` only checks the values of strings that contain `{{...}}`. With `extract.interpolationPrefix: '{'` and `extract.interpolationSuffix: '}'` it checks simple ICU arguments like `{name}`.
-* `types` does not add `parseInterpolation: false` to the generated `i18next.d.ts`. The file is only written when it does not exist yet, so add it once by hand.
-* `status` reports missing plural suffix keys that ICU and MF2 do not need.
+```javascript
+import { defineConfig } from 'i18next-cli';
+
+export default defineConfig({
+  locales: ['en', 'de', 'ru'],
+  extract: {
+    input: ['src/**/*.{js,jsx,ts,tsx}'],
+    output: 'locales/{{language}}/{{namespace}}.json',
+    messageFormat: 'icu' // or 'mf2'
+  }
+});
+```
+
+With it:
+
+* `extract` writes one key per message: `t('photos', '{count, plural, one {# photo} other {# photos}}', { count })` gives `photos`, not `photos_one` and `photos_other`, and `context` adds no `_male` keys. The children of `Trans` are written with `{name}` (ICU) or `{$name}` (MF2), with apostrophes and braces escaped, and `IcuTrans`, `IcuTransWithoutContext` and the `icu.macro` components are extracted.
+* `lint` checks every value in all locales: syntax errors, argument names that differ from the primary language, and plural categories that do not fit the locale (for example `few` and `many` missing in Russian, or `zero` in English, which is never used). Exact selectors like `=1` count when they cover a category (`one` in English, but not in Russian, where `one` is also 21, 31, ...). The `t()` interpolation check reads ICU and MF2 arguments.
+* `status` counts a plural or select message as one key, so it no longer asks for `_few` and `_many` keys.
+* `types` sets `parseInterpolation: false` in a newly generated `i18next.d.ts`, and warns when an existing one lacks it.
+* `instrument` writes ICU or MF2 placeholders, turns a `count === 1 ? ... : ...` ternary into one plural message, and registers i18next-icu or i18next-mf2 in the init file it creates.
 
 ## React
 
