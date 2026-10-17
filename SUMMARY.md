@@ -37,6 +37,7 @@
 
 * [Add or Load Translations](how-to/add-or-load-translations.md)
 * [Extracting translations](how-to/extracting-translations.md)
+* [Using ICU or MF2](how-to/using-icu-or-mf2.md)
 * [AI coding agents](how-to/ai-coding-agents.md)
 * [Caching](how-to/caching.md)
 * [Backend Fallback](how-to/backend-fallback.md)

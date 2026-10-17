@@ -20,10 +20,13 @@ While the i18next format (JSON based) is the preferred solution and widely suppo
 | --------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [i18next-fluent](https://github.com/i18next/i18next-fluent)     | fluent              | i18nFormat plugin to use mozilla [fluent format](https://projectfluent.org/) with i18next                                                                                                                                                                                         |
 | [i18next-icu](https://github.com/i18next/i18next-icu)           | ICU                 | i18nFormat plugin to use ICU format with i18next based on [yahoo/intl-messageformat](https://github.com/formatjs/formatjs/tree/master/packages/intl-messageformat)                                                                                                                |
+| [i18next-mf2](https://github.com/i18next/i18next-mf2)           | MessageFormat 2     | i18nFormat plugin to use [Unicode MessageFormat 2](https://messageformat.unicode.org/) with i18next based on [messageformat](https://github.com/messageformat/messageformat)                                                                                                      |
 | [i18next-polyglot](https://github.com/i18next/i18next-polyglot) | polyglot            | i18nFormat plugin to use [airbnb/polyglot.js](https://github.com/airbnb/polyglot.js) format with i18next                                                                                                                                                                          |
 | [i18next-shopify](https://github.com/Shopify/i18next-shopify)   | Shopify json format | It allows developers to use the same format used by Shopify [apps](https://shopify.dev/docs/apps/checkout/best-practices/localizing-ui-extensions#how-it-works) and [themes](https://shopify.dev/docs/themes/architecture/locales/storefront-locale-files#usage) for localization |
 
 _In general, using an i18n format plugin, will remove the i18next specific format functionality, like plurals, interpolation, context, etc... you need to use the format requested in the used i18n format._
+
+For ICU and MF2, [Using ICU or MF2](../how-to/using-icu-or-mf2.md) lists what keeps working and what does not.
 
 ## extraction tools
 

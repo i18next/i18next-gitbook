@@ -269,6 +269,46 @@ The extended sample adds the language detector for our browser and the http-back
 
 [source code](https://jsfiddle.net/jamuhl/ferfywyf/525/)
 
+## Choose your message syntax
+
+The samples above use the i18next JSON format. Two plugins let you write your messages in another syntax instead. Pick one before your translation files grow: switching later means converting every message, and one i18next instance uses one syntax.
+
+**i18next JSON** (the default) uses `{{name}}` for values and key suffixes for plurals and context:
+
+```json
+{
+  "greeting": "Hello {{name}}!",
+  "photos_one": "You have one photo.",
+  "photos_other": "You have {{count}} photos."
+}
+```
+
+Pick it unless you have a reason not to. Every i18next feature, plugin and tool supports it, including [nesting](../translation-function/nesting.md), [formatting](../translation-function/formatting.md), [context](../translation-function/context.md) and [i18next-cli](https://github.com/i18next/i18next-cli).
+
+**ICU MessageFormat** via [i18next-icu](https://github.com/i18next/i18next-icu) puts plurals and selects into the message:
+
+```json
+{
+  "greeting": "Hello {name}!",
+  "photos": "You have {count, plural, one {one photo} other {# photos}}."
+}
+```
+
+Pick it if your translations are already in ICU, if your translators or translation management system expect ICU, or if you share messages with other ICU based libraries like FormatJS.
+
+**MessageFormat 2 (MF2)** via [i18next-mf2](https://github.com/i18next/i18next-mf2) is the Unicode successor of ICU MessageFormat:
+
+```json
+{
+  "greeting": "Hello {$name}!",
+  "photos": ".input {$count :number} .match $count one {{You have one photo.}} * {{You have {$count} photos.}}"
+}
+```
+
+Pick it if you start fresh and want the newer Unicode standard. Check first that your translation tools can handle MF2 messages.
+
+With all three, `i18next.t('photos', { count: 3 })` returns "You have 3 photos.". ICU and MF2 replace i18next's own message handling, so plural and context suffix keys, `$t()` nesting, i18next formatters and `returnObjects` stop working. Read [Using ICU or MF2](../how-to/using-icu-or-mf2.md) before you switch.
+
 You should now have an idea about how to achieve the basic setup. It's time to learn more about:
 
 * The translation functions like [interpolation](../translation-function/interpolation.md), [formatting](../translation-function/formatting.md) and [plurals](../translation-function/plurals.md).

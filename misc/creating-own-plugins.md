@@ -10,6 +10,7 @@ i18next comes with a lot of modules to enhance the features available. There are
 * cache resources on client, eg. localStorage
 * detect user language by querystring, navigator, cookie, ...
 * post processors to further manipulate values, eg. to add sprintf support
+* i18n formats to write translations in another syntax, eg. ICU
 
 The plugins need to support following APIs:
 
@@ -176,6 +177,42 @@ Override the built in [Formatter](../translation-function/formatting.md).
       return value.toUTCString()
     }
   }
+}
+```
+
+## i18n format
+
+i18n format plugins replace the i18next message format with another syntax, like [i18next-icu](https://github.com/i18next/i18next-icu) or [i18next-mf2](https://github.com/i18next/i18next-mf2). Only one i18nFormat plugin can be used per i18next instance.
+
+```javascript
+{
+  type: 'i18nFormat',
+
+  // called on i18next.init with the i18next instance;
+  // by convention the plugin reads its options from i18next.options.i18nFormat
+  init: function(i18next) {},
+
+  // called instead of i18next's interpolation and nesting (also when skipInterpolation is set);
+  // the return value goes through post processing and is returned by t
+  parse: function(res, options, lng, ns, key, info) {
+    // res: the found value, or the defaultValue or key if nothing was found
+    // options: the t options, merged over interpolation.defaultVariables
+    // info.resolved: { res, usedKey, exactUsedKey, usedLng, usedNS }
+    return res;
+  },
+
+  // called instead of i18next's plural and context suffix lookup, for each language code and namespace;
+  // finalKeys starts as [key], push more keys to it (the last one is looked up first)
+  addLookupKeys: function(finalKeys, key, code, ns, options) {
+    return finalKeys;
+  },
+
+  // optional: if true, i18next handles objects and arrays as usual (returnObjects, joinArrays);
+  // if not set, they are passed to parse
+  handleAsObject: false,
+
+  // optional: replaces the lookup in the resource store
+  // getResource: function(code, ns, key, options) {}
 }
 ```
 
