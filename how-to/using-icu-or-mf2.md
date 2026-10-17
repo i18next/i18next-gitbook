@@ -177,7 +177,7 @@ react-i18next works with both plugins. For rich text use the `Trans` component w
 
 ## next-i18next (App Router)
 
-With [next-i18next](https://github.com/i18next/next-i18next) and the App Router, register the plugin on the server and on the client. A Server Component can not pass a plugin class to a Client Component as a prop, so `use={[ICU]}` goes into a small `'use client'` wrapper around `I18nProvider`:
+With [next-i18next](https://github.com/i18next/next-i18next) 16.4.0 or later and the App Router, register the plugin in the server config and import `I18nProvider` from `next-i18next/icu` (or `next-i18next/mf2`) instead of `next-i18next/client`. It takes the same props and registers the plugin on the client instance. A Server Component can not pass a plugin class to a Client Component as a prop, so this import replaces the `'use client'` wrapper you would otherwise write.
 
 ```typescript
 // i18n.config.ts
@@ -195,30 +195,10 @@ export default i18nConfig;
 ```
 
 ```tsx
-// app/[lng]/providers.tsx
-'use client';
-import ICU from 'i18next-icu';
-import { I18nProvider } from 'next-i18next/client';
-import type { Resource } from 'i18next';
-
-export function Providers({ children, language, resources }: {
-  children: React.ReactNode;
-  language: string;
-  resources: Resource;
-}) {
-  return (
-    <I18nProvider language={language} resources={resources} use={[ICU]}>
-      {children}
-    </I18nProvider>
-  );
-}
-```
-
-```tsx
 // app/[lng]/layout.tsx
 import { initServerI18next, getT, getResources } from 'next-i18next/server';
+import { I18nProvider } from 'next-i18next/icu'; // or 'next-i18next/mf2'
 import i18nConfig from '../../i18n.config';
-import { Providers } from './providers';
 
 initServerI18next(i18nConfig);
 
@@ -231,13 +211,37 @@ export default async function RootLayout({ children, params }: {
   return (
     <html lang={lng}>
       <body>
-        <Providers language={lng} resources={getResources(i18n)}>
+        <I18nProvider language={lng} resources={getResources(i18n)}>
           {children}
-        </Providers>
+        </I18nProvider>
       </body>
     </html>
   );
 }
 ```
 
-`getT` in Server Components and `useT` in Client Components then format the ICU messages. For rich text in a Server Component use `Trans` from `react-i18next/TransWithoutContext` with the `values` and `components` props. i18next-mf2 is wired the same way.
+`getT` in Server Components and `useT` in Client Components then format the ICU messages. For rich text in a Server Component, use `IcuTransWithoutContext` from `react-i18next/IcuTransWithoutContext` (react-i18next 17.0.21 or later) and pass `t` and `i18n` from `getT()`, so it renders in the request's language:
+
+```tsx
+// app/[lng]/page.tsx
+import { getT } from 'next-i18next/server';
+import { IcuTransWithoutContext } from 'react-i18next/IcuTransWithoutContext';
+
+export default async function Page() {
+  const { t, i18n } = await getT();
+  return (
+    <IcuTransWithoutContext
+      i18nKey="welcome"
+      defaultTranslation="Welcome back, <0>{name}</0>!"
+      content={[{ type: 'strong' }]}
+      values={{ name: 'Ada' }}
+      t={t}
+      i18n={i18n}
+    />
+  );
+}
+```
+
+`Trans` from `react-i18next/TransWithoutContext` with the `values` and `components` props works too. The client instance does not read the server config: plugin options in `i18nextOptions.i18nFormat` (for example `bidiIsolation: 'none'` for MF2) go to `I18nProvider` as well, through its `i18nextOptions` prop. For MF2, put `MF2` from `i18next-mf2` into `use` and import `I18nProvider` from `next-i18next/mf2`.
+
+See [ICU and MF2 with the App Router](https://github.com/i18next/next-i18next#icu-and-mf2-with-the-app-router) in the next-i18next README and the [app-router-icu example](https://github.com/i18next/next-i18next/tree/master/examples/app-router-icu).
