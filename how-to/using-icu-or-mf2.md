@@ -123,7 +123,7 @@ Without `debug` the checks do not run.
 
 ## Other differences
 
-* **Cache after resource changes.** Both plugins cache the parsed message per language, namespace and key (`memoize: true`). After `addResource`, `addResourceBundle`, `reloadResources` or a hot reload, the old message is still used. Set `bindI18nStore: 'added'` and `bindI18n: 'loaded'` in the `i18nFormat` options to clear the cache on these events.
+* **Cache after resource changes.** Both plugins cache the parsed message per language, namespace and key (`memoize: true`). Since i18next-icu 2.6.1 and i18next-mf2 2.1.1 the cache compares the message, so a message changed by `addResource`, `addResourceBundle`, `reloadResources` or a hot reload is parsed again. With older versions the old message is still used unless you set `bindI18nStore: 'added'` and `bindI18n: 'loaded'` in the `i18nFormat` options.
 * **Apostrophes (ICU).** An apostrophe in front of `{` starts quoted text: `l'{place}, {name}` renders as `l{place}, {name}`. Write `l''{place}` or use the typographic apostrophe `’`.
 * **Bidi isolation marks (MF2).** Placeholders whose direction can differ from the message, for example strings, are wrapped in the invisible characters U+2068 and U+2069. They end up in `<title>`, attributes and string comparisons in tests. Set `bidiIsolation: 'none'` in the `i18nFormat` options to turn them off.
 * **Markup (MF2).** MF2 markup like `{#b}text{/b}` is dropped when a message is formatted to a string. With react-i18next use numbered tags like `<0>text</0>`, which MF2 treats as text.
