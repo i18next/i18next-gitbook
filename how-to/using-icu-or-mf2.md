@@ -188,10 +188,14 @@ export default defineConfig({
 With it:
 
 * `extract` writes one key per message: `t('photos', '{count, plural, one {# photo} other {# photos}}', { count })` gives `photos`, not `photos_one` and `photos_other`, and `context` adds no `_male` keys. The children of `Trans` are written with `{name}` (ICU) or `{$name}` (MF2), with apostrophes and braces escaped, and `IcuTrans`, `IcuTransWithoutContext` and the `icu.macro` components are extracted.
-* `lint` checks every value in all locales: syntax errors, argument names that differ from the primary language, and plural categories that do not fit the locale (for example `few` and `many` missing in Russian, or `zero` in English, which is never used). Exact selectors like `=1` count when they cover a category (`one` in English, but not in Russian, where `one` is also 21, 31, ...). The `t()` interpolation check reads ICU and MF2 arguments.
+* `lint` checks every value in all locales: syntax errors, argument names that differ from the primary language, and plural categories that do not fit the locale (for example `few` and `many` missing in Russian, or `zero` in English, which is never used). Exact selectors like `=1` count when they cover a category (`one` in English, but not in Russian, where `one` is also 21, 31, ...). For MF2 it also warns when whitespace at the start or end of a pattern differs from the primary language, since MF2 shows a space inside `{{ }}` as text (i18next-cli 1.78.0). The `t()` interpolation check reads ICU and MF2 arguments.
 * `status` counts a plural or select message as one key, so it no longer asks for `_few` and `_many` keys.
 * `types` sets `parseInterpolation: 'icu'` or `'mf2'` in a newly generated `i18next.d.ts` when the project's i18next is v26.5.0 or later (i18next-cli 1.77.0; before, and with older i18next versions, `parseInterpolation: false`), and warns when an existing one lacks it.
 * `instrument` writes ICU or MF2 placeholders, turns a `count === 1 ? ... : ...` ternary into one plural message, and registers i18next-icu or i18next-mf2 in the init file it creates.
+
+## Translation management
+
+[Locize](https://www.locize.com/docs/integration/i18n-formats) supports both as project formats, ICU as "MessageFormat v1" and MF2 as "MessageFormat v2": the editor highlights the syntax and shows parse errors, checks argument names and the plural forms each language needs, and checks every AI and machine translation for both before it is stored. The details are in the post [AI translations that respect your i18n format](https://www.locize.com/blog/ai-translations-i18n-format).
 
 ## React
 
