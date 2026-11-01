@@ -4,6 +4,30 @@ description: "Breaking changes and migration steps for every major i18next relea
 
 # Migration Guide
 
+### Preparing for v27 (v26.7.0)
+
+v26.7.0 is the last 26.x minor. With `debug: true` it logs a warning wherever a setup relies on something v27 changes, and most v27 defaults can be tried now with existing options:
+
+```javascript
+i18next.init({
+  debug: true, // prints the warnings
+  fallbackLng: 'en', // v27: fallbackLng defaults to false, set your source language (no implicit 'dev')
+  returnEmptyString: false, // v27 default: an empty string falls back like a missing key
+  cleanCode: true, // close to v27, which canonicalizes codes without a region ('EN' becomes 'en')
+});
+```
+
+```typescript
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    strictInterpolationChecks: true; // v27 default
+    returnEmptyString: false; // v27 default
+  }
+}
+```
+
+With `strictInterpolationChecks`, type the key of a wrapper around `t()` with `ParseKeysWithoutVariables` and declare variables from `interpolation.defaultVariables` with the `defaultVariables` type option (see [TypeScript](../overview/typescript.md#custom-type-options)). Plugin authors: declare `callbackApi` on backends and async detectors (see [Creating own Plugins](creating-own-plugins.md#backend)).
+
 ### v25.x.x to v26.0.0
 
 **This is a major breaking release:**

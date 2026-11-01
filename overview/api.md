@@ -399,6 +399,16 @@ i18next
   .then(() => {});
 ```
 
+### hydrate
+
+`i18next.hydrate(resources, lng) // -> returns the instance`
+
+Puts resources rendered on the server into the store and changes to the server's language, each only the first time (since v26.7.0). For SSR integrations like react-i18next's `useSSR`; call it after `init()`. On a clone it does nothing, as a clone shares its parent's store. It sets `initializedStoreOnce` and `initializedLanguageOnce`, which such integrations used to set themselves.
+
+```javascript
+i18next.hydrate(window.__I18N_STORE__, window.__I18N_LANGUAGE__);
+```
+
 ### setDefaultNamespace
 
 `i18next.setDefaultNamespace(ns)`
@@ -409,7 +419,7 @@ Changes the default namespace.
 
 `i18next.dir(lng)`
 
-Returns `rtl` or `ltr` depending on languages read direction.
+Returns `rtl` or `ltr` depending on languages read direction. Without a language (before `init()`, or none resolved) it returns `ltr` (since v26.7.0; `rtl` before).
 
 ```javascript
 // for current language

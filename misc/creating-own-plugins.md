@@ -23,6 +23,7 @@ Backend plugins are used to load data for i18next.
 ```javascript
 {
   type: 'backend',
+  callbackApi: true, // since v26.7.0, see below
   init: function(services, backendOptions, i18nextOptions) {
     /* use services and options */
   },
@@ -86,11 +87,20 @@ Backend plugins are used to load data for i18next.
     // store the translations
   },
 
-  create: function(languages, namespace, key, fallbackValue) { 
-    /* save the missing translation */
+  create: function(languages, namespace, key, fallbackValue, callback, options) {
+    /* save the missing translation, options.isUpdate tells an update from a new key */
   }
 }
 ```
+
+`callbackApi` (since v26.7.0, as an instance or static property) declares how i18next calls `read` and `create`:
+
+* `true`: `read(language, namespace, callback)` and `create(languages, namespace, key, fallbackValue, callback, options)`
+* `false`: `read(language, namespace)` and `create(languages, namespace, key, fallbackValue, options)` return a promise or a value
+
+Without it, i18next guesses from the number of parameters (`Function.length`), which default and rest parameters change; guessing is deprecated and logs a warning in debug mode.
+
+To reload resources, for example on an interval, call `services.utils.reloadResources(languages, namespaces)` (since v26.7.0) instead of the `backendConnector`: it reads through your backend with retries and emits `loaded`, as `i18next.reloadResources()` does. Without languages it reloads the current language and its fallbacks; pass the `preload` languages too if they should be refreshed.
 
 {% hint style="info" %}
 Using `readMulti` is only supported when using the [https://github.com/i18next/i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter)
@@ -104,6 +114,7 @@ Language Detector plugins are used to detect language in user land.
 {
   type: 'languageDetector',
   async: true, // If this is set to true, your detect function receives a callback function that you should call with your language, useful to retrieve your language stored in AsyncStorage for example
+  callbackApi: true, // since v26.7.0, for async detectors: true for detect(callback), false for a detect() that returns a promise (without it, i18next guesses from the number of parameters, which is deprecated)
   init: function(services, detectorOptions, i18nextOptions) { // optional since v22.3.0
     /* use services and options */
   },
@@ -128,6 +139,8 @@ Language Detector plugins are used to detect language in user land.
   // }
 }
 ```
+
+A detector that takes the language from a request, a URL or storage can check it with `isSafeLanguageCode(code)`, exported by i18next since v26.7.0: letters, digits, `-`, `_`, `@` and `.` (no `..`), at most 128 characters. It is not a BCP 47 check, so codes like `en_US` pass; markup, slashes and spaces do not.
 
 ## post processor
 
