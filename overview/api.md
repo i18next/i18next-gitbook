@@ -374,6 +374,8 @@ i18next
 
 Reloads resources on given state. Optionally you can pass an array of languages and namespaces as params if you don't want to reload all.
 
+Without languages it reloads the current languages and every language the backend loaded or tried to load, also for clones of the instance (since v26.7.1; before, only the current languages), and it retries the bundles that failed to load.
+
 ```javascript
 // reload all
 i18next.reloadResources();

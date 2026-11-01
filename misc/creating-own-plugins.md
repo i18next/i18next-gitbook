@@ -100,7 +100,7 @@ Backend plugins are used to load data for i18next.
 
 Without it, i18next guesses from the number of parameters (`Function.length`), which default and rest parameters change; guessing is deprecated and logs a warning in debug mode.
 
-To reload resources, for example on an interval, call `services.utils.reloadResources(languages, namespaces)` (since v26.7.0) instead of the `backendConnector`: it reads through your backend with retries and emits `loaded`, as `i18next.reloadResources()` does. Without languages it reloads the current language and its fallbacks; pass the `preload` languages too if they should be refreshed.
+To reload resources, for example on an interval, call `services.utils.reloadResources()` (since v26.7.0) instead of the `backendConnector`: it reads through your backend with retries and emits `loaded`, as `i18next.reloadResources()` does. Without arguments it reloads everything i18next loaded or tried to load through your backend, also for clones, and retries the bundles that failed (since v26.7.1).
 
 {% hint style="info" %}
 Using `readMulti` is only supported when using the [https://github.com/i18next/i18next-multiload-backend-adapter](https://github.com/i18next/i18next-multiload-backend-adapter)
