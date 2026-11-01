@@ -5,9 +5,9 @@ description: "Type-safe keys with i18next: the declaration file and CustomTypeOp
 # TypeScript
 
 {% hint style="info" %}
-Note: TypeScript support has improved significantly in v25.4 with the `enableSelector` option.
+Note: since v25.4 you can pass a selector function to `t` with the [`enableSelector`](typescript.md#custom-type-options) option. Both APIs are supported, in the types too: string keys stay first-class and the selector API stays opt-in.
 
-As of v25.4, this option is off by default, but will be set to `true` by default in v26, with tentative plans to deprecate type-level support for the "string-based" (non-selector) API in v27.
+Selectors help most with very large namespaces and give you go-to-definition; for the largest resource sets use `enableSelector: "optimize"`. An earlier version of this note announced `true` as the default for v26 and a deprecation of the string-key types for v27. Both plans are dropped.
 {% endhint %}
 
 i18next has embedded type definitions. If you want to enhance IDE Experience and prevent errors (such as type coercion), you should follow the instructions below in order to get the t function fully-type safe (keys and return type).
