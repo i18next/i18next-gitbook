@@ -1,8 +1,170 @@
 ---
-description: "Breaking changes and migration steps for every major i18next release, from v19 to v26."
+description: "Breaking changes and migration steps for every major i18next release, from v19 to v27."
 ---
 
 # Migration Guide
+
+### v26.x.x to v27.0.0
+
+**This is a major breaking release.** It changes defaults that most setups had to override, gives every instance its own logger and post-processors, refuses language codes that look like markup or paths, and removes options that were broken or had no effect. For most of the runtime changes, i18next 26.7 logs a warning in debug mode (`debug: true`), so running your app once on 26.7 with debug logging finds most of what concerns you. It does not warn for `returnEmptyString`, `addResources()`, `createInstance()`, `keySeparator: false` or the TypeScript changes; read those sections below.
+
+#### Keep the v26 behavior
+
+Where an option exists, one line brings the v26 behavior back:
+
+```javascript
+// the default escape of v26, '/' included
+const entities = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '/': '&#x2F;' };
+
+i18next.init({
+  fallbackLng: 'dev', // better: your main language, e.g. 'en'
+  returnEmptyString: true, // an empty translation is a translation again
+  cleanCode: false, // keep codes without a region as they are ('EN' stays 'EN')
+  interpolation: { escape: (str) => str.replace(/[&<>"'/]/g, (c) => entities[c]) }, // escape '/' again
+  returnedObjectHandler: (key) => `key '${key}' returned an object instead of string.`, // a sentence for object hits
+});
+```
+
+```typescript
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    strictInterpolationChecks: false;
+    returnEmptyString: true;
+  }
+}
+```
+
+The other changes have no switch; they are described below.
+
+#### Changed defaults
+
+* **`fallbackLng` defaults to `false`** instead of `['dev']`. `dev` was meant for the `saveMissing` workflow: missing keys went to a "developer language". Every app without a `fallbackLng` therefore requested `dev` from its backend (with i18next-http-backend `/locales/dev/translation.json`, which almost no project has). Now i18next loads only the requested language (and its language part, `de` for `de-CH`), and `saveMissing` sends missing keys for the current language. With `supportedLngs` and no `fallbackLng`, an unsupported language leaves `language` and `languages` unset, as an explicit `fallbackLng: false` already did in v26. Set `fallbackLng` to your main language; `fallbackLng: 'dev'` restores v26 exactly.
+* **`returnEmptyString` defaults to `false`**: an empty translation falls back like a missing value (to the fallback language, the `defaultValue` or the key), as `null` already did. This makes the default fit i18next-cli, whose extractor writes `''` for keys that are not translated yet in the other languages: those keys now fall back instead of rendering blank. An explicit `''` default from code still counts: `t('key', '')` and `t('key', { defaultValue: '' })` return `''`. If an empty translation is meant to render nothing in a language (an empty particle or suffix), set `returnEmptyString: true`, in `init()` and in `CustomTypeOptions`. With Locize, this applies to projects that have "preserve empty strings" turned on in the CDN settings: their published files contain `""` on purpose, so set `returnEmptyString: true`.
+* **Language codes without a region get their canonical casing**, as codes with a region already did (`'en-us'` became `'en-US'`): `'EN'` becomes `'en'`. Only the casing changes: aliases like `tl`, `iw` or `eng` stay as they are (`'TL'` becomes `'tl'`), and so do codes that are not BCP 47, like `en_US` or `my_custom`. i18next 26.7.0 and 26.7.1 warned that v27 turns `iw` into `he` or `tl` into `fil`; that was wrong and 26.7.2 corrects it. `iw`, `tl` and the like stay as they are. If your resources or translation files use upper case (`EN`), rename them to lower case, or set `cleanCode: false` to keep codes without a region exactly as they are. `cleanCode` is deprecated.
+
+#### TypeScript
+
+* **`strictInterpolationChecks` is `true` by default.** `t()` needs the options for a string with `{{variables}}`, so a variable cannot be left out of a call by accident (at runtime the raw `{{name}}` reaches the UI). It only concerns projects with typed resources. The three patterns that need a change:
+
+```typescript
+// 'greeting': 'Hello {{name}}'
+t('greeting'); // error since v27
+t('greeting', { name: user.name }); // ok
+
+// a wrapper that passes a key on to t() without options
+const label = (key: ParseKeys<'common'>) => t(key); // error once a string has variables
+// type its key with ParseKeysWithoutVariables instead: only keys without variables
+const plainLabel = (key: ParseKeysWithoutVariables<'common'>) => t(key); // ok
+
+// variables filled in by interpolation.defaultVariables
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    defaultVariables: { appName: string }; // appName becomes optional in t()
+  }
+}
+```
+
+A plural key needs `count` when its forms use it, also inside a union (`(key: 'plain' | 'item') => t(key)`), with `getFixedT` and when other options are passed (`t('item', { defaultValue })`). To keep the v26 types, set `strictInterpolationChecks: false`; with `parseInterpolation: 'icu'` or `'mf2'` that also gives back the v26 types (their messages require their arguments either way).
+
+* **`returnEmptyString` is `false` in the types too**, so a key whose value is `''` is typed as the key.
+* **`compatibilityJSON` is removed** from the options and `CustomTypeOptions`. It had no effect since v24; remove it.
+* **`keySeparator: false`** in `CustomTypeOptions` offers only the flat keys (it produced `nestedfalsec`-style keys and split keys at the text `false`), and `keyPrefix` takes the parts of the flat keys before a `.` (`'nested'` for `'nested.c'`), since `getFixedT()` joins a key prefix with `.`. A key prefix combined with selectors is not typed for flat keys.
+* **The internal helpers are no longer importable.** Every declaration in `typescript/t.d.ts` and `typescript/options.d.ts` counted as exported, internal helpers included. The 86 helpers whose name starts with `_` or `$` are hidden now; every other type of those files (for example `TOptionsBase`, `TFunctionSignature`, `ParseTReturn`, `DefaultTReturn`, `KeysBuilder`, `AppendKeyPrefix`) is exported on purpose. If you imported one of the hidden helpers, please [open an issue](https://github.com/i18next/i18next/issues): exporting it again breaks nothing. The hidden names: `$FirstNamespace`, `$IsResourcesDefined`, `$PluralBrand`, `$SelectorKeyBrand`, `$ValueIfResourcesDefined`, `_AllContextPrefixes`, `_ArgsFromEntries`, `_BuiltInFormatTypeMap`, `_ContextBases`, `_ContextPrefixes`, `_ContextPrefixesOf`, `_ContextSeparator`, `_CountIfPlural`, `_DefaultVariables`, `_DefinedContextKeys`, `_DefinedKeys`, `_DropConflictKeys`, `_EnableSelector`, `_FallbackNamespace`, `_FallbackParse`, `_HasContextVariant`, `_HasDefinedKey`, `_HasPlural`, `_IcuArg`, `_IcuArgsMap`, `_IcuBlock`, `_IcuCases`, `_IcuEntries`, `_IcuFormatType`, `_IcuSkipQuoted`, `_IcuStripQuotes`, `_IcuTrim`, `_IcuWhitespace`, `_IfOptionalDefaultOptions`, `_IfOptionalOptions`, `_InterpolationFormatSeparator`, `_InterpolationFormatTypeMap`, `_InterpolationMapFromEntries`, `_InterpolationPrefix`, `_InterpolationSuffix`, `_IsContextualKey`, `_IsLiteral`, `_KeyAndOptions`, `_KeySeparator`, `_KeysOf`, `_KeysWithoutVariables`, `_LegacyResources`, `_MergeNamespaces`, `_MergedResources`, `_Mf2ArgsMap`, `_Mf2Entries`, `_Mf2ExprEntries`, `_Mf2Expression`, `_Mf2FunctionType`, `_Mf2Locals`, `_Mf2Name`, `_Mf2Selectors`, `_Mf2Space`, `_Mf2Spaces`, `_Mf2StripEscapes`, `_Mf2Vars`, `_NonNeverKeys`, `_NsResourceStrict`, `_NsSeparator`, `_ParseInterpolation`, `_ParsesMessageFormat`, `_PerPropMerge`, `_PluralSeparator`, `_PrimaryParse`, `_RequiresMessageOptions`, `_ResolveEntryType`, `_Resources`, `_ReturnEmptyString`, `_ReturnNull`, `_ReturnObjects`, `_SelectorArrayOptionsArg`, `_SelectorOptionsArg`, `_SelectorsReturn`, `_StrictInterpolationChecks`, `_StrictKeyChecks`, `_StripFormatOptions`, `_UnescapePrefix`, `_UnescapeSuffix`, `_UnionToIntersection`, `_ValueOf`, `_WithDefaultVariables`. `_CompatibilityJSON` was removed together with `compatibilityJSON`.
+* **Plugin option types belong to the plugins.** `locizeLastUsed` is declared by locize-lastused 5.1.0 and later. `ReactOptions` stays importable from `'i18next'`, but react-i18next fills it in (17.1.13 and later, and 18): the `react` options are checked when react-i18next is part of the program.
+
+#### Logger and post-processors per instance
+
+In v26 the logger and the post-processors were shared by all instances: the `init()` of one instance rewired the logging of all others, and a post-processor `use()`d on one instance worked in every instance. Now they belong to the instance:
+
+* An instance from `createInstance()` does not see what the default `i18next` instance, or any other instance, registered. Call `use()` on each instance.
+
+Before (v26), this worked because the default instance registered sprintf for everybody:
+
+```javascript
+import i18next from 'i18next';
+import sprintf from 'i18next-sprintf-postprocessor';
+
+i18next.use(sprintf);
+const instance = i18next.createInstance();
+await instance.init({ postProcess: 'sprintf' /* ... */ });
+```
+
+After (v27):
+
+```javascript
+import i18next from 'i18next';
+import sprintf from 'i18next-sprintf-postprocessor';
+
+const instance = i18next.createInstance();
+await instance.use(sprintf).init({ postProcess: 'sprintf' /* ... */ });
+```
+
+* A clone (`cloneInstance()`, one per request with i18next-http-middleware) keeps the logger and the post-processors of its parent, also those its parent registers later. What a clone registers itself stays its own.
+* A plugin that calls `use()` from its own `init()` (like the Locize InContext editor) registers right away, as before.
+* `i18next.services.logger` is the instance's logger, with `forward()` as before.
+* In debug mode, a `postProcess` name that is not registered on the instance logs a warning.
+
+#### Language codes from outside
+
+A language code from `lng`, `changeLanguage()`, a language detector or `loadLanguages()` that does not have the shape of `isSafeLanguageCode()` is refused, unless it is configured. The shape: letters, digits, `-`, `_`, `@` and `.` (no `..`), at most 128 characters, not a prototype key. Configured means listed in `supportedLngs`, in a `fallbackLng` that is not a function or in `preload`, or a language in `resources`, as given to `init()`; a `fallbackLng` function and languages added later (`loadLanguages()`, `addResourceBundle()`) do not count. Without `supportedLngs`, a detector that returned `"><img src=x onerror=alert(1)>` made that string `i18next.language`, which apps put into `<html lang>`, and backends were asked to load it.
+
+`changeLanguage()` continues as with an unsupported code: with the detector's next code, else the fallback language, else none (with `fallbackLng: false`, a code refused at `init()` leaves `language` unset). `loadLanguages()` skips the code. BCP 47 (`en-US`, `zh-Hant-TW`, `en-x-pirate`), POSIX (`en_US.UTF-8@euro`, `sr@latin`) and other codes with `_` pass. To use a code with other characters, for example `b+sr+Latn`, list it in `supportedLngs`. In debug mode a refused code logs a warning. With `supportedLngs` nothing changes for you: the input is matched as before (`'de-DE;q=0.9'` still gives `'de'`), and only an unsafe match is refused, which only `nonExplicitSupportedLngs` can return (`'de-<x>'` for a supported `'de'`).
+
+#### Output changes
+
+* **`/` is no longer escaped.** The default escape turned `$10/month` into `$10&#x2F;month` and dates in react-i18next's `Trans` into `17&#x2F;12&#x2F;2025`. `&`, `<`, `>`, `"` and `'` are still escaped, which covers HTML text and quoted attributes; a `/` cannot end either. Update snapshot tests that contain `&#x2F;`. A custom `interpolation.escape` is not affected; one that escapes `/` too keeps the v26 output (see "Keep the v26 behavior" above).
+* **An object or array without `returnObjects` is handled like a missing key**: `t()` returns the default value if one is passed, else the key, with `appendNamespaceToMissingKey`, `parseMissingKeyHandler` and the post-processors applied as for a missing key. It used to return the sentence `key 'obj (en)' returned an object instead of string.`, which ended up in the UI. The key is not saved as missing, since it exists. The debug warning stays; `returnedObjectHandler` still decides what is returned when it is set, so it can bring a sentence back.
+* **`addResources()` keeps every value.** It added only strings and arrays and silently dropped numbers, booleans and nested objects.
+* `dir()` without a language returns `'ltr'` (since 26.7.0).
+
+#### `createInstance(options)`
+
+`createInstance(options)` merges the defaults right away, without initializing the instance. Before `init()`, `instance.options` has the defaults (`options.interpolation`, `overloadTranslationOptionHandler`, ...), `getFixedT()` no longer throws, and with `debug: true` the warnings before `init()` are shown; `t()` returns `''` until `init()`. A `keySeparator` or `nsSeparator` passed to `createInstance()` now counts as set by you, as if passed to `init()`. `loadNamespaces()` before `init()` does nothing and calls back. You still call `init()` as before; with a callback, `createInstance(options, callback)` initializes right away, as in v26.
+
+#### `keySeparator: false`
+
+With `keySeparator: false` keys are flat: a lookup no longer splits a key at the text `false` (`t('nestedfalsec')` returned the value of `nested.c`), and a selector path is joined with `.` like a key prefix. Selectors work on the flat keys: `$ => $['a.b']` and `$ => $.a.b` look up the flat key `'a.b'`, and `$ => $.nested.c` no longer resolves `nested`, then `c`.
+
+#### Removed
+
+| Removed | Use instead |
+| --- | --- |
+| `getResource('en.translation.key')`, `addResource('en.translation.key', value)`, `addResourceBundle('en.translation', resources)` | `getResource('en', 'translation', 'key')`, `addResource('en', 'translation', 'key', value)`, `addResourceBundle('en', 'translation', resources)`. The dotted form throws a `TypeError` in `addResource()`, `addResources()` and `addResourceBundle()`. A language code with a `.` (`de_DE.UTF-8`) is now a language like any other. |
+| `interpolation.prefixEscaped`, `suffixEscaped`, `nestingPrefixEscaped`, `nestingSuffixEscaped` (inserted into the RegExp unescaped) | the literal delimiters as `prefix`, `suffix`, `nestingPrefix`, `nestingSuffix` |
+| `compatibilityJSON` (types) | nothing, remove it |
+| `locizeLastUsed` and the body of `ReactOptions` (types) | locize-lastused 5.1.0, react-i18next 17.1.13 or 18 |
+| the root `index.js` (a CommonJS shim the `exports` map made unreachable) | `require('i18next')` |
+
+#### For plugin authors
+
+* Declare the calling convention of a backend or an async language detector with `callbackApi` (since 26.7.0, see [Creating own Plugins](creating-own-plugins.md#backend)). Plugins without it still work in v27: i18next guesses from the number of parameters, which default and rest parameters change, and logs a deprecation warning in debug mode. The guessing is planned to go in a later major.
+* Reload through `services.utils.reloadResources()` instead of calling `backendConnector.read()` and `loaded()` yourself (since 26.7.0).
+* SSR integrations put server-rendered resources into the store with [`hydrate()`](../overview/api.md#hydrate) (since 26.7.0). Writing `isInitialized`, `initializedStoreOnce` and `initializedLanguageOnce` from outside still works in v27, so react-i18next 17's `useSSR` keeps working, but it is deprecated.
+* Use `isSafeLanguageCode()` to check a language code from a request, a URL or storage with the same rule as core.
+* `services.backendConnector.backend`, `services.languageUtils`, `services.resourceStore`, `services.interpolator` and the `cloneInstance()` semantics are unchanged.
+
+#### Support
+
+* Node.js 22 or later (`engines`).
+* The build targets ES2020 (Chrome and Edge 80, Firefox 80, Safari 14, Opera 67, Samsung Internet 13). It used browserslist `defaults`, which changed with every update of the browser data; the output is the same as 26.7's.
+* TypeScript `^5 || ^6 || ^7`, unchanged.
+
+#### Changes from 26.x patches, in one place
+
+* 26.4.7: a clone no longer inherits `preload`.
+* 26.5.5: with `skipOnVariables` (the default), a `{{placeholder}}` inside a value inserted with `{{- var}}` stays literal.
+* 26.5.10: the best match no longer picks a supported code that only starts with the same letters.
+* 26.5.11 and 26.5.12: a nested `0`, `false` or `''` wins over a flat dotted key; a nested `null` falls back to it.
+
+#### Selector API
+
+Both APIs are supported, in the types too: string keys stay first-class, and the selector API (`enableSelector`) stays opt-in. The old note that v26 would turn on selectors by default and v27 would deprecate string-key types is withdrawn. Selectors help with very large namespaces and go-to-definition; see [TypeScript](../overview/typescript.md).
+
+#### Companion releases
+
+* [react-i18next](https://react.i18next.com/latest/migrating-v17-to-v18): on i18next 27, use react-i18next 17.1.13 or later, or 18; 17.x keeps working.
+* [i18next-cli](https://github.com/i18next/i18next-cli): update to the release published with i18next 27.
+* [next-i18next](https://github.com/i18next/next-i18next): its peers already allow both majors.
 
 ### Preparing for v27 (v26.7.0)
 

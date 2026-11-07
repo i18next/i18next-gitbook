@@ -469,6 +469,7 @@ Will return a new i18next instance.
 Please read the [options page](configuration-options.md) for details on configuration options.
 
 Providing a callback will automatically call init.
+Without a callback, call `init()` yourself; since v27 the options passed here are merged with the defaults right away, so `instance.options` and `getFixedT()` work before `init()` (`t()` returns `''` until then). The new instance has its own logger and post-processors: it does not see what the default `i18next` instance registered with `use()`.
 
 The callback will be called after all translations were loaded or with an error when failed (in case of using a backend).
 
@@ -531,6 +532,8 @@ newInstance.init({
 `i18next.cloneInstance(options)`
 
 Creates a clone of the current instance. Shares store, plugins and initial configuration. Can be used to create an instance sharing storage but being independent on set language or default namespaces.
+
+A clone logs through its parent's logger (or a copy, if you pass `debug` or `prefix`) and uses its parent's post-processors, also those the parent registers later; post-processors registered on the clone stay its own (since v27, when logger and post-processors became per instance).
 
 Since v26.4.7 the clone does not inherit `preload`: the parent already loaded those languages into the shared store, so the clone only loads its own language (and fallbacks). Pass `preload` in the options if the clone should load them too.
 

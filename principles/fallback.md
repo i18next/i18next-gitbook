@@ -122,7 +122,7 @@ i18next.init({
 });
 ```
 
-The default is set to `dev` which means developer language. At first this might look strange to set the default to a language, but this enables to set the `saveMissing` feature to send new keys to that developer specific language. From there your translators can modify the texts to a translation file containing, for instance, proper English, including defined terminology. For production use, just set `fallbackLng` to an existing language.
+Since v27 there is no fallback language by default (`fallbackLng: false`): set it to the language your app is written in. Before v27 the default was `dev`, a developer language: with `saveMissing`, new keys were sent to it, and translators turned them into, for instance, proper English. `fallbackLng: 'dev'` still does that.
 
 ## Namespace fallback
 
@@ -294,10 +294,10 @@ Possible - but not recommended.
 
 ### Missing values for existing keys
 
-In addition to the above, if you want missing values to fallback to the key in cases where the keys (e.g. got extracted by a code parser) exist in your JSON translation file with empty string as value, you also need this setting:
+In addition to the above, if you want missing values to fallback to the key in cases where the keys (e.g. got extracted by a code parser) exist in your JSON translation file with empty string as value, you need this setting (the default since v27):
 
 ```
-// allow an empty value to count as invalid (by default is true)
+// an empty value counts as missing: the default since v27
   returnEmptyString: false
 ```
 

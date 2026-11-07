@@ -147,10 +147,11 @@ i18next.t($ => $.key, {
 {% endtab %}
 {% endtabs %}
 
-| option               | default   | description                            |
-| -------------------- | --------- | -------------------------------------- |
-| nestingPrefixEscaped | undefined | escaped prefix for nesting (regexSafe) |
-| nestingSuffixEscaped | undefined | escaped suffix for nesting (regexSafe) |
+| option                  | default | description                                                                        |
+| ----------------------- | ------- | ---------------------------------------------------------------------------------- |
+| nestingPrefix           | `$t(`   | prefix for nesting                                                                 |
+| nestingSuffix           | `)`     | suffix for nesting                                                                 |
+| nestingOptionsSeparator | `,`     | separates the options from the nesting key, as in `$t(key, { "count": {{count}} })` |
 
 While there are a lot of options going with the defaults should get you covered.
 
