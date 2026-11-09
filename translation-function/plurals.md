@@ -136,6 +136,19 @@ i18next.t($ => $.key, {count: 100}); // -> "other"
 {% endtab %}
 {% endtabs %}
 
+## When a plural form is missing
+
+Since v27.1.0, when the form selected for `count` is missing, i18next uses the `_other` form of the same language before it moves on to the fallback language, as CLDR does ([lateral inheritance](https://www.unicode.org/reports/tr35/#Lateral_Inheritance)). Within one language the order is `key_<form>`, then the plain `key`, then `key_other`. With a context, `key_<context>_other` comes before `key_other`; with `ordinal`, the last one is `key_ordinal_other`. A `defaultValue_other` is used the same way, after `defaultValue`.
+
+This matters for French, Spanish, Italian and Portuguese: current CLDR data gives them a `many` form for exact millions, so files with only `_one` and `_other` miss it.
+
+```javascript
+// fr: { "file_one": "{{count}} fichier", "file_other": "{{count}} fichiers" }
+i18next.t('file', { count: 1000000 }); // -> "1000000 fichiers" (before v27.1.0: "file", or the fallback language)
+```
+
+A form that is filled in from `_other` is not reported as missing at runtime (`saveMissing`, `missingKeyHandler`, `exists()`).
+
 ## How to find the correct plural suffix?
 
 You can use this small utility to get the correct plural suffixes.
