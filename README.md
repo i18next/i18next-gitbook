@@ -12,11 +12,17 @@ Manage up to 2,000 words and 100,000 downloads for $0/mo.\
 {% endhint %}
 
 {% hint style="info" %}
-🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
-The New Official Toolkit for i18next.\
-⇒ [Learn More](https://www.locize.com/blog/i18next-cli?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
+🤖 **Set up i18next with your coding agent**\
+Paste this prompt into Claude Code, Cursor, Codex, GitHub Copilot, Gemini CLI or any agent that can run terminal commands:
 
-{% embed url="https://www.youtube.com/watch?v=aWZnZXwGg34" %}
+```
+Localize this app with i18next.
+Run `npx i18next-cli localize --print-agent-prompt` and follow
+the steps it prints, in order, checking each one before the next.
+```
+
+The official [i18next-cli](https://github.com/i18next/i18next-cli) prints the steps for its installed version: wrap hardcoded strings in `t()`, extract the keys, check every language. You review the diff, and the translation files stay in your repository unless you choose otherwise.\
+⇒ [What the prompt tells your agent](how-to/ai-coding-agents.md)
 {% endhint %}
 
 i18next is an **internationalization-framework** written in and for JavaScript. But it's much more than that!

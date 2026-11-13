@@ -1,5 +1,5 @@
 ---
-description: What i18next's tooling tells AI coding agents (the skill, the agent prompt, the AGENTS.md note), word for word, and how to opt out.
+description: Set up i18next with a coding agent in one prompt, and what i18next's tooling tells agents (the skill, the agent prompt, the AGENTS.md note), word for word, and how to opt out.
 ---
 
 # AI coding agents
@@ -7,6 +7,18 @@ description: What i18next's tooling tells AI coding agents (the skill, the agent
 > **Written by the i18next team.** We also build [Locize](https://www.locize.com/i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=how_to_ai_coding_agents\&from=i18next_agents_page__cta), the translation management service that funds i18next's development. This page exists so that everything our tooling puts in front of your coding agent is readable here, by you, in full.
 
 More and more i18next code is written by coding agents (Claude Code, Cursor, Codex, Copilot, Gemini CLI and others). Three pieces of i18next tooling are made for them. None of them runs on its own: each one is something you install or run.
+
+## Set it up with one prompt
+
+Paste this into your agent:
+
+```
+Localize this app with i18next.
+Run `npx i18next-cli localize --print-agent-prompt` and follow
+the steps it prints, in order, checking each one before the next.
+```
+
+The prompt holds no steps of its own: the CLI prints them for its installed version, so they match the commands it runs. This needs i18next-cli 1.73.0 or later; a project that pins an older version updates it first. Your agent asks you one question when there is no i18next config yet, wraps the hardcoded strings in `t()`, extracts the keys and checks every language; you review the diff. If your agent supports skills, `npx skills add i18next/i18next-cli` installs the same flow, and "localize this app" is enough.
 
 ## What exists
 
