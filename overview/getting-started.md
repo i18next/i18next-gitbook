@@ -99,7 +99,7 @@ i18next.init({
   }
 });
 // initialized and ready to go!
-// i18next is already initialized, because the translation resources where passed via init function
+// i18next is already initialized, because the translation resources were passed via init function
 document.getElementById('output').innerHTML = i18next.t('key');
 ```
 {% endtab %}
@@ -120,7 +120,7 @@ i18next.init({
   }
 });
 // initialized and ready to go!
-// i18next is already initialized, because the translation resources where passed via init function
+// i18next is already initialized, because the translation resources were passed via init function
 document.getElementById('output').innerHTML = i18next.t($ => $.key);
 ```
 {% endtab %}
