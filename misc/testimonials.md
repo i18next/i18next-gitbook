@@ -4,7 +4,7 @@ description: "What developers and companies say about i18next, and who runs it i
 
 # Testimonials
 
-i18next runs on at least 1,534 of the world's top 100,000 websites, from X and GitLab to Deezer, Strava, DeepL and Microsoft Power BI. [Who uses i18next?](https://www.locize.com/blog/who-uses-i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_testimonials) has the data, how it was measured (and where it is fuzzy), and a searchable list.
+At least 1,188 of the world's top 100,000 websites run i18next in their own code, from X, NBA and DeepL to Lufthansa, Strava, Snowflake and Mercedes-Benz. [Who uses i18next?](https://www.locize.com/blog/who-uses-i18next?utm_source=i18next_com\&utm_medium=gitbook\&utm_campaign=misc_testimonials) has the data, how it was measured (and where it is fuzzy), and a searchable list.
 
 Below, what developers and companies say about it.
 
