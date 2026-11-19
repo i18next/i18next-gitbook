@@ -31,14 +31,14 @@ Keys, by default, are strings surrounded by curly brackets:
 Sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('key', { what: 'i18next', how: 'great' });
 // -> "i18next is great"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key, { what: 'i18next', how: 'great' });
 // -> "i18next is great"
@@ -61,7 +61,7 @@ Keys
 Sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 const author = { 
     name: 'Jan',
@@ -72,7 +72,7 @@ i18next.t('key', { author });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 const author = { 
     name: 'Jan',
@@ -100,7 +100,7 @@ Keys
 Sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('keyEscaped', { myVar: '<img />' });
 // -> "no danger &lt;img /&gt;"
@@ -113,7 +113,7 @@ i18next.t('keyEscaped', { myVar: '<img />', interpolation: { escapeValue: false 
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.keyEscaped, { myVar: '<img />' });
 // -> "no danger &lt;img /&gt;"
@@ -134,7 +134,7 @@ _Warning:_ If you toggle escaping off, escape any user input yourself! In partic
 Prefix/Suffix for interpolation and other options can be overridden in the init options or by passing additional options to the `t` function:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.init({
     interpolation: { ... }
@@ -146,7 +146,7 @@ i18next.t('key', {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.init({
     interpolation: { ... }

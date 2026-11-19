@@ -8,6 +8,8 @@ description: "Type-safe keys with i18next: the declaration file and CustomTypeOp
 Note: since v25.4 you can pass a selector function to `t` with the [`enableSelector`](typescript.md#custom-type-options) option. Both APIs are supported, in the types too: string keys stay first-class and the selector API stays opt-in.
 
 Selectors help most with very large namespaces and give you go-to-definition; for the largest resource sets use `enableSelector: "optimize"`. An earlier version of this note announced `true` as the default for v26 and a deprecation of the string-key types for v27. Both plans are dropped.
+
+Examples across these docs come in two tabs: **String keys** (the default, for JavaScript and TypeScript) and **Selector API** (in TypeScript, turned on with `enableSelector`).
 {% endhint %}
 
 i18next has embedded type definitions. If you want to enhance IDE Experience and prevent errors (such as type coercion), you should follow the instructions below in order to get the t function fully-type safe (keys and return type).
@@ -17,7 +19,7 @@ This is an optional feature and may affect the **compilation time** depending on
 {% endhint %}
 
 {% hint style="info" %}
-Make sure your tsconfig compilerOptions has the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag or the [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) set to `true`.\
+We recommend the [`strict`](https://www.typescriptlang.org/tsconfig#strict) flag (or at least [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks)) in your tsconfig compilerOptions. Since v27.2.2, typed string keys also work with `strictNullChecks: false`.\
 The newest i18next versions only support **TypeScript v5**. Older TypeScript versions are not supported any longer with `i18next > v23`.\
 ⚠ _To use it with TypeScript v4, use `i18next@22.5.1`._
 {% endhint %}
@@ -192,7 +194,7 @@ When both files are in the same compile unit (the typical case for source-consum
 
 **Scalar options stay on `CustomTypeOptions`.** `ResourceNamespaceMap` only handles namespace resource types. Settings like `defaultNS`, `returnNull`, `enableSelector`, `parseInterpolation`, etc. continue to live on `CustomTypeOptions` and follow the existing single-declaration rules — but those are scalar and rarely conflict across packages.
 
-**Coexists with `CustomTypeOptions.resources`.** If you already use the legacy `resources` field, it continues to work, and new packages can opt into `ResourceNamespaceMap` without forcing you to migrate. Both surfaces feed `TypeOptions['resources']`.
+**Coexists with `CustomTypeOptions.resources`.** If you already use `CustomTypeOptions.resources`, it continues to work, and new packages can opt into `ResourceNamespaceMap` without forcing you to migrate. Both surfaces feed `TypeOptions['resources']`.
 
 **Same-key conflicts.** If two declarations contribute the same namespace with the same key but different literal types (e.g. `'A'` in one package, `'B'` in another), that key is silently dropped from the merged namespace — calling `t()` with it errors as an unknown key. Other keys in the namespace are preserved.
 
@@ -229,14 +231,12 @@ This error means TypeScript resolved your key type to `never`, so `t` accepts no
 
 ### Typechecking got slow with large resource files
 
-The legacy key-validation types enumerate every possible key, which gets expensive with thousands of keys. Set [`enableSelector: "optimize"`](typescript.md#custom-type-options) to switch to the selector API's lazy resolution; see the OOM entry below for migration helpers.
+The string-key types build a union of every key, which gets expensive with many thousands of keys. Splitting the code into smaller packages helps (see the next section); if type checking is still too slow, [`enableSelector: "optimize"`](typescript.md#custom-type-options) resolves keys lazily; it means writing `t($ => $.some.key)` instead of `t('some.key')`.
 
 ### Out of memory (OOM) errors
 
 {% hint style="warning" %}
-This problem does not occur when `enableSelector` is set to `"optimize"`. If possible, we recommend you first attempt to upgrade to the selector API and setting this option.
-
-To make the migration smoother, we've published the following packages:
+This does not happen with `enableSelector: "optimize"`. If the tips below don't help, you can switch to the selector API with that option; these packages help with the migration:
 
 * [@i18next-selector/codemod](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/codemod)
 * [@i18next-selector/vite-plugin](https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin)
@@ -356,16 +356,16 @@ Due to his anatomy it can be easily casted to a better defined type as you can s
 #### Example with object
 
 {% tabs %}
-{% tab title="v25.4+" %}
+{% tab title="String keys" %}
 ```typescript
-const tResult = t($ => $.myTypeKey, { returnObjects: true }) as { title: string, text: string };
+const tResult = t('myTypeKey', { returnObjects: true }) as { title: string, text: string };
 expectTypeOf(tResult).toEqualTypeOf<{ title: string; text: string }>();
 ```
 {% endtab %}
 
-{% tab title="v25.3 and before" %}
+{% tab title="Selector API" %}
 ```typescript
-const tResult = t('myTypeKey', { returnObjects: true }) as { title: string, text: string };
+const tResult = t($ => $.myTypeKey, { returnObjects: true }) as { title: string, text: string };
 expectTypeOf(tResult).toEqualTypeOf<{ title: string; text: string }>();
 ```
 {% endtab %}
@@ -374,16 +374,16 @@ expectTypeOf(tResult).toEqualTypeOf<{ title: string; text: string }>();
 #### Example with array
 
 {% tabs %}
-{% tab title="v25.4+" %}
+{% tab title="String keys" %}
 ```typescript
-const tResult = t($ => $.myTypeKey, { returnObjects: true }) as Array<string>;
+const tResult = t('myTypeKey', { returnObjects: true }) as Array<string>;
 expectTypeOf(tResult).toEqualTypeOf<Array<string>>();
 ```
 {% endtab %}
 
-{% tab title="v25.3 and before" %}
+{% tab title="Selector API" %}
 ```typescript
-const tResult = t('myTypeKey', { returnObjects: true }) as Array<string>;
+const tResult = t($ => $.myTypeKey, { returnObjects: true }) as Array<string>;
 expectTypeOf(tResult).toEqualTypeOf<Array<string>>();
 ```
 {% endtab %}
@@ -392,18 +392,18 @@ expectTypeOf(tResult).toEqualTypeOf<Array<string>>();
 #### Example without casting using type parameters
 
 {% tabs %}
-{% tab title="v25.4+" %}
+{% tab title="String keys" %}
 ```typescript
 type MyCustomReturn = { title:string; text: string };
-const tResult = t<string, { returnObjects: true }, MyCustomReturn>($ => $.myKey, { returnObjects: true });
+const tResult = t<string, { returnObjects: true }, MyCustomReturn>('myKey', { returnObjects: true });
 expectTypeOf(tResult).toEqualTypeOf<MyCustomReturn>();
 ```
 {% endtab %}
 
-{% tab title="v25.3 and before" %}
+{% tab title="Selector API" %}
 ```typescript
 type MyCustomReturn = { title:string; text: string };
-const tResult = t<string, { returnObjects: true }, MyCustomReturn>('myKey', { returnObjects: true });
+const tResult = t<string, { returnObjects: true }, MyCustomReturn>($ => $.myKey, { returnObjects: true });
 expectTypeOf(tResult).toEqualTypeOf<MyCustomReturn>();
 ```
 {% endtab %}

@@ -82,7 +82,7 @@ When `saveMissing` is enabled, missing keys are sent to the backend's `create` f
 
 | option                           | default | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | -------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| enableSelector (TypeScript only) | false   | <p>if set to <code>true</code>, pass a selector function as the first argument to <code>t</code> to make a translation query.<br><br>if set to <code>"optimize"</code>, i18next is capable of handling arbitrarily large translation sets without slowing down IDE performance. Keeping in mind with this setting, translation keys will not be modified, so you'll need to specify the correct key for pluralization or use a tool like <a href="https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin">@i18next-selector/vite-plugin</a>.</p> |
+| enableSelector | false   | <p>if set to <code>true</code>, pass a selector function as the first argument to <code>t</code> to make a translation query.<br><br>if set to <code>"optimize"</code>, i18next is capable of handling arbitrarily large translation sets without slowing down IDE performance. Keeping in mind with this setting, translation keys will not be modified, so you'll need to specify the correct key for pluralization or use a tool like <a href="https://github.com/ahrjarrett/i18next-selector/tree/main/packages/vite-plugin">@i18next-selector/vite-plugin</a>.<br><br>if set to <code>"strict"</code> (since v26.1.0), every selector path must start with its namespace (<code>$.ns.key</code>), in the types and at runtime.<br><br><code>true</code> and <code>"optimize"</code> only change the TypeScript types; at runtime a selector works without this option. See <a href="typescript.md#custom-type-options">TypeScript</a>.</p> |
 | initAsync                        | true    | triggers resource loading in `init()` inside a `setTimeout` (default async behaviour). Set it to `false` if your backend loads resources synchronously - that way, calling `i18next.t()` after `init()` is possible without relying on the initialization callback. **This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend)**!**                                                                                                                                                   |
 | keySeparator                     | `'.'`   | char to separate keys. _If working with a flat JSON, it's recommended to set this to `false`._                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | nsSeparator                      | `':'`   | char to split namespace from key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -99,7 +99,7 @@ Sample using `initAsync` when using a backend plugin allowing sync (blocking) lo
 **This option only works for sync (blocking) loading backend, like** [**i18next-fs-backend**](https://github.com/i18next/i18next-fs-backend)**!**
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 import i18next from 'i18next';
 import Backend from 'i18next-fs-backend';
@@ -134,7 +134,7 @@ execution order of function calls
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 import i18next from 'i18next';
 import Backend from 'i18next-fs-backend';

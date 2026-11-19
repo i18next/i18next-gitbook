@@ -83,7 +83,7 @@ If you prefer using natural language in keys, please read the [fallback guide](.
 Please be aware these samples are just showing basic usage of the core functionality. For production usage please consider using one of our [framework integrations](supported-frameworks.md) to get better and simpler integrations (Setting innerHTML is just done to show how it works).
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 import i18next from 'i18next';
 
@@ -104,7 +104,7 @@ document.getElementById('output').innerHTML = i18next.t('key');
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 import i18next from 'i18next';
 
@@ -129,7 +129,7 @@ document.getElementById('output').innerHTML = i18next.t($ => $.key);
 Or using callback init signature:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 import i18next from 'i18next';
 
@@ -150,7 +150,7 @@ i18next.init({
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 import i18next from 'i18next';
 
@@ -175,7 +175,7 @@ i18next.init({
 Or using Promises:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option
@@ -194,7 +194,7 @@ i18next.init({
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option
@@ -217,7 +217,7 @@ i18next.init({
 Or using async/await:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 await i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option
@@ -235,7 +235,7 @@ document.getElementById('output').innerHTML = i18next.t('key');
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 await i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option

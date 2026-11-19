@@ -22,7 +22,7 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('tree', { returnObjects: true, something: 'gold' });
 // -> { res: 'added gold' }
@@ -32,7 +32,7 @@ i18next.t('array', { returnObjects: true });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.tree, { returnObjects: true, something: 'gold' });
 // -> { res: 'added gold' }
@@ -75,7 +75,7 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('arrayJoin', { joinArrays: '+' });
 // -> "line1+line2+line3"
@@ -88,7 +88,7 @@ i18next.t('arrayOfObjects.0.name');
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.arrayJoin, { joinArrays: '+' });
 // -> "line1+line2+line3"

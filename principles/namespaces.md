@@ -34,7 +34,7 @@ More often you don't want to load all the translations upfront or at least reduc
 ## Sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.init({
   ns: ['common', 'moduleA', 'moduleB'],
@@ -51,7 +51,7 @@ i18next.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.init({
   ns: ['common', 'moduleA', 'moduleB'],

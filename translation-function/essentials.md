@@ -20,7 +20,7 @@ resources with 2 keys:
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('key');
 // -> "value of key"
@@ -30,7 +30,7 @@ i18next.t('look.deep');
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key);
 // -> "value of key"
@@ -46,13 +46,13 @@ i18next.t($ => $.look.deep);
 You can pass in a default value for cases the key could not be found in translations like:
 
 {% tabs %}
-{% tab title="JavaScript" %}
-```
+{% tab title="String keys" %}
+```javascript
 i18next.t('key', 'default value to show');
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key, { defaultValue: 'default value to show' });
 ```
@@ -97,7 +97,7 @@ common.json
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('name');
 // -> "Module A"
@@ -109,7 +109,7 @@ i18next.t('button.save', { ns: 'common' }) // -> "save"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.name);
 // -> "Module A"
@@ -150,7 +150,7 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // const error = '404';
 i18next.t([`error.${error}`, 'error.unspecific']); 
@@ -162,14 +162,14 @@ i18next.t([`error.${error}`, 'error.unspecific']);
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // const error = '404';
-i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }); 
+i18next.t([$ => $.error[error], $ => $.error.unspecific]);
 // -> "The page was not found"
 
 // const error = '502';
-i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) });
+i18next.t([$ => $.error[error], $ => $.error.unspecific]);
 // -> "Something went wrong"
 ```
 {% endtab %}

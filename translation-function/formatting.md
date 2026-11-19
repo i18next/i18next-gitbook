@@ -41,7 +41,7 @@ Use a "semicolon" delimited list of options.
 {% endhint %}
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 Passing options to the formatting:
 
 1. In the translation string using `{{value, formatname(options1: options1Value)}}`
@@ -70,7 +70,7 @@ i18next.t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 Passing options to the formatting:
 
 1. In the translation string using `{{value, formatname(options1: options1Value)}}`
@@ -105,7 +105,7 @@ i18next.t($ => $.intlNumberWithOptions, { val: 2000, minimumFractionDigits: 3 })
 The language can be overridden by passing it in t.options
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('intlNumber', { val: 1000.1, lng: 'de' }); 
 // or: i18next.t('intlNumber', { val: 1000.1, locale: 'de' });
@@ -114,7 +114,7 @@ i18next.t('intlNumber', { val: 1000.1, formatParams: { val: { lng: 'de' } } });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.intlNumber, { val: 1000.1, lng: 'de' }); 
 // or: i18next.t($ => $.intlNumber, { val: 1000.1, locale: 'de' });
@@ -164,7 +164,7 @@ i18next.services.formatter.addCached('specialformat', (lng, options) => {
 ### Number
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // JSON
 {
@@ -185,7 +185,7 @@ i18next.t('intlNumberWithOptions', { val: 2000, minimumFractionDigits: 3 });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // JSON
 {
@@ -212,7 +212,7 @@ For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### Currency
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // JSON
 {
@@ -238,7 +238,7 @@ i18next.t('twoIntlCurrencyWithUniqueFormatOptions',
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // JSON
 {
@@ -270,7 +270,7 @@ For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### DateTime
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // JSON
 {
@@ -290,7 +290,7 @@ i18next.t('intlDateTime',
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // JSON
 {
@@ -316,7 +316,7 @@ For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### RelativeTime
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // JSON
 {
@@ -336,7 +336,7 @@ i18next.t('intlRelativeTimeWithOptionsExplicit', { val: -3, style: 'long' });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // JSON
 {
@@ -362,7 +362,7 @@ For options see: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### List
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // JSON
 {
@@ -374,7 +374,7 @@ i18next.t('intlList', { val: ['locize', 'i18next', 'awesomeness'] });
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // JSON
 {
@@ -417,7 +417,7 @@ Do you want to create some sort of default formatter, that does not need a speci
 Create a custom formatter plugin, and pass it to i18next:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 <pre class="language-javascript"><code class="lang-javascript">const myFormatter = {
   type: 'formatter',
   init(services, backendOptions, i18nextOptions) {}, // of you need some init stuff to be done...
@@ -455,7 +455,7 @@ i18next.t("testKeyWithoutFormat", { val: new Date() }) // On the "Mon, 07 Jul 20
 </code></pre>
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 <pre class="language-typescript"><code class="lang-typescript">const myFormatter = {
   type: 'formatter',
   init(services, backendOptions, i18nextOptions) {}, // of you need some init stuff to be done...

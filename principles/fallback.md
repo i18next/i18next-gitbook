@@ -15,7 +15,7 @@ By default, if a variant (containing region, script, etc) is not found, i18next 
 Example:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // fallback to one language
 i18next.init({
@@ -43,7 +43,7 @@ i18next.init({
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // fallback to one language
 i18next.init({
@@ -151,7 +151,7 @@ common.json
 Sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.init({
     // files to load
@@ -177,7 +177,7 @@ i18next.init({
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.init({
     // files to load
@@ -203,7 +203,7 @@ i18next.init({
 ### Key not found
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 If a key does not return a value the key acts as fallback:
 
 ```javascript
@@ -211,7 +211,7 @@ i18next.t('notExistingKey'); // -> "notExistingKey"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 If a key does not return a value the selected path acts as fallback:
 
 ```typescript
@@ -227,7 +227,7 @@ Seeing raw keys in your UI usually means a translation is missing, not that the 
 So you could configure i18next to have the key being the fallback instead of loading a fallback language:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 de.json
 
 ```javascript
@@ -257,12 +257,12 @@ i18next.t('This will be shown if the current loaded translations do not have thi
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 de.json
 
 ```typescript
 {
-  "No one says a path can not be the fallback.": "Niemand sagt, dass ein Pfad nicht der Fallback sein kann."
+  "No one says a key can not be the fallback.": "Niemand sagt ein key kann nicht als Ersatz dienen."
 }
 ```
 
@@ -279,7 +279,7 @@ i18next.init({
 });
 
 i18next.t($ => $['No one says a key can not be the fallback.'])
-// -> "Niemand sagt, dass ein Pfad nicht der Fallback sein kann"
+// -> "Niemand sagt ein key kann nicht als Ersatz dienen."
 
 
 i18next.t($ => $['This will be shown if the current loaded translations do not have this.']);
@@ -321,7 +321,7 @@ translation.json
 Sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 // const error = '404';
 i18next.t([`error.${error}`, 'error.unspecific'])
@@ -333,14 +333,14 @@ i18next.t([`error.${error}`, 'error.unspecific'])
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 // const error = '404';
-i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }) 
+i18next.t([$ => $.error[error], $ => $.error.unspecific])
 // -> "The page was not found"
 
 // const error = '502';
-i18next.t($ => $.error[error], { defaultValue: t($ => $.error.unspecific) }) 
+i18next.t([$ => $.error[error], $ => $.error.unspecific])
 // -> "Something went wrong"
 ```
 {% endtab %}

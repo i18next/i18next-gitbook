@@ -21,13 +21,13 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('nesting1'); // -> "1 2 3"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.nesting1); // -> "1 2 3"
 ```
@@ -55,14 +55,14 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('girlsAndBoys', {girls: 3, boys: 2});
 // -> "They have 3 girls and 2 boys"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.girlsAndBoys, {girls: 3, boys: 2});
 // -> "They have 3 girls and 2 boys"
@@ -90,14 +90,14 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('key2', {val: '$t(key1)'});
 // -> "say: hello world"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key2, {val: '$t(key1)'});
 // -> "say: hello world"
@@ -122,7 +122,7 @@ Prefix/Suffix for nesting and other options can be overridden in init [interpola
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.init({
     interpolation: { ... }
@@ -134,7 +134,7 @@ i18next.t('key', {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.init({
     interpolation: { ... }

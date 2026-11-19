@@ -10,19 +10,19 @@ These plurals are streamlined with the one used in the [Intl API](https://develo
 \=>_In environments without_ [_Intl.PluralRules_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/PluralRules) _support you need to_ [_polyfill_](https://github.com/eemeli/intl-pluralrules) _it (notably React Native: the Hermes engine still does not implement `Intl.PluralRules`). Since i18next v24 there is no fallback: without Intl only English-style `_one`/`_other` forms resolve._
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 {% hint style="danger" %}
 Note: The variable name must be `count`.\
-And it must be present: `i18next.t('key', {count: 1});`\
-There will be **no** fallback to the `'key'` value if count is not provided.
+Plural forms are only used when a numeric `count` is passed: `i18next.t('key', {count: 1});`\
+Without `count`, `t('key')` looks up the plain `key` only, never `key_one` or `key_other`.
 {% endhint %}
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 {% hint style="danger" %}
 Note: The variable name must be `count`.\
-And it must be present: `i18next.t($ => $.key, {count: 1});`\
-There will be **no** fallback to the `'key'` property if count is not provided.
+Plural forms are only used when a numeric `count` is passed: `i18next.t($ => $.key, {count: 1});`\
+Without `count`, `t($ => $.key)` looks up the plain `key` only, never `key_one` or `key_other`.
 {% endhint %}
 {% endtab %}
 {% endtabs %}
@@ -55,7 +55,7 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('key', {count: 0}); // -> "items"
 i18next.t('key', {count: 1}); // -> "item"
@@ -68,7 +68,7 @@ i18next.t('keyWithCount', {count: 100}); // -> "100 items"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key, {count: 0}); // -> "items"
 i18next.t($ => $.key, {count: 1}); // -> "item"
@@ -107,7 +107,7 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('key', {count: 0}); // -> "zero"
 i18next.t('key', {count: 1}); // -> "singular"
@@ -121,7 +121,7 @@ i18next.t('key', {count: 100}); // -> "other"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key, {count: 0}); // -> "zero"
 i18next.t($ => $.key, {count: 1}); // -> "singular"
@@ -180,7 +180,7 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('key', { count: 1, ordinal: true }); // -> "1st place"
 i18next.t('key', { count: 21, ordinal: true }); // -> "21st place"
@@ -190,7 +190,7 @@ i18next.t('key', { count: 32, ordinal: true }); // -> "32nd place"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key, { count: 1, ordinal: true }); // -> "1st place"
 i18next.t($ => $.key, { count: 21, ordinal: true }); // -> "21st place"
@@ -232,7 +232,7 @@ keys
 sample
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```javascript
 i18next.t('key1_interval', {postProcess: 'interval', count: 1}); // -> "one item"
 i18next.t('key1_interval', {postProcess: 'interval', count: 4}); // -> "a few items"
@@ -246,7 +246,7 @@ i18next.t('key2_interval', {postProcess: 'interval', count: 100}); // -> "100 it
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```typescript
 i18next.t($ => $.key1_interval, {postProcess: 'interval', count: 1}); // -> "one item"
 i18next.t($ => $.key1_interval, {postProcess: 'interval', count: 4}); // -> "a few items"
